@@ -1,0 +1,241 @@
+{
+  "schema": 1,
+  "application": "0.6.7",
+  "archives": [
+    {
+      "name": "altgraph",
+      "version": "0.17.5",
+      "url": "https://files.pythonhosted.org/packages/7e/f8/97fdf103f38fed6792a1601dbc16cc8aac56e7459a9fff08c812d8ae177a/altgraph-0.17.5.tar.gz",
+      "filename": "altgraph-0.17.5.tar.gz",
+      "sha256": "c87b395dd12fabde9c99573a9749d67da8d29ef9de0125c7f536699b4a9bc9e7",
+      "bytes": 48428,
+      "role": "dependency",
+      "license": "MIT"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.10.23",
+      "url": "https://files.pythonhosted.org/packages/fd/11/b524cbd9bbdaca58608e4cf4053fd463417549e1959fa8d3aa18319f9555/certifi-2026.10.23.tar.gz",
+      "filename": "certifi-2026.10.23.tar.gz",
+      "sha256": "a9895e6e2758b371e0545e321a3a8fd1fcfd9829ada8824a936dfb16aaaf36cd",
+      "bytes": 136225,
+      "role": "dependency",
+      "license": "MPL-2.0"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "url": "https://files.pythonhosted.org/packages/c7/0e/7fa0ef50764b67090eca4114772a2abf8b6148198475e54c660b97caeee6/click-8.5.0.tar.gz",
+      "filename": "click-8.5.0.tar.gz",
+      "sha256": "ba0d2089de75ea0310e2dde03160e6ca10009947fb95a182f9b54021bb272e34",
+      "bytes": 382235,
+      "role": "dependency",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "jplephem",
+      "version": "2.24",
+      "url": "https://files.pythonhosted.org/packages/90/8b/a50514f000fcd0207cd281370b0db66e7712a5db9f96b77a0301a7205f96/jplephem-2.24.tar.gz",
+      "filename": "jplephem-2.24.tar.gz",
+      "sha256": "354fe1adae022264ab46f18afb6af26211277cfd7b3ef90400755fcabe93bc11",
+      "bytes": 45289,
+      "role": "dependency",
+      "license": "MIT"
+    },
+    {
+      "name": "libephemeris",
+      "version": "3.2.2",
+      "url": "https://files.pythonhosted.org/packages/94/42/fc13a03eb4d6187bddc53bb671074caf61669f663a980de9be26e283b704/libephemeris-3.2.2.tar.gz",
+      "filename": "libephemeris-3.2.2.tar.gz",
+      "sha256": "869e48ef45cc16e9db958092149728c2610bfc5d2ce9e3097c45fb8b324159f5",
+      "bytes": 12388171,
+      "role": "dependency",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.4",
+      "url": "https://files.pythonhosted.org/packages/95/b0/c7453d0b6e2073c3264468b106ee1563750cecc910965e67357e3698c83e/numpy-2.5.4.tar.gz",
+      "filename": "numpy-2.5.4.tar.gz",
+      "sha256": "9a94cf751c9ad8ebaa835bcd3d40dacf8534ad086b88c38029b65123c7999d2a",
+      "bytes": 20866315,
+      "role": "dependency",
+      "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "url": "https://files.pythonhosted.org/packages/7d/fa/3944b40b07da9ce895c0e6303a5ab7d53da063554f534556b134a54d6093/packaging-26.3.tar.gz",
+      "filename": "packaging-26.3.tar.gz",
+      "sha256": "94edc256424af38762eb31306eed28beb9f0efc50a8837492c9d6fd6004aed79",
+      "bytes": 313412,
+      "role": "dependency",
+      "license": "Apache-2.0 OR BSD-2-Clause"
+    },
+    {
+      "name": "pefile",
+      "version": "2024.8.26",
+      "url": "https://files.pythonhosted.org/packages/03/4f/2750f7f6f025a1507cd3b7218691671eecfd0bbebebe8b39aa0fe1d360b8/pefile-2024.8.26.tar.gz",
+      "filename": "pefile-2024.8.26.tar.gz",
+      "sha256": "3ff6c5d8b43e8c37bb6e6dd5085658d658a7a0bdcd20b6a07b1fcfc1c4e9d632",
+      "bytes": 76008,
+      "role": "dependency",
+      "license": "MIT"
+    },
+    {
+      "name": "pyerfa",
+      "version": "2.0.1.5",
+      "url": "https://files.pythonhosted.org/packages/71/39/63cc8291b0cf324ae710df41527faf7d331bce573899199d926b3e492260/pyerfa-2.0.1.5.tar.gz",
+      "filename": "pyerfa-2.0.1.5.tar.gz",
+      "sha256": "17d6b24fe4846c65d5e7d8c362dcb08199dc63b30a236aedd73875cc83e1f6c0",
+      "bytes": 818430,
+      "role": "dependency",
+      "license": "BSD 3-Clause License"
+    },
+    {
+      "name": "pyinstaller",
+      "version": "6.22.3",
+      "url": "https://files.pythonhosted.org/packages/63/41/f90302845945abd4ed647933ff5ee7c6ac93983187be67f897b6cb613331/pyinstaller-6.22.3.tar.gz",
+      "filename": "pyinstaller-6.22.3.tar.gz",
+      "sha256": "05eb2f5615503e72939a7224d68b4aff572c6b0438ee4a17d0a4b481f399362d",
+      "bytes": 4437180,
+      "role": "dependency",
+      "license": "GPLv2-or-later with a special exception which allows to use PyInstaller to build and distribute non-free programs (including commercial ones)"
+    },
+    {
+      "name": "pyinstaller-hooks-contrib",
+      "version": "2026.9",
+      "url": "https://files.pythonhosted.org/packages/96/25/e47c6188228281372be7e9911a93931e01ec8798c02c93abd680b9b9521f/pyinstaller_hooks_contrib-2026.9.tar.gz",
+      "filename": "pyinstaller_hooks_contrib-2026.9.tar.gz",
+      "sha256": "2748767901acb5cecd1304652b6c7add5bffcff1d71d01207fe24a5d42942a56",
+      "bytes": 180783,
+      "role": "dependency",
+      "license": null
+    },
+    {
+      "name": "pywin32-ctypes",
+      "version": "0.2.3",
+      "url": "https://files.pythonhosted.org/packages/85/9f/01a1a99704853cb63f253eea009390c88e7131c67e66a0a02099a8c917cb/pywin32-ctypes-0.2.3.tar.gz",
+      "filename": "pywin32-ctypes-0.2.3.tar.gz",
+      "sha256": "d162dc04946d704503b2edc4d55f3dba5c1d539ead017afa00142c38b9885755",
+      "bytes": 29471,
+      "role": "dependency",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "setuptools",
+      "version": "84.2.1",
+      "url": "https://files.pythonhosted.org/packages/70/b3/c19426f783614d625699a4b247faf628ea9ab1db228674491767b417f9e1/setuptools-84.2.1.tar.gz",
+      "filename": "setuptools-84.2.1.tar.gz",
+      "sha256": "3ff8b3b5492a0aa66960f4419365a86b84e013070d4313e4d4a6894f5d64d6bc",
+      "bytes": 1230289,
+      "role": "dependency",
+      "license": "MIT"
+    },
+    {
+      "name": "sgp4",
+      "version": "2.27",
+      "url": "https://files.pythonhosted.org/packages/a8/62/e1282ea86299c76159e182cd36046e6d7980b120fef14c101757e1f650b3/sgp4-2.27.tar.gz",
+      "filename": "sgp4-2.27.tar.gz",
+      "sha256": "06d37247c6985739b707b8b39b6b83e06e8af783b2531e31965501ba983985f9",
+      "bytes": 180401,
+      "role": "dependency",
+      "license": "MIT"
+    },
+    {
+      "name": "skyfield",
+      "version": "1.55",
+      "url": "https://files.pythonhosted.org/packages/8f/50/d491b746eb3d6155d8206d86415b02d900567d463579173a518debaa4e1f/skyfield-1.55.tar.gz",
+      "filename": "skyfield-1.55.tar.gz",
+      "sha256": "05dce8aafbff3f007f01cabcd2eb1858c43d7465f58c13d22c5a828a6d2fc14b",
+      "bytes": 347730,
+      "role": "dependency",
+      "license": "MIT"
+    },
+    {
+      "name": "skyfield-data",
+      "version": "7.0.0",
+      "url": "https://files.pythonhosted.org/packages/d3/6a/2f8d001dfcacb737cbdbc96db566eb9de9ebf0493bf9780785c42215c397/skyfield_data-7.0.0.tar.gz",
+      "filename": "skyfield_data-7.0.0.tar.gz",
+      "sha256": "df3b4f0f5b5b57e5adf5a0a5d30d73ca23dd4066ee666da3222d7bd63d580bbd",
+      "bytes": 16984524,
+      "role": "dependency",
+      "license": "MIT"
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.5",
+      "url": "https://files.pythonhosted.org/packages/d9/68/f1b440335057bfce71b6e50a9d09445aa2ecbd08359a337976627b8409e7/tzdata-2026.5.tar.gz",
+      "filename": "tzdata-2026.5.tar.gz",
+      "sha256": "8cc73c0a0bfca7dbfa59235d60b2eff82231dee33f53d206db1acd9173cfc0a7",
+      "bytes": 200404,
+      "role": "dependency",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "zstandard",
+      "version": "0.25.0",
+      "url": "https://files.pythonhosted.org/packages/fd/aa/3e0508d5a5dd96529cdc5a97011299056e14c6505b678fd58938792794b1/zstandard-0.25.0.tar.gz",
+      "filename": "zstandard-0.25.0.tar.gz",
+      "sha256": "7713e1179d162cf5c7906da876ec2ccb9c3a9dcbdffef0cc7f70c3667a205f0b",
+      "bytes": 711513,
+      "role": "dependency",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "PySide6 and shiboken6",
+      "version": "6.12.0",
+      "url": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.12.0-src/pyside-setup-everywhere-src-6.12.0.tar.xz",
+      "filename": "pyside-setup-everywhere-src-6.12.0.tar.xz",
+      "sha256": "099c1a597cf33c1b000e11cf68a0b82d216fb802bf81726efc720394f10c7751",
+      "bytes": 18211772,
+      "role": "Qt source"
+    },
+    {
+      "name": "qtbase",
+      "version": "6.12.0",
+      "url": "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qtbase-everywhere-src-6.12.0.tar.xz",
+      "filename": "qtbase-everywhere-src-6.12.0.tar.xz",
+      "sha256": "a951bd163c7b80fc6b8c88d7668fb56abf91c152373e13c10666763238131307",
+      "bytes": 51220268,
+      "role": "Qt source"
+    },
+    {
+      "name": "qtsvg",
+      "version": "6.12.0",
+      "url": "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qtsvg-everywhere-src-6.12.0.tar.xz",
+      "filename": "qtsvg-everywhere-src-6.12.0.tar.xz",
+      "sha256": "e4ab39534ec97987b1b9b60ef7f4d3253d5912a69f8c713a01753174a4029331",
+      "bytes": 2341876,
+      "role": "Qt source"
+    },
+    {
+      "name": "qttools",
+      "version": "6.12.0",
+      "url": "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qttools-everywhere-src-6.12.0.tar.xz",
+      "filename": "qttools-everywhere-src-6.12.0.tar.xz",
+      "sha256": "8dab8f3611496486a470ad5f115ceea584f36bc22a2b8b6f6ebdbafbb8160693",
+      "bytes": 10819720,
+      "role": "Qt source"
+    },
+    {
+      "name": "qttranslations",
+      "version": "6.12.0",
+      "url": "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qttranslations-everywhere-src-6.12.0.tar.xz",
+      "filename": "qttranslations-everywhere-src-6.12.0.tar.xz",
+      "sha256": "85929c0c30d6f273f23bd879bb69803ea17b010ab73cab2f8abf95357f6f6bbb",
+      "bytes": 1745884,
+      "role": "Qt source"
+    },
+    {
+      "name": "CPython",
+      "version": "3.12.14",
+      "url": "https://www.python.org/ftp/python/3.12.14/Python-3.12.14.tar.xz",
+      "filename": "Python-3.12.14.tar.xz",
+      "sha256": "5c8462af5790baf43a321a1559dbe0db06d1be4300fb85fb53c40060668e548a",
+      "bytes": 20820300,
+      "role": "runtime source"
+    }
+  ],
+  "note": "Exact upstream source archives accompany the complete source ZIP. Dependencies are unmodified. Qt hashes checked against official sidecars; PyPI sdists against PyPI digests; CPython fetched over official HTTPS and hashed."
+}

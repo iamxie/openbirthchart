@@ -1,0 +1,8 @@
+﻿suite,mode,case,frame,reason,failed_points
+complete,actual,complete-1914-05-T,rejected,folded_or_degenerate_family,0;1;2;3;4;5;6;7;8;9;11;15;19;18;20;17;-11;-1;-2;-3
+complete,actual,complete-1914-06-T,ok,individual_point_ambiguity,1;2;3
+complete,actual,complete-2000-07-T,rejected,folded_or_degenerate_family,0;1;2;3;4;5;6;7;8;9;11;15;19;18;20;17;-11;-1;-2;-3
+complete,actual,complete-2027-04-T,rejected,folded_or_degenerate_family,0;1;2;3;4;5;6;7;8;9;11;15;19;18;20;17;-11;-1;-2;-3
+complete,zero,complete-1914-05-T,rejected,folded_or_degenerate_family,0;1;2;3;4;5;6;7;8;9;11;15;19;18;20;17;-11;-1;-2;-3
+complete,zero,complete-2000-07-T,rejected,folded_or_degenerate_family,0;1;2;3;4;5;6;7;8;9;11;15;19;18;20;17;-11;-1;-2;-3
+complete,zero,complete-2027-04-T,rejected,folded_or_degenerate_family,0;1;2;3;4;5;6;7;8;9;11;15;19;18;20;17;-11;-1;-2;-3

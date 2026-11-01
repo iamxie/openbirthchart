@@ -1,0 +1,12 @@
+{
+  "policy": "Reject Polich-Page cusps that cannot form twelve consecutive non-overlapping sectors. A Swiss result does not override this product requirement.",
+  "suite": "regression/complete-v1/cases.json",
+  "expected_status": "UserError",
+  "cases": [
+    "complete-1941-07-T",
+    "complete-1983-11-T",
+    "complete-2000-06-T",
+    "complete-2004-01-T",
+    "complete-2012-08-T"
+  ]
+}

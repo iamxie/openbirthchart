@@ -1,0 +1,6 @@
+{'suite': 'complete', 'mode': 'actual', 'cases': 2016, 'old_ok': 1987, 'new_ok': 1983, 'unchanged_entire_records': 1877, 'validated_T_records': 139, 'surviving_T_records': 135, 'raw_T_positions_preserved': 2780, 'fractional_cusp_positions_changed': 173, 'new_refusals': 4}
+{'suite': 'complete', 'mode': 'zero', 'cases': 2016, 'old_ok': 1987, 'new_ok': 1984, 'unchanged_entire_records': 1877, 'validated_T_records': 139, 'surviving_T_records': 136, 'raw_T_positions_preserved': 2780, 'fractional_cusp_positions_changed': 174, 'new_refusals': 3}
+{'suite': 'main', 'mode': 'actual', 'cases': 1200, 'old_ok': 1200, 'new_ok': 1200, 'unchanged_entire_records': 1115, 'validated_T_records': 85, 'surviving_T_records': 85, 'raw_T_positions_preserved': 1700, 'fractional_cusp_positions_changed': 114}
+{'suite': 'main', 'mode': 'zero', 'cases': 1200, 'old_ok': 1200, 'new_ok': 1200, 'unchanged_entire_records': 1115, 'validated_T_records': 85, 'surviving_T_records': 85, 'raw_T_positions_preserved': 1700, 'fractional_cusp_positions_changed': 114}
+{'suite': 'boundary', 'mode': 'actual', 'cases': 87, 'old_ok': 77, 'new_ok': 77, 'unchanged_entire_records': 87}
+{'suite': 'boundary', 'mode': 'zero', 'cases': 87, 'old_ok': 77, 'new_ok': 77, 'unchanged_entire_records': 87}

@@ -1,0 +1,9 @@
+.............................................................{"baseline_cases_sha256":"same","baseline_version":"0.6.0","candidate_cases_sha256":"changed","candidate_elapsed_seconds":1.0,"candidate_version":"0.6.0","cases":1,"changed_case_ids":[],"changed_cases":0,"changed_fields":0,"environment_changed":false,"environment_changed_fields":0,"max_angular_delta_arcseconds":0,"passed":false,"problems":["Fixed inputs changed; comparisons are not valid"],"raw_changed_cases":0,"raw_only_changed_cases":0,"schema":1}
+.{"baseline_cases_sha256":"same","baseline_version":"0.6.0","candidate_cases_sha256":"same","candidate_elapsed_seconds":1.0,"candidate_version":"0.6.0","cases":1,"changed_case_ids":["a"],"changed_cases":1,"changed_fields":1,"environment_changed":false,"environment_changed_fields":0,"max_angular_delta_arcseconds":7.993605777301127e-13,"passed":false,"problems":[],"raw_changed_cases":1,"raw_only_changed_cases":0,"schema":1}
+{"baseline_cases_sha256":"same","baseline_version":"0.6.0","candidate_cases_sha256":"same","candidate_elapsed_seconds":1.0,"candidate_version":"0.6.0","cases":1,"changed_case_ids":["a"],"changed_cases":1,"changed_fields":3,"environment_changed":false,"environment_changed_fields":0,"max_angular_delta_arcseconds":0,"passed":false,"problems":["Unexpected calculation outcomes"],"raw_changed_cases":1,"raw_only_changed_cases":0,"schema":1}
+...{"baseline_cases_sha256":"same","baseline_version":"0.6.0","candidate_cases_sha256":"same","candidate_elapsed_seconds":1.0,"candidate_version":"0.7.0","cases":1,"changed_case_ids":[],"changed_cases":0,"changed_fields":0,"environment_changed":true,"environment_changed_fields":1,"max_angular_delta_arcseconds":0,"passed":true,"problems":[],"raw_changed_cases":0,"raw_only_changed_cases":0,"schema":1}
+............................................................
+----------------------------------------------------------------------
+Ran 125 tests in 199.141s
+
+OK

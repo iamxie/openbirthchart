@@ -1,0 +1,21 @@
+{
+  "name": "87 邊界例基準對照資料",
+  "engine": "swiss",
+  "suite": "boundary-v2",
+  "house_latitude_mode": "actual",
+  "product_version": "0.6.5",
+  "reference_version": "2.10.03",
+  "product_description": null,
+  "created_utc": "2026-10-31T16:28:07.415029+00:00",
+  "independent_repeat": {
+    "first": "D:\\Codex\\OpenBirthChart\\results\\numerical\\boundary-dual-20261101\\runs\\swiss-actual-first",
+    "second": "D:\\Codex\\OpenBirthChart\\results\\numerical\\boundary-dual-20261101\\runs\\swiss-actual-repeat",
+    "cases": 87,
+    "equal": true,
+    "differences": [],
+    "environment_equal": true,
+    "first_manifest_sha256": "a422b740225de8785fcb6166778f123ea6635490d6b416af9594b7abecef55e1",
+    "second_manifest_sha256": "b4794c7ceaabd66b943bd9384592e709c6f13519cb10687d28607a9009cc06ed"
+  },
+  "interpretation": "Fixed observed product/reference behavior, including geometry rejections and undefined positions; not a claim of correctness."
+}

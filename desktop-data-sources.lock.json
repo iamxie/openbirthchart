@@ -1,0 +1,58 @@
+{
+  "release": "data-v4",
+  "files": [
+    {
+      "path": "data/desktop/manifest.json",
+      "url": "https://github.com/g-battaglia/libephemeris/releases/download/data-v4/manifest.json",
+      "bytes": 71736,
+      "sha256": "eadf1997ff9c3b373dc670d08812102602edbdfc7772e5c707910c010478e2bb"
+    },
+    {
+      "path": "data/desktop/checksums.sha256",
+      "url": "https://github.com/g-battaglia/libephemeris/releases/download/data-v4/checksums.sha256",
+      "bytes": 1026,
+      "sha256": "f74ff8d9c0f75cd828bfab749c17bc3396c7ab902325a5800eb330cf6cb1178d"
+    },
+    {
+      "path": "data/desktop/base_core.leb2",
+      "url": "https://github.com/g-battaglia/libephemeris/releases/download/data-v4/base_core.leb2",
+      "bytes": 10232271,
+      "sha256": "b891de02f82b68346046da67389fd3713aa81ab299287c632cb20cc396397964"
+    },
+    {
+      "path": "data/desktop/base_asteroids.leb2",
+      "url": "https://github.com/g-battaglia/libephemeris/releases/download/data-v4/base_asteroids.leb2",
+      "bytes": 2147422,
+      "sha256": "9364f821f09076db3cd3cfc428379e136a0eea80917af692681be405601652d8"
+    },
+    {
+      "path": "data/desktop/NotoSansTC.ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/3be1884c48c3e45b52ecc725676a08f87776373e/ofl/notosanstc/NotoSansTC%5Bwght%5D.ttf",
+      "bytes": 11941968,
+      "sha256": "864727d210d54f2537bbe23b3a839436c3992af72de9322af5270897246bd44f"
+    },
+    {
+      "path": "data/desktop/OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/3be1884c48c3e45b52ecc725676a08f87776373e/ofl/notosanstc/OFL.txt",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "path": "data/desktop/astronomicon/Astronomicon.ttf",
+      "url": "https://astronomicon.co/AstronomiconFonts.zip",
+      "archive_sha256": "7e335239147a62a1246e1fcffa8ccce59fc11628dbb3685593828d934abbc8a0",
+      "archive_member": "AstronomiconFont_1.0/Astronomicon.ttf",
+      "bytes": 31268,
+      "sha256": "584ea502bcf9dee1a5cda707673a1074f2aabafe5ae13b286de3d8228a67638d"
+    },
+    {
+      "path": "data/desktop/astronomicon/OFL-License.txt",
+      "url": "https://astronomicon.co/AstronomiconFonts.zip",
+      "archive_sha256": "7e335239147a62a1246e1fcffa8ccce59fc11628dbb3685593828d934abbc8a0",
+      "archive_member": "AstronomiconFont_1.0/OFL-License.txt",
+      "bytes": 4419,
+      "sha256": "7cce6fa1c3e011d2794b8f480470c06150db940a90ea3d11fcbf18b2f892e0c9"
+    }
+  ],
+  "note": "Small bodies use pinned upstream JPL-derived LEB2. Main planets remain Skyfield DE440s."
+}

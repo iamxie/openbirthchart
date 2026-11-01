@@ -1,0 +1,21 @@
+{
+  "name": "完全基準對照資料",
+  "engine": "swiss",
+  "suite": "complete-v2",
+  "house_latitude_mode": "zero",
+  "product_version": "0.6.5",
+  "reference_version": "2.10.03",
+  "product_description": null,
+  "created_utc": "2026-10-31T14:34:00.258314+00:00",
+  "independent_repeat": {
+    "first": "D:\\Codex\\OpenBirthChart\\results\\numerical\\complete-dual-20261031\\runs-final\\swiss-zero-first",
+    "second": "D:\\Codex\\OpenBirthChart\\results\\numerical\\complete-dual-20261031\\runs-final\\swiss-zero-repeat",
+    "cases": 2016,
+    "equal": true,
+    "differences": [],
+    "environment_equal": true,
+    "first_manifest_sha256": "76a251ef605b293318b9f590b08cfdb98a0aa33de2c02dd54faa1e3fb791df41",
+    "second_manifest_sha256": "02266fd45dac9bcb9cdca45e0202867df3c573c87242980f06f308f3b9e5af92"
+  },
+  "interpretation": "Fixed observed product/reference behavior, including geometry rejections and undefined positions; not a claim of correctness."
+}

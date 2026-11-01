@@ -1,0 +1,79 @@
+﻿suite,case,local_iso,zone,latitude,longitude,changed_points,mc_changed,origin,direction,swiss_different_points,max_cusp_delta_arcsec,city_name
+complete,complete-1904-01-H,1904-01-13T11:41:25,Australia/Melbourne,-37.814,144.96332,20,True,0.0,-1,19,0.0005718643478758167,Melbourne
+complete,complete-1904-03-H,1904-03-21T08:11:02,Australia/Darwin,-12.46113,130.84185,19,False,180.0,-1,19,0.00017450504401494982,Darwin
+complete,complete-1904-04-H,1904-04-14T02:18:24,Pacific/Auckland,-46.4,168.35,20,True,0.0,-1,19,0.000609644916949037,Invercargill
+complete,complete-1904-05-H,1904-05-26T03:39:15,America/Argentina/Buenos_Aires,-34.61315,-58.37723,20,True,0.0,-1,19,0.0010755354878710932,Buenos Aires
+complete,complete-1904-06-H,1904-06-30T21:50:57,America/Recife,-8.05389,-34.88111,19,False,180.0,-1,19,0.0009398215070177685,Recife
+complete,complete-1904-09-H,1904-09-17T07:55:05,America/Argentina/Ushuaia,-53.78773,-67.70975,20,True,0.0,-1,19,2.440697244310286e-05,Río Grande
+complete,complete-1914-01-H,1914-01-19T17:12:13,America/Recife,-8.05389,-34.88111,20,True,0.0,-1,19,0.0003074912228839821,Recife
+complete,complete-1914-04-H,1914-04-19T18:03:55,America/Argentina/Ushuaia,-53.78773,-67.70975,20,True,0.0,-1,19,0.00031639085591450566,Río Grande
+complete,complete-1914-08-H,1914-08-22T02:18:54,Australia/Melbourne,-37.814,144.96332,20,True,0.0,-1,19,0.0014741082850378007,Melbourne
+complete,complete-1914-10-H,1914-10-24T16:22:42,Australia/Darwin,-12.46113,130.84185,19,False,180.0,-1,19,0.0009711633992992574,Darwin
+complete,complete-1914-11-H,1914-11-25T22:18:12,Pacific/Auckland,-46.4,168.35,20,True,0.0,-1,19,0.0009009723271447001,Invercargill
+complete,complete-1914-12-H,1914-12-10T07:41:35,America/Argentina/Buenos_Aires,-34.61315,-58.37723,20,True,0.0,-1,19,0.0002929243919425062,Buenos Aires
+complete,complete-1936-03-H,1936-03-15T16:03:03,Australia/Melbourne,-37.814,144.96332,20,True,0.0,-1,19,0.00019044334749196423,Melbourne
+complete,complete-1936-05-H,1936-05-25T15:49:35,Australia/Darwin,-12.46113,130.84185,20,True,0.0,-1,19,0.0007484327909423882,Darwin
+complete,complete-1936-06-H,1936-06-19T08:04:09,Pacific/Auckland,-46.4,168.35,20,True,0.0,-1,19,0.00023417903776135063,Invercargill
+complete,complete-1936-07-H,1936-07-28T18:14:35,America/Argentina/Buenos_Aires,-34.61315,-58.37723,20,True,0.0,-1,19,0.0008491539119859226,Buenos Aires
+complete,complete-1936-08-H,1936-08-20T09:05:48,America/Recife,-8.05389,-34.88111,20,True,0.0,-1,19,0.00018328823898627888,Recife
+complete,complete-1936-09-H,1936-09-18T08:26:17,Asia/Manila,14.6042,120.9822,20,True,180.0,1,19,0.0019442004486336373,Manila
+complete,complete-1936-11-H,1936-11-19T19:16:45,America/Argentina/Ushuaia,-53.78773,-67.70975,20,True,0.0,-1,19,0.0004520849870459642,Río Grande
+complete,complete-1941-01-H,1941-01-26T05:48:04,Pacific/Auckland,-46.4,168.35,20,True,0.0,-1,19,0.002495716580597218,Invercargill
+complete,complete-1941-02-H,1941-02-27T22:39:51,America/Argentina/Buenos_Aires,-34.61315,-58.37723,20,True,0.0,-1,19,0.00022808067114965525,Buenos Aires
+complete,complete-1941-03-H,1941-03-27T20:48:20,America/Recife,-8.05389,-34.88111,20,True,0.0,-1,19,0.0012344939023023471,Recife
+complete,complete-1941-04-H,1941-04-16T16:17:05,Asia/Manila,14.6042,120.9822,20,True,180.0,1,19,0.0013137794212525478,Manila
+complete,complete-1941-06-H,1941-06-14T10:53:14,America/Argentina/Ushuaia,-53.78773,-67.70975,20,True,0.0,-1,19,0.001112134691538813,Río Grande
+complete,complete-1941-10-H,1941-10-11T07:06:16,Australia/Melbourne,-37.814,144.96332,20,True,0.0,-1,19,0.0005637738468067255,Melbourne
+complete,complete-1941-12-H,1941-12-12T16:58:44,Australia/Darwin,-12.46113,130.84185,19,False,180.0,-1,19,0.000996900917016319,Darwin
+complete,complete-1958-01-H,1958-01-21T10:38:15,America/Argentina/Ushuaia,-53.78773,-67.70975,20,True,0.0,-1,19,0.0014660501165053574,Río Grande
+complete,complete-1958-05-H,1958-05-31T23:36:56,Australia/Melbourne,-37.814,144.96332,20,True,0.0,-1,19,0.0008875913636074984,Melbourne
+complete,complete-1958-07-H,1958-07-01T23:46:16,Australia/Darwin,-12.46113,130.84185,19,False,180.0,-1,19,0.0012814741012334707,Darwin
+complete,complete-1958-08-H,1958-08-10T21:15:34,Pacific/Auckland,-46.4,168.35,20,True,0.0,-1,19,0.0006120581929280888,Invercargill
+complete,complete-1958-09-H,1958-09-08T06:32:36,America/Argentina/Buenos_Aires,-34.61315,-58.37723,20,True,0.0,-1,19,0.0003459180334175471,Buenos Aires
+complete,complete-1958-10-H,1958-10-09T11:53:18,America/Recife,-8.05389,-34.88111,19,False,180.0,-1,19,0.0026197570832664496,Recife
+complete,complete-1960-02-H,1960-02-29T16:51:18,Australia/Darwin,-12.46113,130.84185,20,True,0.0,-1,19,0.0006507698572022491,Darwin
+complete,complete-1960-03-H,1960-03-31T17:08:59,Pacific/Auckland,-46.4,168.35,20,True,0.0,-1,19,0.0013038594715908403,Invercargill
+complete,complete-1960-04-H,1960-04-27T09:30:39,America/Argentina/Buenos_Aires,-34.61315,-58.37723,20,True,0.0,-1,19,0.002206027284046286,Buenos Aires
+complete,complete-1960-05-H,1960-05-07T07:21:45,America/Recife,-8.05389,-34.88111,20,True,0.0,-1,19,0.002116383893735474,Recife
+complete,complete-1960-06-H,1960-06-23T09:29:58,Asia/Manila,14.6042,120.9822,20,True,180.0,1,19,0.001554264940750727,Manila
+complete,complete-1960-08-H,1960-08-28T14:37:18,America/Argentina/Ushuaia,-53.78773,-67.70975,20,True,0.0,-1,19,0.000509437177242944,Río Grande
+complete,complete-1960-12-H,1960-12-05T14:25:50,Australia/Melbourne,-37.814,144.96332,20,True,0.0,-1,19,0.0008590231118432712,Melbourne
+complete,complete-1973-03-H,1973-03-11T20:44:53,America/Argentina/Ushuaia,-53.78773,-67.70975,20,True,0.0,-1,19,0.000773028182265989,Río Grande
+complete,complete-1973-07-H,1973-07-21T19:18:30,Australia/Melbourne,-37.814,144.96332,20,True,0.0,-1,19,0.0006867095180496108,Melbourne
+complete,complete-1973-09-H,1973-09-17T01:46:49,Australia/Darwin,-12.46113,130.84185,20,True,0.0,-1,19,0.0007204499524959829,Darwin
+complete,complete-1973-10-H,1973-10-25T19:01:15,Pacific/Auckland,-46.4,168.35,20,True,0.0,-1,19,0.0007914157777122455,Invercargill
+complete,complete-1973-11-H,1973-11-29T04:43:49,America/Argentina/Buenos_Aires,-34.61315,-58.37723,20,True,0.0,-1,19,0.00036166397876513656,Buenos Aires
+complete,complete-1973-12-H,1973-12-13T18:03:38,America/Recife,-8.05389,-34.88111,20,True,0.0,-1,19,0.0008963555274021928,Recife
+complete,complete-1983-02-H,1983-02-07T08:43:58,Australia/Melbourne,-37.814,144.96332,20,True,0.0,-1,19,0.0011604941391851753,Melbourne
+complete,complete-1983-04-H,1983-04-10T21:46:11,Australia/Darwin,-12.46113,130.84185,20,True,0.0,-1,19,0.0009458449767407728,Darwin
+complete,complete-1983-05-H,1983-05-02T15:21:33,Pacific/Auckland,-46.4,168.35,20,True,0.0,-1,19,0.00033237172374356305,Invercargill
+complete,complete-1983-06-H,1983-06-08T04:20:53,America/Argentina/Buenos_Aires,-34.61315,-58.37723,20,True,0.0,-1,19,0.0005432488251244649,Buenos Aires
+complete,complete-1983-07-H,1983-07-22T16:37:35,America/Recife,-8.05389,-34.88111,19,False,180.0,-1,19,0.001192962145069032,Recife
+complete,complete-1983-10-H,1983-10-23T19:16:28,America/Argentina/Ushuaia,-53.78773,-67.70975,20,True,0.0,-1,19,0.0007280542376975063,Río Grande
+complete,complete-2000-01-H,2000-01-21T09:14:38,America/Argentina/Buenos_Aires,-34.61315,-58.37723,20,True,0.0,-1,19,0.0018527308839111356,Buenos Aires
+complete,complete-2000-02-H,2000-02-29T21:42:44,America/Recife,-8.05389,-34.88111,20,True,0.0,-1,19,0.0007270363767020172,Recife
+complete,complete-2000-05-H,2000-05-27T19:38:22,America/Argentina/Ushuaia,-53.78773,-67.70975,20,True,0.0,-1,19,0.0007449715212715091,Río Grande
+complete,complete-2000-09-H,2000-09-21T01:55:50,Australia/Melbourne,-37.814,144.96332,20,True,0.0,-1,19,0.00035508635392034194,Melbourne
+complete,complete-2000-11-H,2000-11-26T10:47:44,Australia/Darwin,-12.46113,130.84185,19,False,180.0,-1,19,0.00040368348663832876,Darwin
+complete,complete-2000-12-H,2000-12-19T02:45:25,Pacific/Auckland,-46.4,168.35,20,True,0.0,-1,19,0.000770696351537481,Invercargill
+complete,complete-2004-04-H,2004-04-01T00:58:46,Australia/Melbourne,-37.814,144.96332,20,True,0.0,-1,19,0.0005233733190834755,Melbourne
+complete,complete-2004-06-H,2004-06-22T20:50:22,Australia/Darwin,-12.46113,130.84185,19,False,180.0,-1,19,0.0013403101092990255,Darwin
+complete,complete-2004-07-H,2004-07-02T20:48:15,Pacific/Auckland,-46.4,168.35,20,True,0.0,-1,19,0.0015822270597709576,Invercargill
+complete,complete-2004-08-H,2004-08-01T07:00:01,America/Argentina/Buenos_Aires,-34.61315,-58.37723,20,True,0.0,-1,19,0.0005217212901698076,Buenos Aires
+complete,complete-2004-09-H,2004-09-07T18:42:11,America/Recife,-8.05389,-34.88111,19,False,180.0,-1,19,0.0012642686897379463,Recife
+complete,complete-2004-10-H,2004-10-05T04:27:48,Asia/Manila,14.6042,120.9822,20,True,180.0,1,19,0.002331265113753034,Manila
+complete,complete-2004-12-H,2004-12-26T15:56:53,America/Argentina/Ushuaia,-53.78773,-67.70975,20,True,0.0,-1,19,0.0005942245479673147,Río Grande
+complete,complete-2012-01-H,2012-01-28T18:16:54,Australia/Darwin,-12.46113,130.84185,20,True,0.0,-1,19,0.001150502771452011,Darwin
+complete,complete-2012-02-H,2012-02-29T01:06:37,Pacific/Auckland,-46.4,168.35,20,True,0.0,-1,19,0.0011190078112122137,Invercargill
+complete,complete-2012-03-H,2012-03-19T21:03:34,America/Argentina/Buenos_Aires,-34.61315,-58.37723,20,True,0.0,-1,19,0.0004539076826404198,Buenos Aires
+complete,complete-2012-04-H,2012-04-06T01:49:33,America/Recife,-8.05389,-34.88111,19,False,180.0,-1,19,0.0011620993063843343,Recife
+complete,complete-2012-07-H,2012-07-21T11:16:28,America/Argentina/Ushuaia,-53.78773,-67.70975,20,True,0.0,-1,19,0.00011894730960193556,Río Grande
+complete,complete-2012-11-H,2012-11-15T04:59:45,Australia/Melbourne,-37.814,144.96332,20,True,0.0,-1,19,0.0004514502052188618,Melbourne
+complete,complete-2027-02-H,2027-02-08T01:50:30,America/Argentina/Ushuaia,-53.78773,-67.70975,20,True,0.0,-1,19,0.0006670218681392726,Río Grande
+complete,complete-2027-06-H,2027-06-30T18:03:34,Australia/Melbourne,-37.814,144.96332,20,True,0.0,-1,19,0.0006676437578789773,Melbourne
+complete,complete-2027-07-H,2027-07-22T14:00:32,Asia/Bangkok,13.75398,100.50144,20,True,180.0,1,19,0.0010257290568915778,Bangkok
+complete,complete-2027-08-H,2027-08-15T20:13:56,Australia/Darwin,-12.46113,130.84185,19,False,180.0,-1,19,0.0003907241762135527,Darwin
+complete,complete-2027-09-H,2027-09-06T22:23:10,Pacific/Auckland,-46.4,168.35,20,True,0.0,-1,19,0.0016774113873907481,Invercargill
+complete,complete-2027-10-H,2027-10-24T05:54:02,America/Argentina/Buenos_Aires,-34.61315,-58.37723,20,True,0.0,-1,19,0.00039882040709926514,Buenos Aires
+complete,complete-2027-11-H,2027-11-01T02:21:15,America/Recife,-8.05389,-34.88111,20,True,0.0,-1,19,0.0006324663672785391,Recife
+complete,complete-2027-12-H,2027-12-31T20:28:04,Asia/Manila,14.6042,120.9822,20,True,180.0,1,19,0.0009588146212990978,Manila

@@ -1,0 +1,8 @@
+{
+  "cases": 1200,
+  "numerical_and_raw_api_exact": true,
+  "old_ignored_field": "elapsed_seconds",
+  "new_ignored_field": "input.house_latitude",
+  "old_sha256": "aae6fee03519259b02a7ffa470da9885d54416ae279f56c7176ece5ffbc18f82",
+  "new_sha256": "dd24e276b380f9fc191df932094f65cbd16df19207f28a8c4c1fa7c374a68850"
+}

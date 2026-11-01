@@ -1,0 +1,675 @@
+{
+  "complete": {
+    "comparable_charts": 1987,
+    "points": {
+      "charts": 1987,
+      "measurements": 39740,
+      "angular_exceeded": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "house_crossing": {
+        "measurements": 1482,
+        "charts": 78
+      },
+      "zodiac_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "display_zodiac_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "undefined_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "undefined_both": {
+        "measurements": 57,
+        "charts": 31
+      },
+      "retrograde_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "day_chart_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "review_charts": 78,
+      "max_longitude_delta_arcsec": 1.506332452231618,
+      "max_latitude_delta_arcsec": 0.5625233453059764,
+      "max_separation_arcsec": 1.5318764883270004
+    },
+    "cusps": {
+      "charts": 1987,
+      "measurements": 23844,
+      "angular_exceeded": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "house_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "zodiac_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "display_zodiac_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "undefined_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "undefined_both": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "retrograde_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "day_chart_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "review_charts": 0,
+      "max_longitude_delta_arcsec": 0.01765113137253138,
+      "max_latitude_delta_arcsec": 0.0,
+      "max_separation_arcsec": 0.01765113137253138
+    },
+    "h_points": {
+      "charts": 144,
+      "measurements": 2880,
+      "angular_exceeded": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "house_crossing": {
+        "measurements": 1482,
+        "charts": 78
+      },
+      "zodiac_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "display_zodiac_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "undefined_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "undefined_both": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "retrograde_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "day_chart_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "review_charts": 78,
+      "max_longitude_delta_arcsec": 1.506332452231618,
+      "max_latitude_delta_arcsec": 0.5625233453059764,
+      "max_separation_arcsec": 1.5318764883270004
+    },
+    "h_cusps": {
+      "charts": 144,
+      "measurements": 1728,
+      "angular_exceeded": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "house_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "zodiac_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "display_zodiac_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "undefined_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "undefined_both": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "retrograde_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "day_chart_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "review_charts": 0,
+      "max_longitude_delta_arcsec": 0.0026197570832664496,
+      "max_latitude_delta_arcsec": 0.0,
+      "max_separation_arcsec": 0.0026197570832664496
+    },
+    "max_point_longitude": {
+      "case": "complete-1960-06-P",
+      "system": "P",
+      "name": "灶神星",
+      "point_id": 20,
+      "product_longitude": 282.95548534068917,
+      "reference_longitude": 282.955066915008,
+      "longitude_delta_arcsec": 1.506332452231618
+    },
+    "max_point_separation": {
+      "case": "complete-1960-06-P",
+      "system": "P",
+      "name": "灶神星",
+      "point_id": 20,
+      "product_longitude": 282.95548534068917,
+      "reference_longitude": 282.955066915008,
+      "separation_arcsec": 1.5318764883270004
+    },
+    "max_cusp_longitude": {
+      "case": "complete-2012-08-R",
+      "system": "R",
+      "name": "宮頭 12",
+      "point_id": 12,
+      "product_longitude": 77.07169111176162,
+      "reference_longitude": 77.07169601485367,
+      "longitude_delta_arcsec": 0.01765113137253138
+    },
+    "max_h_cusp_longitude": {
+      "case": "complete-1958-10-H",
+      "system": "H",
+      "name": "宮頭 2",
+      "point_id": 2,
+      "product_longitude": 42.983035317056874,
+      "reference_longitude": 42.98303458934657,
+      "longitude_delta_arcsec": 0.0026197570832664496
+    },
+    "house_differences_by_point": {
+      "太陽": 78,
+      "月亮": 78,
+      "水星": 78,
+      "金星": 78,
+      "火星": 78,
+      "木星": 78,
+      "土星": 78,
+      "天王星": 78,
+      "海王星": 78,
+      "冥王星": 78,
+      "北交點": 78,
+      "凱龍星": 78,
+      "婚神星": 78,
+      "智神星": 78,
+      "灶神星": 78,
+      "穀神星": 78,
+      "南交點": 78,
+      "幸運點": 78,
+      "上升點": 78
+    },
+    "house_differences_by_system": {
+      "H": 1482
+    },
+    "corrected_mc_difference_count": 0,
+    "changed_point_before_after": {
+      "2 -> 11": 69,
+      "6 -> 7": 160,
+      "1 -> 12": 165,
+      "5 -> 8": 68,
+      "10 -> 3": 57,
+      "11 -> 2": 95,
+      "7 -> 6": 142,
+      "3 -> 10": 51,
+      "4 -> 9": 55,
+      "12 -> 1": 135,
+      "4 -> 10": 67,
+      "1 -> 6": 31,
+      "12 -> 7": 72,
+      "8 -> 11": 4,
+      "2 -> 5": 8,
+      "7 -> 12": 27,
+      "5 -> 2": 11,
+      "8 -> 5": 84,
+      "6 -> 1": 62,
+      "11 -> 8": 5,
+      "4 -> 3": 2,
+      "10 -> 9": 2,
+      "9 -> 4": 59,
+      "12 -> 6": 21,
+      "1 -> 7": 32,
+      "6 -> 12": 27,
+      "10 -> 4": 1,
+      "7 -> 1": 25,
+      "3 -> 9": 2,
+      "8 -> 2": 1,
+      "9 -> 10": 1,
+      "3 -> 4": 3,
+      "5 -> 11": 1,
+      "11 -> 5": 1,
+      "2 -> 8": 2
+    },
+    "affected_case_ids": [
+      "complete-1904-01-H",
+      "complete-1904-03-H",
+      "complete-1904-04-H",
+      "complete-1904-05-H",
+      "complete-1904-06-H",
+      "complete-1904-09-H",
+      "complete-1914-01-H",
+      "complete-1914-04-H",
+      "complete-1914-08-H",
+      "complete-1914-10-H",
+      "complete-1914-11-H",
+      "complete-1914-12-H",
+      "complete-1936-03-H",
+      "complete-1936-05-H",
+      "complete-1936-06-H",
+      "complete-1936-07-H",
+      "complete-1936-08-H",
+      "complete-1936-09-H",
+      "complete-1936-11-H",
+      "complete-1941-01-H",
+      "complete-1941-02-H",
+      "complete-1941-03-H",
+      "complete-1941-04-H",
+      "complete-1941-06-H",
+      "complete-1941-10-H",
+      "complete-1941-12-H",
+      "complete-1958-01-H",
+      "complete-1958-05-H",
+      "complete-1958-07-H",
+      "complete-1958-08-H",
+      "complete-1958-09-H",
+      "complete-1958-10-H",
+      "complete-1960-02-H",
+      "complete-1960-03-H",
+      "complete-1960-04-H",
+      "complete-1960-05-H",
+      "complete-1960-06-H",
+      "complete-1960-08-H",
+      "complete-1960-12-H",
+      "complete-1973-03-H",
+      "complete-1973-07-H",
+      "complete-1973-09-H",
+      "complete-1973-10-H",
+      "complete-1973-11-H",
+      "complete-1973-12-H",
+      "complete-1983-02-H",
+      "complete-1983-04-H",
+      "complete-1983-05-H",
+      "complete-1983-06-H",
+      "complete-1983-07-H",
+      "complete-1983-10-H",
+      "complete-2000-01-H",
+      "complete-2000-02-H",
+      "complete-2000-05-H",
+      "complete-2000-09-H",
+      "complete-2000-11-H",
+      "complete-2000-12-H",
+      "complete-2004-04-H",
+      "complete-2004-06-H",
+      "complete-2004-07-H",
+      "complete-2004-08-H",
+      "complete-2004-09-H",
+      "complete-2004-10-H",
+      "complete-2004-12-H",
+      "complete-2012-01-H",
+      "complete-2012-02-H",
+      "complete-2012-03-H",
+      "complete-2012-04-H",
+      "complete-2012-07-H",
+      "complete-2012-11-H",
+      "complete-2027-02-H",
+      "complete-2027-06-H",
+      "complete-2027-07-H",
+      "complete-2027-08-H",
+      "complete-2027-09-H",
+      "complete-2027-10-H",
+      "complete-2027-11-H",
+      "complete-2027-12-H"
+    ]
+  },
+  "legacy": {
+    "comparable_charts": 1247,
+    "points": {
+      "charts": 1247,
+      "measurements": 24940,
+      "angular_exceeded": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "house_crossing": {
+        "measurements": 1102,
+        "charts": 58
+      },
+      "zodiac_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "display_zodiac_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "undefined_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "undefined_both": {
+        "measurements": 32,
+        "charts": 23
+      },
+      "retrograde_mismatch": {
+        "measurements": 1,
+        "charts": 1
+      },
+      "day_chart_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "review_charts": 59,
+      "max_longitude_delta_arcsec": 2.074552711172828,
+      "max_latitude_delta_arcsec": 0.8983491979748237,
+      "max_separation_arcsec": 1.963023576039231
+    },
+    "cusps": {
+      "charts": 1247,
+      "measurements": 14964,
+      "angular_exceeded": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "house_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "zodiac_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "display_zodiac_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "undefined_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "undefined_both": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "retrograde_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "day_chart_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "review_charts": 0,
+      "max_longitude_delta_arcsec": 1.7042526548266324,
+      "max_latitude_delta_arcsec": 0.0,
+      "max_separation_arcsec": 1.7042526548266321
+    },
+    "h_points": {
+      "charts": 101,
+      "measurements": 2020,
+      "angular_exceeded": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "house_crossing": {
+        "measurements": 1102,
+        "charts": 58
+      },
+      "zodiac_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "display_zodiac_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "undefined_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "undefined_both": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "retrograde_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "day_chart_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "review_charts": 58,
+      "max_longitude_delta_arcsec": 1.7641975174683466,
+      "max_latitude_delta_arcsec": 0.7014108793139684,
+      "max_separation_arcsec": 1.8130857064500738
+    },
+    "h_cusps": {
+      "charts": 101,
+      "measurements": 1212,
+      "angular_exceeded": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "house_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "zodiac_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "display_zodiac_crossing": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "undefined_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "undefined_both": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "retrograde_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "day_chart_mismatch": {
+        "measurements": 0,
+        "charts": 0
+      },
+      "review_charts": 0,
+      "max_longitude_delta_arcsec": 0.006110244112278451,
+      "max_latitude_delta_arcsec": 0.0,
+      "max_separation_arcsec": 0.006110244112278451
+    },
+    "max_point_longitude": {
+      "case": "main-1940-01",
+      "system": "T",
+      "name": "智神星",
+      "point_id": 18,
+      "product_longitude": 111.68324382560463,
+      "reference_longitude": 111.68266756096264,
+      "longitude_delta_arcsec": 2.074552711172828
+    },
+    "max_point_separation": {
+      "case": "main-1935-09",
+      "system": "V",
+      "name": "灶神星",
+      "point_id": 20,
+      "product_longitude": 341.99659223660365,
+      "reference_longitude": 341.99606527515243,
+      "separation_arcsec": 1.963023576039231
+    },
+    "max_cusp_longitude": {
+      "case": "edge-range-last",
+      "system": "P",
+      "name": "宮頭 8",
+      "point_id": 8,
+      "product_longitude": 154.89917842995317,
+      "reference_longitude": 154.89870502643794,
+      "longitude_delta_arcsec": 1.7042526548266324
+    },
+    "max_h_cusp_longitude": {
+      "case": "edge-azimuth-main-2023-05",
+      "system": "H",
+      "name": "宮頭 6",
+      "point_id": 6,
+      "product_longitude": 354.021173499425,
+      "reference_longitude": 354.02117519671503,
+      "longitude_delta_arcsec": 0.006110244112278451
+    },
+    "house_differences_by_point": {
+      "太陽": 58,
+      "月亮": 58,
+      "水星": 58,
+      "金星": 58,
+      "火星": 58,
+      "木星": 58,
+      "土星": 58,
+      "天王星": 58,
+      "海王星": 58,
+      "冥王星": 58,
+      "北交點": 58,
+      "凱龍星": 58,
+      "婚神星": 58,
+      "智神星": 58,
+      "灶神星": 58,
+      "穀神星": 58,
+      "南交點": 58,
+      "幸運點": 58,
+      "上升點": 58
+    },
+    "house_differences_by_system": {
+      "H": 1102
+    },
+    "corrected_mc_difference_count": 0,
+    "changed_point_before_after": {
+      "2 -> 11": 44,
+      "1 -> 12": 177,
+      "7 -> 6": 155,
+      "6 -> 7": 68,
+      "4 -> 10": 49,
+      "8 -> 5": 60,
+      "9 -> 4": 30,
+      "10 -> 3": 29,
+      "4 -> 9": 24,
+      "5 -> 8": 40,
+      "3 -> 10": 32,
+      "11 -> 2": 48,
+      "12 -> 1": 91,
+      "12 -> 7": 34,
+      "6 -> 1": 42,
+      "11 -> 8": 9,
+      "1 -> 6": 38,
+      "4 -> 3": 3,
+      "5 -> 2": 7,
+      "7 -> 12": 38,
+      "2 -> 5": 9,
+      "9 -> 10": 2,
+      "8 -> 11": 3,
+      "3 -> 4": 2,
+      "10 -> 9": 3,
+      "7 -> 1": 27,
+      "1 -> 7": 16,
+      "8 -> 2": 6,
+      "2 -> 8": 5,
+      "3 -> 9": 2,
+      "6 -> 12": 31,
+      "12 -> 6": 18,
+      "11 -> 5": 3,
+      "5 -> 11": 3,
+      "10 -> 4": 2
+    },
+    "affected_case_ids": [
+      "edge-azimuth-main-1936-03",
+      "edge-azimuth-main-1947-04",
+      "edge-azimuth-main-1965-09",
+      "edge-azimuth-main-1967-07",
+      "edge-azimuth-main-1977-10",
+      "edge-azimuth-main-1978-08",
+      "edge-azimuth-main-1980-06",
+      "edge-azimuth-main-1981-12",
+      "edge-azimuth-main-1982-05",
+      "edge-azimuth-main-1984-03",
+      "edge-azimuth-main-1991-01",
+      "edge-azimuth-main-1994-10",
+      "edge-azimuth-main-2002-03",
+      "edge-azimuth-main-2022-06",
+      "edge-azimuth-main-2023-05",
+      "edge-azimuth-main-2023-11",
+      "main-1936-03",
+      "main-1943-03",
+      "main-1943-08",
+      "main-1945-02",
+      "main-1947-04",
+      "main-1953-06",
+      "main-1957-01",
+      "main-1960-12",
+      "main-1963-08",
+      "main-1964-09",
+      "main-1965-05",
+      "main-1965-08",
+      "main-1965-09",
+      "main-1967-07",
+      "main-1968-04",
+      "main-1969-04",
+      "main-1971-01",
+      "main-1973-09",
+      "main-1976-09",
+      "main-1977-08",
+      "main-1977-10",
+      "main-1978-08",
+      "main-1980-05",
+      "main-1980-06",
+      "main-1982-05",
+      "main-1984-03",
+      "main-1988-10",
+      "main-1991-03",
+      "main-1995-12",
+      "main-1999-07",
+      "main-2002-06",
+      "main-2004-04",
+      "main-2009-10",
+      "main-2012-06",
+      "main-2012-11",
+      "main-2014-06",
+      "main-2014-07",
+      "main-2016-03",
+      "main-2018-04",
+      "main-2023-11",
+      "main-2025-07",
+      "main-2026-05"
+    ]
+  },
+  "boundary": {
+    "cases": 87,
+    "swiss_outcomes": {
+      "ok": 49,
+      "not_calculated": 4,
+      "error": 4,
+      "not_applicable": 30
+    },
+    "comparable_charts": 47,
+    "rows": 1504
+  }
+}

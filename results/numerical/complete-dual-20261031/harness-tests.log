@@ -1,0 +1,15 @@
+test_legacy_swiss_input_defaults_to_actual (test_complete_latitude_baselines.ModeTests.test_legacy_swiss_input_defaults_to_actual) ... ok
+test_mode_inventory_and_metadata_must_agree (test_complete_latitude_baselines.ModeTests.test_mode_inventory_and_metadata_must_agree) ... ok
+test_swiss_modes_retain_real_coordinates_and_pass_distinct_latitudes (test_complete_latitude_baselines.ModeTests.test_swiss_modes_retain_real_coordinates_and_pass_distinct_latitudes) ... ok
+test_swiss_rejects_truthy_non_boolean (test_complete_latitude_baselines.ModeTests.test_swiss_rejects_truthy_non_boolean) ... ok
+test_checkpoint_cannot_replace_committed_result (test_complete_regression.IntegrityTests.test_checkpoint_cannot_replace_committed_result) ... ok
+test_checkpoint_integer_keys_survive_json_roundtrip (test_complete_regression.IntegrityTests.test_checkpoint_integer_keys_survive_json_roundtrip) ... ok
+test_frozen_suite_coverage_and_corruption (test_complete_regression.IntegrityTests.test_frozen_suite_coverage_and_corruption) ... ok
+test_only_timings_are_excluded (test_complete_regression.IntegrityTests.test_only_timings_are_excluded) ... ok
+test_resume_rejects_tampered_or_wrong_environment_checkpoint (test_complete_regression.IntegrityTests.test_resume_rejects_tampered_or_wrong_environment_checkpoint) ... ok
+test_signed_zero_is_not_equal (test_complete_regression.IntegrityTests.test_signed_zero_is_not_equal) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.201s
+
+OK

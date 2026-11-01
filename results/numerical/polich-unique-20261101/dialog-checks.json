@@ -1,0 +1,34 @@
+[
+  {
+    "language": "zh-TW",
+    "source": "此時間／地點的 Polich–Page 宮位制因幾何多解、折返或退化，無法取得唯一且連續的歸宮結果，因此停止整張排盤。即使只有個別天體無法唯一歸宮，也不輸出星盤。請改選其他宮位制後重新排盤。",
+    "text": "此時間／地點的 Polich–Page 宮位制因幾何多解、折返或退化，無法取得唯一且連續的歸宮結果，因此停止整張排盤。即使只有個別天體無法唯一歸宮，也不輸出星盤。請改選其他宮位制後重新排盤。",
+    "width": 400,
+    "height": 180,
+    "screenshot": "visuals-final/zh-TW-refusal-0.png"
+  },
+  {
+    "language": "zh-TW",
+    "source": "Polich–Page 個別點的原始求解值與已驗證的宮位邊界不一致，或精度不足以判定邊界哪一側，因此無法確認歸宮結果，停止整張排盤。請改選其他宮位制後重新排盤。",
+    "text": "Polich–Page 個別點的原始求解值與已驗證的宮位邊界不一致，或精度不足以判定邊界哪一側，因此無法確認歸宮結果，停止整張排盤。請改選其他宮位制後重新排盤。",
+    "width": 400,
+    "height": 158,
+    "screenshot": "visuals-final/zh-TW-refusal-1.png"
+  },
+  {
+    "language": "en-US",
+    "source": "此時間／地點的 Polich–Page 宮位制因幾何多解、折返或退化，無法取得唯一且連續的歸宮結果，因此停止整張排盤。即使只有個別天體無法唯一歸宮，也不輸出星盤。請改選其他宮位制後重新排盤。",
+    "text": "The Polich–Page geometry at this time and location has multiple solutions, a fold, or a degeneracy, so unique and continuous house placement is not possible. The entire chart is refused even if only one body cannot be placed uniquely. Choose another house system and calculate again.",
+    "width": 400,
+    "height": 224,
+    "screenshot": "visuals-final/en-US-refusal-0.png"
+  },
+  {
+    "language": "en-US",
+    "source": "Polich–Page 個別點的原始求解值與已驗證的宮位邊界不一致，或精度不足以判定邊界哪一側，因此無法確認歸宮結果，停止整張排盤。請改選其他宮位制後重新排盤。",
+    "text": "A raw Polich–Page solution disagrees with the verified house boundary, or numerical precision cannot determine which side of the boundary a point occupies. House placement cannot be confirmed, so the entire chart is refused. Choose another house system and calculate again.",
+    "width": 400,
+    "height": 224,
+    "screenshot": "visuals-final/en-US-refusal-1.png"
+  }
+]

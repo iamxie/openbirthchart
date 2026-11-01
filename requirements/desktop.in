@@ -1,0 +1,6 @@
+-c core.lock
+libephemeris==3.2.2
+pyerfa==2.0.1.5
+PySide6-Essentials>=6.8,<7
+tzdata
+pyinstaller>=6,<7

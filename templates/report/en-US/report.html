@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="$lang">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>$person · $title</title><style>$css</style></head>
+<body>
+<header class="screen-only">
+<nav><a href="#chart">$chart_title</a><a href="#positions">$positions_title</a><a href="#houses">$houses_title</a><a href="#matrix">$matrix_title</a><a href="#details">$details_title</a></nav></header>
+<main>
+<section class="$chart_page_class" id="chart"><h1>$chart_title</h1>$house_notice
+<div class="chart-layout"><div class="wheel">$wheel</div><aside>$metadata $warnings</aside></div>$notes_content</section>
+<section class="page" id="positions"><h1>$positions_title</h1>$house_notice$positions</section>
+<section class="page" id="houses"><h1>$houses_title</h1>$houses</section>
+<section class="page" id="matrix"><h1>$matrix_title</h1><div class="matrix-layout"><div>$matrix</div><aside><p>$matrix_hint</p><h2>$legend_title</h2>$legend</aside></div></section>
+<section class="page" id="details"><h1>$details_title</h1>$details</section>
+$azimuth_help
+</main>
+<footer class="screen-only print-hint">$print_hint</footer>
+</body></html>

@@ -1,0 +1,4983 @@
+{
+  "source": "results\\numerical\\house-number2-1200-20261030\\results.jsonl.gz",
+  "source_sha256": "59f02bbd2a7a694ae50376a712a1fd364861cbc124e2dafc82803baabd8e21dd",
+  "records": [
+    {
+      "current_engine_exact_match": true,
+      "elapsed_seconds": 0.16113989998120815,
+      "house_position_audit": [
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            178.48725735655535,
+            0.0002666099362410855,
+            "C"
+          ],
+          "correction": null,
+          "house": 4,
+          "point_id": 0,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 4.9331029529447,
+          "raw_position": 4.9331029529447,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            140.3433245332129,
+            4.21504445470027,
+            "C"
+          ],
+          "correction": null,
+          "house": 3,
+          "point_id": 1,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 3.6581596466618946,
+          "raw_position": 3.6581596466618946,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            193.86986124884842,
+            -0.09512692102599032,
+            "C"
+          ],
+          "correction": null,
+          "house": 5,
+          "point_id": 2,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 5.52781451885285,
+          "raw_position": 5.52781451885285,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            160.69981760191496,
+            -7.717525764568453,
+            "C"
+          ],
+          "correction": null,
+          "house": 4,
+          "point_id": 3,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 4.18514381893163,
+          "raw_position": 4.18514381893163,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            187.74417922859644,
+            0.6713930802789204,
+            "C"
+          ],
+          "correction": null,
+          "house": 5,
+          "point_id": 4,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 5.290870254143675,
+          "raw_position": 5.290870254143675,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            358.5063462582338,
+            -1.6087886186866147,
+            "C"
+          ],
+          "correction": null,
+          "house": 10,
+          "point_id": 5,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 10.94259664981428,
+          "raw_position": 10.94259664981428,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            242.8001668857663,
+            1.6954137844963784,
+            "C"
+          ],
+          "correction": null,
+          "house": 7,
+          "point_id": 6,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 7.268565795891742,
+          "raw_position": 7.268565795891742,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            1.549804650830498,
+            -0.7744989650937844,
+            "C"
+          ],
+          "correction": null,
+          "house": 11,
+          "point_id": 7,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 11.053638156487192,
+          "raw_position": 11.053638156487192,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            147.88454383439463,
+            0.4743498244012481,
+            "C"
+          ],
+          "correction": null,
+          "house": 3,
+          "point_id": 8,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 3.846538847289341,
+          "raw_position": 3.846538847289341,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            107.01734950599844,
+            -1.1037243124441767,
+            "C"
+          ],
+          "correction": null,
+          "house": 2,
+          "point_id": 9,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 2.5843192607460823,
+          "raw_position": 2.5843192607460823,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            83.0974842674698,
+            0.0,
+            "C"
+          ],
+          "correction": null,
+          "house": 1,
+          "point_id": 11,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 1.9145104127787274,
+          "raw_position": 1.9145104127787274,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            35.291734669800206,
+            -0.6070650414484097,
+            "C"
+          ],
+          "correction": null,
+          "house": 12,
+          "point_id": 15,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 12.340064863336895,
+          "raw_position": 12.340064863336895,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            134.81850063977137,
+            -8.322222171613001,
+            "C"
+          ],
+          "correction": null,
+          "house": 3,
+          "point_id": 19,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 3.286208944750834,
+          "raw_position": 3.286208944750834,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            236.15967938683562,
+            30.810637889590247,
+            "C"
+          ],
+          "correction": null,
+          "house": 6,
+          "point_id": 18,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 6.696326412534252,
+          "raw_position": 6.696326412534252,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            242.23936419798565,
+            1.862816592988462,
+            "C"
+          ],
+          "correction": null,
+          "house": 7,
+          "point_id": 20,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 7.248288223562081,
+          "raw_position": 7.248288223562081,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            255.78934871189657,
+            -2.735916722787407,
+            "C"
+          ],
+          "correction": null,
+          "house": 7,
+          "point_id": 17,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 7.7417567814763775,
+          "raw_position": 7.7417567814763775,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            263.0974842674698,
+            0.0,
+            "C"
+          ],
+          "correction": null,
+          "house": 7,
+          "point_id": -11,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 7.914510412778727,
+          "raw_position": 7.914510412778727,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            91.99492515413246,
+            0,
+            "C"
+          ],
+          "correction": null,
+          "house": 2,
+          "point_id": -1,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 2.1733042010587065,
+          "raw_position": 2.1733042010587065,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            53.85099233079001,
+            0,
+            "C"
+          ],
+          "correction": "exact_13_to_1",
+          "house": 1,
+          "point_id": -2,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 1.0,
+          "raw_position": 13.0,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            334.6341517480271,
+            -33.86785,
+            23.449178919232605,
+            332.67079794131735,
+            0,
+            "C"
+          ],
+          "correction": null,
+          "house": 10,
+          "point_id": -3,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 10.0,
+          "raw_position": 10.0,
+          "status": "ok",
+          "warnings": []
+        }
+      ],
+      "id": "main-1927-09",
+      "numeric": {
+        "all_points": {
+          "-1": {
+            "house": 2,
+            "id": -1,
+            "lat": 0,
+            "lon": {
+              "$float": "0x1.6ffacda8dbddep+6"
+            },
+            "retrograde": false,
+            "source": "derived",
+            "speed": null
+          },
+          "-11": {
+            "house": 7,
+            "id": -11,
+            "lat": {
+              "$float": "0x0.0p+0"
+            },
+            "lon": {
+              "$float": "0x1.0718f4ba9ca84p+8"
+            },
+            "retrograde": true,
+            "source": "skyfield",
+            "speed": {
+              "$float": "-0x1.3b56fc03c9800p-3"
+            }
+          },
+          "-2": {
+            "house": 1,
+            "id": -2,
+            "lat": 0,
+            "lon": {
+              "$float": "0x1.aeced5112f1e8p+5"
+            },
+            "retrograde": false,
+            "source": "derived",
+            "speed": null
+          },
+          "-3": {
+            "house": 10,
+            "id": -3,
+            "lat": 0,
+            "lon": {
+              "$float": "0x1.4cabb969f42eap+8"
+            },
+            "retrograde": false,
+            "source": "derived",
+            "speed": null
+          },
+          "0": {
+            "house": 4,
+            "id": 0,
+            "lat": {
+              "$float": "0x1.178f8f4fa49fdp-12"
+            },
+            "lon": {
+              "$float": "0x1.64f979cbd6480p+7"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.f520334d2c000p-1"
+            }
+          },
+          "1": {
+            "house": 3,
+            "id": 1,
+            "lat": {
+              "$float": "0x1.0dc349d107ec9p+2"
+            },
+            "lon": {
+              "$float": "0x1.18afc83bb420bp+7"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.8c015753c2400p+3"
+            }
+          },
+          "11": {
+            "house": 1,
+            "id": 11,
+            "lat": {
+              "$float": "0x0.0p+0"
+            },
+            "lon": {
+              "$float": "0x1.4c63d2ea72a11p+6"
+            },
+            "retrograde": true,
+            "source": "skyfield",
+            "speed": {
+              "$float": "-0x1.3b56fc03c9800p-3"
+            }
+          },
+          "15": {
+            "house": 12,
+            "id": 15,
+            "lat": {
+              "$float": "-0x1.36d13aa721b11p-1"
+            },
+            "lon": {
+              "$float": "0x1.1a5578fc8f35cp+5"
+            },
+            "retrograde": true,
+            "source": "leb",
+            "speed": {
+              "$float": "-0x1.24d5c94d70000p-5"
+            }
+          },
+          "17": {
+            "house": 7,
+            "id": 17,
+            "lat": {
+              "$float": "-0x1.5e3284e879c7dp+1"
+            },
+            "lon": {
+              "$float": "0x1.ff942583ad789p+7"
+            },
+            "retrograde": false,
+            "source": "leb",
+            "speed": {
+              "$float": "0x1.0cc2be01ac000p-2"
+            }
+          },
+          "18": {
+            "house": 6,
+            "id": 18,
+            "lat": {
+              "$float": "0x1.ecf85f6f8b046p+4"
+            },
+            "lon": {
+              "$float": "0x1.d851c17f209bdp+7"
+            },
+            "retrograde": false,
+            "source": "leb",
+            "speed": {
+              "$float": "0x1.655771e464000p-2"
+            }
+          },
+          "19": {
+            "house": 3,
+            "id": 19,
+            "lat": {
+              "$float": "-0x1.0a4fa4df23f75p+3"
+            },
+            "lon": {
+              "$float": "0x1.0da312840f257p+7"
+            },
+            "retrograde": false,
+            "source": "leb",
+            "speed": {
+              "$float": "0x1.e2e8df7dbc000p-2"
+            }
+          },
+          "2": {
+            "house": 5,
+            "id": 2,
+            "lat": {
+              "$float": "-0x1.85a3ce6c69b0ap-4"
+            },
+            "lon": {
+              "$float": "0x1.83bd5e741fb93p+7"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.9294334046000p+0"
+            }
+          },
+          "20": {
+            "house": 7,
+            "id": 20,
+            "lat": {
+              "$float": "0x1.dce18c5954e2ep+0"
+            },
+            "lon": {
+              "$float": "0x1.e47a8df1b45d0p+7"
+            },
+            "retrograde": false,
+            "source": "leb",
+            "speed": {
+              "$float": "0x1.ce63c42da3000p-2"
+            }
+          },
+          "3": {
+            "house": 4,
+            "id": 3,
+            "lat": {
+              "$float": "-0x1.edebf12f36f84p+2"
+            },
+            "lon": {
+              "$float": "0x1.41664e7e22c7ap+7"
+            },
+            "retrograde": true,
+            "source": "skyfield",
+            "speed": {
+              "$float": "-0x1.841637d368000p-2"
+            }
+          },
+          "4": {
+            "house": 5,
+            "id": 4,
+            "lat": {
+              "$float": "0x1.57c0d5751e097p-1"
+            },
+            "lon": {
+              "$float": "0x1.777d050f525e5p+7"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.4eb94f0728000p-1"
+            }
+          },
+          "5": {
+            "house": 10,
+            "id": 5,
+            "lat": {
+              "$float": "-0x1.9bd992276f9f5p+0"
+            },
+            "lon": {
+              "$float": "0x1.66819fe88b90fp+8"
+            },
+            "retrograde": true,
+            "source": "skyfield",
+            "speed": {
+              "$float": "-0x1.120acfb9e0000p-3"
+            }
+          },
+          "6": {
+            "house": 7,
+            "id": 6,
+            "lat": {
+              "$float": "0x1.b206a345997b4p+0"
+            },
+            "lon": {
+              "$float": "0x1.e599af795b6abp+7"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.24c98ca7a0000p-4"
+            }
+          },
+          "7": {
+            "house": 11,
+            "id": 7,
+            "lat": {
+              "$float": "-0x1.8c8b20dbba304p-1"
+            },
+            "lon": {
+              "$float": "0x1.8cbfff628174cp+0"
+            },
+            "retrograde": true,
+            "source": "skyfield",
+            "speed": {
+              "$float": "-0x1.48d80b2d7f800p-5"
+            }
+          },
+          "8": {
+            "house": 3,
+            "id": 8,
+            "lat": {
+              "$float": "0x1.e5bbf5daaab45p-2"
+            },
+            "lon": {
+              "$float": "0x1.27c4e2edf134fp+7"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.0d5a6670c0000p-5"
+            }
+          },
+          "9": {
+            "house": 2,
+            "id": 9,
+            "lat": {
+              "$float": "-0x1.1a8dad31bf717p+0"
+            },
+            "lon": {
+              "$float": "0x1.ac11c411a375dp+6"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.55b921c680000p-7"
+            }
+          }
+        },
+        "asc": {
+          "$float": "0x1.aeced5112f1e8p+5"
+        },
+        "aspects": {
+          "0:5:180": {
+            "a_lon": {
+              "$float": "0x1.64f979cbd6480p+7"
+            },
+            "angle": 180,
+            "b_lon": {
+              "$float": "0x1.66819fe88b90fp+8"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+1"
+            },
+            "minor": false,
+            "orb": {
+              "$float": "0x1.38c0a81b3c000p-6"
+            }
+          },
+          "0:8:30": {
+            "a_lon": {
+              "$float": "0x1.64f979cbd6480p+7"
+            },
+            "angle": 30,
+            "b_lon": {
+              "$float": "0x1.27c4e2edf134fp+7"
+            },
+            "limit": {
+              "$float": "0x1.0000000000000p+0"
+            },
+            "minor": true,
+            "orb": {
+              "$float": "0x1.3496dde513100p-1"
+            }
+          },
+          "0:9:72": {
+            "a_lon": {
+              "$float": "0x1.64f979cbd6480p+7"
+            },
+            "angle": 72,
+            "b_lon": {
+              "$float": "0x1.ac11c411a375dp+6"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+0"
+            },
+            "minor": true,
+            "orb": {
+              "$float": "0x1.0f683cfb72e00p-1"
+            }
+          },
+          "2:8:45": {
+            "a_lon": {
+              "$float": "0x1.83bd5e741fb93p+7"
+            },
+            "angle": 45,
+            "b_lon": {
+              "$float": "0x1.27c4e2edf134fp+7"
+            },
+            "limit": {
+              "$float": "0x1.0000000000000p+0"
+            },
+            "minor": true,
+            "orb": {
+              "$float": "0x1.f87b862e84400p-1"
+            }
+          },
+          "4:-2:135": {
+            "a_lon": {
+              "$float": "0x1.777d050f525e5p+7"
+            },
+            "angle": 135,
+            "b_lon": {
+              "$float": "0x1.aeced5112f1e8p+5"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+0"
+            },
+            "minor": true,
+            "orb": {
+              "$float": "0x1.1b581a7cb4a00p+0"
+            }
+          },
+          "5:7:0": {
+            "a_lon": {
+              "$float": "0x1.66819fe88b90fp+8"
+            },
+            "angle": 0,
+            "b_lon": {
+              "$float": "0x1.8cbfff628174cp+0"
+            },
+            "limit": {
+              "$float": "0x1.0000000000000p+2"
+            },
+            "minor": false,
+            "orb": {
+              "$float": "0x1.85900b6b78400p+1"
+            }
+          },
+          "5:8:150": {
+            "a_lon": {
+              "$float": "0x1.66819fe88b90fp+8"
+            },
+            "angle": 150,
+            "b_lon": {
+              "$float": "0x1.27c4e2edf134fp+7"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+0"
+            },
+            "minor": true,
+            "orb": {
+              "$float": "0x1.3e5ce325ed000p-1"
+            }
+          },
+          "6:-3:90": {
+            "a_lon": {
+              "$float": "0x1.e599af795b6abp+7"
+            },
+            "angle": 90,
+            "b_lon": {
+              "$float": "0x1.4cabb969f42eap+8"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+1"
+            },
+            "minor": false,
+            "orb": {
+              "$float": "0x1.08f295cc35c00p-3"
+            }
+          },
+          "6:7:120": {
+            "a_lon": {
+              "$float": "0x1.e599af795b6abp+7"
+            },
+            "angle": 120,
+            "b_lon": {
+              "$float": "0x1.8cbfff628174cp+0"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+1"
+            },
+            "minor": false,
+            "orb": {
+              "$float": "0x1.4017bd4b33e00p+0"
+            }
+          },
+          "6:9:135": {
+            "a_lon": {
+              "$float": "0x1.e599af795b6abp+7"
+            },
+            "angle": 135,
+            "b_lon": {
+              "$float": "0x1.ac11c411a375dp+6"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+0"
+            },
+            "minor": true,
+            "orb": {
+              "$float": "0x1.90cd7089afc00p-1"
+            }
+          },
+          "9:-3:135": {
+            "a_lon": {
+              "$float": "0x1.ac11c411a375dp+6"
+            },
+            "angle": 135,
+            "b_lon": {
+              "$float": "0x1.4cabb969f42eap+8"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+0"
+            },
+            "minor": true,
+            "orb": {
+              "$float": "0x1.4e90cb16a2600p-1"
+            }
+          }
+        },
+        "cusps": [
+          {
+            "$float": "0x1.aeced5112f1e8p+5"
+          },
+          {
+            "$float": "0x1.580fd6b81ae54p+6"
+          },
+          {
+            "$float": "0x1.e2fd46f7b4e89p+6"
+          },
+          {
+            "$float": "0x1.315772d3e85d4p+7"
+          },
+          {
+            "$float": "0x1.687a46f2d26bap+7"
+          },
+          {
+            "$float": "0x1.9c32688d39836p+7"
+          },
+          {
+            "$float": "0x1.d3b3b5444bc7ap+7"
+          },
+          {
+            "$float": "0x1.0a03f5ae06b95p+8"
+          },
+          {
+            "$float": "0x1.2cbf51bded3a2p+8"
+          },
+          {
+            "$float": "0x1.4cabb969f42eap+8"
+          },
+          {
+            "$float": "0x1.e91bcb49ae921p-3"
+          },
+          {
+            "$float": "0x1.a1934469cc1b2p+4"
+          }
+        ],
+        "day_chart": false,
+        "dst_minutes": {
+          "$float": "0x0.0p+0"
+        },
+        "input": {
+          "dst_enabled": false,
+          "dst_minutes": 60,
+          "fold": 0,
+          "gender": "男",
+          "latitude": {
+            "$float": "-0x1.0ef15b573eab3p+5"
+          },
+          "local_iso": "1927-09-22T22:12:16",
+          "longitude": {
+            "$float": "0x1.2e6a25d8d79d1p+7"
+          },
+          "manual_dst": false,
+          "minor_aspects": true,
+          "name": "",
+          "notes": "",
+          "small_bodies": true,
+          "system": "C",
+          "zone": "Australia/Sydney"
+        },
+        "local": "1927-09-22T22:12:16+10:00",
+        "mc": {
+          "$float": "0x1.4cabb969f42eap+8"
+        },
+        "orbs": {
+          "0": {
+            "$float": "0x1.0000000000000p+2"
+          },
+          "120": {
+            "$float": "0x1.8000000000000p+1"
+          },
+          "135": {
+            "$float": "0x1.8000000000000p+0"
+          },
+          "150": {
+            "$float": "0x1.8000000000000p+0"
+          },
+          "180": {
+            "$float": "0x1.8000000000000p+1"
+          },
+          "30": {
+            "$float": "0x1.0000000000000p+0"
+          },
+          "45": {
+            "$float": "0x1.0000000000000p+0"
+          },
+          "60": {
+            "$float": "0x1.0000000000000p+1"
+          },
+          "72": {
+            "$float": "0x1.8000000000000p+0"
+          },
+          "90": {
+            "$float": "0x1.8000000000000p+1"
+          }
+        },
+        "times": {
+          "erfa_gast_deg": {
+            "$float": "0x1.6eda89b0dd578p+7"
+          },
+          "erfa_true_obliquity_deg": {
+            "$float": "0x1.772fd63c0281bp+4"
+          },
+          "tt_jd": {
+            "$float": "0x1.2809d012058bfp+21"
+          },
+          "ut1_jd": {
+            "$float": "0x1.2809d01172283p+21"
+          },
+          "ut1_source": "historical_model"
+        },
+        "utc": "1927-09-22T12:12:16+00:00",
+        "utc_offset": "UTC+10:00",
+        "visible_point_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11,
+          15,
+          19,
+          18,
+          20,
+          17,
+          -11,
+          -1,
+          -2,
+          -3
+        ]
+      },
+      "raw": {
+        "all_points": [
+          {
+            "color": "#df484c",
+            "house": 4,
+            "id": 0,
+            "lat": 0.0002666099362410855,
+            "lon": 178.48725735655535,
+            "name": "太陽",
+            "retrograde": false,
+            "short": "日",
+            "source": "skyfield",
+            "speed": 0.9787612945274304
+          },
+          {
+            "color": "#e45e82",
+            "house": 3,
+            "id": 1,
+            "lat": 4.21504445470027,
+            "lon": 140.3433245332129,
+            "name": "月亮",
+            "retrograde": false,
+            "short": "月",
+            "source": "skyfield",
+            "speed": 12.375163711158166
+          },
+          {
+            "color": "#22875e",
+            "house": 5,
+            "id": 2,
+            "lat": -0.09512692102599032,
+            "lon": 193.86986124884842,
+            "name": "水星",
+            "retrograde": false,
+            "short": "水",
+            "source": "skyfield",
+            "speed": 1.5725738555829594
+          },
+          {
+            "color": "#ce447e",
+            "house": 4,
+            "id": 3,
+            "lat": -7.717525764568453,
+            "lon": 160.69981760191496,
+            "name": "金星",
+            "retrograde": true,
+            "short": "金",
+            "source": "skyfield",
+            "speed": -0.3789910052091727
+          },
+          {
+            "color": "#bc542e",
+            "house": 5,
+            "id": 4,
+            "lat": 0.6713930802789204,
+            "lon": 187.74417922859644,
+            "name": "火星",
+            "retrograde": false,
+            "short": "火",
+            "source": "skyfield",
+            "speed": 0.653757543204847
+          },
+          {
+            "color": "#d85e2a",
+            "house": 10,
+            "id": 5,
+            "lat": -1.6087886186866147,
+            "lon": 358.5063462582338,
+            "name": "木星",
+            "retrograde": true,
+            "short": "木",
+            "source": "skyfield",
+            "speed": -0.13380968366618617
+          },
+          {
+            "color": "#88633d",
+            "house": 7,
+            "id": 6,
+            "lat": 1.6954137844963784,
+            "lon": 242.8001668857663,
+            "name": "土星",
+            "retrograde": false,
+            "short": "土",
+            "source": "skyfield",
+            "speed": 0.07148127501750423
+          },
+          {
+            "color": "#387b59",
+            "house": 11,
+            "id": 7,
+            "lat": -0.7744989650937844,
+            "lon": 1.549804650830498,
+            "name": "天王星",
+            "retrograde": true,
+            "short": "天",
+            "source": "skyfield",
+            "speed": -0.04014208014631038
+          },
+          {
+            "color": "#4e65bb",
+            "house": 3,
+            "id": 8,
+            "lat": 0.4743498244012481,
+            "lon": 147.88454383439463,
+            "name": "海王星",
+            "retrograde": false,
+            "short": "海",
+            "source": "skyfield",
+            "speed": 0.032880020216907724
+          },
+          {
+            "color": "#474359",
+            "house": 2,
+            "id": 9,
+            "lat": -1.1037243124441767,
+            "lon": 107.01734950599844,
+            "name": "冥王星",
+            "retrograde": false,
+            "short": "冥",
+            "source": "skyfield",
+            "speed": 0.010428563587083772
+          },
+          {
+            "color": "#777c3c",
+            "house": 1,
+            "id": 11,
+            "lat": 0.0,
+            "lon": 83.0974842674698,
+            "name": "北交點",
+            "retrograde": true,
+            "short": "北",
+            "source": "skyfield",
+            "speed": -0.1539745033889517
+          },
+          {
+            "color": "#3d8068",
+            "house": 12,
+            "id": 15,
+            "lat": -0.6070650414484097,
+            "lon": 35.291734669800206,
+            "name": "凱龍星",
+            "retrograde": true,
+            "short": "凱",
+            "source": "leb",
+            "speed": -0.03574647251980423
+          },
+          {
+            "color": "#44866e",
+            "house": 3,
+            "id": 19,
+            "lat": -8.322222171613001,
+            "lon": 134.81850063977137,
+            "name": "婚神星",
+            "retrograde": false,
+            "short": "婚",
+            "source": "leb",
+            "speed": 0.4715914650432751
+          },
+          {
+            "color": "#44866e",
+            "house": 6,
+            "id": 18,
+            "lat": 30.810637889590247,
+            "lon": 236.15967938683562,
+            "name": "智神星",
+            "retrograde": false,
+            "short": "智",
+            "source": "leb",
+            "speed": 0.34896638828740834
+          },
+          {
+            "color": "#44866e",
+            "house": 7,
+            "id": 20,
+            "lat": 1.862816592988462,
+            "lon": 242.23936419798565,
+            "name": "灶神星",
+            "retrograde": false,
+            "short": "灶",
+            "source": "leb",
+            "speed": 0.4515524533132975
+          },
+          {
+            "color": "#44866e",
+            "house": 7,
+            "id": 17,
+            "lat": -2.735916722787407,
+            "lon": 255.78934871189657,
+            "name": "穀神星",
+            "retrograde": false,
+            "short": "穀",
+            "source": "leb",
+            "speed": 0.262461632587474
+          },
+          {
+            "color": "#777c3c",
+            "house": 7,
+            "id": -11,
+            "lat": 0.0,
+            "lon": 263.0974842674698,
+            "name": "南交點",
+            "retrograde": true,
+            "short": "南",
+            "source": "skyfield",
+            "speed": -0.1539745033889517
+          },
+          {
+            "color": "#688966",
+            "house": 2,
+            "id": -1,
+            "lat": 0,
+            "lon": 91.99492515413246,
+            "name": "幸運點",
+            "retrograde": false,
+            "short": "幸",
+            "source": "derived",
+            "speed": null
+          },
+          {
+            "color": "#447d67",
+            "house": 1,
+            "id": -2,
+            "lat": 0,
+            "lon": 53.85099233079001,
+            "name": "上升點",
+            "retrograde": false,
+            "short": "升",
+            "source": "derived",
+            "speed": null
+          },
+          {
+            "color": "#447d67",
+            "house": 10,
+            "id": -3,
+            "lat": 0,
+            "lon": 332.67079794131735,
+            "name": "天頂",
+            "retrograde": false,
+            "short": "頂",
+            "source": "derived",
+            "speed": null
+          }
+        ],
+        "asc": 53.85099233079001,
+        "aspects": [
+          {
+            "a": "太陽",
+            "a_lon": 178.48725735655535,
+            "angle": 180,
+            "b": "木星",
+            "b_lon": 358.5063462582338,
+            "color": "#ed3030",
+            "limit": 3.0,
+            "minor": false,
+            "name": "對分",
+            "orb": 0.019088901678458114
+          },
+          {
+            "a": "土星",
+            "a_lon": 242.8001668857663,
+            "angle": 90,
+            "b": "天頂",
+            "b_lon": 332.67079794131735,
+            "color": "#ed3030",
+            "limit": 3.0,
+            "minor": false,
+            "name": "四分",
+            "orb": 0.12936894444894165
+          },
+          {
+            "a": "太陽",
+            "a_lon": 178.48725735655535,
+            "angle": 72,
+            "b": "冥王星",
+            "b_lon": 107.01734950599844,
+            "color": "#92934b",
+            "limit": 1.5,
+            "minor": true,
+            "name": "五分相",
+            "orb": 0.5300921494430781
+          },
+          {
+            "a": "太陽",
+            "a_lon": 178.48725735655535,
+            "angle": 30,
+            "b": "海王星",
+            "b_lon": 147.88454383439463,
+            "color": "#69a9a9",
+            "limit": 1.0,
+            "minor": true,
+            "name": "半六合",
+            "orb": 0.6027135221607125
+          },
+          {
+            "a": "木星",
+            "a_lon": 358.5063462582338,
+            "angle": 150,
+            "b": "海王星",
+            "b_lon": 147.88454383439463,
+            "color": "#655e58",
+            "limit": 1.5,
+            "minor": true,
+            "name": "梅花相",
+            "orb": 0.621802423839199
+          },
+          {
+            "a": "冥王星",
+            "a_lon": 107.01734950599844,
+            "angle": 135,
+            "b": "天頂",
+            "b_lon": 332.67079794131735,
+            "color": "#42b84b",
+            "limit": 1.5,
+            "minor": true,
+            "name": "補八分",
+            "orb": 0.6534484353189214
+          },
+          {
+            "a": "土星",
+            "a_lon": 242.8001668857663,
+            "angle": 135,
+            "b": "冥王星",
+            "b_lon": 107.01734950599844,
+            "color": "#42b84b",
+            "limit": 1.5,
+            "minor": true,
+            "name": "補八分",
+            "orb": 0.7828173797678346
+          },
+          {
+            "a": "水星",
+            "a_lon": 193.86986124884842,
+            "angle": 45,
+            "b": "海王星",
+            "b_lon": 147.88454383439463,
+            "color": "#b57ac6",
+            "limit": 1.0,
+            "minor": true,
+            "name": "半四分",
+            "orb": 0.9853174144537888
+          },
+          {
+            "a": "火星",
+            "a_lon": 187.74417922859644,
+            "angle": 135,
+            "b": "上升點",
+            "b_lon": 53.85099233079001,
+            "color": "#42b84b",
+            "limit": 1.5,
+            "minor": true,
+            "name": "補八分",
+            "orb": 1.1068131021935415
+          },
+          {
+            "a": "土星",
+            "a_lon": 242.8001668857663,
+            "angle": 120,
+            "b": "天王星",
+            "b_lon": 1.549804650830498,
+            "color": "#3434ed",
+            "limit": 3.0,
+            "minor": false,
+            "name": "三分",
+            "orb": 1.2503622349357784
+          },
+          {
+            "a": "木星",
+            "a_lon": 358.5063462582338,
+            "angle": 0,
+            "b": "天王星",
+            "b_lon": 1.549804650830498,
+            "color": "#dfb900",
+            "limit": 4.0,
+            "minor": false,
+            "name": "合相",
+            "orb": 3.0434583925966763
+          }
+        ],
+        "cusps": [
+          53.85099233079001,
+          86.01546752609403,
+          120.74734103242567,
+          152.67079794131735,
+          180.23882254427537,
+          206.09845391585412,
+          233.85099233079,
+          266.015467526094,
+          300.74734103242565,
+          332.67079794131735,
+          0.2388225442753731,
+          26.09845391585413
+        ],
+        "day_chart": false,
+        "dst_minutes": 0.0,
+        "input": {
+          "dst_enabled": false,
+          "dst_minutes": 60,
+          "fold": 0,
+          "gender": "男",
+          "latitude": -33.86785,
+          "local_iso": "1927-09-22T22:12:16",
+          "longitude": 151.20732,
+          "manual_dst": false,
+          "minor_aspects": true,
+          "name": "",
+          "notes": "",
+          "small_bodies": true,
+          "system": "C",
+          "zone": "Australia/Sydney"
+        },
+        "local": "1927-09-22T22:12:16+10:00",
+        "mc": 332.67079794131735,
+        "notes": [
+          "1960 年以前：以歷史時區換算的格林威治時間近似地球自轉時間。"
+        ],
+        "orbs": {
+          "0": 4.0,
+          "30": 1.0,
+          "45": 1.0,
+          "60": 2.0,
+          "72": 1.5,
+          "90": 3.0,
+          "120": 3.0,
+          "135": 1.5,
+          "150": 1.5,
+          "180": 3.0
+        },
+        "points": [
+          {
+            "color": "#df484c",
+            "house": 4,
+            "id": 0,
+            "lat": 0.0002666099362410855,
+            "lon": 178.48725735655535,
+            "name": "太陽",
+            "retrograde": false,
+            "short": "日",
+            "source": "skyfield",
+            "speed": 0.9787612945274304
+          },
+          {
+            "color": "#e45e82",
+            "house": 3,
+            "id": 1,
+            "lat": 4.21504445470027,
+            "lon": 140.3433245332129,
+            "name": "月亮",
+            "retrograde": false,
+            "short": "月",
+            "source": "skyfield",
+            "speed": 12.375163711158166
+          },
+          {
+            "color": "#22875e",
+            "house": 5,
+            "id": 2,
+            "lat": -0.09512692102599032,
+            "lon": 193.86986124884842,
+            "name": "水星",
+            "retrograde": false,
+            "short": "水",
+            "source": "skyfield",
+            "speed": 1.5725738555829594
+          },
+          {
+            "color": "#ce447e",
+            "house": 4,
+            "id": 3,
+            "lat": -7.717525764568453,
+            "lon": 160.69981760191496,
+            "name": "金星",
+            "retrograde": true,
+            "short": "金",
+            "source": "skyfield",
+            "speed": -0.3789910052091727
+          },
+          {
+            "color": "#bc542e",
+            "house": 5,
+            "id": 4,
+            "lat": 0.6713930802789204,
+            "lon": 187.74417922859644,
+            "name": "火星",
+            "retrograde": false,
+            "short": "火",
+            "source": "skyfield",
+            "speed": 0.653757543204847
+          },
+          {
+            "color": "#d85e2a",
+            "house": 10,
+            "id": 5,
+            "lat": -1.6087886186866147,
+            "lon": 358.5063462582338,
+            "name": "木星",
+            "retrograde": true,
+            "short": "木",
+            "source": "skyfield",
+            "speed": -0.13380968366618617
+          },
+          {
+            "color": "#88633d",
+            "house": 7,
+            "id": 6,
+            "lat": 1.6954137844963784,
+            "lon": 242.8001668857663,
+            "name": "土星",
+            "retrograde": false,
+            "short": "土",
+            "source": "skyfield",
+            "speed": 0.07148127501750423
+          },
+          {
+            "color": "#387b59",
+            "house": 11,
+            "id": 7,
+            "lat": -0.7744989650937844,
+            "lon": 1.549804650830498,
+            "name": "天王星",
+            "retrograde": true,
+            "short": "天",
+            "source": "skyfield",
+            "speed": -0.04014208014631038
+          },
+          {
+            "color": "#4e65bb",
+            "house": 3,
+            "id": 8,
+            "lat": 0.4743498244012481,
+            "lon": 147.88454383439463,
+            "name": "海王星",
+            "retrograde": false,
+            "short": "海",
+            "source": "skyfield",
+            "speed": 0.032880020216907724
+          },
+          {
+            "color": "#474359",
+            "house": 2,
+            "id": 9,
+            "lat": -1.1037243124441767,
+            "lon": 107.01734950599844,
+            "name": "冥王星",
+            "retrograde": false,
+            "short": "冥",
+            "source": "skyfield",
+            "speed": 0.010428563587083772
+          },
+          {
+            "color": "#777c3c",
+            "house": 1,
+            "id": 11,
+            "lat": 0.0,
+            "lon": 83.0974842674698,
+            "name": "北交點",
+            "retrograde": true,
+            "short": "北",
+            "source": "skyfield",
+            "speed": -0.1539745033889517
+          },
+          {
+            "color": "#3d8068",
+            "house": 12,
+            "id": 15,
+            "lat": -0.6070650414484097,
+            "lon": 35.291734669800206,
+            "name": "凱龍星",
+            "retrograde": true,
+            "short": "凱",
+            "source": "leb",
+            "speed": -0.03574647251980423
+          },
+          {
+            "color": "#44866e",
+            "house": 3,
+            "id": 19,
+            "lat": -8.322222171613001,
+            "lon": 134.81850063977137,
+            "name": "婚神星",
+            "retrograde": false,
+            "short": "婚",
+            "source": "leb",
+            "speed": 0.4715914650432751
+          },
+          {
+            "color": "#44866e",
+            "house": 6,
+            "id": 18,
+            "lat": 30.810637889590247,
+            "lon": 236.15967938683562,
+            "name": "智神星",
+            "retrograde": false,
+            "short": "智",
+            "source": "leb",
+            "speed": 0.34896638828740834
+          },
+          {
+            "color": "#44866e",
+            "house": 7,
+            "id": 20,
+            "lat": 1.862816592988462,
+            "lon": 242.23936419798565,
+            "name": "灶神星",
+            "retrograde": false,
+            "short": "灶",
+            "source": "leb",
+            "speed": 0.4515524533132975
+          },
+          {
+            "color": "#44866e",
+            "house": 7,
+            "id": 17,
+            "lat": -2.735916722787407,
+            "lon": 255.78934871189657,
+            "name": "穀神星",
+            "retrograde": false,
+            "short": "穀",
+            "source": "leb",
+            "speed": 0.262461632587474
+          },
+          {
+            "color": "#777c3c",
+            "house": 7,
+            "id": -11,
+            "lat": 0.0,
+            "lon": 263.0974842674698,
+            "name": "南交點",
+            "retrograde": true,
+            "short": "南",
+            "source": "skyfield",
+            "speed": -0.1539745033889517
+          },
+          {
+            "color": "#688966",
+            "house": 2,
+            "id": -1,
+            "lat": 0,
+            "lon": 91.99492515413246,
+            "name": "幸運點",
+            "retrograde": false,
+            "short": "幸",
+            "source": "derived",
+            "speed": null
+          },
+          {
+            "color": "#447d67",
+            "house": 1,
+            "id": -2,
+            "lat": 0,
+            "lon": 53.85099233079001,
+            "name": "上升點",
+            "retrograde": false,
+            "short": "升",
+            "source": "derived",
+            "speed": null
+          },
+          {
+            "color": "#447d67",
+            "house": 10,
+            "id": -3,
+            "lat": 0,
+            "lon": 332.67079794131735,
+            "name": "天頂",
+            "retrograde": false,
+            "short": "頂",
+            "source": "derived",
+            "speed": null
+          }
+        ],
+        "times": {
+          "erfa_gast_deg": 183.4268317480271,
+          "erfa_true_obliquity_deg": 23.449178919232605,
+          "tt_jd": 2425146.008799642,
+          "ut1_jd": 2425146.0085185184,
+          "ut1_source": "historical_model"
+        },
+        "timezone_mode": "地區歷史時區",
+        "tzdata_version": "2026.5",
+        "utc": "1927-09-22T12:12:16+00:00",
+        "utc_offset": "UTC+10:00",
+        "version": "0.6.2"
+      }
+    },
+    {
+      "current_engine_exact_match": true,
+      "elapsed_seconds": 0.16595970001071692,
+      "house_position_audit": [
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            256.32447971146473,
+            -3.3358521441928585e-05,
+            "K"
+          ],
+          "correction": null,
+          "house": 6,
+          "point_id": 0,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 6.062632437032927,
+          "raw_position": 6.062632437032927,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            288.25485565586484,
+            -1.2178308859607485,
+            "K"
+          ],
+          "correction": null,
+          "house": 7,
+          "point_id": 1,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 7.717233118548728,
+          "raw_position": 7.717233118548728,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            244.29880705736372,
+            0.43938508241276947,
+            "K"
+          ],
+          "correction": null,
+          "house": 5,
+          "point_id": 2,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 5.283551374887934,
+          "raw_position": 5.283551374887934,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            261.22847104550095,
+            -0.2962600994756468,
+            "K"
+          ],
+          "correction": null,
+          "house": 6,
+          "point_id": 3,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 6.372267202149984,
+          "raw_position": 6.372267202149984,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            178.83807819509886,
+            1.9539550640768975,
+            "K"
+          ],
+          "correction": null,
+          "house": 3,
+          "point_id": 4,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 3.321159031101917,
+          "raw_position": 3.321159031101917,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            222.5859549425288,
+            1.017225112792723,
+            "K"
+          ],
+          "correction": null,
+          "house": null,
+          "point_id": 5,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 0.0,
+          "raw_position": 0.0,
+          "status": "undefined",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            323.06905165633054,
+            -1.3883911777603142,
+            "K"
+          ],
+          "correction": null,
+          "house": 8,
+          "point_id": 6,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 8.659932993058547,
+          "raw_position": 8.659932993058547,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            27.833508335424014,
+            -0.5529603805796189,
+            "K"
+          ],
+          "correction": null,
+          "house": 9,
+          "point_id": 7,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 9.703686016464555,
+          "raw_position": 9.703686016464555,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            164.56431162555333,
+            0.9325861918926813,
+            "K"
+          ],
+          "correction": null,
+          "house": 3,
+          "point_id": 8,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 3.009116828878118,
+          "raw_position": 3.009116828878118,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            115.72263543301213,
+            1.6915164706525687,
+            "K"
+          ],
+          "correction": null,
+          "house": 2,
+          "point_id": 9,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 2.0159280254485097,
+          "raw_position": 2.0159280254485097,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            301.8835879233419,
+            0.0,
+            "K"
+          ],
+          "correction": null,
+          "house": 8,
+          "point_id": 11,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 8.033284296530706,
+          "raw_position": 8.033284296530706,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            66.75232817273624,
+            -4.654935370264985,
+            "K"
+          ],
+          "correction": null,
+          "house": 11,
+          "point_id": 15,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 11.128184501832484,
+          "raw_position": 11.128184501832484,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            289.1258752019755,
+            7.916637137156959,
+            "K"
+          ],
+          "correction": null,
+          "house": 6,
+          "point_id": 19,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 6.9327580919407605,
+          "raw_position": 6.9327580919407605,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            29.067466388105114,
+            -43.05439626585576,
+            "K"
+          ],
+          "correction": null,
+          "house": null,
+          "point_id": 18,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 0.0,
+          "raw_position": 0.0,
+          "status": "undefined",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            259.7875370466211,
+            1.870362713072554,
+            "K"
+          ],
+          "correction": null,
+          "house": 6,
+          "point_id": 20,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 6.0978937346488955,
+          "raw_position": 6.0978937346488955,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            121.63602594729205,
+            6.559204008129054,
+            "K"
+          ],
+          "correction": null,
+          "house": 2,
+          "point_id": 17,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 2.7178552187449494,
+          "raw_position": 2.7178552187449494,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            121.8835879233419,
+            0.0,
+            "K"
+          ],
+          "correction": null,
+          "house": 2,
+          "point_id": -11,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 2.0332842965307076,
+          "raw_position": 2.0332842965307076,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            62.01952476019346,
+            0,
+            "K"
+          ],
+          "correction": null,
+          "house": 11,
+          "point_id": -1,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 11.169697678169296,
+          "raw_position": 11.169697678169296,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            93.94990070459359,
+            0,
+            "K"
+          ],
+          "correction": null,
+          "house": 1,
+          "point_id": -2,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 1.0,
+          "raw_position": 1.0,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            42.1219372366464,
+            -54.8,
+            23.448998794509887,
+            44.586423639877395,
+            0,
+            "K"
+          ],
+          "correction": null,
+          "house": 10,
+          "point_id": -3,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 10.0,
+          "raw_position": 10.0,
+          "status": "ok",
+          "warnings": []
+        }
+      ],
+      "id": "main-1934-12",
+      "numeric": {
+        "all_points": {
+          "-1": {
+            "house": 11,
+            "id": -1,
+            "lat": 0,
+            "lon": {
+              "$float": "0x1.f027fc98f3f20p+5"
+            },
+            "retrograde": false,
+            "source": "derived",
+            "speed": null
+          },
+          "-11": {
+            "house": 2,
+            "id": -11,
+            "lat": {
+              "$float": "0x0.0p+0"
+            },
+            "lon": {
+              "$float": "0x1.e788cb45c7938p+6"
+            },
+            "retrograde": true,
+            "source": "skyfield",
+            "speed": {
+              "$float": "-0x1.e9cd55dbc0000p-6"
+            }
+          },
+          "-2": {
+            "house": 1,
+            "id": -2,
+            "lat": 0,
+            "lon": {
+              "$float": "0x1.77ccb2c532b51p+6"
+            },
+            "retrograde": false,
+            "source": "derived",
+            "speed": null
+          },
+          "-3": {
+            "house": 10,
+            "id": -3,
+            "lat": 0,
+            "lon": {
+              "$float": "0x1.64b0fee096ff6p+5"
+            },
+            "retrograde": false,
+            "source": "derived",
+            "speed": null
+          },
+          "0": {
+            "house": 6,
+            "id": 0,
+            "lat": {
+              "$float": "-0x1.17d4e11afc009p-15"
+            },
+            "lon": {
+              "$float": "0x1.0053111a34f4ep+8"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.04365be358000p+0"
+            }
+          },
+          "1": {
+            "house": 7,
+            "id": 1,
+            "lat": {
+              "$float": "-0x1.37c3c3d342974p+0"
+            },
+            "lon": {
+              "$float": "0x1.20413e386323ep+8"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.d2d6d3ce3a000p+3"
+            }
+          },
+          "11": {
+            "house": 8,
+            "id": 11,
+            "lat": {
+              "$float": "0x0.0p+0"
+            },
+            "lon": {
+              "$float": "0x1.2de232d171e4ep+8"
+            },
+            "retrograde": true,
+            "source": "skyfield",
+            "speed": {
+              "$float": "-0x1.e9cd55dbc0000p-6"
+            }
+          },
+          "15": {
+            "house": 11,
+            "id": 15,
+            "lat": {
+              "$float": "-0x1.29ea760b12086p+2"
+            },
+            "lon": {
+              "$float": "0x1.0b026251070bep+6"
+            },
+            "retrograde": true,
+            "source": "leb",
+            "speed": {
+              "$float": "-0x1.cdec189730000p-5"
+            }
+          },
+          "17": {
+            "house": 2,
+            "id": 17,
+            "lat": {
+              "$float": "0x1.a3c9ff9bad35cp+2"
+            },
+            "lon": {
+              "$float": "0x1.e68b4a62cc1b7p+6"
+            },
+            "retrograde": true,
+            "source": "leb",
+            "speed": {
+              "$float": "-0x1.d2969ec720000p-5"
+            }
+          },
+          "18": {
+            "house": null,
+            "id": 18,
+            "lat": {
+              "$float": "-0x1.586f674f37000p+5"
+            },
+            "lon": {
+              "$float": "0x1.d11457a2a7d9fp+4"
+            },
+            "retrograde": true,
+            "source": "leb",
+            "speed": {
+              "$float": "-0x1.fe8ac062e8000p-4"
+            }
+          },
+          "19": {
+            "house": 6,
+            "id": 19,
+            "lat": {
+              "$float": "0x1.faaa2ecf98d86p+2"
+            },
+            "lon": {
+              "$float": "0x1.2120395b73dcbp+8"
+            },
+            "retrograde": false,
+            "source": "leb",
+            "speed": {
+              "$float": "0x1.873a3b4f8a000p-2"
+            }
+          },
+          "2": {
+            "house": 5,
+            "id": 2,
+            "lat": {
+              "$float": "0x1.c1ee29bd409fdp-2"
+            },
+            "lon": {
+              "$float": "0x1.e898fd3d1661ep+7"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.8888a429f2000p+0"
+            }
+          },
+          "20": {
+            "house": 6,
+            "id": 20,
+            "lat": {
+              "$float": "0x1.ded0173c4df08p+0"
+            },
+            "lon": {
+              "$float": "0x1.03c99c0723a04p+8"
+            },
+            "retrograde": false,
+            "source": "leb",
+            "speed": {
+              "$float": "0x1.151dfe8a93000p-1"
+            }
+          },
+          "3": {
+            "house": 6,
+            "id": 3,
+            "lat": {
+              "$float": "-0x1.2f5eceb96e314p-2"
+            },
+            "lon": {
+              "$float": "0x1.053a7d1414827p+8"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.41f0e528a0000p+0"
+            }
+          },
+          "4": {
+            "house": 3,
+            "id": 4,
+            "lat": {
+              "$float": "0x1.f436662a10591p+0"
+            },
+            "lon": {
+              "$float": "0x1.65ad1895cee17p+7"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.03aba5cbc0000p-1"
+            }
+          },
+          "5": {
+            "house": null,
+            "id": 5,
+            "lat": {
+              "$float": "0x1.0468dd701d5a2p+0"
+            },
+            "lon": {
+              "$float": "0x1.bd2c0249462e7p+7"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.985ae13db0000p-3"
+            }
+          },
+          "6": {
+            "house": 8,
+            "id": 6,
+            "lat": {
+              "$float": "-0x1.636d9aae8914bp+0"
+            },
+            "lon": {
+              "$float": "0x1.4311ad5e8dacap+8"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.1e6733c580000p-4"
+            }
+          },
+          "7": {
+            "house": 9,
+            "id": 7,
+            "lat": {
+              "$float": "-0x1.1b1d9f7d25777p-1"
+            },
+            "lon": {
+              "$float": "0x1.bd560cd6196ecp+4"
+            },
+            "retrograde": true,
+            "source": "skyfield",
+            "speed": {
+              "$float": "-0x1.788d1ffbb0000p-6"
+            }
+          },
+          "8": {
+            "house": 3,
+            "id": 8,
+            "lat": {
+              "$float": "0x1.dd7beff5c2afbp-1"
+            },
+            "lon": {
+              "$float": "0x1.4920ed7411022p+7"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.3eb6071200000p-8"
+            }
+          },
+          "9": {
+            "house": 2,
+            "id": 9,
+            "lat": {
+              "$float": "0x1.b1073932191edp+0"
+            },
+            "lon": {
+              "$float": "0x1.cee3fa8afedf2p+6"
+            },
+            "retrograde": true,
+            "source": "skyfield",
+            "speed": {
+              "$float": "-0x1.05cd5f0540000p-6"
+            }
+          }
+        },
+        "asc": {
+          "$float": "0x1.77ccb2c532b51p+6"
+        },
+        "aspects": {
+          "0:8:90": {
+            "a_lon": {
+              "$float": "0x1.0053111a34f4ep+8"
+            },
+            "angle": 90,
+            "b_lon": {
+              "$float": "0x1.4920ed7411022p+7"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+1"
+            },
+            "minor": false,
+            "orb": {
+              "$float": "0x1.c29a602c73d00p+0"
+            }
+          },
+          "2:-2:150": {
+            "a_lon": {
+              "$float": "0x1.e898fd3d1661ep+7"
+            },
+            "angle": 150,
+            "b_lon": {
+              "$float": "0x1.77ccb2c532b51p+6"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+0"
+            },
+            "minor": true,
+            "orb": {
+              "$float": "0x1.6547b4fa0ec00p-2"
+            }
+          },
+          "3:6:60": {
+            "a_lon": {
+              "$float": "0x1.053a7d1414827p+8"
+            },
+            "angle": 60,
+            "b_lon": {
+              "$float": "0x1.4311ad5e8dacap+8"
+            },
+            "limit": {
+              "$float": "0x1.0000000000000p+1"
+            },
+            "minor": false,
+            "orb": {
+              "$float": "0x1.d7304a792a300p+0"
+            }
+          },
+          "4:-3:135": {
+            "a_lon": {
+              "$float": "0x1.65ad1895cee17p+7"
+            },
+            "angle": 135,
+            "b_lon": {
+              "$float": "0x1.64b0fee096ff6p+5"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+0"
+            },
+            "minor": true,
+            "orb": {
+              "$float": "0x1.7f272256de600p-1"
+            }
+          },
+          "4:7:150": {
+            "a_lon": {
+              "$float": "0x1.65ad1895cee17p+7"
+            },
+            "angle": 150,
+            "b_lon": {
+              "$float": "0x1.bd560cd6196ecp+4"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+0"
+            },
+            "minor": true,
+            "orb": {
+              "$float": "0x1.012b7d85d9d00p+0"
+            }
+          },
+          "5:-3:180": {
+            "a_lon": {
+              "$float": "0x1.bd2c0249462e7p+7"
+            },
+            "angle": 180,
+            "b_lon": {
+              "$float": "0x1.64b0fee096ff6p+5"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+1"
+            },
+            "minor": false,
+            "orb": {
+              "$float": "0x1.000f5bb7e4580p+1"
+            }
+          },
+          "5:8:60": {
+            "a_lon": {
+              "$float": "0x1.bd2c0249462e7p+7"
+            },
+            "angle": 60,
+            "b_lon": {
+              "$float": "0x1.4920ed7411022p+7"
+            },
+            "limit": {
+              "$float": "0x1.0000000000000p+1"
+            },
+            "minor": false,
+            "orb": {
+              "$float": "0x1.fa75956569d80p+0"
+            }
+          },
+          "7:9:90": {
+            "a_lon": {
+              "$float": "0x1.bd560cd6196ecp+4"
+            },
+            "angle": 90,
+            "b_lon": {
+              "$float": "0x1.cee3fa8afedf2p+6"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+1"
+            },
+            "minor": false,
+            "orb": {
+              "$float": "0x1.0e311550ef920p+1"
+            }
+          },
+          "8:-2:72": {
+            "a_lon": {
+              "$float": "0x1.4920ed7411022p+7"
+            },
+            "angle": 72,
+            "b_lon": {
+              "$float": "0x1.77ccb2c532b51p+6"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+0"
+            },
+            "minor": true,
+            "orb": {
+              "$float": "0x1.62b5f7442c300p+0"
+            }
+          },
+          "8:-3:120": {
+            "a_lon": {
+              "$float": "0x1.4920ed7411022p+7"
+            },
+            "angle": 120,
+            "b_lon": {
+              "$float": "0x1.64b0fee096ff6p+5"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+1"
+            },
+            "minor": false,
+            "orb": {
+              "$float": "0x1.6a488297b8000p-6"
+            }
+          },
+          "9:-3:72": {
+            "a_lon": {
+              "$float": "0x1.cee3fa8afedf2p+6"
+            },
+            "angle": 72,
+            "b_lon": {
+              "$float": "0x1.64b0fee096ff6p+5"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+0"
+            },
+            "minor": true,
+            "orb": {
+              "$float": "0x1.ba4272a650400p-1"
+            }
+          }
+        },
+        "cusps": [
+          {
+            "$float": "0x1.77ccb2c532b51p+6"
+          },
+          {
+            "$float": "0x1.e2e346797d490p+6"
+          },
+          {
+            "$float": "0x1.50e25c617b9c5p+7"
+          },
+          {
+            "$float": "0x1.c12c3fb825bfep+7"
+          },
+          {
+            "$float": "0x1.dedde9399e580p+7"
+          },
+          {
+            "$float": "0x1.fe89017d5d0abp+7"
+          },
+          {
+            "$float": "0x1.11f32cb14cad4p+8"
+          },
+          {
+            "$float": "0x1.2cb8d19e5f524p+8"
+          },
+          {
+            "$float": "0x1.5c712e30bdce2p+8"
+          },
+          {
+            "$float": "0x1.64b0fee096ff6p+5"
+          },
+          {
+            "$float": "0x1.db77a4e679600p+5"
+          },
+          {
+            "$float": "0x1.2d1202faba156p+6"
+          }
+        ],
+        "day_chart": false,
+        "dst_minutes": {
+          "$float": "0x1.e000000000000p+5"
+        },
+        "input": {
+          "dst_enabled": false,
+          "dst_minutes": 60,
+          "fold": 0,
+          "gender": "男",
+          "latitude": {
+            "$float": "-0x1.b666666666666p+5"
+          },
+          "local_iso": "1934-12-08T23:13:08",
+          "longitude": {
+            "$float": "-0x1.1133333333333p+6"
+          },
+          "manual_dst": false,
+          "minor_aspects": true,
+          "name": "",
+          "notes": "",
+          "small_bodies": true,
+          "system": "K",
+          "zone": "America/Argentina/Ushuaia"
+        },
+        "local": "1934-12-08T23:13:08-03:00",
+        "mc": {
+          "$float": "0x1.64b0fee096ff6p+5"
+        },
+        "orbs": {
+          "0": {
+            "$float": "0x1.0000000000000p+2"
+          },
+          "120": {
+            "$float": "0x1.8000000000000p+1"
+          },
+          "135": {
+            "$float": "0x1.8000000000000p+0"
+          },
+          "150": {
+            "$float": "0x1.8000000000000p+0"
+          },
+          "180": {
+            "$float": "0x1.8000000000000p+1"
+          },
+          "30": {
+            "$float": "0x1.0000000000000p+0"
+          },
+          "45": {
+            "$float": "0x1.0000000000000p+0"
+          },
+          "60": {
+            "$float": "0x1.0000000000000p+1"
+          },
+          "72": {
+            "$float": "0x1.8000000000000p+0"
+          },
+          "90": {
+            "$float": "0x1.8000000000000p+1"
+          }
+        },
+        "times": {
+          "erfa_gast_deg": {
+            "$float": "0x1.b9b01050a1719p+6"
+          },
+          "erfa_true_obliquity_deg": {
+            "$float": "0x1.772f195c25d07p+4"
+          },
+          "tt_jd": {
+            "$float": "0x1.285c24bdeb064p+21"
+          },
+          "ut1_jd": {
+            "$float": "0x1.285c24bd585e1p+21"
+          },
+          "ut1_source": "historical_model"
+        },
+        "utc": "1934-12-09T02:13:08+00:00",
+        "utc_offset": "UTC-03:00",
+        "visible_point_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11,
+          15,
+          19,
+          18,
+          20,
+          17,
+          -11,
+          -1,
+          -2,
+          -3
+        ]
+      },
+      "raw": {
+        "all_points": [
+          {
+            "color": "#df484c",
+            "house": 6,
+            "id": 0,
+            "lat": -3.3358521441928585e-05,
+            "lon": 256.32447971146473,
+            "name": "太陽",
+            "retrograde": false,
+            "short": "日",
+            "source": "skyfield",
+            "speed": 1.0164544515646412
+          },
+          {
+            "color": "#e45e82",
+            "house": 7,
+            "id": 1,
+            "lat": -1.2178308859607485,
+            "lon": 288.25485565586484,
+            "name": "月亮",
+            "retrograde": false,
+            "short": "月",
+            "source": "skyfield",
+            "speed": 14.588724043642287
+          },
+          {
+            "color": "#22875e",
+            "house": 5,
+            "id": 2,
+            "lat": 0.43938508241276947,
+            "lon": 244.29880705736372,
+            "name": "水星",
+            "retrograde": false,
+            "short": "水",
+            "source": "skyfield",
+            "speed": 1.5333349802403973
+          },
+          {
+            "color": "#ce447e",
+            "house": 6,
+            "id": 3,
+            "lat": -0.2962600994756468,
+            "lon": 261.22847104550095,
+            "name": "金星",
+            "retrograde": false,
+            "short": "金",
+            "source": "skyfield",
+            "speed": 1.2575820182973985
+          },
+          {
+            "color": "#bc542e",
+            "house": 3,
+            "id": 4,
+            "lat": 1.9539550640768975,
+            "lon": 178.83807819509886,
+            "name": "火星",
+            "retrograde": false,
+            "short": "火",
+            "source": "skyfield",
+            "speed": 0.5071689425676595
+          },
+          {
+            "color": "#d85e2a",
+            "house": null,
+            "id": 5,
+            "lat": 1.017225112792723,
+            "lon": 222.5859549425288,
+            "name": "木星",
+            "retrograde": false,
+            "short": "木",
+            "source": "skyfield",
+            "speed": 0.19939208955292997
+          },
+          {
+            "color": "#88633d",
+            "house": 8,
+            "id": 6,
+            "lat": -1.3883911777603142,
+            "lon": 323.06905165633054,
+            "name": "土星",
+            "retrograde": false,
+            "short": "土",
+            "source": "skyfield",
+            "speed": 0.06992264006839832
+          },
+          {
+            "color": "#387b59",
+            "house": 9,
+            "id": 7,
+            "lat": -0.5529603805796189,
+            "lon": 27.833508335424014,
+            "name": "天王星",
+            "retrograde": true,
+            "short": "天",
+            "source": "skyfield",
+            "speed": -0.022982865556286924
+          },
+          {
+            "color": "#4e65bb",
+            "house": 3,
+            "id": 8,
+            "lat": 0.9325861918926813,
+            "lon": 164.56431162555333,
+            "name": "海王星",
+            "retrograde": false,
+            "short": "海",
+            "source": "skyfield",
+            "speed": 0.004863144613409531
+          },
+          {
+            "color": "#474359",
+            "house": 2,
+            "id": 9,
+            "lat": 1.6915164706525687,
+            "lon": 115.72263543301213,
+            "name": "冥王星",
+            "retrograde": true,
+            "short": "冥",
+            "source": "skyfield",
+            "speed": -0.015979140084709798
+          },
+          {
+            "color": "#777c3c",
+            "house": 8,
+            "id": 11,
+            "lat": 0.0,
+            "lon": 301.8835879233419,
+            "name": "北交點",
+            "retrograde": true,
+            "short": "北",
+            "source": "skyfield",
+            "speed": -0.029895147176830505
+          },
+          {
+            "color": "#3d8068",
+            "house": 11,
+            "id": 15,
+            "lat": -4.654935370264985,
+            "lon": 66.75232817273624,
+            "name": "凱龍星",
+            "retrograde": true,
+            "short": "凱",
+            "source": "leb",
+            "speed": -0.05638699343535336
+          },
+          {
+            "color": "#44866e",
+            "house": 6,
+            "id": 19,
+            "lat": 7.916637137156959,
+            "lon": 289.1258752019755,
+            "name": "婚神星",
+            "retrograde": false,
+            "short": "婚",
+            "source": "leb",
+            "speed": 0.38205807373969947
+          },
+          {
+            "color": "#44866e",
+            "house": null,
+            "id": 18,
+            "lat": -43.05439626585576,
+            "lon": 29.067466388105114,
+            "name": "智神星",
+            "retrograde": true,
+            "short": "智",
+            "source": "leb",
+            "speed": -0.12464404250067673
+          },
+          {
+            "color": "#44866e",
+            "house": 6,
+            "id": 20,
+            "lat": 1.870362713072554,
+            "lon": 259.7875370466211,
+            "name": "灶神星",
+            "retrograde": false,
+            "short": "灶",
+            "source": "leb",
+            "speed": 0.541244463363455
+          },
+          {
+            "color": "#44866e",
+            "house": 2,
+            "id": 17,
+            "lat": 6.559204008129054,
+            "lon": 121.63602594729205,
+            "name": "穀神星",
+            "retrograde": true,
+            "short": "穀",
+            "source": "leb",
+            "speed": -0.05695658694548911
+          },
+          {
+            "color": "#777c3c",
+            "house": 2,
+            "id": -11,
+            "lat": 0.0,
+            "lon": 121.8835879233419,
+            "name": "南交點",
+            "retrograde": true,
+            "short": "南",
+            "source": "skyfield",
+            "speed": -0.029895147176830505
+          },
+          {
+            "color": "#688966",
+            "house": 11,
+            "id": -1,
+            "lat": 0,
+            "lon": 62.01952476019346,
+            "name": "幸運點",
+            "retrograde": false,
+            "short": "幸",
+            "source": "derived",
+            "speed": null
+          },
+          {
+            "color": "#447d67",
+            "house": 1,
+            "id": -2,
+            "lat": 0,
+            "lon": 93.94990070459359,
+            "name": "上升點",
+            "retrograde": false,
+            "short": "升",
+            "source": "derived",
+            "speed": null
+          },
+          {
+            "color": "#447d67",
+            "house": 10,
+            "id": -3,
+            "lat": 0,
+            "lon": 44.586423639877395,
+            "name": "天頂",
+            "retrograde": false,
+            "short": "頂",
+            "source": "derived",
+            "speed": null
+          }
+        ],
+        "asc": 93.94990070459359,
+        "aspects": [
+          {
+            "a": "海王星",
+            "a_lon": 164.56431162555333,
+            "angle": 120,
+            "b": "天頂",
+            "b_lon": 44.586423639877395,
+            "color": "#3434ed",
+            "limit": 3.0,
+            "minor": false,
+            "name": "三分",
+            "orb": 0.02211201432407961
+          },
+          {
+            "a": "水星",
+            "a_lon": 244.29880705736372,
+            "angle": 150,
+            "b": "上升點",
+            "b_lon": 93.94990070459359,
+            "color": "#655e58",
+            "limit": 1.5,
+            "minor": true,
+            "name": "梅花相",
+            "orb": 0.34890635277014326
+          },
+          {
+            "a": "火星",
+            "a_lon": 178.83807819509886,
+            "angle": 135,
+            "b": "天頂",
+            "b_lon": 44.586423639877395,
+            "color": "#42b84b",
+            "limit": 1.5,
+            "minor": true,
+            "name": "補八分",
+            "orb": 0.748345444778522
+          },
+          {
+            "a": "冥王星",
+            "a_lon": 115.72263543301213,
+            "angle": 72,
+            "b": "天頂",
+            "b_lon": 44.586423639877395,
+            "color": "#92934b",
+            "limit": 1.5,
+            "minor": true,
+            "name": "五分相",
+            "orb": 0.8637882068652516
+          },
+          {
+            "a": "火星",
+            "a_lon": 178.83807819509886,
+            "angle": 150,
+            "b": "天王星",
+            "b_lon": 27.833508335424014,
+            "color": "#655e58",
+            "limit": 1.5,
+            "minor": true,
+            "name": "梅花相",
+            "orb": 1.0045698596748593
+          },
+          {
+            "a": "海王星",
+            "a_lon": 164.56431162555333,
+            "angle": 72,
+            "b": "上升點",
+            "b_lon": 93.94990070459359,
+            "color": "#92934b",
+            "limit": 1.5,
+            "minor": true,
+            "name": "五分相",
+            "orb": 1.385589079040244
+          },
+          {
+            "a": "太陽",
+            "a_lon": 256.32447971146473,
+            "angle": 90,
+            "b": "海王星",
+            "b_lon": 164.56431162555333,
+            "color": "#ed3030",
+            "limit": 3.0,
+            "minor": false,
+            "name": "四分",
+            "orb": 1.7601680859114026
+          },
+          {
+            "a": "金星",
+            "a_lon": 261.22847104550095,
+            "angle": 60,
+            "b": "土星",
+            "b_lon": 323.06905165633054,
+            "color": "#3434ed",
+            "limit": 2.0,
+            "minor": false,
+            "name": "六合",
+            "orb": 1.8405806108295906
+          },
+          {
+            "a": "木星",
+            "a_lon": 222.5859549425288,
+            "angle": 60,
+            "b": "海王星",
+            "b_lon": 164.56431162555333,
+            "color": "#3434ed",
+            "limit": 2.0,
+            "minor": false,
+            "name": "六合",
+            "orb": 1.9783566830245434
+          },
+          {
+            "a": "木星",
+            "a_lon": 222.5859549425288,
+            "angle": 180,
+            "b": "天頂",
+            "b_lon": 44.586423639877395,
+            "color": "#ed3030",
+            "limit": 3.0,
+            "minor": false,
+            "name": "對分",
+            "orb": 2.0004686973485946
+          },
+          {
+            "a": "天王星",
+            "a_lon": 27.833508335424014,
+            "angle": 90,
+            "b": "冥王星",
+            "b_lon": 115.72263543301213,
+            "color": "#ed3030",
+            "limit": 3.0,
+            "minor": false,
+            "name": "四分",
+            "orb": 2.1108729024118844
+          }
+        ],
+        "cusps": [
+          93.94990070459359,
+          120.72194852664165,
+          168.4421110595123,
+          224.5864236398774,
+          239.4334199910918,
+          255.26758949051631,
+          273.9499007045936,
+          300.72194852664165,
+          348.4421110595123,
+          44.586423639877395,
+          59.433419991091796,
+          75.26758949051631
+        ],
+        "day_chart": false,
+        "dst_minutes": 60.0,
+        "input": {
+          "dst_enabled": false,
+          "dst_minutes": 60,
+          "fold": 0,
+          "gender": "男",
+          "latitude": -54.8,
+          "local_iso": "1934-12-08T23:13:08",
+          "longitude": -68.3,
+          "manual_dst": false,
+          "minor_aspects": true,
+          "name": "",
+          "notes": "",
+          "small_bodies": true,
+          "system": "K",
+          "zone": "America/Argentina/Ushuaia"
+        },
+        "local": "1934-12-08T23:13:08-03:00",
+        "mc": 44.586423639877395,
+        "notes": [
+          "1960 年以前：以歷史時區換算的格林威治時間近似地球自轉時間。"
+        ],
+        "orbs": {
+          "0": 4.0,
+          "30": 1.0,
+          "45": 1.0,
+          "60": 2.0,
+          "72": 1.5,
+          "90": 3.0,
+          "120": 3.0,
+          "135": 1.5,
+          "150": 1.5,
+          "180": 3.0
+        },
+        "points": [
+          {
+            "color": "#df484c",
+            "house": 6,
+            "id": 0,
+            "lat": -3.3358521441928585e-05,
+            "lon": 256.32447971146473,
+            "name": "太陽",
+            "retrograde": false,
+            "short": "日",
+            "source": "skyfield",
+            "speed": 1.0164544515646412
+          },
+          {
+            "color": "#e45e82",
+            "house": 7,
+            "id": 1,
+            "lat": -1.2178308859607485,
+            "lon": 288.25485565586484,
+            "name": "月亮",
+            "retrograde": false,
+            "short": "月",
+            "source": "skyfield",
+            "speed": 14.588724043642287
+          },
+          {
+            "color": "#22875e",
+            "house": 5,
+            "id": 2,
+            "lat": 0.43938508241276947,
+            "lon": 244.29880705736372,
+            "name": "水星",
+            "retrograde": false,
+            "short": "水",
+            "source": "skyfield",
+            "speed": 1.5333349802403973
+          },
+          {
+            "color": "#ce447e",
+            "house": 6,
+            "id": 3,
+            "lat": -0.2962600994756468,
+            "lon": 261.22847104550095,
+            "name": "金星",
+            "retrograde": false,
+            "short": "金",
+            "source": "skyfield",
+            "speed": 1.2575820182973985
+          },
+          {
+            "color": "#bc542e",
+            "house": 3,
+            "id": 4,
+            "lat": 1.9539550640768975,
+            "lon": 178.83807819509886,
+            "name": "火星",
+            "retrograde": false,
+            "short": "火",
+            "source": "skyfield",
+            "speed": 0.5071689425676595
+          },
+          {
+            "color": "#d85e2a",
+            "house": null,
+            "id": 5,
+            "lat": 1.017225112792723,
+            "lon": 222.5859549425288,
+            "name": "木星",
+            "retrograde": false,
+            "short": "木",
+            "source": "skyfield",
+            "speed": 0.19939208955292997
+          },
+          {
+            "color": "#88633d",
+            "house": 8,
+            "id": 6,
+            "lat": -1.3883911777603142,
+            "lon": 323.06905165633054,
+            "name": "土星",
+            "retrograde": false,
+            "short": "土",
+            "source": "skyfield",
+            "speed": 0.06992264006839832
+          },
+          {
+            "color": "#387b59",
+            "house": 9,
+            "id": 7,
+            "lat": -0.5529603805796189,
+            "lon": 27.833508335424014,
+            "name": "天王星",
+            "retrograde": true,
+            "short": "天",
+            "source": "skyfield",
+            "speed": -0.022982865556286924
+          },
+          {
+            "color": "#4e65bb",
+            "house": 3,
+            "id": 8,
+            "lat": 0.9325861918926813,
+            "lon": 164.56431162555333,
+            "name": "海王星",
+            "retrograde": false,
+            "short": "海",
+            "source": "skyfield",
+            "speed": 0.004863144613409531
+          },
+          {
+            "color": "#474359",
+            "house": 2,
+            "id": 9,
+            "lat": 1.6915164706525687,
+            "lon": 115.72263543301213,
+            "name": "冥王星",
+            "retrograde": true,
+            "short": "冥",
+            "source": "skyfield",
+            "speed": -0.015979140084709798
+          },
+          {
+            "color": "#777c3c",
+            "house": 8,
+            "id": 11,
+            "lat": 0.0,
+            "lon": 301.8835879233419,
+            "name": "北交點",
+            "retrograde": true,
+            "short": "北",
+            "source": "skyfield",
+            "speed": -0.029895147176830505
+          },
+          {
+            "color": "#3d8068",
+            "house": 11,
+            "id": 15,
+            "lat": -4.654935370264985,
+            "lon": 66.75232817273624,
+            "name": "凱龍星",
+            "retrograde": true,
+            "short": "凱",
+            "source": "leb",
+            "speed": -0.05638699343535336
+          },
+          {
+            "color": "#44866e",
+            "house": 6,
+            "id": 19,
+            "lat": 7.916637137156959,
+            "lon": 289.1258752019755,
+            "name": "婚神星",
+            "retrograde": false,
+            "short": "婚",
+            "source": "leb",
+            "speed": 0.38205807373969947
+          },
+          {
+            "color": "#44866e",
+            "house": null,
+            "id": 18,
+            "lat": -43.05439626585576,
+            "lon": 29.067466388105114,
+            "name": "智神星",
+            "retrograde": true,
+            "short": "智",
+            "source": "leb",
+            "speed": -0.12464404250067673
+          },
+          {
+            "color": "#44866e",
+            "house": 6,
+            "id": 20,
+            "lat": 1.870362713072554,
+            "lon": 259.7875370466211,
+            "name": "灶神星",
+            "retrograde": false,
+            "short": "灶",
+            "source": "leb",
+            "speed": 0.541244463363455
+          },
+          {
+            "color": "#44866e",
+            "house": 2,
+            "id": 17,
+            "lat": 6.559204008129054,
+            "lon": 121.63602594729205,
+            "name": "穀神星",
+            "retrograde": true,
+            "short": "穀",
+            "source": "leb",
+            "speed": -0.05695658694548911
+          },
+          {
+            "color": "#777c3c",
+            "house": 2,
+            "id": -11,
+            "lat": 0.0,
+            "lon": 121.8835879233419,
+            "name": "南交點",
+            "retrograde": true,
+            "short": "南",
+            "source": "skyfield",
+            "speed": -0.029895147176830505
+          },
+          {
+            "color": "#688966",
+            "house": 11,
+            "id": -1,
+            "lat": 0,
+            "lon": 62.01952476019346,
+            "name": "幸運點",
+            "retrograde": false,
+            "short": "幸",
+            "source": "derived",
+            "speed": null
+          },
+          {
+            "color": "#447d67",
+            "house": 1,
+            "id": -2,
+            "lat": 0,
+            "lon": 93.94990070459359,
+            "name": "上升點",
+            "retrograde": false,
+            "short": "升",
+            "source": "derived",
+            "speed": null
+          },
+          {
+            "color": "#447d67",
+            "house": 10,
+            "id": -3,
+            "lat": 0,
+            "lon": 44.586423639877395,
+            "name": "天頂",
+            "retrograde": false,
+            "short": "頂",
+            "source": "derived",
+            "speed": null
+          }
+        ],
+        "times": {
+          "erfa_gast_deg": 110.4219372366464,
+          "erfa_true_obliquity_deg": 23.448998794509887,
+          "tt_jd": 2427780.5927334297,
+          "ut1_jd": 2427780.5924537037,
+          "ut1_source": "historical_model"
+        },
+        "timezone_mode": "地區歷史時區",
+        "tzdata_version": "2026.5",
+        "utc": "1934-12-09T02:13:08+00:00",
+        "utc_offset": "UTC-03:00",
+        "version": "0.6.2"
+      }
+    },
+    {
+      "current_engine_exact_match": true,
+      "elapsed_seconds": 0.06863450002856553,
+      "house_position_audit": [
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            303.6897106088416,
+            8.017740540787796e-05,
+            "H"
+          ],
+          "correction": null,
+          "house": 7,
+          "point_id": 0,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 7.642306715393948,
+          "raw_position": 7.642306715393948,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            198.21320791220384,
+            5.123275118984676,
+            "H"
+          ],
+          "correction": null,
+          "house": 3,
+          "point_id": 1,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 3.751890295014628,
+          "raw_position": 3.751890295014628,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            301.04674025837136,
+            -2.010017723294997,
+            "H"
+          ],
+          "correction": null,
+          "house": 7,
+          "point_id": 2,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 7.625403462178714,
+          "raw_position": 7.625403462178714,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            319.03917307912565,
+            -1.5080675499406042,
+            "H"
+          ],
+          "correction": null,
+          "house": 8,
+          "point_id": 3,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 8.042625016017507,
+          "raw_position": 8.042625016017507,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            46.574579564335906,
+            1.6619401590988268,
+            "H"
+          ],
+          "correction": null,
+          "house": 10,
+          "point_id": 4,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 10.876633903112728,
+          "raw_position": 10.876633903112728,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            331.3899126096257,
+            -0.9370901710755516,
+            "H"
+          ],
+          "correction": null,
+          "house": 8,
+          "point_id": 5,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 8.320656734192552,
+          "raw_position": 8.320656734192552,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            245.45512662509822,
+            1.8809712242795593,
+            "H"
+          ],
+          "correction": null,
+          "house": 5,
+          "point_id": 6,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 5.7340216725437365,
+          "raw_position": 5.7340216725437365,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            356.5582398964493,
+            -0.7248207881522083,
+            "H"
+          ],
+          "correction": null,
+          "house": 8,
+          "point_id": 7,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 8.967156083481091,
+          "raw_position": 8.967156083481091,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            146.19871604139107,
+            0.45884162659515404,
+            "H"
+          ],
+          "correction": null,
+          "house": 2,
+          "point_id": 8,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 2.185966272603899,
+          "raw_position": 2.185966272603899,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            104.48546329295687,
+            -1.3846241494116729,
+            "H"
+          ],
+          "correction": null,
+          "house": 1,
+          "point_id": 9,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 1.1116653158479803,
+          "raw_position": 1.1116653158479803,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            96.8161895701111,
+            0.0,
+            "H"
+          ],
+          "correction": null,
+          "house": 12,
+          "point_id": 11,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 12.919211345257018,
+          "raw_position": 12.919211345257018,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            27.654327643053257,
+            -0.27045445104423754,
+            "H"
+          ],
+          "correction": null,
+          "house": 10,
+          "point_id": 15,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 10.033597327094563,
+          "raw_position": 10.033597327094563,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            1.0974236500088883,
+            -6.405503990874908,
+            "H"
+          ],
+          "correction": null,
+          "house": 9,
+          "point_id": 19,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 9.223736228265892,
+          "raw_position": 9.223736228265892,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            227.71638102899365,
+            19.674163908319706,
+            "H"
+          ],
+          "correction": null,
+          "house": 4,
+          "point_id": 18,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 4.956344244780844,
+          "raw_position": 4.956344244780844,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            216.47353046237245,
+            7.741509805737563,
+            "H"
+          ],
+          "correction": null,
+          "house": 4,
+          "point_id": 20,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 4.482712389020687,
+          "raw_position": 4.482712389020687,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            244.1825614702523,
+            5.394380931766212,
+            "H"
+          ],
+          "correction": null,
+          "house": 5,
+          "point_id": 17,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 5.6432339817773975,
+          "raw_position": 5.6432339817773975,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            276.8161895701111,
+            0.0,
+            "H"
+          ],
+          "correction": null,
+          "house": 6,
+          "point_id": -11,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 6.9192113452570165,
+          "raw_position": 6.9192113452570165,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            244.91098604049577,
+            0,
+            "H"
+          ],
+          "correction": null,
+          "house": 5,
+          "point_id": -1,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 5.73245474801614,
+          "raw_position": 5.73245474801614,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            139.434483343858,
+            0,
+            "H"
+          ],
+          "correction": null,
+          "house": 2,
+          "point_id": -2,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 2.0161492036076996,
+          "raw_position": 2.0161492036076996,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "arguments": [
+            25.000591740434196,
+            59.32938,
+            23.448501377557893,
+            26.94406235543638,
+            0,
+            "H"
+          ],
+          "correction": null,
+          "house": 10,
+          "point_id": -3,
+          "policy": "lib-house-pos-exact-13-wrap-v1",
+          "position": 10.0,
+          "raw_position": 10.0,
+          "status": "ok",
+          "warnings": []
+        }
+      ],
+      "id": "main-1927-01",
+      "numeric": {
+        "all_points": {
+          "-1": {
+            "house": 5,
+            "id": -1,
+            "lat": 0,
+            "lon": {
+              "$float": "0x1.e9d26cc326157p+7"
+            },
+            "retrograde": false,
+            "source": "derived",
+            "speed": null
+          },
+          "-11": {
+            "house": 6,
+            "id": -11,
+            "lat": {
+              "$float": "0x0.0p+0"
+            },
+            "lon": {
+              "$float": "0x1.14d0f1ccb6f6ap+8"
+            },
+            "retrograde": true,
+            "source": "skyfield",
+            "speed": {
+              "$float": "-0x1.f277b004ee000p-6"
+            }
+          },
+          "-2": {
+            "house": 2,
+            "id": -2,
+            "lat": 0,
+            "lon": {
+              "$float": "0x1.16de7499d10dcp+7"
+            },
+            "retrograde": false,
+            "source": "derived",
+            "speed": null
+          },
+          "-3": {
+            "house": 10,
+            "id": -3,
+            "lat": 0,
+            "lon": {
+              "$float": "0x1.af1ae120dfbe6p+4"
+            },
+            "retrograde": false,
+            "source": "derived",
+            "speed": null
+          },
+          "0": {
+            "house": 7,
+            "id": 0,
+            "lat": {
+              "$float": "0x1.5049d561f9cf4p-14"
+            },
+            "lon": {
+              "$float": "0x1.2fb090dfdcaddp+8"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.044d97f46c000p+0"
+            }
+          },
+          "1": {
+            "house": 3,
+            "id": 1,
+            "lat": {
+              "$float": "0x1.47e3bd531cc7cp+2"
+            },
+            "lon": {
+              "$float": "0x1.8c6d29966453fp+7"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.7d2c3b77b2e00p+3"
+            }
+          },
+          "11": {
+            "house": 12,
+            "id": 11,
+            "lat": {
+              "$float": "0x0.0p+0"
+            },
+            "lon": {
+              "$float": "0x1.8343c732dbdaap+6"
+            },
+            "retrograde": true,
+            "source": "skyfield",
+            "speed": {
+              "$float": "-0x1.f277b004ee000p-6"
+            }
+          },
+          "15": {
+            "house": 10,
+            "id": 15,
+            "lat": {
+              "$float": "-0x1.14f202f92ba81p-2"
+            },
+            "lon": {
+              "$float": "0x1.ba7820433c852p+4"
+            },
+            "retrograde": false,
+            "source": "leb",
+            "speed": {
+              "$float": "0x1.00b87684be000p-6"
+            }
+          },
+          "17": {
+            "house": 5,
+            "id": 17,
+            "lat": {
+              "$float": "0x1.593d898506855p+2"
+            },
+            "lon": {
+              "$float": "0x1.e85d78b2707c9p+7"
+            },
+            "retrograde": false,
+            "source": "leb",
+            "speed": {
+              "$float": "0x1.6754ade091000p-2"
+            }
+          },
+          "18": {
+            "house": 4,
+            "id": 18,
+            "lat": {
+              "$float": "0x1.3ac960182606ep+4"
+            },
+            "lon": {
+              "$float": "0x1.c76ec97e86015p+7"
+            },
+            "retrograde": false,
+            "source": "leb",
+            "speed": {
+              "$float": "0x1.2e3795fed7000p-2"
+            }
+          },
+          "19": {
+            "house": 9,
+            "id": 19,
+            "lat": {
+              "$float": "-0x1.99f3c702cd223p+2"
+            },
+            "lon": {
+              "$float": "0x1.18f0c19ea526fp+0"
+            },
+            "retrograde": false,
+            "source": "leb",
+            "speed": {
+              "$float": "0x1.f98d0f32aa4a0p-2"
+            }
+          },
+          "2": {
+            "house": 7,
+            "id": 2,
+            "lat": {
+              "$float": "-0x1.014842c0f7589p+1"
+            },
+            "lon": {
+              "$float": "0x1.2d0bf72b691c9p+8"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.ac1023d3b4000p+0"
+            }
+          },
+          "20": {
+            "house": 4,
+            "id": 20,
+            "lat": {
+              "$float": "0x1.ef74e58b5397ep+2"
+            },
+            "lon": {
+              "$float": "0x1.b0f27295b3195p+7"
+            },
+            "retrograde": false,
+            "source": "leb",
+            "speed": {
+              "$float": "0x1.5305c5efaf000p-2"
+            }
+          },
+          "3": {
+            "house": 8,
+            "id": 3,
+            "lat": {
+              "$float": "-0x1.8210b707275bap+0"
+            },
+            "lon": {
+              "$float": "0x1.3f0a073f35ba7p+8"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.4082460050000p+0"
+            }
+          },
+          "4": {
+            "house": 10,
+            "id": 4,
+            "lat": {
+              "$float": "0x1.a974e9073d0e3p+0"
+            },
+            "lon": {
+              "$float": "0x1.7498bd2bae2e6p+5"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.af62360296000p-2"
+            }
+          },
+          "5": {
+            "house": 8,
+            "id": 5,
+            "lat": {
+              "$float": "-0x1.dfca486c58571p-1"
+            },
+            "lon": {
+              "$float": "0x1.4b63d15012a3fp+8"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.d16a487640000p-3"
+            }
+          },
+          "6": {
+            "house": 5,
+            "id": 6,
+            "lat": {
+              "$float": "0x1.e1875484ff6f1p+0"
+            },
+            "lon": {
+              "$float": "0x1.eae9065b64abep+7"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.48131791a0000p-4"
+            }
+          },
+          "7": {
+            "house": 8,
+            "id": 7,
+            "lat": {
+              "$float": "-0x1.731bb5d9263c5p-1"
+            },
+            "lon": {
+              "$float": "0x1.648ee8cf52928p+8"
+            },
+            "retrograde": false,
+            "source": "skyfield",
+            "speed": {
+              "$float": "0x1.4235762000000p-5"
+            }
+          },
+          "8": {
+            "house": 2,
+            "id": 8,
+            "lat": {
+              "$float": "0x1.d5da9451141a0p-2"
+            },
+            "lon": {
+              "$float": "0x1.2465be1be5ee3p+7"
+            },
+            "retrograde": true,
+            "source": "skyfield",
+            "speed": {
+              "$float": "-0x1.a018244000000p-6"
+            }
+          },
+          "9": {
+            "house": 1,
+            "id": 9,
+            "lat": {
+              "$float": "-0x1.6276ba6ef9968p+0"
+            },
+            "lon": {
+              "$float": "0x1.a1f11d4a1aa20p+6"
+            },
+            "retrograde": true,
+            "source": "skyfield",
+            "speed": {
+              "$float": "-0x1.440bc7ee80000p-6"
+            }
+          }
+        },
+        "asc": {
+          "$float": "0x1.16de7499d10dcp+7"
+        },
+        "aspects": {
+          "0:2:0": {
+            "a_lon": {
+              "$float": "0x1.2fb090dfdcaddp+8"
+            },
+            "angle": 0,
+            "b_lon": {
+              "$float": "0x1.2d0bf72b691c9p+8"
+            },
+            "limit": {
+              "$float": "0x1.0000000000000p+2"
+            },
+            "minor": false,
+            "orb": {
+              "$float": "0x1.524cda39c8a00p+1"
+            }
+          },
+          "0:6:60": {
+            "a_lon": {
+              "$float": "0x1.2fb090dfdcaddp+8"
+            },
+            "angle": 60,
+            "b_lon": {
+              "$float": "0x1.eae9065b64abep+7"
+            },
+            "limit": {
+              "$float": "0x1.0000000000000p+1"
+            },
+            "minor": false,
+            "orb": {
+              "$float": "0x1.c3f24dd5a8200p+0"
+            }
+          },
+          "1:-2:60": {
+            "a_lon": {
+              "$float": "0x1.8c6d29966453fp+7"
+            },
+            "angle": 60,
+            "b_lon": {
+              "$float": "0x1.16de7499d10dcp+7"
+            },
+            "limit": {
+              "$float": "0x1.0000000000000p+1"
+            },
+            "minor": false,
+            "orb": {
+              "$float": "0x1.38a581b65ce80p+0"
+            }
+          },
+          "1:3:120": {
+            "a_lon": {
+              "$float": "0x1.8c6d29966453fp+7"
+            },
+            "angle": 120,
+            "b_lon": {
+              "$float": "0x1.3f0a073f35ba7p+8"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+1"
+            },
+            "minor": false,
+            "orb": {
+              "$float": "0x1.a6e4e80720f00p-1"
+            }
+          },
+          "2:5:30": {
+            "a_lon": {
+              "$float": "0x1.2d0bf72b691c9p+8"
+            },
+            "angle": 30,
+            "b_lon": {
+              "$float": "0x1.4b63d15012a3fp+8"
+            },
+            "limit": {
+              "$float": "0x1.0000000000000p+0"
+            },
+            "minor": true,
+            "orb": {
+              "$float": "0x1.5f6892a61d800p-2"
+            }
+          },
+          "3:-2:180": {
+            "a_lon": {
+              "$float": "0x1.3f0a073f35ba7p+8"
+            },
+            "angle": 180,
+            "b_lon": {
+              "$float": "0x1.16de7499d10dcp+7"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+1"
+            },
+            "minor": false,
+            "orb": {
+              "$float": "0x1.94cc36cb31c00p-2"
+            }
+          },
+          "3:4:90": {
+            "a_lon": {
+              "$float": "0x1.3f0a073f35ba7p+8"
+            },
+            "angle": 90,
+            "b_lon": {
+              "$float": "0x1.7498bd2bae2e6p+5"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+1"
+            },
+            "minor": false,
+            "orb": {
+              "$float": "0x1.3b77ccdffa500p+1"
+            }
+          },
+          "4:-2:90": {
+            "a_lon": {
+              "$float": "0x1.7498bd2bae2e6p+5"
+            },
+            "angle": 90,
+            "b_lon": {
+              "$float": "0x1.16de7499d10dcp+7"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+1"
+            },
+            "minor": false,
+            "orb": {
+              "$float": "0x1.6e1153b9608a0p+1"
+            }
+          },
+          "7:-3:30": {
+            "a_lon": {
+              "$float": "0x1.648ee8cf52928p+8"
+            },
+            "angle": 30,
+            "b_lon": {
+              "$float": "0x1.af1ae120dfbe6p+4"
+            },
+            "limit": {
+              "$float": "0x1.0000000000000p+0"
+            },
+            "minor": true,
+            "orb": {
+              "$float": "0x1.8b150aeda5800p-2"
+            }
+          },
+          "7:8:150": {
+            "a_lon": {
+              "$float": "0x1.648ee8cf52928p+8"
+            },
+            "angle": 150,
+            "b_lon": {
+              "$float": "0x1.2465be1be5ee3p+7"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+0"
+            },
+            "minor": true,
+            "orb": {
+              "$float": "0x1.7027057e6d800p-2"
+            }
+          },
+          "8:-3:120": {
+            "a_lon": {
+              "$float": "0x1.2465be1be5ee3p+7"
+            },
+            "angle": 120,
+            "b_lon": {
+              "$float": "0x1.af1ae120dfbe6p+4"
+            },
+            "limit": {
+              "$float": "0x1.8000000000000p+1"
+            },
+            "minor": false,
+            "orb": {
+              "$float": "0x1.7d9e083609a00p-1"
+            }
+          }
+        },
+        "cusps": [
+          {
+            "$float": "0x1.8e0451ccfbaacp+6"
+          },
+          {
+            "$float": "0x1.157dc427f63e8p+7"
+          },
+          {
+            "$float": "0x1.6488dfcb16c58p+7"
+          },
+          {
+            "$float": "0x1.9de35c241bf7dp+7"
+          },
+          {
+            "$float": "0x1.ca2fffbe11598p+7"
+          },
+          {
+            "$float": "0x1.f64a2e1acf464p+7"
+          },
+          {
+            "$float": "0x1.178114733eeabp+8"
+          },
+          {
+            "$float": "0x1.3ebee213fb1f4p+8"
+          },
+          {
+            "$float": "0x1.66446fe58b62cp+8"
+          },
+          {
+            "$float": "0x1.af1ae120dfbe6p+4"
+          },
+          {
+            "$float": "0x1.88bffef845660p+5"
+          },
+          {
+            "$float": "0x1.1c945c359e8c8p+6"
+          }
+        ],
+        "day_chart": false,
+        "dst_minutes": {
+          "$float": "0x0.0p+0"
+        },
+        "input": {
+          "dst_enabled": false,
+          "dst_minutes": 60,
+          "fold": 0,
+          "gender": "男",
+          "latitude": {
+            "$float": "0x1.daa291fb3fa6ep+5"
+          },
+          "local_iso": "1927-01-24T17:15:47",
+          "longitude": {
+            "$float": "0x1.21196fa82e87dp+4"
+          },
+          "manual_dst": false,
+          "minor_aspects": true,
+          "name": "",
+          "notes": "",
+          "small_bodies": true,
+          "system": "H",
+          "zone": "Europe/Stockholm"
+        },
+        "local": "1927-01-24T17:15:47+01:00",
+        "mc": {
+          "$float": "0x1.af1ae120dfbe6p+4"
+        },
+        "orbs": {
+          "0": {
+            "$float": "0x1.0000000000000p+2"
+          },
+          "120": {
+            "$float": "0x1.8000000000000p+1"
+          },
+          "135": {
+            "$float": "0x1.8000000000000p+0"
+          },
+          "150": {
+            "$float": "0x1.8000000000000p+0"
+          },
+          "180": {
+            "$float": "0x1.8000000000000p+1"
+          },
+          "30": {
+            "$float": "0x1.0000000000000p+0"
+          },
+          "45": {
+            "$float": "0x1.0000000000000p+0"
+          },
+          "60": {
+            "$float": "0x1.0000000000000p+1"
+          },
+          "72": {
+            "$float": "0x1.8000000000000p+0"
+          },
+          "90": {
+            "$float": "0x1.8000000000000p+1"
+          }
+        },
+        "times": {
+          "erfa_gast_deg": {
+            "$float": "0x1.bba3f34fb9e23p+2"
+          },
+          "erfa_true_obliquity_deg": {
+            "$float": "0x1.772d0fc7cd275p+4"
+          },
+          "tt_jd": {
+            "$float": "0x1.2802496c5ac25p+21"
+          },
+          "ut1_jd": {
+            "$float": "0x1.2802496bc7deap+21"
+          },
+          "ut1_source": "historical_model"
+        },
+        "utc": "1927-01-24T16:15:47+00:00",
+        "utc_offset": "UTC+01:00",
+        "visible_point_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11,
+          15,
+          19,
+          18,
+          20,
+          17,
+          -11,
+          -1,
+          -2,
+          -3
+        ]
+      },
+      "raw": {
+        "all_points": [
+          {
+            "color": "#df484c",
+            "house": 7,
+            "id": 0,
+            "lat": 8.017740540787796e-05,
+            "lon": 303.6897106088416,
+            "name": "太陽",
+            "retrograde": false,
+            "short": "日",
+            "source": "skyfield",
+            "speed": 1.016808983968076
+          },
+          {
+            "color": "#e45e82",
+            "house": 3,
+            "id": 1,
+            "lat": 5.123275118984676,
+            "lon": 198.21320791220384,
+            "name": "月亮",
+            "retrograde": false,
+            "short": "月",
+            "source": "skyfield",
+            "speed": 11.911649450098594
+          },
+          {
+            "color": "#22875e",
+            "house": 7,
+            "id": 2,
+            "lat": -2.010017723294997,
+            "lon": 301.04674025837136,
+            "name": "水星",
+            "retrograde": false,
+            "short": "水",
+            "source": "skyfield",
+            "speed": 1.672121276078542
+          },
+          {
+            "color": "#ce447e",
+            "house": 8,
+            "id": 3,
+            "lat": -1.5080675499406042,
+            "lon": 319.03917307912565,
+            "name": "金星",
+            "retrograde": false,
+            "short": "金",
+            "source": "skyfield",
+            "speed": 1.2519878149760189
+          },
+          {
+            "color": "#bc542e",
+            "house": 10,
+            "id": 4,
+            "lat": 1.6619401590988268,
+            "lon": 46.574579564335906,
+            "name": "火星",
+            "retrograde": false,
+            "short": "火",
+            "source": "skyfield",
+            "speed": 0.4212730826452571
+          },
+          {
+            "color": "#d85e2a",
+            "house": 8,
+            "id": 5,
+            "lat": -0.9370901710755516,
+            "lon": 331.3899126096257,
+            "name": "木星",
+            "retrograde": false,
+            "short": "木",
+            "source": "skyfield",
+            "speed": 0.22725350008840906
+          },
+          {
+            "color": "#88633d",
+            "house": 5,
+            "id": 6,
+            "lat": 1.8809712242795593,
+            "lon": 245.45512662509822,
+            "name": "土星",
+            "retrograde": false,
+            "short": "土",
+            "source": "skyfield",
+            "speed": 0.08009633261281124
+          },
+          {
+            "color": "#387b59",
+            "house": 8,
+            "id": 7,
+            "lat": -0.7248207881522083,
+            "lon": 356.5582398964493,
+            "name": "天王星",
+            "retrograde": false,
+            "short": "天",
+            "source": "skyfield",
+            "speed": 0.03933213301934302
+          },
+          {
+            "color": "#4e65bb",
+            "house": 2,
+            "id": 8,
+            "lat": 0.45884162659515404,
+            "lon": 146.19871604139107,
+            "name": "海王星",
+            "retrograde": true,
+            "short": "海",
+            "source": "skyfield",
+            "speed": -0.025396380806341767
+          },
+          {
+            "color": "#474359",
+            "house": 1,
+            "id": 9,
+            "lat": -1.3846241494116729,
+            "lon": 104.48546329295687,
+            "name": "冥王星",
+            "retrograde": true,
+            "short": "冥",
+            "source": "skyfield",
+            "speed": -0.01977819943022041
+          },
+          {
+            "color": "#777c3c",
+            "house": 12,
+            "id": 11,
+            "lat": 0.0,
+            "lon": 96.8161895701111,
+            "name": "北交點",
+            "retrograde": true,
+            "short": "北",
+            "source": "skyfield",
+            "speed": -0.030424043554120317
+          },
+          {
+            "color": "#3d8068",
+            "house": 10,
+            "id": 15,
+            "lat": -0.27045445104423754,
+            "lon": 27.654327643053257,
+            "name": "凱龍星",
+            "retrograde": false,
+            "short": "凱",
+            "source": "leb",
+            "speed": 0.015668979397531757
+          },
+          {
+            "color": "#44866e",
+            "house": 9,
+            "id": 19,
+            "lat": -6.405503990874908,
+            "lon": 1.0974236500088883,
+            "name": "婚神星",
+            "retrograde": false,
+            "short": "婚",
+            "source": "leb",
+            "speed": 0.49370216128097333
+          },
+          {
+            "color": "#44866e",
+            "house": 4,
+            "id": 18,
+            "lat": 19.674163908319706,
+            "lon": 227.71638102899365,
+            "name": "智神星",
+            "retrograde": false,
+            "short": "智",
+            "source": "leb",
+            "speed": 0.29513391845625847
+          },
+          {
+            "color": "#44866e",
+            "house": 4,
+            "id": 20,
+            "lat": 7.741509805737563,
+            "lon": 216.47353046237245,
+            "name": "灶神星",
+            "retrograde": false,
+            "short": "灶",
+            "source": "leb",
+            "speed": 0.33107671046650466
+          },
+          {
+            "color": "#44866e",
+            "house": 5,
+            "id": 17,
+            "lat": 5.394380931766212,
+            "lon": 244.1825614702523,
+            "name": "穀神星",
+            "retrograde": false,
+            "short": "穀",
+            "source": "leb",
+            "speed": 0.35090896304268426
+          },
+          {
+            "color": "#777c3c",
+            "house": 6,
+            "id": -11,
+            "lat": 0.0,
+            "lon": 276.8161895701111,
+            "name": "南交點",
+            "retrograde": true,
+            "short": "南",
+            "source": "skyfield",
+            "speed": -0.030424043554120317
+          },
+          {
+            "color": "#688966",
+            "house": 5,
+            "id": -1,
+            "lat": 0,
+            "lon": 244.91098604049577,
+            "name": "幸運點",
+            "retrograde": false,
+            "short": "幸",
+            "source": "derived",
+            "speed": null
+          },
+          {
+            "color": "#447d67",
+            "house": 2,
+            "id": -2,
+            "lat": 0,
+            "lon": 139.434483343858,
+            "name": "上升點",
+            "retrograde": false,
+            "short": "升",
+            "source": "derived",
+            "speed": null
+          },
+          {
+            "color": "#447d67",
+            "house": 10,
+            "id": -3,
+            "lat": 0,
+            "lon": 26.94406235543638,
+            "name": "天頂",
+            "retrograde": false,
+            "short": "頂",
+            "source": "derived",
+            "speed": null
+          }
+        ],
+        "asc": 139.434483343858,
+        "aspects": [
+          {
+            "a": "水星",
+            "a_lon": 301.04674025837136,
+            "angle": 30,
+            "b": "木星",
+            "b_lon": 331.3899126096257,
+            "color": "#69a9a9",
+            "limit": 1.0,
+            "minor": true,
+            "name": "半六合",
+            "orb": 0.34317235125433854
+          },
+          {
+            "a": "天王星",
+            "a_lon": 356.5582398964493,
+            "angle": 150,
+            "b": "海王星",
+            "b_lon": 146.19871604139107,
+            "color": "#655e58",
+            "limit": 1.5,
+            "minor": true,
+            "name": "梅花相",
+            "orb": 0.35952385505822804
+          },
+          {
+            "a": "天王星",
+            "a_lon": 356.5582398964493,
+            "angle": 30,
+            "b": "天頂",
+            "b_lon": 26.94406235543638,
+            "color": "#69a9a9",
+            "limit": 1.0,
+            "minor": true,
+            "name": "半六合",
+            "orb": 0.38582245898703604
+          },
+          {
+            "a": "金星",
+            "a_lon": 319.03917307912565,
+            "angle": 180,
+            "b": "上升點",
+            "b_lon": 139.434483343858,
+            "color": "#ed3030",
+            "limit": 3.0,
+            "minor": false,
+            "name": "對分",
+            "orb": 0.395310264732359
+          },
+          {
+            "a": "海王星",
+            "a_lon": 146.19871604139107,
+            "angle": 120,
+            "b": "天頂",
+            "b_lon": 26.94406235543638,
+            "color": "#3434ed",
+            "limit": 3.0,
+            "minor": false,
+            "name": "三分",
+            "orb": 0.7453463140453209
+          },
+          {
+            "a": "月亮",
+            "a_lon": 198.21320791220384,
+            "angle": 120,
+            "b": "金星",
+            "b_lon": 319.03917307912565,
+            "color": "#3434ed",
+            "limit": 3.0,
+            "minor": false,
+            "name": "三分",
+            "orb": 0.8259651669218044
+          },
+          {
+            "a": "月亮",
+            "a_lon": 198.21320791220384,
+            "angle": 60,
+            "b": "上升點",
+            "b_lon": 139.434483343858,
+            "color": "#3434ed",
+            "limit": 2.0,
+            "minor": false,
+            "name": "六合",
+            "orb": 1.2212754316541634
+          },
+          {
+            "a": "太陽",
+            "a_lon": 303.6897106088416,
+            "angle": 60,
+            "b": "土星",
+            "b_lon": 245.45512662509822,
+            "color": "#3434ed",
+            "limit": 2.0,
+            "minor": false,
+            "name": "六合",
+            "orb": 1.7654160162566086
+          },
+          {
+            "a": "金星",
+            "a_lon": 319.03917307912565,
+            "angle": 90,
+            "b": "火星",
+            "b_lon": 46.574579564335906,
+            "color": "#ed3030",
+            "limit": 3.0,
+            "minor": false,
+            "name": "四分",
+            "orb": 2.464593514789726
+          },
+          {
+            "a": "太陽",
+            "a_lon": 303.6897106088416,
+            "angle": 0,
+            "b": "水星",
+            "b_lon": 301.04674025837136,
+            "color": "#dfb900",
+            "limit": 4.0,
+            "minor": false,
+            "name": "合相",
+            "orb": 2.64297035047025
+          },
+          {
+            "a": "火星",
+            "a_lon": 46.574579564335906,
+            "angle": 90,
+            "b": "上升點",
+            "b_lon": 139.434483343858,
+            "color": "#ed3030",
+            "limit": 3.0,
+            "minor": false,
+            "name": "四分",
+            "orb": 2.8599037795220994
+          }
+        ],
+        "cusps": [
+          99.50421829496435,
+          138.7456371772853,
+          178.26733240750286,
+          206.9440623554364,
+          229.09374803506648,
+          251.14488300113874,
+          279.50421829496435,
+          318.7456371772853,
+          358.26733240750286,
+          26.94406235543638,
+          49.09374803506648,
+          71.14488300113874
+        ],
+        "day_chart": false,
+        "dst_minutes": 0.0,
+        "input": {
+          "dst_enabled": false,
+          "dst_minutes": 60,
+          "fold": 0,
+          "gender": "男",
+          "latitude": 59.32938,
+          "local_iso": "1927-01-24T17:15:47",
+          "longitude": 18.06871,
+          "manual_dst": false,
+          "minor_aspects": true,
+          "name": "",
+          "notes": "",
+          "small_bodies": true,
+          "system": "H",
+          "zone": "Europe/Stockholm"
+        },
+        "local": "1927-01-24T17:15:47+01:00",
+        "mc": 26.94406235543638,
+        "notes": [
+          "1960 年以前：以歷史時區換算的格林威治時間近似地球自轉時間。"
+        ],
+        "orbs": {
+          "0": 4.0,
+          "30": 1.0,
+          "45": 1.0,
+          "60": 2.0,
+          "72": 1.5,
+          "90": 3.0,
+          "120": 3.0,
+          "135": 1.5,
+          "150": 1.5,
+          "180": 3.0
+        },
+        "points": [
+          {
+            "color": "#df484c",
+            "house": 7,
+            "id": 0,
+            "lat": 8.017740540787796e-05,
+            "lon": 303.6897106088416,
+            "name": "太陽",
+            "retrograde": false,
+            "short": "日",
+            "source": "skyfield",
+            "speed": 1.016808983968076
+          },
+          {
+            "color": "#e45e82",
+            "house": 3,
+            "id": 1,
+            "lat": 5.123275118984676,
+            "lon": 198.21320791220384,
+            "name": "月亮",
+            "retrograde": false,
+            "short": "月",
+            "source": "skyfield",
+            "speed": 11.911649450098594
+          },
+          {
+            "color": "#22875e",
+            "house": 7,
+            "id": 2,
+            "lat": -2.010017723294997,
+            "lon": 301.04674025837136,
+            "name": "水星",
+            "retrograde": false,
+            "short": "水",
+            "source": "skyfield",
+            "speed": 1.672121276078542
+          },
+          {
+            "color": "#ce447e",
+            "house": 8,
+            "id": 3,
+            "lat": -1.5080675499406042,
+            "lon": 319.03917307912565,
+            "name": "金星",
+            "retrograde": false,
+            "short": "金",
+            "source": "skyfield",
+            "speed": 1.2519878149760189
+          },
+          {
+            "color": "#bc542e",
+            "house": 10,
+            "id": 4,
+            "lat": 1.6619401590988268,
+            "lon": 46.574579564335906,
+            "name": "火星",
+            "retrograde": false,
+            "short": "火",
+            "source": "skyfield",
+            "speed": 0.4212730826452571
+          },
+          {
+            "color": "#d85e2a",
+            "house": 8,
+            "id": 5,
+            "lat": -0.9370901710755516,
+            "lon": 331.3899126096257,
+            "name": "木星",
+            "retrograde": false,
+            "short": "木",
+            "source": "skyfield",
+            "speed": 0.22725350008840906
+          },
+          {
+            "color": "#88633d",
+            "house": 5,
+            "id": 6,
+            "lat": 1.8809712242795593,
+            "lon": 245.45512662509822,
+            "name": "土星",
+            "retrograde": false,
+            "short": "土",
+            "source": "skyfield",
+            "speed": 0.08009633261281124
+          },
+          {
+            "color": "#387b59",
+            "house": 8,
+            "id": 7,
+            "lat": -0.7248207881522083,
+            "lon": 356.5582398964493,
+            "name": "天王星",
+            "retrograde": false,
+            "short": "天",
+            "source": "skyfield",
+            "speed": 0.03933213301934302
+          },
+          {
+            "color": "#4e65bb",
+            "house": 2,
+            "id": 8,
+            "lat": 0.45884162659515404,
+            "lon": 146.19871604139107,
+            "name": "海王星",
+            "retrograde": true,
+            "short": "海",
+            "source": "skyfield",
+            "speed": -0.025396380806341767
+          },
+          {
+            "color": "#474359",
+            "house": 1,
+            "id": 9,
+            "lat": -1.3846241494116729,
+            "lon": 104.48546329295687,
+            "name": "冥王星",
+            "retrograde": true,
+            "short": "冥",
+            "source": "skyfield",
+            "speed": -0.01977819943022041
+          },
+          {
+            "color": "#777c3c",
+            "house": 12,
+            "id": 11,
+            "lat": 0.0,
+            "lon": 96.8161895701111,
+            "name": "北交點",
+            "retrograde": true,
+            "short": "北",
+            "source": "skyfield",
+            "speed": -0.030424043554120317
+          },
+          {
+            "color": "#3d8068",
+            "house": 10,
+            "id": 15,
+            "lat": -0.27045445104423754,
+            "lon": 27.654327643053257,
+            "name": "凱龍星",
+            "retrograde": false,
+            "short": "凱",
+            "source": "leb",
+            "speed": 0.015668979397531757
+          },
+          {
+            "color": "#44866e",
+            "house": 9,
+            "id": 19,
+            "lat": -6.405503990874908,
+            "lon": 1.0974236500088883,
+            "name": "婚神星",
+            "retrograde": false,
+            "short": "婚",
+            "source": "leb",
+            "speed": 0.49370216128097333
+          },
+          {
+            "color": "#44866e",
+            "house": 4,
+            "id": 18,
+            "lat": 19.674163908319706,
+            "lon": 227.71638102899365,
+            "name": "智神星",
+            "retrograde": false,
+            "short": "智",
+            "source": "leb",
+            "speed": 0.29513391845625847
+          },
+          {
+            "color": "#44866e",
+            "house": 4,
+            "id": 20,
+            "lat": 7.741509805737563,
+            "lon": 216.47353046237245,
+            "name": "灶神星",
+            "retrograde": false,
+            "short": "灶",
+            "source": "leb",
+            "speed": 0.33107671046650466
+          },
+          {
+            "color": "#44866e",
+            "house": 5,
+            "id": 17,
+            "lat": 5.394380931766212,
+            "lon": 244.1825614702523,
+            "name": "穀神星",
+            "retrograde": false,
+            "short": "穀",
+            "source": "leb",
+            "speed": 0.35090896304268426
+          },
+          {
+            "color": "#777c3c",
+            "house": 6,
+            "id": -11,
+            "lat": 0.0,
+            "lon": 276.8161895701111,
+            "name": "南交點",
+            "retrograde": true,
+            "short": "南",
+            "source": "skyfield",
+            "speed": -0.030424043554120317
+          },
+          {
+            "color": "#688966",
+            "house": 5,
+            "id": -1,
+            "lat": 0,
+            "lon": 244.91098604049577,
+            "name": "幸運點",
+            "retrograde": false,
+            "short": "幸",
+            "source": "derived",
+            "speed": null
+          },
+          {
+            "color": "#447d67",
+            "house": 2,
+            "id": -2,
+            "lat": 0,
+            "lon": 139.434483343858,
+            "name": "上升點",
+            "retrograde": false,
+            "short": "升",
+            "source": "derived",
+            "speed": null
+          },
+          {
+            "color": "#447d67",
+            "house": 10,
+            "id": -3,
+            "lat": 0,
+            "lon": 26.94406235543638,
+            "name": "天頂",
+            "retrograde": false,
+            "short": "頂",
+            "source": "derived",
+            "speed": null
+          }
+        ],
+        "times": {
+          "erfa_gast_deg": 6.9318817404341955,
+          "erfa_true_obliquity_deg": 23.448501377557893,
+          "tt_jd": 2424905.177907484,
+          "ut1_jd": 2424905.177627315,
+          "ut1_source": "historical_model"
+        },
+        "timezone_mode": "地區歷史時區",
+        "tzdata_version": "2026.5",
+        "utc": "1927-01-24T16:15:47+00:00",
+        "utc_offset": "UTC+01:00",
+        "version": "0.6.2"
+      }
+    }
+  ]
+}

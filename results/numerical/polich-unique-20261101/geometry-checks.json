@@ -1,0 +1,11 @@
+{
+  "frames": 224,
+  "dense_plane_checks": 7956,
+  "accepted_cusp_probes": 11520,
+  "near_boundary_precision_refusals": 1740,
+  "folded_cusp_probes_refused": 180,
+  "roots_checked": 8846,
+  "max_cartesian_dot_residual": 2.5727033350908535e-15,
+  "unexpected_failures": [],
+  "elapsed_seconds": 26.316809099982493
+}

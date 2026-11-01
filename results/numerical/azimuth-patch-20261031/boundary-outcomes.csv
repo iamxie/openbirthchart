@@ -1,0 +1,88 @@
+﻿case,product_status,product_full_chart,swiss_status,swiss_error
+edge-azimuth-main-1936-03,ok,True,ok,
+edge-azimuth-main-1947-04,ok,True,ok,
+edge-azimuth-main-1965-09,ok,True,ok,
+edge-azimuth-main-1967-07,ok,True,ok,
+edge-azimuth-main-1977-10,ok,True,ok,
+edge-azimuth-main-1978-08,ok,True,ok,
+edge-azimuth-main-1980-06,ok,True,ok,
+edge-azimuth-main-1981-12,ok,True,ok,
+edge-azimuth-main-1982-05,ok,True,ok,
+edge-azimuth-main-1984-03,ok,True,ok,
+edge-azimuth-main-1991-01,ok,True,ok,
+edge-azimuth-main-1994-10,ok,True,ok,
+edge-azimuth-main-2002-03,ok,True,ok,
+edge-azimuth-main-2022-06,ok,True,ok,
+edge-azimuth-main-2023-05,ok,True,ok,
+edge-azimuth-main-2023-11,ok,True,ok,
+edge-pre-1960,ok,True,ok,
+edge-start-1960,ok,True,ok,
+edge-pre-1972,ok,True,ok,
+edge-start-1972,ok,True,ok,
+edge-leap-day,ok,True,ok,
+edge-century-not-leap,ok,True,ok,
+edge-leap-second-before,ok,True,ok,
+edge-leap-second-after,ok,True,ok,
+edge-range-first,ok,True,ok,
+edge-range-last,ok,True,ok,
+edge-range-before,UserError,False,ok,
+edge-range-after,UserError,False,ok,
+edge-fold-None,AmbiguousTimeError,False,not_calculated,"{'type': 'AmbiguousTimeError', 'message': '這個鐘點在當天出現兩次，請選擇「第一次」或「第二次」。'}"
+edge-fold-0,ok,True,ok,
+edge-fold-1,ok,True,ok,
+edge-dst-gap,UserError,False,not_calculated,"{'type': 'UserError', 'message': '這個當地時間因夏令時間切換而不存在，請核對出生時間。'}"
+edge-date-line-gap,UserError,False,not_calculated,"{'type': 'UserError', 'message': '這個當地時間因夏令時間切換而不存在，請核對出生時間。'}"
+edge-quarter-hour,ok,True,ok,
+edge-half-hour-dst,ok,True,ok,
+edge-manual-auto,ok,True,ok,
+edge-manual-off,ok,True,ok,
+edge-manual-on,ok,True,ok,
+edge-manual-negative,ok,True,ok,
+edge-manual-maximum,ok,True,ok,
+edge-polar-69.65-P,UserError,False,error,swisseph.houses_armc: error
+edge-polar-69.65-K,UserError,False,error,swisseph.houses_armc: error
+edge-polar-69.65-E,ok,True,ok,
+edge-polar-69.65-W,ok,True,ok,
+edge-polar--69.65-P,UserError,False,error,swisseph.houses_armc: error
+edge-polar--69.65-K,UserError,False,error,swisseph.houses_armc: error
+edge-polar--69.65-E,ok,True,ok,
+edge-polar--69.65-W,ok,True,ok,
+edge-longitude--180.0,ok,True,ok,
+edge-longitude-180.0,ok,True,ok,
+edge-longitude-0.0,ok,True,ok,
+edge-no-minors,ok,True,ok,
+edge-utc-leap-second-input,ValueError,False,not_calculated,"{'type': 'ValueError', 'message': 'second must be in 0..59'}"
+edge-cusp-0.0,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'house'}"
+edge-cusp-360.0,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'house'}"
+edge-cusp-359.999999,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'house'}"
+edge-cusp-29.999999,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'house'}"
+edge-cusp-30.0,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'house'}"
+edge-cusp-30.000001,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'house'}"
+edge-aspect-3.999999,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'aspect'}"
+edge-aspect-4.0,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'aspect'}"
+edge-aspect-4.000001,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'aspect'}"
+edge-aspect-359.999999,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'aspect'}"
+edge-aspect-360.0,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'aspect'}"
+edge-time-2016-12-31T23:59:59Z,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'time'}"
+edge-time-2016-12-31T23:59:60Z,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'time'}"
+edge-time-2017-01-01T00:00:00Z,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'time'}"
+edge-mercury-station-before,ok,True,ok,
+edge-mercury-station-after,ok,True,ok,
+edge-day-night-before,ok,True,ok,
+edge-day-night-after,ok,True,ok,
+edge-eop-1973-01-02T00:00:00--86401,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'time'}"
+edge-eop-1973-01-02T00:00:00--86400,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'time'}"
+edge-eop-1973-01-02T00:00:00--1,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'time'}"
+edge-eop-1973-01-02T00:00:00-0,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'time'}"
+edge-eop-2027-10-04T00:00:00--86401,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'time'}"
+edge-eop-2027-10-04T00:00:00--86400,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'time'}"
+edge-eop-2027-10-04T00:00:00--1,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'time'}"
+edge-eop-2027-10-04T00:00:00-0,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'time'}"
+edge-eop-2026-09-02T00:00:00--86401,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'time'}"
+edge-eop-2026-09-02T00:00:00--86400,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'time'}"
+edge-eop-2026-09-02T00:00:00--1,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'time'}"
+edge-eop-2026-09-02T00:00:00-0,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'time'}"
+edge-eop-2026-10-09T00:00:00--86401,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'time'}"
+edge-eop-2026-10-09T00:00:00--86400,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'time'}"
+edge-eop-2026-10-09T00:00:00--1,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'time'}"
+edge-eop-2026-10-09T00:00:00-0,ok,False,not_applicable,"{'type': 'not_applicable', 'message': 'Isolated helper regression without complete birth inputs', 'kind': 'time'}"

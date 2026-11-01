@@ -1,0 +1,44 @@
+{
+  "schema": "complete-current-v1",
+  "active_suite": "complete-v2",
+  "cases_per_dataset": 2016,
+  "updated_utc": "2026-10-31T14:36:01.394745+00:00",
+  "modes": {
+    "actual": {
+      "product": {
+        "path": "regression/complete-v2/product/actual",
+        "seal_sha256": "d8aad34e2ff45c8e867f7a1cc2d8697272ccc3f72ba36b397827a8e18596ba21",
+        "cases_sha256": "f78ed06b2a529dc0f4234d1ea335b6c6c6bc4a23fbad467e0a711fde03f9571e"
+      },
+      "swiss": {
+        "path": "regression/complete-v2/swiss/actual",
+        "seal_sha256": "3feb61a6437e4763e1bdeaf3a7e83022f8030381f3a7947fc0dfdd93bd3cd20b",
+        "cases_sha256": "f78ed06b2a529dc0f4234d1ea335b6c6c6bc4a23fbad467e0a711fde03f9571e"
+      }
+    },
+    "zero": {
+      "product": {
+        "path": "regression/complete-v2/product/zero",
+        "seal_sha256": "17f7a610bcac63c14bfae4c0451bb21864da2460d76579f5d0ff2fae51808bb3",
+        "cases_sha256": "2c7f96c121911b9ba25979285494124a281adf7c7ff795fcdc9cf7886b3a864a"
+      },
+      "swiss": {
+        "path": "regression/complete-v2/swiss/zero",
+        "seal_sha256": "009669d777fb2f7d12f8539d8cd446b5f3ec14ab10a527950aaba0ec10621814",
+        "cases_sha256": "2c7f96c121911b9ba25979285494124a281adf7c7ff795fcdc9cf7886b3a864a"
+      }
+    }
+  },
+  "superseded": [
+    {
+      "path": "regression/complete-v1/product-0.6.5",
+      "status": "obsolete"
+    },
+    {
+      "path": "regression/complete-v1/swiss-2.10.03",
+      "status": "obsolete"
+    }
+  ],
+  "supersession_policy": "Old 2016 outputs are obsolete and retained unchanged as history. Fixed case conditions and legacy 1287 baselines remain valid.",
+  "report": "results/numerical/complete-dual-20261031/REPORT.md"
+}

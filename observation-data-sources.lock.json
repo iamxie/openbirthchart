@@ -1,0 +1,41 @@
+{
+  "retrieved_utc": "2026-10-26T08:27:43.583970+00:00",
+  "catalogue": "CDS I/256 CMC1-11 (1999)",
+  "files": [
+    {
+      "path": "data/observations/cmc11-ReadMe.txt",
+      "url": "https://cdsarc.cds.unistra.fr/ftp/I/256/ReadMe",
+      "derived_gzip": null,
+      "bytes": 20712,
+      "sha256": "f4c05a95570543970873ac56f16d38b53a1d761261200e51714a70a40c5e0d06"
+    },
+    {
+      "path": "data/observations/planet.dat.gz",
+      "url": "https://cdsarc.cds.unistra.fr/ftp/I/256/planet.dat.gz",
+      "derived_gzip": null,
+      "bytes": 520255,
+      "sha256": "2ddfee2d17cb7acd5434eb448771209a0328e5d0863b6d58819355c5f4c320a5"
+    },
+    {
+      "path": "data/observations/intcmc11.tex.gz",
+      "url": "https://cdsarc.cds.unistra.fr/ftp/I/256/intcmc11.tex.gz",
+      "derived_gzip": null,
+      "bytes": 38989,
+      "sha256": "7365770d39daa72f28c60155ab1f4a844c36187c4fc8255b47cf322d68ea3278"
+    },
+    {
+      "path": "data/observations/planet.dat",
+      "url": null,
+      "derived_gzip": "planet.dat.gz",
+      "bytes": 2121560,
+      "sha256": "f2b3952079a3f25f7aac8c1ed686e802dc1ad2532b9efc741a671395803e7fb6"
+    },
+    {
+      "path": "data/observations/intcmc11.tex",
+      "url": null,
+      "derived_gzip": "intcmc11.tex.gz",
+      "bytes": 161344,
+      "sha256": "b5d9c3897bebaeacb6cfe914a27c1672f5b7daa607d649d823ac26f2194c0cb5"
+    }
+  ]
+}

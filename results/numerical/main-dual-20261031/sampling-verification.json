@@ -1,0 +1,11 @@
+{
+  "cases_per_mode": 1200,
+  "no_resampling": true,
+  "excluded_boundary_cases": 87,
+  "original_cases_sha256": "f177b191e0d4d619b15afff149ba757b4ae94a8ea4da8fad6c08b193e5c48e7e",
+  "frozen_time_input_sha256": "87b37b523f3f3e9485fe5227410c65ceacdb3cf326db0f103a4885fb2b6395d4",
+  "modes": {
+    "actual": "01f3b924b32b10b938ea255a9a9a6332dae59e7cbb301ca926cc6aecf49a8b38",
+    "zero": "ffa96956652bfde8635d7881a1e3c1da4314cf4d76ac9c16626eba4f0b859375"
+  }
+}

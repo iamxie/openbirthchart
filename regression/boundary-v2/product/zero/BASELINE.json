@@ -1,0 +1,21 @@
+{
+  "name": "87 邊界例基準資料",
+  "engine": "product",
+  "suite": "boundary-v2",
+  "house_latitude_mode": "zero",
+  "product_version": "0.6.5",
+  "reference_version": null,
+  "product_description": "LibEphemeris based with application fixes; exact source and policy captured",
+  "created_utc": "2026-10-31T16:28:04.882118+00:00",
+  "independent_repeat": {
+    "first": "D:\\Codex\\OpenBirthChart\\results\\numerical\\boundary-dual-20261101\\runs\\product-zero-first",
+    "second": "D:\\Codex\\OpenBirthChart\\results\\numerical\\boundary-dual-20261101\\runs\\product-zero-repeat",
+    "cases": 87,
+    "equal": true,
+    "differences": [],
+    "environment_equal": true,
+    "first_manifest_sha256": "c7f966f439415aa0fb0c54602305f48dab65669b0f2d5956b7102fe018c67333",
+    "second_manifest_sha256": "ac7775606cc841af6e0ad4a31d47c734c9d4b6ceb089d07cc3a7db1214173ea3"
+  },
+  "interpretation": "Fixed observed product/reference behavior, including geometry rejections and undefined positions; not a claim of correctness."
+}

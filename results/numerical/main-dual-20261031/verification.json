@@ -1,0 +1,91 @@
+{
+  "seals": {
+    "product-actual": {
+      "verified": true,
+      "files": 1223
+    },
+    "product-zero": {
+      "verified": true,
+      "files": 1223
+    },
+    "swiss-actual": {
+      "verified": true,
+      "files": 1216
+    },
+    "swiss-zero": {
+      "verified": true,
+      "files": 1216
+    }
+  },
+  "mode_invariants": {
+    "product": {
+      "cases": 1200,
+      "coordinate_pairs": 24000,
+      "axis_house_pairs": 2400,
+      "unchanged_coordinates_and_axes": true,
+      "changed_charts": 479,
+      "changed_points": 892,
+      "undefined_transitions": 32,
+      "by_system": {
+        "P": 101,
+        "X": 49,
+        "C": 114,
+        "H": 153,
+        "T": 89,
+        "K": 188,
+        "R": 104,
+        "U": 53,
+        "B": 41
+      }
+    },
+    "swiss": {
+      "cases": 1200,
+      "coordinate_pairs": 24000,
+      "axis_house_pairs": 2400,
+      "unchanged_coordinates_and_axes": true,
+      "changed_charts": 479,
+      "changed_points": 892,
+      "undefined_transitions": 32,
+      "by_system": {
+        "P": 101,
+        "X": 49,
+        "C": 114,
+        "H": 153,
+        "T": 89,
+        "K": 188,
+        "R": 104,
+        "U": 53,
+        "B": 41
+      }
+    }
+  },
+  "product_continuity": {
+    "actual": {
+      "cases": 1200,
+      "raw_and_numeric_exact": true
+    },
+    "zero": {
+      "cases": 1200,
+      "raw_and_numeric_exact": true
+    }
+  },
+  "swiss_actual_continuity": {
+    "cases": 1200,
+    "exact_except_added_input_flag_and_timing_location": true
+  },
+  "preservation": {
+    "files": 4304,
+    "changed": []
+  },
+  "sampling": {
+    "cases_per_mode": 1200,
+    "no_resampling": true,
+    "excluded_boundary_cases": 87,
+    "original_cases_sha256": "f177b191e0d4d619b15afff149ba757b4ae94a8ea4da8fad6c08b193e5c48e7e",
+    "frozen_time_input_sha256": "87b37b523f3f3e9485fe5227410c65ceacdb3cf326db0f103a4885fb2b6395d4",
+    "modes": {
+      "actual": "01f3b924b32b10b938ea255a9a9a6332dae59e7cbb301ca926cc6aecf49a8b38",
+      "zero": "ffa96956652bfde8635d7881a1e3c1da4314cf4d76ac9c16626eba4f0b859375"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "same_house_difference_points": true,
+  "same_house_difference_charts": true,
+  "changed_house_pairs_between_modes": 164,
+  "product_only_mode_change_points": [],
+  "swiss_only_mode_change_points": [
+    [
+      "complete-1941-07-T",
+      "1"
+    ],
+    [
+      "complete-1941-07-T",
+      "15"
+    ],
+    [
+      "complete-1941-07-T",
+      "17"
+    ],
+    [
+      "complete-1941-07-T",
+      "18"
+    ],
+    [
+      "complete-1941-07-T",
+      "2"
+    ],
+    [
+      "complete-1941-07-T",
+      "4"
+    ],
+    [
+      "complete-1983-11-T",
+      "17"
+    ],
+    [
+      "complete-1983-11-T",
+      "18"
+    ],
+    [
+      "complete-1983-11-T",
+      "19"
+    ],
+    [
+      "complete-1983-11-T",
+      "20"
+    ],
+    [
+      "complete-1983-11-T",
+      "9"
+    ],
+    [
+      "complete-2000-06-T",
+      "17"
+    ],
+    [
+      "complete-2004-01-T",
+      "17"
+    ],
+    [
+      "complete-2004-01-T",
+      "18"
+    ],
+    [
+      "complete-2004-01-T",
+      "19"
+    ],
+    [
+      "complete-2004-01-T",
+      "9"
+    ],
+    [
+      "complete-2012-08-T",
+      "1"
+    ],
+    [
+      "complete-2012-08-T",
+      "19"
+    ]
+  ],
+  "azimuth_max_cusp": {
+    "angular_exceeded": false,
+    "angular_within_tolerance": true,
+    "band": "south_low",
+    "case": "complete-1958-10-H",
+    "city": "geonames-3390760",
+    "city_name": "Recife",
+    "display_zodiac_crossing": false,
+    "geographic_latitude": -8.05389,
+    "geographic_longitude": -34.88111,
+    "hemisphere": "south",
+    "house_latitude_mode": "actual",
+    "kind": "cusp",
+    "latitude_delta_arcsec": 0.0,
+    "local_iso": "1958-10-09T11:53:18",
+    "longitude_delta_arcsec": 0.0026197570832664496,
+    "name": "宮頭 2",
+    "point_id": 2,
+    "product_longitude": 42.983035317056874,
+    "product_sign": 1,
+    "reference_longitude": 42.98303458934657,
+    "reference_sign": 1,
+    "separation_arcsec": 0.0026197570832664496,
+    "system": "H",
+    "utc": "1958-10-09T14:53:18+00:00",
+    "zodiac_crossing": false,
+    "zone": "America/Recife"
+  }
+}

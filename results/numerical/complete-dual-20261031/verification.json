@@ -1,0 +1,90 @@
+{
+  "seals": {
+    "product-actual": {
+      "files": 166,
+      "verified": true
+    },
+    "product-zero": {
+      "files": 166,
+      "verified": true
+    },
+    "swiss-actual": {
+      "files": 159,
+      "verified": true
+    },
+    "swiss-zero": {
+      "files": 159,
+      "verified": true
+    }
+  },
+  "mode_invariants": {
+    "product": {
+      "cases": 2016,
+      "coordinate_pairs": 39740,
+      "axis_house_pairs": 3974,
+      "unchanged_coordinates_and_axes": true,
+      "changed_charts": 714,
+      "changed_points": 1397,
+      "undefined_transitions": 57,
+      "by_system": {
+        "K": 264,
+        "H": 263,
+        "C": 172,
+        "U": 61,
+        "X": 78,
+        "B": 68,
+        "P": 132,
+        "R": 214,
+        "T": 145
+      }
+    },
+    "swiss": {
+      "cases": 2016,
+      "coordinate_pairs": 39840,
+      "axis_house_pairs": 3984,
+      "unchanged_coordinates_and_axes": true,
+      "changed_charts": 719,
+      "changed_points": 1415,
+      "undefined_transitions": 57,
+      "by_system": {
+        "K": 264,
+        "H": 263,
+        "C": 172,
+        "U": 61,
+        "X": 78,
+        "B": 68,
+        "P": 132,
+        "R": 214,
+        "T": 163
+      }
+    }
+  },
+  "product_continuity": {
+    "actual": {
+      "cases": 2016,
+      "raw_and_numeric_exact": true
+    },
+    "zero": {
+      "cases": 2016,
+      "raw_and_numeric_exact": true
+    }
+  },
+  "swiss_actual_continuity": {
+    "cases": 2016,
+    "exact_except_added_input_flag": true
+  },
+  "preservation": {
+    "files": 1302,
+    "changed": []
+  },
+  "sampling": {
+    "cases_per_mode": 2016,
+    "same_physical_inputs": true,
+    "source_sha256": "f256f246e4c09101b7bc3b2df1e83226139ac1a0a42b644dbe6a877a7aa9fd43",
+    "only_case_input_addition": "house_latitude: true/false",
+    "inputs_sha256": {
+      "actual": "f78ed06b2a529dc0f4234d1ea335b6c6c6bc4a23fbad467e0a711fde03f9571e",
+      "zero": "2c7f96c121911b9ba25979285494124a281adf7c7ff795fcdc9cf7886b3a864a"
+    }
+  }
+}

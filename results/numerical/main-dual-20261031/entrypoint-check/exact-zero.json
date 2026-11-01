@@ -1,0 +1,10 @@
+{
+  "first": "D:\\Codex\\OpenBirthChart\\regression\\main-v2\\product\\zero",
+  "second": "results\\numerical\\main-dual-20261031\\entrypoint-check\\run-zero",
+  "cases": 1200,
+  "equal": true,
+  "differences": [],
+  "environment_equal": true,
+  "first_manifest_sha256": "d57130eb31a311f90aaf3112285462cdbe40e2478d6e28a4dbbd762dd80ce0be",
+  "second_manifest_sha256": "9be11517cccf8a9cd03e60c1a37e8eab5b985f4fc254019c30613263f1988a59"
+}

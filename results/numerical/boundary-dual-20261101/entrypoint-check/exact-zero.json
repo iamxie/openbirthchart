@@ -1,0 +1,10 @@
+{
+  "first": "D:\\Codex\\OpenBirthChart\\regression\\boundary-v2\\product\\zero",
+  "second": "results\\numerical\\boundary-dual-20261101\\entrypoint-check\\run-zero",
+  "cases": 87,
+  "equal": true,
+  "differences": [],
+  "environment_equal": true,
+  "first_manifest_sha256": "c7f966f439415aa0fb0c54602305f48dab65669b0f2d5956b7102fe018c67333",
+  "second_manifest_sha256": "b0d56950b3f4d7b9bde1f909f8bed4d69574ffda64a873bbeafd2d14899d6221"
+}

@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-10-26T05:56:24.074392+00:00",
+  "swiss_data_commit": "94621aba9f3ff9c32cb721eac0380c30dbb153fe",
+  "files": [
+    {
+      "path": "data/core/de440s.bsp",
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/bsp/de440s.bsp",
+      "bytes": 32726016,
+      "sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+    },
+    {
+      "path": "data/reference/sepl_18.se1",
+      "url": "https://raw.githubusercontent.com/aloistr/swisseph/94621aba9f3ff9c32cb721eac0380c30dbb153fe/ephe/sepl_18.se1",
+      "bytes": 484061,
+      "sha256": "ca1393ceab3a44fbc895887cf789c68819ae6a1cbc9b22225872dbe4ccd99a66"
+    },
+    {
+      "path": "data/reference/semo_18.se1",
+      "url": "https://raw.githubusercontent.com/aloistr/swisseph/94621aba9f3ff9c32cb721eac0380c30dbb153fe/ephe/semo_18.se1",
+      "bytes": 1304771,
+      "sha256": "1ca07bd67c24374d77226180c20a4f9996cba013697894810518e7eb582ca4f7"
+    }
+  ],
+  "note": "Hashes identify downloaded artifacts, not an independent authenticity signature. Swiss files are comparison-only."
+}

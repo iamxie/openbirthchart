@@ -1,0 +1,70 @@
+[
+  {
+    "path": "desktop/house_positions.py",
+    "kind": "changed"
+  },
+  {
+    "path": "desktop/model.py",
+    "kind": "changed"
+  },
+  {
+    "path": "desktop/polich.py",
+    "kind": "added"
+  },
+  {
+    "path": "desktop/window.py",
+    "kind": "changed"
+  },
+  {
+    "path": "scripts/complete_regression.py",
+    "kind": "changed"
+  },
+  {
+    "path": "scripts/numerical_regression.py",
+    "kind": "changed"
+  },
+  {
+    "path": "tests/test_desktop_polich_asc.py",
+    "kind": "changed"
+  },
+  {
+    "path": "tests/test_house_number2.py",
+    "kind": "changed"
+  },
+  {
+    "path": "translations/desktop_en_US.qm",
+    "kind": "changed"
+  },
+  {
+    "path": "translations/desktop_en_US.ts",
+    "kind": "changed"
+  },
+  {
+    "path": "docs/azimuth-swiss-differences.md",
+    "kind": "added"
+  },
+  {
+    "path": "docs/polich-page-unique-placement.md",
+    "kind": "added"
+  },
+  {
+    "path": "docs/polich-page.md",
+    "kind": "changed"
+  },
+  {
+    "path": "docs/README.md",
+    "kind": "added"
+  },
+  {
+    "path": "HANDOFF.md",
+    "kind": "changed"
+  },
+  {
+    "path": "TODO.md",
+    "kind": "changed"
+  },
+  {
+    "path": "DESKTOP_README.md",
+    "kind": "changed"
+  }
+]

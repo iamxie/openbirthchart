@@ -1,0 +1,46 @@
+{
+  "schema": "main-current-v1",
+  "active_suite": "main-v2",
+  "cases_per_dataset": 1200,
+  "updated_utc": "2026-10-31T15:55:27.031788+00:00",
+  "modes": {
+    "actual": {
+      "product": {
+        "path": "regression/main-v2/product/actual",
+        "seal_sha256": "8375310fe1b70daa7d973614eac976982c6b2542ff84911552f6c88a60ffcf9c",
+        "cases_sha256": "01f3b924b32b10b938ea255a9a9a6332dae59e7cbb301ca926cc6aecf49a8b38"
+      },
+      "swiss": {
+        "path": "regression/main-v2/swiss/actual",
+        "seal_sha256": "d734508aad002fbf26b0fa8458d248a3b3d1b8370cc09c4ac6def16e275bd303",
+        "cases_sha256": "01f3b924b32b10b938ea255a9a9a6332dae59e7cbb301ca926cc6aecf49a8b38"
+      }
+    },
+    "zero": {
+      "product": {
+        "path": "regression/main-v2/product/zero",
+        "seal_sha256": "8797623adcd0baf5bacb17c7a4a5552507d255362d3747d3f5e72e7e70dc22e2",
+        "cases_sha256": "ffa96956652bfde8635d7881a1e3c1da4314cf4d76ac9c16626eba4f0b859375"
+      },
+      "swiss": {
+        "path": "regression/main-v2/swiss/zero",
+        "seal_sha256": "f5f5b0c87735f0d379ab2d33b836e881ded5bd78284572fd398996cd450f3087",
+        "cases_sha256": "ffa96956652bfde8635d7881a1e3c1da4314cf4d76ac9c16626eba4f0b859375"
+      }
+    }
+  },
+  "superseded": [
+    {
+      "path": "regression/baselines/0.6.5",
+      "scope": "balanced 1200 only",
+      "status": "obsolete"
+    },
+    {
+      "path": "regression/references/swiss-2.10.03-0.6.3",
+      "scope": "all 1200",
+      "status": "obsolete"
+    }
+  ],
+  "preserved": "All historical bytes, all 87 boundary cases, complete-v2 baselines and routing, application/library code and packages are unchanged.",
+  "report": "results/numerical/main-dual-20261031/REPORT.md"
+}

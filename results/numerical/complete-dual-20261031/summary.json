@@ -1,0 +1,4370 @@
+{
+  "comparisons": {
+    "actual": {
+      "cases": 2016,
+      "house_latitude_mode": "actual",
+      "outcomes": {
+        "both_ok": 1987,
+        "both_rejected": 24,
+        "one_sided_rejection": 5
+      },
+      "total": {
+        "charts": 1987,
+        "measurements": 63584,
+        "angular_exceeded": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "house_crossing": {
+          "measurements": 1482,
+          "charts": 78
+        },
+        "zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "display_zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_both": {
+          "measurements": 57,
+          "charts": 31
+        },
+        "retrograde_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "day_chart_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "review_charts": 78,
+        "max_longitude_delta_arcsec": 1.506332452231618,
+        "max_latitude_delta_arcsec": 0.5625233453059764,
+        "max_separation_arcsec": 1.5318764883270004
+      },
+      "points": {
+        "charts": 1987,
+        "measurements": 39740,
+        "angular_exceeded": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "house_crossing": {
+          "measurements": 1482,
+          "charts": 78
+        },
+        "zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "display_zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_both": {
+          "measurements": 57,
+          "charts": 31
+        },
+        "retrograde_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "day_chart_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "review_charts": 78,
+        "max_longitude_delta_arcsec": 1.506332452231618,
+        "max_latitude_delta_arcsec": 0.5625233453059764,
+        "max_separation_arcsec": 1.5318764883270004
+      },
+      "cusps": {
+        "charts": 1987,
+        "measurements": 23844,
+        "angular_exceeded": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "house_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "display_zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_both": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "retrograde_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "day_chart_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "review_charts": 0,
+        "max_longitude_delta_arcsec": 0.01765113137253138,
+        "max_latitude_delta_arcsec": 0.0,
+        "max_separation_arcsec": 0.01765113137253138
+      },
+      "direct16": {
+        "charts": 1987,
+        "measurements": 31792,
+        "angular_exceeded": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "house_crossing": {
+          "measurements": 1248,
+          "charts": 78
+        },
+        "zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "display_zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_both": {
+          "measurements": 57,
+          "charts": 31
+        },
+        "retrograde_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "day_chart_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "review_charts": 78,
+        "max_longitude_delta_arcsec": 1.506332452231618,
+        "max_latitude_delta_arcsec": 0.5625233453059764,
+        "max_separation_arcsec": 1.5318764883270004
+      },
+      "by_system": {
+        "P": {
+          "statistics": {
+            "charts": 132,
+            "measurements": 4224,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 132,
+            "both_rejected": 12
+          }
+        },
+        "K": {
+          "statistics": {
+            "charts": 132,
+            "measurements": 4224,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 57,
+              "charts": 31
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 132,
+            "both_rejected": 12
+          }
+        },
+        "C": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "R": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "E": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "V": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "X": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "O": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "B": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "U": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "H": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 1482,
+              "charts": 78
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 78,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "M": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "T": {
+          "statistics": {
+            "charts": 139,
+            "measurements": 4448,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 139,
+            "one_sided_rejection": 5
+          }
+        },
+        "W": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        }
+      },
+      "by_city": {
+        "geonames-2158177": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 228,
+              "charts": 12
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 2,
+              "charts": 2
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 12,
+            "max_longitude_delta_arcsec": 1.1819224440500875,
+            "max_latitude_delta_arcsec": 0.5459257649974347,
+            "max_separation_arcsec": 1.1777425970189233
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-1609350": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 19,
+              "charts": 1
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 1,
+            "max_longitude_delta_arcsec": 0.8539604198176676,
+            "max_latitude_delta_arcsec": 0.5500566363991766,
+            "max_separation_arcsec": 0.851317939375545
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-2073124": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 228,
+              "charts": 12
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 1,
+              "charts": 1
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 12,
+            "max_longitude_delta_arcsec": 1.0899686647519502,
+            "max_latitude_delta_arcsec": 0.49521260426104163,
+            "max_separation_arcsec": 1.0835950697801184
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-2189529": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 228,
+              "charts": 12
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 8,
+              "charts": 6
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 12,
+            "max_longitude_delta_arcsec": 1.2882484985709652,
+            "max_latitude_delta_arcsec": 0.44257310824775686,
+            "max_separation_arcsec": 1.281894380486294
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-3435910": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 228,
+              "charts": 12
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 2,
+              "charts": 2
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 12,
+            "max_longitude_delta_arcsec": 1.331016164203902,
+            "max_latitude_delta_arcsec": 0.4885058164319389,
+            "max_separation_arcsec": 1.3084645313548784
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-3390760": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 228,
+              "charts": 12
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 12,
+            "max_longitude_delta_arcsec": 1.1078366427227593,
+            "max_latitude_delta_arcsec": 0.5404304234396307,
+            "max_separation_arcsec": 1.1154338692874224
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-1701668": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 95,
+              "charts": 5
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 1,
+              "charts": 1
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 5,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5450776363005616,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-1850147": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.4549030944863262,
+            "max_latitude_delta_arcsec": 0.47041672997281125,
+            "max_separation_arcsec": 1.5002442598485262
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-3838854": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 228,
+              "charts": 12
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 7,
+              "charts": 4
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 12,
+            "max_longitude_delta_arcsec": 1.099992517629289,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.1684521297333763
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-3133895": {
+          "statistics": {
+            "charts": 139,
+            "measurements": 4448,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.0180707161907776,
+            "max_latitude_delta_arcsec": 0.4916212291021793,
+            "max_separation_arcsec": 1.0897697832583206
+          },
+          "outcomes": {
+            "both_rejected": 24,
+            "both_ok": 139,
+            "one_sided_rejection": 5
+          }
+        },
+        "geonames-3413829": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 28,
+              "charts": 8
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 0.896328972567062,
+            "max_latitude_delta_arcsec": 0.4699328274387682,
+            "max_separation_arcsec": 0.9348939010170966
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-5128581": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 8,
+              "charts": 7
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 0.7708802066190401,
+            "max_latitude_delta_arcsec": 0.5369042782973565,
+            "max_separation_arcsec": 0.8360719425418693
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        }
+      },
+      "by_band": {
+        "north_high": {
+          "charts": 307,
+          "measurements": 9824,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 28,
+            "charts": 8
+          },
+          "retrograde_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 0,
+          "max_longitude_delta_arcsec": 1.0180707161907776,
+          "max_latitude_delta_arcsec": 0.4916212291021793,
+          "max_separation_arcsec": 1.0897697832583206
+        },
+        "north_low": {
+          "charts": 336,
+          "measurements": 10752,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 114,
+            "charts": 6
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 1,
+            "charts": 1
+          },
+          "retrograde_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 6,
+          "max_longitude_delta_arcsec": 1.506332452231618,
+          "max_latitude_delta_arcsec": 0.5500566363991766,
+          "max_separation_arcsec": 1.5318764883270004
+        },
+        "north_mid": {
+          "charts": 336,
+          "measurements": 10752,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 8,
+            "charts": 7
+          },
+          "retrograde_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 0,
+          "max_longitude_delta_arcsec": 1.4549030944863262,
+          "max_latitude_delta_arcsec": 0.5369042782973565,
+          "max_separation_arcsec": 1.5002442598485262
+        },
+        "south_high": {
+          "charts": 336,
+          "measurements": 10752,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 456,
+            "charts": 24
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 15,
+            "charts": 10
+          },
+          "retrograde_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 24,
+          "max_longitude_delta_arcsec": 1.2882484985709652,
+          "max_latitude_delta_arcsec": 0.5625233453059764,
+          "max_separation_arcsec": 1.281894380486294
+        },
+        "south_low": {
+          "charts": 336,
+          "measurements": 10752,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 456,
+            "charts": 24
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 1,
+            "charts": 1
+          },
+          "retrograde_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 24,
+          "max_longitude_delta_arcsec": 1.1078366427227593,
+          "max_latitude_delta_arcsec": 0.5404304234396307,
+          "max_separation_arcsec": 1.1154338692874224
+        },
+        "south_mid": {
+          "charts": 336,
+          "measurements": 10752,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 456,
+            "charts": 24
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 4,
+            "charts": 4
+          },
+          "retrograde_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 24,
+          "max_longitude_delta_arcsec": 1.331016164203902,
+          "max_latitude_delta_arcsec": 0.5459257649974347,
+          "max_separation_arcsec": 1.3084645313548784
+        }
+      },
+      "threshold_arcsec": 30.0,
+      "threshold_operator": "<",
+      "review_required": true,
+      "product_manifest_sha256": "de912614ab4a8a319200299c08414dac7adc38e557cada02579c7221610115cd",
+      "reference_manifest_sha256": "0ae965881715222f98641b8607cfb68ec42717a93f4d133f71e9b7a8b5783ca0",
+      "source_sha256": "7ab3ba0ed4c026e00401c36c73aea4da5bc4f1a6c881328c966fa3954ea8f877",
+      "time_policy": "Local civil time; fold=0; redraw only nonexistent time on the same selected day. Shared product TT/UT1, not independent civil-time validation."
+    },
+    "zero": {
+      "cases": 2016,
+      "house_latitude_mode": "zero",
+      "outcomes": {
+        "both_ok": 1987,
+        "both_rejected": 24,
+        "one_sided_rejection": 5
+      },
+      "total": {
+        "charts": 1987,
+        "measurements": 63584,
+        "angular_exceeded": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "house_crossing": {
+          "measurements": 1482,
+          "charts": 78
+        },
+        "zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "display_zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_both": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "retrograde_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "day_chart_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "review_charts": 78,
+        "max_longitude_delta_arcsec": 1.506332452231618,
+        "max_latitude_delta_arcsec": 0.5625233453059764,
+        "max_separation_arcsec": 1.5318764883270004
+      },
+      "points": {
+        "charts": 1987,
+        "measurements": 39740,
+        "angular_exceeded": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "house_crossing": {
+          "measurements": 1482,
+          "charts": 78
+        },
+        "zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "display_zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_both": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "retrograde_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "day_chart_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "review_charts": 78,
+        "max_longitude_delta_arcsec": 1.506332452231618,
+        "max_latitude_delta_arcsec": 0.5625233453059764,
+        "max_separation_arcsec": 1.5318764883270004
+      },
+      "cusps": {
+        "charts": 1987,
+        "measurements": 23844,
+        "angular_exceeded": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "house_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "display_zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_both": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "retrograde_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "day_chart_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "review_charts": 0,
+        "max_longitude_delta_arcsec": 0.01765113137253138,
+        "max_latitude_delta_arcsec": 0.0,
+        "max_separation_arcsec": 0.01765113137253138
+      },
+      "direct16": {
+        "charts": 1987,
+        "measurements": 31792,
+        "angular_exceeded": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "house_crossing": {
+          "measurements": 1248,
+          "charts": 78
+        },
+        "zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "display_zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_both": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "retrograde_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "day_chart_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "review_charts": 78,
+        "max_longitude_delta_arcsec": 1.506332452231618,
+        "max_latitude_delta_arcsec": 0.5625233453059764,
+        "max_separation_arcsec": 1.5318764883270004
+      },
+      "by_system": {
+        "P": {
+          "statistics": {
+            "charts": 132,
+            "measurements": 4224,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 132,
+            "both_rejected": 12
+          }
+        },
+        "K": {
+          "statistics": {
+            "charts": 132,
+            "measurements": 4224,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 132,
+            "both_rejected": 12
+          }
+        },
+        "C": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "R": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "E": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "V": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "X": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "O": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "B": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "U": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "H": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 1482,
+              "charts": 78
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 78,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "M": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        },
+        "T": {
+          "statistics": {
+            "charts": 139,
+            "measurements": 4448,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 139,
+            "one_sided_rejection": 5
+          }
+        },
+        "W": {
+          "statistics": {
+            "charts": 144,
+            "measurements": 4608,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 144
+          }
+        }
+      },
+      "by_city": {
+        "geonames-2158177": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 228,
+              "charts": 12
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 12,
+            "max_longitude_delta_arcsec": 1.1819224440500875,
+            "max_latitude_delta_arcsec": 0.5459257649974347,
+            "max_separation_arcsec": 1.1777425970189233
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-1609350": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 19,
+              "charts": 1
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 1,
+            "max_longitude_delta_arcsec": 0.8539604198176676,
+            "max_latitude_delta_arcsec": 0.5500566363991766,
+            "max_separation_arcsec": 0.851317939375545
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-2073124": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 228,
+              "charts": 12
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 12,
+            "max_longitude_delta_arcsec": 1.0899686647519502,
+            "max_latitude_delta_arcsec": 0.49521260426104163,
+            "max_separation_arcsec": 1.0835950697801184
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-2189529": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 228,
+              "charts": 12
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 12,
+            "max_longitude_delta_arcsec": 1.2882484985709652,
+            "max_latitude_delta_arcsec": 0.44257310824775686,
+            "max_separation_arcsec": 1.281894380486294
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-3435910": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 228,
+              "charts": 12
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 12,
+            "max_longitude_delta_arcsec": 1.331016164203902,
+            "max_latitude_delta_arcsec": 0.4885058164319389,
+            "max_separation_arcsec": 1.3084645313548784
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-3390760": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 228,
+              "charts": 12
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 12,
+            "max_longitude_delta_arcsec": 1.1078366427227593,
+            "max_latitude_delta_arcsec": 0.5404304234396307,
+            "max_separation_arcsec": 1.1154338692874224
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-1701668": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 95,
+              "charts": 5
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 5,
+            "max_longitude_delta_arcsec": 1.506332452231618,
+            "max_latitude_delta_arcsec": 0.5450776363005616,
+            "max_separation_arcsec": 1.5318764883270004
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-1850147": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.4549030944863262,
+            "max_latitude_delta_arcsec": 0.47041672997281125,
+            "max_separation_arcsec": 1.5002442598485262
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-3838854": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 228,
+              "charts": 12
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 12,
+            "max_longitude_delta_arcsec": 1.099992517629289,
+            "max_latitude_delta_arcsec": 0.5625233453059764,
+            "max_separation_arcsec": 1.1684521297333763
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-3133895": {
+          "statistics": {
+            "charts": 139,
+            "measurements": 4448,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 1.0180707161907776,
+            "max_latitude_delta_arcsec": 0.4916212291021793,
+            "max_separation_arcsec": 1.0897697832583206
+          },
+          "outcomes": {
+            "both_rejected": 24,
+            "both_ok": 139,
+            "one_sided_rejection": 5
+          }
+        },
+        "geonames-3413829": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 0.896328972567062,
+            "max_latitude_delta_arcsec": 0.4699328274387682,
+            "max_separation_arcsec": 0.9348939010170966
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        },
+        "geonames-5128581": {
+          "statistics": {
+            "charts": 168,
+            "measurements": 5376,
+            "angular_exceeded": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "house_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "display_zodiac_crossing": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "undefined_both": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "retrograde_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "day_chart_mismatch": {
+              "measurements": 0,
+              "charts": 0
+            },
+            "review_charts": 0,
+            "max_longitude_delta_arcsec": 0.7708802066190401,
+            "max_latitude_delta_arcsec": 0.5369042782973565,
+            "max_separation_arcsec": 0.8360719425418693
+          },
+          "outcomes": {
+            "both_ok": 168
+          }
+        }
+      },
+      "by_band": {
+        "north_high": {
+          "charts": 307,
+          "measurements": 9824,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "retrograde_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 0,
+          "max_longitude_delta_arcsec": 1.0180707161907776,
+          "max_latitude_delta_arcsec": 0.4916212291021793,
+          "max_separation_arcsec": 1.0897697832583206
+        },
+        "north_low": {
+          "charts": 336,
+          "measurements": 10752,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 114,
+            "charts": 6
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "retrograde_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 6,
+          "max_longitude_delta_arcsec": 1.506332452231618,
+          "max_latitude_delta_arcsec": 0.5500566363991766,
+          "max_separation_arcsec": 1.5318764883270004
+        },
+        "north_mid": {
+          "charts": 336,
+          "measurements": 10752,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "retrograde_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 0,
+          "max_longitude_delta_arcsec": 1.4549030944863262,
+          "max_latitude_delta_arcsec": 0.5369042782973565,
+          "max_separation_arcsec": 1.5002442598485262
+        },
+        "south_high": {
+          "charts": 336,
+          "measurements": 10752,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 456,
+            "charts": 24
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "retrograde_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 24,
+          "max_longitude_delta_arcsec": 1.2882484985709652,
+          "max_latitude_delta_arcsec": 0.5625233453059764,
+          "max_separation_arcsec": 1.281894380486294
+        },
+        "south_low": {
+          "charts": 336,
+          "measurements": 10752,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 456,
+            "charts": 24
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "retrograde_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 24,
+          "max_longitude_delta_arcsec": 1.1078366427227593,
+          "max_latitude_delta_arcsec": 0.5404304234396307,
+          "max_separation_arcsec": 1.1154338692874224
+        },
+        "south_mid": {
+          "charts": 336,
+          "measurements": 10752,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 456,
+            "charts": 24
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "retrograde_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 24,
+          "max_longitude_delta_arcsec": 1.331016164203902,
+          "max_latitude_delta_arcsec": 0.5459257649974347,
+          "max_separation_arcsec": 1.3084645313548784
+        }
+      },
+      "threshold_arcsec": 30.0,
+      "threshold_operator": "<",
+      "review_required": true,
+      "product_manifest_sha256": "706b19673c06a45d4472dbb25f2cdd7695606e038c2faeda13bc739de9522321",
+      "reference_manifest_sha256": "76a251ef605b293318b9f590b08cfdb98a0aa33de2c02dd54faa1e3fb791df41",
+      "source_sha256": "7ab3ba0ed4c026e00401c36c73aea4da5bc4f1a6c881328c966fa3954ea8f877",
+      "time_policy": "Local civil time; fold=0; redraw only nonexistent time on the same selected day. Shared product TT/UT1, not independent civil-time validation."
+    }
+  },
+  "mode_invariants": {
+    "product": {
+      "cases": 2016,
+      "coordinate_pairs": 39740,
+      "axis_house_pairs": 3974,
+      "unchanged_coordinates_and_axes": true,
+      "changed_charts": 714,
+      "changed_points": 1397,
+      "undefined_transitions": 57,
+      "by_system": {
+        "K": 264,
+        "H": 263,
+        "C": 172,
+        "U": 61,
+        "X": 78,
+        "B": 68,
+        "P": 132,
+        "R": 214,
+        "T": 145
+      }
+    },
+    "swiss": {
+      "cases": 2016,
+      "coordinate_pairs": 39840,
+      "axis_house_pairs": 3984,
+      "unchanged_coordinates_and_axes": true,
+      "changed_charts": 719,
+      "changed_points": 1415,
+      "undefined_transitions": 57,
+      "by_system": {
+        "K": 264,
+        "H": 263,
+        "C": 172,
+        "U": 61,
+        "X": 78,
+        "B": 68,
+        "P": 132,
+        "R": 214,
+        "T": 163
+      }
+    }
+  },
+  "angular_maxima": {
+    "actual": {
+      "sun_through_pluto": {
+        "longitude_delta_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "north_mid",
+          "case": "complete-2012-06-P",
+          "city": "geonames-1850147",
+          "city_name": "Tokyo",
+          "day_chart_mismatch": false,
+          "display_zodiac_crossing": false,
+          "geographic_latitude": 35.6895,
+          "geographic_longitude": 139.69171,
+          "hemisphere": "north",
+          "house_crossing": false,
+          "house_latitude_mode": "actual",
+          "house_pos_delta_units": 9.276990109441385e-08,
+          "kind": "point",
+          "latitude_delta_arcsec": 0.0015966635561692755,
+          "local_iso": "2012-06-10T23:26:37",
+          "longitude_delta_arcsec": 0.0072703293881204445,
+          "name": "金星",
+          "point_id": 3,
+          "product_correction": null,
+          "product_house": 3,
+          "product_house_pos": 3.834781130858548,
+          "product_house_pos_raw": 3.834781130858548,
+          "product_latitude": -0.9101043028520516,
+          "product_longitude": 72.9457949727388,
+          "product_sign": 2,
+          "reference_house": 3,
+          "reference_house_pos": 3.834781223628449,
+          "reference_house_pos_raw": 3.834781223628449,
+          "reference_latitude": -0.9101038593343971,
+          "reference_longitude": 72.94579699227474,
+          "reference_sign": 2,
+          "retrograde_mismatch": false,
+          "scope": "direct16",
+          "separation_arcsec": 0.00744269362850689,
+          "system": "P",
+          "undefined_both": false,
+          "undefined_mismatch": false,
+          "utc": "2012-06-10T14:26:37+00:00",
+          "zodiac_crossing": false,
+          "zone": "Asia/Tokyo"
+        },
+        "latitude_delta_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "north_low",
+          "case": "complete-2004-05-P",
+          "city": "geonames-1609350",
+          "city_name": "Bangkok",
+          "day_chart_mismatch": false,
+          "display_zodiac_crossing": false,
+          "geographic_latitude": 13.75398,
+          "geographic_longitude": 100.50144,
+          "hemisphere": "north",
+          "house_crossing": false,
+          "house_latitude_mode": "actual",
+          "house_pos_delta_units": 4.521131735657491e-08,
+          "kind": "point",
+          "latitude_delta_arcsec": 0.0022015060702429423,
+          "local_iso": "2004-05-16T08:05:23",
+          "longitude_delta_arcsec": 0.004686908448547911,
+          "name": "金星",
+          "point_id": 3,
+          "product_correction": null,
+          "product_house": 12,
+          "product_house_pos": 12.919070139071147,
+          "product_house_pos_raw": 12.919070139071147,
+          "product_latitude": 3.97311604075496,
+          "product_longitude": 86.06924833182178,
+          "product_sign": 2,
+          "reference_house": 12,
+          "reference_house_pos": 12.919070184282464,
+          "reference_house_pos_raw": 12.919070184282464,
+          "reference_latitude": 3.973116652284424,
+          "reference_longitude": 86.0692496337408,
+          "reference_sign": 2,
+          "retrograde_mismatch": false,
+          "scope": "direct16",
+          "separation_arcsec": 0.005168005250086452,
+          "system": "P",
+          "undefined_both": false,
+          "undefined_mismatch": false,
+          "utc": "2004-05-16T01:05:23+00:00",
+          "zodiac_crossing": false,
+          "zone": "Asia/Bangkok"
+        },
+        "separation_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "north_mid",
+          "case": "complete-2012-06-P",
+          "city": "geonames-1850147",
+          "city_name": "Tokyo",
+          "day_chart_mismatch": false,
+          "display_zodiac_crossing": false,
+          "geographic_latitude": 35.6895,
+          "geographic_longitude": 139.69171,
+          "hemisphere": "north",
+          "house_crossing": false,
+          "house_latitude_mode": "actual",
+          "house_pos_delta_units": 9.276990109441385e-08,
+          "kind": "point",
+          "latitude_delta_arcsec": 0.0015966635561692755,
+          "local_iso": "2012-06-10T23:26:37",
+          "longitude_delta_arcsec": 0.0072703293881204445,
+          "name": "金星",
+          "point_id": 3,
+          "product_correction": null,
+          "product_house": 3,
+          "product_house_pos": 3.834781130858548,
+          "product_house_pos_raw": 3.834781130858548,
+          "product_latitude": -0.9101043028520516,
+          "product_longitude": 72.9457949727388,
+          "product_sign": 2,
+          "reference_house": 3,
+          "reference_house_pos": 3.834781223628449,
+          "reference_house_pos_raw": 3.834781223628449,
+          "reference_latitude": -0.9101038593343971,
+          "reference_longitude": 72.94579699227474,
+          "reference_sign": 2,
+          "retrograde_mismatch": false,
+          "scope": "direct16",
+          "separation_arcsec": 0.00744269362850689,
+          "system": "P",
+          "undefined_both": false,
+          "undefined_mismatch": false,
+          "utc": "2012-06-10T14:26:37+00:00",
+          "zodiac_crossing": false,
+          "zone": "Asia/Tokyo"
+        }
+      },
+      "direct16": {
+        "longitude_delta_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "north_low",
+          "case": "complete-1960-06-P",
+          "city": "geonames-1701668",
+          "city_name": "Manila",
+          "day_chart_mismatch": false,
+          "display_zodiac_crossing": false,
+          "geographic_latitude": 14.6042,
+          "geographic_longitude": 120.9822,
+          "hemisphere": "north",
+          "house_crossing": false,
+          "house_latitude_mode": "actual",
+          "house_pos_delta_units": 1.404985475428333e-05,
+          "kind": "point",
+          "latitude_delta_arcsec": 0.2811313557333328,
+          "local_iso": "1960-06-23T09:29:58",
+          "longitude_delta_arcsec": 1.506332452231618,
+          "name": "灶神星",
+          "point_id": 20,
+          "product_correction": null,
+          "product_house": 5,
+          "product_house_pos": 5.540747630371757,
+          "product_house_pos_raw": 5.540747630371757,
+          "product_latitude": 1.4368285413185038,
+          "product_longitude": 282.95548534068917,
+          "product_sign": 9,
+          "reference_house": 5,
+          "reference_house_pos": 5.540733580517003,
+          "reference_house_pos_raw": 5.540733580517003,
+          "reference_latitude": 1.436906633361763,
+          "reference_longitude": 282.955066915008,
+          "reference_sign": 9,
+          "retrograde_mismatch": false,
+          "scope": "direct16",
+          "separation_arcsec": 1.5318764883270004,
+          "system": "P",
+          "undefined_both": false,
+          "undefined_mismatch": false,
+          "utc": "1960-06-23T01:29:58+00:00",
+          "zodiac_crossing": false,
+          "zone": "Asia/Manila"
+        },
+        "latitude_delta_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "south_high",
+          "case": "complete-1958-01-P",
+          "city": "geonames-3838854",
+          "city_name": "Río Grande",
+          "day_chart_mismatch": false,
+          "display_zodiac_crossing": false,
+          "geographic_latitude": -53.78773,
+          "geographic_longitude": -67.70975,
+          "hemisphere": "south",
+          "house_crossing": false,
+          "house_latitude_mode": "actual",
+          "house_pos_delta_units": 1.8115016588993171e-06,
+          "kind": "point",
+          "latitude_delta_arcsec": 0.5625233453059764,
+          "local_iso": "1958-01-21T10:38:15",
+          "longitude_delta_arcsec": 0.26208302954415785,
+          "name": "智神星",
+          "point_id": 18,
+          "product_correction": null,
+          "product_house": 1,
+          "product_house_pos": 1.938548467298086,
+          "product_house_pos_raw": 1.938548467298086,
+          "product_latitude": -34.58949452164235,
+          "product_longitude": 27.364990242615576,
+          "product_sign": 0,
+          "reference_house": 1,
+          "reference_house_pos": 1.9385502787997448,
+          "reference_house_pos_raw": 1.9385502787997448,
+          "reference_latitude": -34.589338265157544,
+          "reference_longitude": 27.364917441774036,
+          "reference_sign": 0,
+          "retrograde_mismatch": false,
+          "scope": "direct16",
+          "separation_arcsec": 0.6024814010507483,
+          "system": "P",
+          "undefined_both": false,
+          "undefined_mismatch": false,
+          "utc": "1958-01-21T13:38:15+00:00",
+          "zodiac_crossing": false,
+          "zone": "America/Argentina/Ushuaia"
+        },
+        "separation_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "north_low",
+          "case": "complete-1960-06-P",
+          "city": "geonames-1701668",
+          "city_name": "Manila",
+          "day_chart_mismatch": false,
+          "display_zodiac_crossing": false,
+          "geographic_latitude": 14.6042,
+          "geographic_longitude": 120.9822,
+          "hemisphere": "north",
+          "house_crossing": false,
+          "house_latitude_mode": "actual",
+          "house_pos_delta_units": 1.404985475428333e-05,
+          "kind": "point",
+          "latitude_delta_arcsec": 0.2811313557333328,
+          "local_iso": "1960-06-23T09:29:58",
+          "longitude_delta_arcsec": 1.506332452231618,
+          "name": "灶神星",
+          "point_id": 20,
+          "product_correction": null,
+          "product_house": 5,
+          "product_house_pos": 5.540747630371757,
+          "product_house_pos_raw": 5.540747630371757,
+          "product_latitude": 1.4368285413185038,
+          "product_longitude": 282.95548534068917,
+          "product_sign": 9,
+          "reference_house": 5,
+          "reference_house_pos": 5.540733580517003,
+          "reference_house_pos_raw": 5.540733580517003,
+          "reference_latitude": 1.436906633361763,
+          "reference_longitude": 282.955066915008,
+          "reference_sign": 9,
+          "retrograde_mismatch": false,
+          "scope": "direct16",
+          "separation_arcsec": 1.5318764883270004,
+          "system": "P",
+          "undefined_both": false,
+          "undefined_mismatch": false,
+          "utc": "1960-06-23T01:29:58+00:00",
+          "zodiac_crossing": false,
+          "zone": "Asia/Manila"
+        }
+      },
+      "all20": {
+        "longitude_delta_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "north_low",
+          "case": "complete-1960-06-P",
+          "city": "geonames-1701668",
+          "city_name": "Manila",
+          "day_chart_mismatch": false,
+          "display_zodiac_crossing": false,
+          "geographic_latitude": 14.6042,
+          "geographic_longitude": 120.9822,
+          "hemisphere": "north",
+          "house_crossing": false,
+          "house_latitude_mode": "actual",
+          "house_pos_delta_units": 1.404985475428333e-05,
+          "kind": "point",
+          "latitude_delta_arcsec": 0.2811313557333328,
+          "local_iso": "1960-06-23T09:29:58",
+          "longitude_delta_arcsec": 1.506332452231618,
+          "name": "灶神星",
+          "point_id": 20,
+          "product_correction": null,
+          "product_house": 5,
+          "product_house_pos": 5.540747630371757,
+          "product_house_pos_raw": 5.540747630371757,
+          "product_latitude": 1.4368285413185038,
+          "product_longitude": 282.95548534068917,
+          "product_sign": 9,
+          "reference_house": 5,
+          "reference_house_pos": 5.540733580517003,
+          "reference_house_pos_raw": 5.540733580517003,
+          "reference_latitude": 1.436906633361763,
+          "reference_longitude": 282.955066915008,
+          "reference_sign": 9,
+          "retrograde_mismatch": false,
+          "scope": "direct16",
+          "separation_arcsec": 1.5318764883270004,
+          "system": "P",
+          "undefined_both": false,
+          "undefined_mismatch": false,
+          "utc": "1960-06-23T01:29:58+00:00",
+          "zodiac_crossing": false,
+          "zone": "Asia/Manila"
+        },
+        "latitude_delta_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "south_high",
+          "case": "complete-1958-01-P",
+          "city": "geonames-3838854",
+          "city_name": "Río Grande",
+          "day_chart_mismatch": false,
+          "display_zodiac_crossing": false,
+          "geographic_latitude": -53.78773,
+          "geographic_longitude": -67.70975,
+          "hemisphere": "south",
+          "house_crossing": false,
+          "house_latitude_mode": "actual",
+          "house_pos_delta_units": 1.8115016588993171e-06,
+          "kind": "point",
+          "latitude_delta_arcsec": 0.5625233453059764,
+          "local_iso": "1958-01-21T10:38:15",
+          "longitude_delta_arcsec": 0.26208302954415785,
+          "name": "智神星",
+          "point_id": 18,
+          "product_correction": null,
+          "product_house": 1,
+          "product_house_pos": 1.938548467298086,
+          "product_house_pos_raw": 1.938548467298086,
+          "product_latitude": -34.58949452164235,
+          "product_longitude": 27.364990242615576,
+          "product_sign": 0,
+          "reference_house": 1,
+          "reference_house_pos": 1.9385502787997448,
+          "reference_house_pos_raw": 1.9385502787997448,
+          "reference_latitude": -34.589338265157544,
+          "reference_longitude": 27.364917441774036,
+          "reference_sign": 0,
+          "retrograde_mismatch": false,
+          "scope": "direct16",
+          "separation_arcsec": 0.6024814010507483,
+          "system": "P",
+          "undefined_both": false,
+          "undefined_mismatch": false,
+          "utc": "1958-01-21T13:38:15+00:00",
+          "zodiac_crossing": false,
+          "zone": "America/Argentina/Ushuaia"
+        },
+        "separation_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "north_low",
+          "case": "complete-1960-06-P",
+          "city": "geonames-1701668",
+          "city_name": "Manila",
+          "day_chart_mismatch": false,
+          "display_zodiac_crossing": false,
+          "geographic_latitude": 14.6042,
+          "geographic_longitude": 120.9822,
+          "hemisphere": "north",
+          "house_crossing": false,
+          "house_latitude_mode": "actual",
+          "house_pos_delta_units": 1.404985475428333e-05,
+          "kind": "point",
+          "latitude_delta_arcsec": 0.2811313557333328,
+          "local_iso": "1960-06-23T09:29:58",
+          "longitude_delta_arcsec": 1.506332452231618,
+          "name": "灶神星",
+          "point_id": 20,
+          "product_correction": null,
+          "product_house": 5,
+          "product_house_pos": 5.540747630371757,
+          "product_house_pos_raw": 5.540747630371757,
+          "product_latitude": 1.4368285413185038,
+          "product_longitude": 282.95548534068917,
+          "product_sign": 9,
+          "reference_house": 5,
+          "reference_house_pos": 5.540733580517003,
+          "reference_house_pos_raw": 5.540733580517003,
+          "reference_latitude": 1.436906633361763,
+          "reference_longitude": 282.955066915008,
+          "reference_sign": 9,
+          "retrograde_mismatch": false,
+          "scope": "direct16",
+          "separation_arcsec": 1.5318764883270004,
+          "system": "P",
+          "undefined_both": false,
+          "undefined_mismatch": false,
+          "utc": "1960-06-23T01:29:58+00:00",
+          "zodiac_crossing": false,
+          "zone": "Asia/Manila"
+        }
+      },
+      "cusps": {
+        "longitude_delta_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "north_high",
+          "case": "complete-2012-08-R",
+          "city": "geonames-3133895",
+          "city_name": "Tromsø",
+          "display_zodiac_crossing": false,
+          "geographic_latitude": 69.6489,
+          "geographic_longitude": 18.95508,
+          "hemisphere": "north",
+          "house_latitude_mode": "actual",
+          "kind": "cusp",
+          "latitude_delta_arcsec": 0.0,
+          "local_iso": "2012-08-14T22:57:00",
+          "longitude_delta_arcsec": 0.01765113137253138,
+          "name": "宮頭 12",
+          "point_id": 12,
+          "product_longitude": 77.07169111176162,
+          "product_sign": 2,
+          "reference_longitude": 77.07169601485367,
+          "reference_sign": 2,
+          "separation_arcsec": 0.01765113137253138,
+          "system": "R",
+          "utc": "2012-08-14T20:57:00+00:00",
+          "zodiac_crossing": false,
+          "zone": "Europe/Oslo"
+        },
+        "latitude_delta_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "south_mid",
+          "case": "complete-1904-01-P",
+          "city": "geonames-2158177",
+          "city_name": "Melbourne",
+          "display_zodiac_crossing": false,
+          "geographic_latitude": -37.814,
+          "geographic_longitude": 144.96332,
+          "hemisphere": "south",
+          "house_latitude_mode": "actual",
+          "kind": "cusp",
+          "latitude_delta_arcsec": 0.0,
+          "local_iso": "1904-01-13T11:41:25",
+          "longitude_delta_arcsec": 0.0001995071244209612,
+          "name": "宮頭 1",
+          "point_id": 1,
+          "product_longitude": 9.327334775173313,
+          "product_sign": 0,
+          "reference_longitude": 9.327334719754667,
+          "reference_sign": 0,
+          "separation_arcsec": 0.0001995071244209612,
+          "system": "P",
+          "utc": "1904-01-13T01:41:25+00:00",
+          "zodiac_crossing": false,
+          "zone": "Australia/Melbourne"
+        },
+        "separation_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "north_high",
+          "case": "complete-2012-08-R",
+          "city": "geonames-3133895",
+          "city_name": "Tromsø",
+          "display_zodiac_crossing": false,
+          "geographic_latitude": 69.6489,
+          "geographic_longitude": 18.95508,
+          "hemisphere": "north",
+          "house_latitude_mode": "actual",
+          "kind": "cusp",
+          "latitude_delta_arcsec": 0.0,
+          "local_iso": "2012-08-14T22:57:00",
+          "longitude_delta_arcsec": 0.01765113137253138,
+          "name": "宮頭 12",
+          "point_id": 12,
+          "product_longitude": 77.07169111176162,
+          "product_sign": 2,
+          "reference_longitude": 77.07169601485367,
+          "reference_sign": 2,
+          "separation_arcsec": 0.01765113137253138,
+          "system": "R",
+          "utc": "2012-08-14T20:57:00+00:00",
+          "zodiac_crossing": false,
+          "zone": "Europe/Oslo"
+        }
+      }
+    },
+    "zero": {
+      "sun_through_pluto": {
+        "longitude_delta_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "north_mid",
+          "case": "complete-2012-06-P",
+          "city": "geonames-1850147",
+          "city_name": "Tokyo",
+          "day_chart_mismatch": false,
+          "display_zodiac_crossing": false,
+          "geographic_latitude": 35.6895,
+          "geographic_longitude": 139.69171,
+          "hemisphere": "north",
+          "house_crossing": false,
+          "house_latitude_mode": "zero",
+          "house_pos_delta_units": 9.758906172052662e-08,
+          "kind": "point",
+          "latitude_delta_arcsec": 0.0015966635561692755,
+          "local_iso": "2012-06-10T23:26:37",
+          "longitude_delta_arcsec": 0.0072703293881204445,
+          "name": "金星",
+          "point_id": 3,
+          "product_correction": null,
+          "product_house": 3,
+          "product_house_pos": 3.8279160147377467,
+          "product_house_pos_raw": 3.8279160147377467,
+          "product_latitude": -0.9101043028520516,
+          "product_longitude": 72.9457949727388,
+          "product_sign": 2,
+          "reference_house": 3,
+          "reference_house_pos": 3.8279161123268084,
+          "reference_house_pos_raw": 3.8279161123268084,
+          "reference_latitude": -0.9101038593343971,
+          "reference_longitude": 72.94579699227474,
+          "reference_sign": 2,
+          "retrograde_mismatch": false,
+          "scope": "direct16",
+          "separation_arcsec": 0.00744269362850689,
+          "system": "P",
+          "undefined_both": false,
+          "undefined_mismatch": false,
+          "utc": "2012-06-10T14:26:37+00:00",
+          "zodiac_crossing": false,
+          "zone": "Asia/Tokyo"
+        },
+        "latitude_delta_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "north_low",
+          "case": "complete-2004-05-P",
+          "city": "geonames-1609350",
+          "city_name": "Bangkok",
+          "day_chart_mismatch": false,
+          "display_zodiac_crossing": false,
+          "geographic_latitude": 13.75398,
+          "geographic_longitude": 100.50144,
+          "hemisphere": "north",
+          "house_crossing": false,
+          "house_latitude_mode": "zero",
+          "house_pos_delta_units": 5.0697234854624185e-08,
+          "kind": "point",
+          "latitude_delta_arcsec": 0.0022015060702429423,
+          "local_iso": "2004-05-16T08:05:23",
+          "longitude_delta_arcsec": 0.004686908448547911,
+          "name": "金星",
+          "point_id": 3,
+          "product_correction": null,
+          "product_house": 12,
+          "product_house_pos": 12.959662840657224,
+          "product_house_pos_raw": 12.959662840657224,
+          "product_latitude": 3.97311604075496,
+          "product_longitude": 86.06924833182178,
+          "product_sign": 2,
+          "reference_house": 12,
+          "reference_house_pos": 12.959662891354458,
+          "reference_house_pos_raw": 12.959662891354458,
+          "reference_latitude": 3.973116652284424,
+          "reference_longitude": 86.0692496337408,
+          "reference_sign": 2,
+          "retrograde_mismatch": false,
+          "scope": "direct16",
+          "separation_arcsec": 0.005168005250086452,
+          "system": "P",
+          "undefined_both": false,
+          "undefined_mismatch": false,
+          "utc": "2004-05-16T01:05:23+00:00",
+          "zodiac_crossing": false,
+          "zone": "Asia/Bangkok"
+        },
+        "separation_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "north_mid",
+          "case": "complete-2012-06-P",
+          "city": "geonames-1850147",
+          "city_name": "Tokyo",
+          "day_chart_mismatch": false,
+          "display_zodiac_crossing": false,
+          "geographic_latitude": 35.6895,
+          "geographic_longitude": 139.69171,
+          "hemisphere": "north",
+          "house_crossing": false,
+          "house_latitude_mode": "zero",
+          "house_pos_delta_units": 9.758906172052662e-08,
+          "kind": "point",
+          "latitude_delta_arcsec": 0.0015966635561692755,
+          "local_iso": "2012-06-10T23:26:37",
+          "longitude_delta_arcsec": 0.0072703293881204445,
+          "name": "金星",
+          "point_id": 3,
+          "product_correction": null,
+          "product_house": 3,
+          "product_house_pos": 3.8279160147377467,
+          "product_house_pos_raw": 3.8279160147377467,
+          "product_latitude": -0.9101043028520516,
+          "product_longitude": 72.9457949727388,
+          "product_sign": 2,
+          "reference_house": 3,
+          "reference_house_pos": 3.8279161123268084,
+          "reference_house_pos_raw": 3.8279161123268084,
+          "reference_latitude": -0.9101038593343971,
+          "reference_longitude": 72.94579699227474,
+          "reference_sign": 2,
+          "retrograde_mismatch": false,
+          "scope": "direct16",
+          "separation_arcsec": 0.00744269362850689,
+          "system": "P",
+          "undefined_both": false,
+          "undefined_mismatch": false,
+          "utc": "2012-06-10T14:26:37+00:00",
+          "zodiac_crossing": false,
+          "zone": "Asia/Tokyo"
+        }
+      },
+      "direct16": {
+        "longitude_delta_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "north_low",
+          "case": "complete-1960-06-P",
+          "city": "geonames-1701668",
+          "city_name": "Manila",
+          "day_chart_mismatch": false,
+          "display_zodiac_crossing": false,
+          "geographic_latitude": 14.6042,
+          "geographic_longitude": 120.9822,
+          "hemisphere": "north",
+          "house_crossing": false,
+          "house_latitude_mode": "zero",
+          "house_pos_delta_units": 1.426248561831045e-05,
+          "kind": "point",
+          "latitude_delta_arcsec": 0.2811313557333328,
+          "local_iso": "1960-06-23T09:29:58",
+          "longitude_delta_arcsec": 1.506332452231618,
+          "name": "灶神星",
+          "point_id": 20,
+          "product_correction": null,
+          "product_house": 5,
+          "product_house_pos": 5.5384134763836945,
+          "product_house_pos_raw": 5.5384134763836945,
+          "product_latitude": 1.4368285413185038,
+          "product_longitude": 282.95548534068917,
+          "product_sign": 9,
+          "reference_house": 5,
+          "reference_house_pos": 5.538399213898076,
+          "reference_house_pos_raw": 5.538399213898076,
+          "reference_latitude": 1.436906633361763,
+          "reference_longitude": 282.955066915008,
+          "reference_sign": 9,
+          "retrograde_mismatch": false,
+          "scope": "direct16",
+          "separation_arcsec": 1.5318764883270004,
+          "system": "P",
+          "undefined_both": false,
+          "undefined_mismatch": false,
+          "utc": "1960-06-23T01:29:58+00:00",
+          "zodiac_crossing": false,
+          "zone": "Asia/Manila"
+        },
+        "latitude_delta_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "south_high",
+          "case": "complete-1958-01-P",
+          "city": "geonames-3838854",
+          "city_name": "Río Grande",
+          "day_chart_mismatch": false,
+          "display_zodiac_crossing": false,
+          "geographic_latitude": -53.78773,
+          "geographic_longitude": -67.70975,
+          "hemisphere": "south",
+          "house_crossing": false,
+          "house_latitude_mode": "zero",
+          "house_pos_delta_units": 2.5065661737322387e-06,
+          "kind": "point",
+          "latitude_delta_arcsec": 0.5625233453059764,
+          "local_iso": "1958-01-21T10:38:15",
+          "longitude_delta_arcsec": 0.26208302954415785,
+          "name": "智神星",
+          "point_id": 18,
+          "product_correction": null,
+          "product_house": 2,
+          "product_house_pos": 2.5141168008232264,
+          "product_house_pos_raw": 2.5141168008232264,
+          "product_latitude": -34.58949452164235,
+          "product_longitude": 27.364990242615576,
+          "product_sign": 0,
+          "reference_house": 2,
+          "reference_house_pos": 2.5141142942570527,
+          "reference_house_pos_raw": 2.5141142942570527,
+          "reference_latitude": -34.589338265157544,
+          "reference_longitude": 27.364917441774036,
+          "reference_sign": 0,
+          "retrograde_mismatch": false,
+          "scope": "direct16",
+          "separation_arcsec": 0.6024814010507483,
+          "system": "P",
+          "undefined_both": false,
+          "undefined_mismatch": false,
+          "utc": "1958-01-21T13:38:15+00:00",
+          "zodiac_crossing": false,
+          "zone": "America/Argentina/Ushuaia"
+        },
+        "separation_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "north_low",
+          "case": "complete-1960-06-P",
+          "city": "geonames-1701668",
+          "city_name": "Manila",
+          "day_chart_mismatch": false,
+          "display_zodiac_crossing": false,
+          "geographic_latitude": 14.6042,
+          "geographic_longitude": 120.9822,
+          "hemisphere": "north",
+          "house_crossing": false,
+          "house_latitude_mode": "zero",
+          "house_pos_delta_units": 1.426248561831045e-05,
+          "kind": "point",
+          "latitude_delta_arcsec": 0.2811313557333328,
+          "local_iso": "1960-06-23T09:29:58",
+          "longitude_delta_arcsec": 1.506332452231618,
+          "name": "灶神星",
+          "point_id": 20,
+          "product_correction": null,
+          "product_house": 5,
+          "product_house_pos": 5.5384134763836945,
+          "product_house_pos_raw": 5.5384134763836945,
+          "product_latitude": 1.4368285413185038,
+          "product_longitude": 282.95548534068917,
+          "product_sign": 9,
+          "reference_house": 5,
+          "reference_house_pos": 5.538399213898076,
+          "reference_house_pos_raw": 5.538399213898076,
+          "reference_latitude": 1.436906633361763,
+          "reference_longitude": 282.955066915008,
+          "reference_sign": 9,
+          "retrograde_mismatch": false,
+          "scope": "direct16",
+          "separation_arcsec": 1.5318764883270004,
+          "system": "P",
+          "undefined_both": false,
+          "undefined_mismatch": false,
+          "utc": "1960-06-23T01:29:58+00:00",
+          "zodiac_crossing": false,
+          "zone": "Asia/Manila"
+        }
+      },
+      "all20": {
+        "longitude_delta_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "north_low",
+          "case": "complete-1960-06-P",
+          "city": "geonames-1701668",
+          "city_name": "Manila",
+          "day_chart_mismatch": false,
+          "display_zodiac_crossing": false,
+          "geographic_latitude": 14.6042,
+          "geographic_longitude": 120.9822,
+          "hemisphere": "north",
+          "house_crossing": false,
+          "house_latitude_mode": "zero",
+          "house_pos_delta_units": 1.426248561831045e-05,
+          "kind": "point",
+          "latitude_delta_arcsec": 0.2811313557333328,
+          "local_iso": "1960-06-23T09:29:58",
+          "longitude_delta_arcsec": 1.506332452231618,
+          "name": "灶神星",
+          "point_id": 20,
+          "product_correction": null,
+          "product_house": 5,
+          "product_house_pos": 5.5384134763836945,
+          "product_house_pos_raw": 5.5384134763836945,
+          "product_latitude": 1.4368285413185038,
+          "product_longitude": 282.95548534068917,
+          "product_sign": 9,
+          "reference_house": 5,
+          "reference_house_pos": 5.538399213898076,
+          "reference_house_pos_raw": 5.538399213898076,
+          "reference_latitude": 1.436906633361763,
+          "reference_longitude": 282.955066915008,
+          "reference_sign": 9,
+          "retrograde_mismatch": false,
+          "scope": "direct16",
+          "separation_arcsec": 1.5318764883270004,
+          "system": "P",
+          "undefined_both": false,
+          "undefined_mismatch": false,
+          "utc": "1960-06-23T01:29:58+00:00",
+          "zodiac_crossing": false,
+          "zone": "Asia/Manila"
+        },
+        "latitude_delta_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "south_high",
+          "case": "complete-1958-01-P",
+          "city": "geonames-3838854",
+          "city_name": "Río Grande",
+          "day_chart_mismatch": false,
+          "display_zodiac_crossing": false,
+          "geographic_latitude": -53.78773,
+          "geographic_longitude": -67.70975,
+          "hemisphere": "south",
+          "house_crossing": false,
+          "house_latitude_mode": "zero",
+          "house_pos_delta_units": 2.5065661737322387e-06,
+          "kind": "point",
+          "latitude_delta_arcsec": 0.5625233453059764,
+          "local_iso": "1958-01-21T10:38:15",
+          "longitude_delta_arcsec": 0.26208302954415785,
+          "name": "智神星",
+          "point_id": 18,
+          "product_correction": null,
+          "product_house": 2,
+          "product_house_pos": 2.5141168008232264,
+          "product_house_pos_raw": 2.5141168008232264,
+          "product_latitude": -34.58949452164235,
+          "product_longitude": 27.364990242615576,
+          "product_sign": 0,
+          "reference_house": 2,
+          "reference_house_pos": 2.5141142942570527,
+          "reference_house_pos_raw": 2.5141142942570527,
+          "reference_latitude": -34.589338265157544,
+          "reference_longitude": 27.364917441774036,
+          "reference_sign": 0,
+          "retrograde_mismatch": false,
+          "scope": "direct16",
+          "separation_arcsec": 0.6024814010507483,
+          "system": "P",
+          "undefined_both": false,
+          "undefined_mismatch": false,
+          "utc": "1958-01-21T13:38:15+00:00",
+          "zodiac_crossing": false,
+          "zone": "America/Argentina/Ushuaia"
+        },
+        "separation_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "north_low",
+          "case": "complete-1960-06-P",
+          "city": "geonames-1701668",
+          "city_name": "Manila",
+          "day_chart_mismatch": false,
+          "display_zodiac_crossing": false,
+          "geographic_latitude": 14.6042,
+          "geographic_longitude": 120.9822,
+          "hemisphere": "north",
+          "house_crossing": false,
+          "house_latitude_mode": "zero",
+          "house_pos_delta_units": 1.426248561831045e-05,
+          "kind": "point",
+          "latitude_delta_arcsec": 0.2811313557333328,
+          "local_iso": "1960-06-23T09:29:58",
+          "longitude_delta_arcsec": 1.506332452231618,
+          "name": "灶神星",
+          "point_id": 20,
+          "product_correction": null,
+          "product_house": 5,
+          "product_house_pos": 5.5384134763836945,
+          "product_house_pos_raw": 5.5384134763836945,
+          "product_latitude": 1.4368285413185038,
+          "product_longitude": 282.95548534068917,
+          "product_sign": 9,
+          "reference_house": 5,
+          "reference_house_pos": 5.538399213898076,
+          "reference_house_pos_raw": 5.538399213898076,
+          "reference_latitude": 1.436906633361763,
+          "reference_longitude": 282.955066915008,
+          "reference_sign": 9,
+          "retrograde_mismatch": false,
+          "scope": "direct16",
+          "separation_arcsec": 1.5318764883270004,
+          "system": "P",
+          "undefined_both": false,
+          "undefined_mismatch": false,
+          "utc": "1960-06-23T01:29:58+00:00",
+          "zodiac_crossing": false,
+          "zone": "Asia/Manila"
+        }
+      },
+      "cusps": {
+        "longitude_delta_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "north_high",
+          "case": "complete-2012-08-R",
+          "city": "geonames-3133895",
+          "city_name": "Tromsø",
+          "display_zodiac_crossing": false,
+          "geographic_latitude": 69.6489,
+          "geographic_longitude": 18.95508,
+          "hemisphere": "north",
+          "house_latitude_mode": "zero",
+          "kind": "cusp",
+          "latitude_delta_arcsec": 0.0,
+          "local_iso": "2012-08-14T22:57:00",
+          "longitude_delta_arcsec": 0.01765113137253138,
+          "name": "宮頭 12",
+          "point_id": 12,
+          "product_longitude": 77.07169111176162,
+          "product_sign": 2,
+          "reference_longitude": 77.07169601485367,
+          "reference_sign": 2,
+          "separation_arcsec": 0.01765113137253138,
+          "system": "R",
+          "utc": "2012-08-14T20:57:00+00:00",
+          "zodiac_crossing": false,
+          "zone": "Europe/Oslo"
+        },
+        "latitude_delta_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "south_mid",
+          "case": "complete-1904-01-P",
+          "city": "geonames-2158177",
+          "city_name": "Melbourne",
+          "display_zodiac_crossing": false,
+          "geographic_latitude": -37.814,
+          "geographic_longitude": 144.96332,
+          "hemisphere": "south",
+          "house_latitude_mode": "zero",
+          "kind": "cusp",
+          "latitude_delta_arcsec": 0.0,
+          "local_iso": "1904-01-13T11:41:25",
+          "longitude_delta_arcsec": 0.0001995071244209612,
+          "name": "宮頭 1",
+          "point_id": 1,
+          "product_longitude": 9.327334775173313,
+          "product_sign": 0,
+          "reference_longitude": 9.327334719754667,
+          "reference_sign": 0,
+          "separation_arcsec": 0.0001995071244209612,
+          "system": "P",
+          "utc": "1904-01-13T01:41:25+00:00",
+          "zodiac_crossing": false,
+          "zone": "Australia/Melbourne"
+        },
+        "separation_arcsec": {
+          "angular_exceeded": false,
+          "angular_within_tolerance": true,
+          "band": "north_high",
+          "case": "complete-2012-08-R",
+          "city": "geonames-3133895",
+          "city_name": "Tromsø",
+          "display_zodiac_crossing": false,
+          "geographic_latitude": 69.6489,
+          "geographic_longitude": 18.95508,
+          "hemisphere": "north",
+          "house_latitude_mode": "zero",
+          "kind": "cusp",
+          "latitude_delta_arcsec": 0.0,
+          "local_iso": "2012-08-14T22:57:00",
+          "longitude_delta_arcsec": 0.01765113137253138,
+          "name": "宮頭 12",
+          "point_id": 12,
+          "product_longitude": 77.07169111176162,
+          "product_sign": 2,
+          "reference_longitude": 77.07169601485367,
+          "reference_sign": 2,
+          "separation_arcsec": 0.01765113137253138,
+          "system": "R",
+          "utc": "2012-08-14T20:57:00+00:00",
+          "zodiac_crossing": false,
+          "zone": "Europe/Oslo"
+        }
+      }
+    }
+  },
+  "mismatch_patterns": {
+    "actual": {
+      "by_system": {
+        "H": 1482
+      },
+      "by_point": {
+        "太陽": 78,
+        "月亮": 78,
+        "水星": 78,
+        "金星": 78,
+        "火星": 78,
+        "木星": 78,
+        "土星": 78,
+        "天王星": 78,
+        "海王星": 78,
+        "冥王星": 78,
+        "北交點": 78,
+        "凱龍星": 78,
+        "婚神星": 78,
+        "智神星": 78,
+        "灶神星": 78,
+        "穀神星": 78,
+        "南交點": 78,
+        "幸運點": 78,
+        "上升點": 78
+      },
+      "axis_points": 78,
+      "modulo_house_shift": {
+        "9": 169,
+        "1": 299,
+        "11": 311,
+        "3": 175,
+        "5": 170,
+        "7": 244,
+        "6": 114
+      }
+    },
+    "zero": {
+      "by_system": {
+        "H": 1482
+      },
+      "by_point": {
+        "太陽": 78,
+        "月亮": 78,
+        "水星": 78,
+        "金星": 78,
+        "火星": 78,
+        "木星": 78,
+        "土星": 78,
+        "天王星": 78,
+        "海王星": 78,
+        "冥王星": 78,
+        "北交點": 78,
+        "凱龍星": 78,
+        "婚神星": 78,
+        "智神星": 78,
+        "灶神星": 78,
+        "穀神星": 78,
+        "南交點": 78,
+        "幸運點": 78,
+        "上升點": 78
+      },
+      "axis_points": 78,
+      "modulo_house_shift": {
+        "9": 171,
+        "1": 300,
+        "11": 312,
+        "3": 170,
+        "5": 169,
+        "7": 246,
+        "6": 114
+      }
+    }
+  },
+  "timings": [
+    {
+      "engine": "product",
+      "mode": "actual",
+      "round": "first",
+      "workers": 12,
+      "pool_wall_seconds": 13.30760649999138,
+      "wall_seconds": 20.336599899921566,
+      "record_elapsed_seconds_sum": 122.17889890028164
+    },
+    {
+      "engine": "product",
+      "mode": "actual",
+      "round": "repeat",
+      "workers": 12,
+      "pool_wall_seconds": 12.999700900050811,
+      "wall_seconds": 19.727720299968496,
+      "record_elapsed_seconds_sum": 123.76895060006063
+    },
+    {
+      "engine": "product",
+      "mode": "zero",
+      "round": "first",
+      "workers": 12,
+      "pool_wall_seconds": 13.072759600006975,
+      "wall_seconds": 20.088253100053407,
+      "record_elapsed_seconds_sum": 122.42204680142459
+    },
+    {
+      "engine": "product",
+      "mode": "zero",
+      "round": "repeat",
+      "workers": 12,
+      "pool_wall_seconds": 12.986400700057857,
+      "wall_seconds": 19.879224900039844,
+      "record_elapsed_seconds_sum": 124.77025629940908
+    },
+    {
+      "engine": "swiss",
+      "mode": "actual",
+      "round": "first",
+      "workers": 4,
+      "pool_wall_seconds": 13.972748800064437,
+      "wall_seconds": 16.89085339999292,
+      "record_elapsed_seconds_sum": 1.5745949001284316
+    },
+    {
+      "engine": "swiss",
+      "mode": "actual",
+      "round": "repeat",
+      "workers": 4,
+      "pool_wall_seconds": 15.0180278000189,
+      "wall_seconds": 17.87317339994479,
+      "record_elapsed_seconds_sum": 1.883599501219578
+    },
+    {
+      "engine": "swiss",
+      "mode": "zero",
+      "round": "first",
+      "workers": 4,
+      "pool_wall_seconds": 14.209043400012888,
+      "wall_seconds": 16.932958699995652,
+      "record_elapsed_seconds_sum": 1.7296661995351315
+    },
+    {
+      "engine": "swiss",
+      "mode": "zero",
+      "round": "repeat",
+      "workers": 4,
+      "pool_wall_seconds": 14.89561489992775,
+      "wall_seconds": 17.509236600017175,
+      "record_elapsed_seconds_sum": 1.647681899368763
+    }
+  ]
+}

@@ -1,0 +1,1878 @@
+{
+  "comparisons": {
+    "actual": {
+      "cases": 87,
+      "house_latitude_mode": "actual",
+      "outcomes": {
+        "chart_compared": 47,
+        "product_only_rejection": 3,
+        "no_unique_instant": 3,
+        "both_rejected": 4,
+        "product_helper_no_native_equivalent": 11,
+        "time_compared": 19
+      },
+      "product_statuses": {
+        "ok": 77,
+        "UserError": 8,
+        "AmbiguousTimeError": 1,
+        "ValueError": 1
+      },
+      "reference_statuses": {
+        "ok": 69,
+        "not_comparable": 14,
+        "Error": 4
+      },
+      "total": {
+        "charts": 47,
+        "measurements": 1504,
+        "angular_exceeded": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "house_crossing": {
+          "measurements": 304,
+          "charts": 16
+        },
+        "zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "display_zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_both": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "retrograde_mismatch": {
+          "measurements": 1,
+          "charts": 1
+        },
+        "day_chart_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "review_charts": 17,
+        "max_longitude_delta_arcsec": 1.7943704431047536,
+        "max_latitude_delta_arcsec": 0.6774642754749038,
+        "max_separation_arcsec": 1.835634552125828
+      },
+      "points": {
+        "charts": 47,
+        "measurements": 940,
+        "angular_exceeded": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "house_crossing": {
+          "measurements": 304,
+          "charts": 16
+        },
+        "zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "display_zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_both": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "retrograde_mismatch": {
+          "measurements": 1,
+          "charts": 1
+        },
+        "day_chart_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "review_charts": 17,
+        "max_longitude_delta_arcsec": 1.7943704431047536,
+        "max_latitude_delta_arcsec": 0.6774642754749038,
+        "max_separation_arcsec": 1.835634552125828
+      },
+      "cusps": {
+        "charts": 47,
+        "measurements": 564,
+        "angular_exceeded": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "house_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "display_zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_both": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "retrograde_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "day_chart_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "review_charts": 0,
+        "max_longitude_delta_arcsec": 1.7042526548266324,
+        "max_latitude_delta_arcsec": 0.0,
+        "max_separation_arcsec": 1.7042526548266321
+      },
+      "angular_maxima": {
+        "sun_through_pluto": {
+          "longitude_delta_arcsec": {
+            "case": "edge-range-first",
+            "case_kind": "chart",
+            "house_latitude_mode": "actual",
+            "local_iso": "1850-01-02T00:00:00",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "point",
+            "name": "月亮",
+            "point_id": 1,
+            "product_longitude": 148.99623148646316,
+            "reference_longitude": 148.99623405781887,
+            "product_latitude": 0.40651552741943314,
+            "reference_latitude": 0.4065159463644436,
+            "scope": "direct16",
+            "longitude_delta_arcsec": 0.009256880548491608,
+            "latitude_delta_arcsec": 0.00150820203765889,
+            "separation_arcsec": 0.009378709791792216,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 4,
+            "reference_sign": 4,
+            "product_house": 7,
+            "reference_house": 7,
+            "house_crossing": false,
+            "undefined_mismatch": false,
+            "undefined_both": false,
+            "retrograde_mismatch": false,
+            "product_house_pos_raw": 7.789533110633822,
+            "reference_house_pos_raw": 7.789533198625429,
+            "product_house_pos": 7.789533110633822,
+            "reference_house_pos": 7.789533198625429,
+            "product_correction": null,
+            "house_pos_delta_units": 8.799160688965912e-08,
+            "day_chart_mismatch": false,
+            "angular_exceeded": false
+          },
+          "latitude_delta_arcsec": {
+            "case": "edge-range-first",
+            "case_kind": "chart",
+            "house_latitude_mode": "actual",
+            "local_iso": "1850-01-02T00:00:00",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "point",
+            "name": "月亮",
+            "point_id": 1,
+            "product_longitude": 148.99623148646316,
+            "reference_longitude": 148.99623405781887,
+            "product_latitude": 0.40651552741943314,
+            "reference_latitude": 0.4065159463644436,
+            "scope": "direct16",
+            "longitude_delta_arcsec": 0.009256880548491608,
+            "latitude_delta_arcsec": 0.00150820203765889,
+            "separation_arcsec": 0.009378709791792216,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 4,
+            "reference_sign": 4,
+            "product_house": 7,
+            "reference_house": 7,
+            "house_crossing": false,
+            "undefined_mismatch": false,
+            "undefined_both": false,
+            "retrograde_mismatch": false,
+            "product_house_pos_raw": 7.789533110633822,
+            "reference_house_pos_raw": 7.789533198625429,
+            "product_house_pos": 7.789533110633822,
+            "reference_house_pos": 7.789533198625429,
+            "product_correction": null,
+            "house_pos_delta_units": 8.799160688965912e-08,
+            "day_chart_mismatch": false,
+            "angular_exceeded": false
+          },
+          "separation_arcsec": {
+            "case": "edge-range-first",
+            "case_kind": "chart",
+            "house_latitude_mode": "actual",
+            "local_iso": "1850-01-02T00:00:00",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "point",
+            "name": "月亮",
+            "point_id": 1,
+            "product_longitude": 148.99623148646316,
+            "reference_longitude": 148.99623405781887,
+            "product_latitude": 0.40651552741943314,
+            "reference_latitude": 0.4065159463644436,
+            "scope": "direct16",
+            "longitude_delta_arcsec": 0.009256880548491608,
+            "latitude_delta_arcsec": 0.00150820203765889,
+            "separation_arcsec": 0.009378709791792216,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 4,
+            "reference_sign": 4,
+            "product_house": 7,
+            "reference_house": 7,
+            "house_crossing": false,
+            "undefined_mismatch": false,
+            "undefined_both": false,
+            "retrograde_mismatch": false,
+            "product_house_pos_raw": 7.789533110633822,
+            "reference_house_pos_raw": 7.789533198625429,
+            "product_house_pos": 7.789533110633822,
+            "reference_house_pos": 7.789533198625429,
+            "product_correction": null,
+            "house_pos_delta_units": 8.799160688965912e-08,
+            "day_chart_mismatch": false,
+            "angular_exceeded": false
+          }
+        },
+        "direct16": {
+          "longitude_delta_arcsec": {
+            "case": "edge-range-first",
+            "case_kind": "chart",
+            "house_latitude_mode": "actual",
+            "local_iso": "1850-01-02T00:00:00",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "point",
+            "name": "灶神星",
+            "point_id": 20,
+            "product_longitude": 112.06909590787285,
+            "reference_longitude": 112.06859747163865,
+            "product_latitude": 0.9258736191634332,
+            "reference_latitude": 0.9257658107733068,
+            "scope": "direct16",
+            "longitude_delta_arcsec": 1.7943704431047536,
+            "latitude_delta_arcsec": 0.3881102044553053,
+            "separation_arcsec": 1.835634552125828,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 3,
+            "reference_sign": 3,
+            "product_house": 6,
+            "reference_house": 6,
+            "house_crossing": false,
+            "undefined_mismatch": false,
+            "undefined_both": false,
+            "retrograde_mismatch": false,
+            "product_house_pos_raw": 6.725191502383695,
+            "reference_house_pos_raw": 6.725170350547231,
+            "product_house_pos": 6.725191502383695,
+            "reference_house_pos": 6.725170350547231,
+            "product_correction": null,
+            "house_pos_delta_units": 2.1151836464561313e-05,
+            "day_chart_mismatch": false,
+            "angular_exceeded": false
+          },
+          "latitude_delta_arcsec": {
+            "case": "edge-start-1972",
+            "case_kind": "chart",
+            "house_latitude_mode": "actual",
+            "local_iso": "1972-01-01T00:00:00",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "point",
+            "name": "智神星",
+            "point_id": 18,
+            "product_longitude": 46.73036934182741,
+            "reference_longitude": 46.73018239504565,
+            "product_latitude": -49.03716754209361,
+            "reference_latitude": -49.03697935757265,
+            "scope": "direct16",
+            "longitude_delta_arcsec": 0.6730084143356407,
+            "latitude_delta_arcsec": 0.6774642754749038,
+            "separation_arcsec": 0.8084672253818997,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 1,
+            "reference_sign": 1,
+            "product_house": 4,
+            "reference_house": 4,
+            "house_crossing": false,
+            "undefined_mismatch": false,
+            "undefined_both": false,
+            "retrograde_mismatch": false,
+            "product_house_pos_raw": 4.53847977505499,
+            "reference_house_pos_raw": 4.538474363941225,
+            "product_house_pos": 4.53847977505499,
+            "reference_house_pos": 4.538474363941225,
+            "product_correction": null,
+            "house_pos_delta_units": 5.4111137650636465e-06,
+            "day_chart_mismatch": false,
+            "angular_exceeded": false
+          },
+          "separation_arcsec": {
+            "case": "edge-range-first",
+            "case_kind": "chart",
+            "house_latitude_mode": "actual",
+            "local_iso": "1850-01-02T00:00:00",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "point",
+            "name": "灶神星",
+            "point_id": 20,
+            "product_longitude": 112.06909590787285,
+            "reference_longitude": 112.06859747163865,
+            "product_latitude": 0.9258736191634332,
+            "reference_latitude": 0.9257658107733068,
+            "scope": "direct16",
+            "longitude_delta_arcsec": 1.7943704431047536,
+            "latitude_delta_arcsec": 0.3881102044553053,
+            "separation_arcsec": 1.835634552125828,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 3,
+            "reference_sign": 3,
+            "product_house": 6,
+            "reference_house": 6,
+            "house_crossing": false,
+            "undefined_mismatch": false,
+            "undefined_both": false,
+            "retrograde_mismatch": false,
+            "product_house_pos_raw": 6.725191502383695,
+            "reference_house_pos_raw": 6.725170350547231,
+            "product_house_pos": 6.725191502383695,
+            "reference_house_pos": 6.725170350547231,
+            "product_correction": null,
+            "house_pos_delta_units": 2.1151836464561313e-05,
+            "day_chart_mismatch": false,
+            "angular_exceeded": false
+          }
+        },
+        "all20": {
+          "longitude_delta_arcsec": {
+            "case": "edge-range-first",
+            "case_kind": "chart",
+            "house_latitude_mode": "actual",
+            "local_iso": "1850-01-02T00:00:00",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "point",
+            "name": "灶神星",
+            "point_id": 20,
+            "product_longitude": 112.06909590787285,
+            "reference_longitude": 112.06859747163865,
+            "product_latitude": 0.9258736191634332,
+            "reference_latitude": 0.9257658107733068,
+            "scope": "direct16",
+            "longitude_delta_arcsec": 1.7943704431047536,
+            "latitude_delta_arcsec": 0.3881102044553053,
+            "separation_arcsec": 1.835634552125828,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 3,
+            "reference_sign": 3,
+            "product_house": 6,
+            "reference_house": 6,
+            "house_crossing": false,
+            "undefined_mismatch": false,
+            "undefined_both": false,
+            "retrograde_mismatch": false,
+            "product_house_pos_raw": 6.725191502383695,
+            "reference_house_pos_raw": 6.725170350547231,
+            "product_house_pos": 6.725191502383695,
+            "reference_house_pos": 6.725170350547231,
+            "product_correction": null,
+            "house_pos_delta_units": 2.1151836464561313e-05,
+            "day_chart_mismatch": false,
+            "angular_exceeded": false
+          },
+          "latitude_delta_arcsec": {
+            "case": "edge-start-1972",
+            "case_kind": "chart",
+            "house_latitude_mode": "actual",
+            "local_iso": "1972-01-01T00:00:00",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "point",
+            "name": "智神星",
+            "point_id": 18,
+            "product_longitude": 46.73036934182741,
+            "reference_longitude": 46.73018239504565,
+            "product_latitude": -49.03716754209361,
+            "reference_latitude": -49.03697935757265,
+            "scope": "direct16",
+            "longitude_delta_arcsec": 0.6730084143356407,
+            "latitude_delta_arcsec": 0.6774642754749038,
+            "separation_arcsec": 0.8084672253818997,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 1,
+            "reference_sign": 1,
+            "product_house": 4,
+            "reference_house": 4,
+            "house_crossing": false,
+            "undefined_mismatch": false,
+            "undefined_both": false,
+            "retrograde_mismatch": false,
+            "product_house_pos_raw": 4.53847977505499,
+            "reference_house_pos_raw": 4.538474363941225,
+            "product_house_pos": 4.53847977505499,
+            "reference_house_pos": 4.538474363941225,
+            "product_correction": null,
+            "house_pos_delta_units": 5.4111137650636465e-06,
+            "day_chart_mismatch": false,
+            "angular_exceeded": false
+          },
+          "separation_arcsec": {
+            "case": "edge-range-first",
+            "case_kind": "chart",
+            "house_latitude_mode": "actual",
+            "local_iso": "1850-01-02T00:00:00",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "point",
+            "name": "灶神星",
+            "point_id": 20,
+            "product_longitude": 112.06909590787285,
+            "reference_longitude": 112.06859747163865,
+            "product_latitude": 0.9258736191634332,
+            "reference_latitude": 0.9257658107733068,
+            "scope": "direct16",
+            "longitude_delta_arcsec": 1.7943704431047536,
+            "latitude_delta_arcsec": 0.3881102044553053,
+            "separation_arcsec": 1.835634552125828,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 3,
+            "reference_sign": 3,
+            "product_house": 6,
+            "reference_house": 6,
+            "house_crossing": false,
+            "undefined_mismatch": false,
+            "undefined_both": false,
+            "retrograde_mismatch": false,
+            "product_house_pos_raw": 6.725191502383695,
+            "reference_house_pos_raw": 6.725170350547231,
+            "product_house_pos": 6.725191502383695,
+            "reference_house_pos": 6.725170350547231,
+            "product_correction": null,
+            "house_pos_delta_units": 2.1151836464561313e-05,
+            "day_chart_mismatch": false,
+            "angular_exceeded": false
+          }
+        },
+        "cusps": {
+          "longitude_delta_arcsec": {
+            "case": "edge-range-last",
+            "case_kind": "chart",
+            "house_latitude_mode": "actual",
+            "local_iso": "2149-12-30T23:59:59",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "cusp",
+            "name": "宮頭 8",
+            "point_id": 8,
+            "product_longitude": 154.89917842995317,
+            "reference_longitude": 154.89870502643794,
+            "longitude_delta_arcsec": 1.7042526548266324,
+            "latitude_delta_arcsec": 0.0,
+            "separation_arcsec": 1.7042526548266321,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 5,
+            "reference_sign": 5,
+            "angular_exceeded": false
+          },
+          "latitude_delta_arcsec": {
+            "case": "edge-azimuth-main-1936-03",
+            "case_kind": "chart",
+            "house_latitude_mode": "actual",
+            "local_iso": "1936-03-02T05:58:10",
+            "zone": "America/Lima",
+            "system": "H",
+            "city_name": "Lima",
+            "geographic_latitude": -12.04318,
+            "geographic_longitude": -77.02824,
+            "kind": "cusp",
+            "name": "宮頭 1",
+            "point_id": 1,
+            "product_longitude": 200.56368464085463,
+            "reference_longitude": 200.56368482861797,
+            "longitude_delta_arcsec": 0.000675948001571669,
+            "latitude_delta_arcsec": 0.0,
+            "separation_arcsec": 0.000675948001571669,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 6,
+            "reference_sign": 6,
+            "angular_exceeded": false
+          },
+          "separation_arcsec": {
+            "case": "edge-range-last",
+            "case_kind": "chart",
+            "house_latitude_mode": "actual",
+            "local_iso": "2149-12-30T23:59:59",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "cusp",
+            "name": "宮頭 8",
+            "point_id": 8,
+            "product_longitude": 154.89917842995317,
+            "reference_longitude": 154.89870502643794,
+            "longitude_delta_arcsec": 1.7042526548266324,
+            "latitude_delta_arcsec": 0.0,
+            "separation_arcsec": 1.7042526548266321,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 5,
+            "reference_sign": 5,
+            "angular_exceeded": false
+          }
+        },
+        "azimuth_cusps": {
+          "longitude_delta_arcsec": {
+            "case": "edge-azimuth-main-2023-05",
+            "case_kind": "chart",
+            "house_latitude_mode": "actual",
+            "local_iso": "2023-05-08T21:45:39",
+            "zone": "Asia/Singapore",
+            "system": "H",
+            "city_name": "Singapore",
+            "geographic_latitude": 1.28967,
+            "geographic_longitude": 103.85007,
+            "kind": "cusp",
+            "name": "宮頭 6",
+            "point_id": 6,
+            "product_longitude": 354.021173499425,
+            "reference_longitude": 354.02117519671503,
+            "longitude_delta_arcsec": 0.006110244112278451,
+            "latitude_delta_arcsec": 0.0,
+            "separation_arcsec": 0.006110244112278451,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 11,
+            "reference_sign": 11,
+            "angular_exceeded": false
+          },
+          "latitude_delta_arcsec": {
+            "case": "edge-azimuth-main-1936-03",
+            "case_kind": "chart",
+            "house_latitude_mode": "actual",
+            "local_iso": "1936-03-02T05:58:10",
+            "zone": "America/Lima",
+            "system": "H",
+            "city_name": "Lima",
+            "geographic_latitude": -12.04318,
+            "geographic_longitude": -77.02824,
+            "kind": "cusp",
+            "name": "宮頭 1",
+            "point_id": 1,
+            "product_longitude": 200.56368464085463,
+            "reference_longitude": 200.56368482861797,
+            "longitude_delta_arcsec": 0.000675948001571669,
+            "latitude_delta_arcsec": 0.0,
+            "separation_arcsec": 0.000675948001571669,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 6,
+            "reference_sign": 6,
+            "angular_exceeded": false
+          },
+          "separation_arcsec": {
+            "case": "edge-azimuth-main-2023-05",
+            "case_kind": "chart",
+            "house_latitude_mode": "actual",
+            "local_iso": "2023-05-08T21:45:39",
+            "zone": "Asia/Singapore",
+            "system": "H",
+            "city_name": "Singapore",
+            "geographic_latitude": 1.28967,
+            "geographic_longitude": 103.85007,
+            "kind": "cusp",
+            "name": "宮頭 6",
+            "point_id": 6,
+            "product_longitude": 354.021173499425,
+            "reference_longitude": 354.02117519671503,
+            "longitude_delta_arcsec": 0.006110244112278451,
+            "latitude_delta_arcsec": 0.0,
+            "separation_arcsec": 0.006110244112278451,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 11,
+            "reference_sign": 11,
+            "angular_exceeded": false
+          }
+        }
+      },
+      "by_system": {
+        "E": {
+          "charts": 2,
+          "measurements": 64,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "retrograde_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 0,
+          "max_longitude_delta_arcsec": 0.19837997617742076,
+          "max_latitude_delta_arcsec": 0.27550363789998755,
+          "max_separation_arcsec": 0.27623426311299615
+        },
+        "H": {
+          "charts": 16,
+          "measurements": 512,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 304,
+            "charts": 16
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "retrograde_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 16,
+          "max_longitude_delta_arcsec": 0.7732838139418163,
+          "max_latitude_delta_arcsec": 0.581444407168874,
+          "max_separation_arcsec": 0.8115684252003417
+        },
+        "P": {
+          "charts": 20,
+          "measurements": 640,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "retrograde_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 0,
+          "max_longitude_delta_arcsec": 1.7943704431047536,
+          "max_latitude_delta_arcsec": 0.6774642754749038,
+          "max_separation_arcsec": 1.835634552125828
+        },
+        "W": {
+          "charts": 9,
+          "measurements": 288,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "retrograde_mismatch": {
+            "measurements": 1,
+            "charts": 1
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 1,
+          "max_longitude_delta_arcsec": 0.27880877607913135,
+          "max_latitude_delta_arcsec": 0.35269693643726896,
+          "max_separation_arcsec": 0.35326516920308354
+        }
+      },
+      "house_difference_systems": {
+        "H": 304
+      },
+      "asc_differences": 16,
+      "mc_differences": 0,
+      "time_comparison": {
+        "cases": 19,
+        "max_abs_tt_seconds": 4.023313522338867e-05,
+        "max_abs_ut1_seconds": 0.5629822611808777,
+        "worst_tt": {
+          "case": "edge-time-2016-12-31T23:59:59Z",
+          "case_kind": "time",
+          "house_latitude_mode": "actual",
+          "utc": "2016-12-31T23:59:59Z",
+          "product_tt_jd": 2457754.5007775924,
+          "reference_tt_jd": 2457754.500777593,
+          "product_ut1_jd": 2457754.499983696,
+          "reference_ut1_jd": 2457754.4999836856,
+          "tt_delta_seconds": 4.023313522338867e-05,
+          "ut1_delta_seconds": -0.0008851289749145508,
+          "product_ut1_source": "final_B",
+          "product_measured_time": true,
+          "product_leap_table_assumption": false,
+          "reference_function": "swisseph.utc_to_jd"
+        },
+        "worst_ut1": {
+          "case": "edge-eop-2027-10-04T00:00:00--86401",
+          "case_kind": "time",
+          "house_latitude_mode": "actual",
+          "utc": "2027-10-02T23:59:59Z",
+          "product_tt_jd": 2461681.500789167,
+          "reference_tt_jd": 2461681.500789167,
+          "product_ut1_jd": 2461681.4999863547,
+          "reference_ut1_jd": 2461681.4999928707,
+          "tt_delta_seconds": 0.0,
+          "ut1_delta_seconds": 0.5629822611808777,
+          "product_ut1_source": "prediction_A",
+          "product_measured_time": false,
+          "product_leap_table_assumption": true,
+          "reference_function": "swisseph.utc_to_jd"
+        },
+        "interpretation": "Independent time models; differences are in seconds, not angular arcseconds. No shared time inputs for these 19 tests. No accuracy pass/fail threshold is assigned."
+      },
+      "threshold_arcsec": 30.0,
+      "threshold_operator": "<",
+      "review_required": true,
+      "product_manifest_sha256": "9c13847f9b6619bf9edb4294ecb430257b7055fc7a94ad57078951ba8db02be8",
+      "reference_manifest_sha256": "a422b740225de8785fcb6166778f123ea6635490d6b416af9594b7abecef55e1",
+      "source_sha256": "32ca2b978c937f325b695721a1a3163cef6e5cb2264a583fa32da83cdbe4b40e"
+    },
+    "zero": {
+      "cases": 87,
+      "house_latitude_mode": "zero",
+      "outcomes": {
+        "chart_compared": 47,
+        "product_only_rejection": 3,
+        "no_unique_instant": 3,
+        "both_rejected": 4,
+        "product_helper_no_native_equivalent": 11,
+        "time_compared": 19
+      },
+      "product_statuses": {
+        "ok": 77,
+        "UserError": 8,
+        "AmbiguousTimeError": 1,
+        "ValueError": 1
+      },
+      "reference_statuses": {
+        "ok": 69,
+        "not_comparable": 14,
+        "Error": 4
+      },
+      "total": {
+        "charts": 47,
+        "measurements": 1504,
+        "angular_exceeded": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "house_crossing": {
+          "measurements": 304,
+          "charts": 16
+        },
+        "zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "display_zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_both": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "retrograde_mismatch": {
+          "measurements": 1,
+          "charts": 1
+        },
+        "day_chart_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "review_charts": 17,
+        "max_longitude_delta_arcsec": 1.7943704431047536,
+        "max_latitude_delta_arcsec": 0.6774642754749038,
+        "max_separation_arcsec": 1.835634552125828
+      },
+      "points": {
+        "charts": 47,
+        "measurements": 940,
+        "angular_exceeded": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "house_crossing": {
+          "measurements": 304,
+          "charts": 16
+        },
+        "zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "display_zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_both": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "retrograde_mismatch": {
+          "measurements": 1,
+          "charts": 1
+        },
+        "day_chart_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "review_charts": 17,
+        "max_longitude_delta_arcsec": 1.7943704431047536,
+        "max_latitude_delta_arcsec": 0.6774642754749038,
+        "max_separation_arcsec": 1.835634552125828
+      },
+      "cusps": {
+        "charts": 47,
+        "measurements": 564,
+        "angular_exceeded": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "house_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "display_zodiac_crossing": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "undefined_both": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "retrograde_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "day_chart_mismatch": {
+          "measurements": 0,
+          "charts": 0
+        },
+        "review_charts": 0,
+        "max_longitude_delta_arcsec": 1.7042526548266324,
+        "max_latitude_delta_arcsec": 0.0,
+        "max_separation_arcsec": 1.7042526548266321
+      },
+      "angular_maxima": {
+        "sun_through_pluto": {
+          "longitude_delta_arcsec": {
+            "case": "edge-range-first",
+            "case_kind": "chart",
+            "house_latitude_mode": "zero",
+            "local_iso": "1850-01-02T00:00:00",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "point",
+            "name": "月亮",
+            "point_id": 1,
+            "product_longitude": 148.99623148646316,
+            "reference_longitude": 148.99623405781887,
+            "product_latitude": 0.40651552741943314,
+            "reference_latitude": 0.4065159463644436,
+            "scope": "direct16",
+            "longitude_delta_arcsec": 0.009256880548491608,
+            "latitude_delta_arcsec": 0.00150820203765889,
+            "separation_arcsec": 0.009378709791792216,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 4,
+            "reference_sign": 4,
+            "product_house": 7,
+            "reference_house": 7,
+            "house_crossing": false,
+            "undefined_mismatch": false,
+            "undefined_both": false,
+            "retrograde_mismatch": false,
+            "product_house_pos_raw": 7.781014000290878,
+            "reference_house_pos_raw": 7.781014079538104,
+            "product_house_pos": 7.781014000290878,
+            "reference_house_pos": 7.781014079538104,
+            "product_correction": null,
+            "house_pos_delta_units": 7.924722567054232e-08,
+            "day_chart_mismatch": false,
+            "angular_exceeded": false
+          },
+          "latitude_delta_arcsec": {
+            "case": "edge-range-first",
+            "case_kind": "chart",
+            "house_latitude_mode": "zero",
+            "local_iso": "1850-01-02T00:00:00",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "point",
+            "name": "月亮",
+            "point_id": 1,
+            "product_longitude": 148.99623148646316,
+            "reference_longitude": 148.99623405781887,
+            "product_latitude": 0.40651552741943314,
+            "reference_latitude": 0.4065159463644436,
+            "scope": "direct16",
+            "longitude_delta_arcsec": 0.009256880548491608,
+            "latitude_delta_arcsec": 0.00150820203765889,
+            "separation_arcsec": 0.009378709791792216,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 4,
+            "reference_sign": 4,
+            "product_house": 7,
+            "reference_house": 7,
+            "house_crossing": false,
+            "undefined_mismatch": false,
+            "undefined_both": false,
+            "retrograde_mismatch": false,
+            "product_house_pos_raw": 7.781014000290878,
+            "reference_house_pos_raw": 7.781014079538104,
+            "product_house_pos": 7.781014000290878,
+            "reference_house_pos": 7.781014079538104,
+            "product_correction": null,
+            "house_pos_delta_units": 7.924722567054232e-08,
+            "day_chart_mismatch": false,
+            "angular_exceeded": false
+          },
+          "separation_arcsec": {
+            "case": "edge-range-first",
+            "case_kind": "chart",
+            "house_latitude_mode": "zero",
+            "local_iso": "1850-01-02T00:00:00",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "point",
+            "name": "月亮",
+            "point_id": 1,
+            "product_longitude": 148.99623148646316,
+            "reference_longitude": 148.99623405781887,
+            "product_latitude": 0.40651552741943314,
+            "reference_latitude": 0.4065159463644436,
+            "scope": "direct16",
+            "longitude_delta_arcsec": 0.009256880548491608,
+            "latitude_delta_arcsec": 0.00150820203765889,
+            "separation_arcsec": 0.009378709791792216,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 4,
+            "reference_sign": 4,
+            "product_house": 7,
+            "reference_house": 7,
+            "house_crossing": false,
+            "undefined_mismatch": false,
+            "undefined_both": false,
+            "retrograde_mismatch": false,
+            "product_house_pos_raw": 7.781014000290878,
+            "reference_house_pos_raw": 7.781014079538104,
+            "product_house_pos": 7.781014000290878,
+            "reference_house_pos": 7.781014079538104,
+            "product_correction": null,
+            "house_pos_delta_units": 7.924722567054232e-08,
+            "day_chart_mismatch": false,
+            "angular_exceeded": false
+          }
+        },
+        "direct16": {
+          "longitude_delta_arcsec": {
+            "case": "edge-range-first",
+            "case_kind": "chart",
+            "house_latitude_mode": "zero",
+            "local_iso": "1850-01-02T00:00:00",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "point",
+            "name": "灶神星",
+            "point_id": 20,
+            "product_longitude": 112.06909590787285,
+            "reference_longitude": 112.06859747163865,
+            "product_latitude": 0.9258736191634332,
+            "reference_latitude": 0.9257658107733068,
+            "scope": "direct16",
+            "longitude_delta_arcsec": 1.7943704431047536,
+            "latitude_delta_arcsec": 0.3881102044553053,
+            "separation_arcsec": 1.835634552125828,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 3,
+            "reference_sign": 3,
+            "product_house": 6,
+            "reference_house": 6,
+            "house_crossing": false,
+            "undefined_mismatch": false,
+            "undefined_both": false,
+            "retrograde_mismatch": false,
+            "product_house_pos_raw": 6.7035973208728965,
+            "reference_house_pos_raw": 6.703578905176461,
+            "product_house_pos": 6.7035973208728965,
+            "reference_house_pos": 6.703578905176461,
+            "product_correction": null,
+            "house_pos_delta_units": 1.8415696435347684e-05,
+            "day_chart_mismatch": false,
+            "angular_exceeded": false
+          },
+          "latitude_delta_arcsec": {
+            "case": "edge-start-1972",
+            "case_kind": "chart",
+            "house_latitude_mode": "zero",
+            "local_iso": "1972-01-01T00:00:00",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "point",
+            "name": "智神星",
+            "point_id": 18,
+            "product_longitude": 46.73036934182741,
+            "reference_longitude": 46.73018239504565,
+            "product_latitude": -49.03716754209361,
+            "reference_latitude": -49.03697935757265,
+            "scope": "direct16",
+            "longitude_delta_arcsec": 0.6730084143356407,
+            "latitude_delta_arcsec": 0.6774642754749038,
+            "separation_arcsec": 0.8084672253818997,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 1,
+            "reference_sign": 1,
+            "product_house": 4,
+            "reference_house": 4,
+            "house_crossing": false,
+            "undefined_mismatch": false,
+            "undefined_both": false,
+            "retrograde_mismatch": false,
+            "product_house_pos_raw": 4.156400096409414,
+            "reference_house_pos_raw": 4.156393264901958,
+            "product_house_pos": 4.156400096409414,
+            "reference_house_pos": 4.156393264901958,
+            "product_correction": null,
+            "house_pos_delta_units": 6.831507456617203e-06,
+            "day_chart_mismatch": false,
+            "angular_exceeded": false
+          },
+          "separation_arcsec": {
+            "case": "edge-range-first",
+            "case_kind": "chart",
+            "house_latitude_mode": "zero",
+            "local_iso": "1850-01-02T00:00:00",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "point",
+            "name": "灶神星",
+            "point_id": 20,
+            "product_longitude": 112.06909590787285,
+            "reference_longitude": 112.06859747163865,
+            "product_latitude": 0.9258736191634332,
+            "reference_latitude": 0.9257658107733068,
+            "scope": "direct16",
+            "longitude_delta_arcsec": 1.7943704431047536,
+            "latitude_delta_arcsec": 0.3881102044553053,
+            "separation_arcsec": 1.835634552125828,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 3,
+            "reference_sign": 3,
+            "product_house": 6,
+            "reference_house": 6,
+            "house_crossing": false,
+            "undefined_mismatch": false,
+            "undefined_both": false,
+            "retrograde_mismatch": false,
+            "product_house_pos_raw": 6.7035973208728965,
+            "reference_house_pos_raw": 6.703578905176461,
+            "product_house_pos": 6.7035973208728965,
+            "reference_house_pos": 6.703578905176461,
+            "product_correction": null,
+            "house_pos_delta_units": 1.8415696435347684e-05,
+            "day_chart_mismatch": false,
+            "angular_exceeded": false
+          }
+        },
+        "all20": {
+          "longitude_delta_arcsec": {
+            "case": "edge-range-first",
+            "case_kind": "chart",
+            "house_latitude_mode": "zero",
+            "local_iso": "1850-01-02T00:00:00",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "point",
+            "name": "灶神星",
+            "point_id": 20,
+            "product_longitude": 112.06909590787285,
+            "reference_longitude": 112.06859747163865,
+            "product_latitude": 0.9258736191634332,
+            "reference_latitude": 0.9257658107733068,
+            "scope": "direct16",
+            "longitude_delta_arcsec": 1.7943704431047536,
+            "latitude_delta_arcsec": 0.3881102044553053,
+            "separation_arcsec": 1.835634552125828,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 3,
+            "reference_sign": 3,
+            "product_house": 6,
+            "reference_house": 6,
+            "house_crossing": false,
+            "undefined_mismatch": false,
+            "undefined_both": false,
+            "retrograde_mismatch": false,
+            "product_house_pos_raw": 6.7035973208728965,
+            "reference_house_pos_raw": 6.703578905176461,
+            "product_house_pos": 6.7035973208728965,
+            "reference_house_pos": 6.703578905176461,
+            "product_correction": null,
+            "house_pos_delta_units": 1.8415696435347684e-05,
+            "day_chart_mismatch": false,
+            "angular_exceeded": false
+          },
+          "latitude_delta_arcsec": {
+            "case": "edge-start-1972",
+            "case_kind": "chart",
+            "house_latitude_mode": "zero",
+            "local_iso": "1972-01-01T00:00:00",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "point",
+            "name": "智神星",
+            "point_id": 18,
+            "product_longitude": 46.73036934182741,
+            "reference_longitude": 46.73018239504565,
+            "product_latitude": -49.03716754209361,
+            "reference_latitude": -49.03697935757265,
+            "scope": "direct16",
+            "longitude_delta_arcsec": 0.6730084143356407,
+            "latitude_delta_arcsec": 0.6774642754749038,
+            "separation_arcsec": 0.8084672253818997,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 1,
+            "reference_sign": 1,
+            "product_house": 4,
+            "reference_house": 4,
+            "house_crossing": false,
+            "undefined_mismatch": false,
+            "undefined_both": false,
+            "retrograde_mismatch": false,
+            "product_house_pos_raw": 4.156400096409414,
+            "reference_house_pos_raw": 4.156393264901958,
+            "product_house_pos": 4.156400096409414,
+            "reference_house_pos": 4.156393264901958,
+            "product_correction": null,
+            "house_pos_delta_units": 6.831507456617203e-06,
+            "day_chart_mismatch": false,
+            "angular_exceeded": false
+          },
+          "separation_arcsec": {
+            "case": "edge-range-first",
+            "case_kind": "chart",
+            "house_latitude_mode": "zero",
+            "local_iso": "1850-01-02T00:00:00",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "point",
+            "name": "灶神星",
+            "point_id": 20,
+            "product_longitude": 112.06909590787285,
+            "reference_longitude": 112.06859747163865,
+            "product_latitude": 0.9258736191634332,
+            "reference_latitude": 0.9257658107733068,
+            "scope": "direct16",
+            "longitude_delta_arcsec": 1.7943704431047536,
+            "latitude_delta_arcsec": 0.3881102044553053,
+            "separation_arcsec": 1.835634552125828,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 3,
+            "reference_sign": 3,
+            "product_house": 6,
+            "reference_house": 6,
+            "house_crossing": false,
+            "undefined_mismatch": false,
+            "undefined_both": false,
+            "retrograde_mismatch": false,
+            "product_house_pos_raw": 6.7035973208728965,
+            "reference_house_pos_raw": 6.703578905176461,
+            "product_house_pos": 6.7035973208728965,
+            "reference_house_pos": 6.703578905176461,
+            "product_correction": null,
+            "house_pos_delta_units": 1.8415696435347684e-05,
+            "day_chart_mismatch": false,
+            "angular_exceeded": false
+          }
+        },
+        "cusps": {
+          "longitude_delta_arcsec": {
+            "case": "edge-range-last",
+            "case_kind": "chart",
+            "house_latitude_mode": "zero",
+            "local_iso": "2149-12-30T23:59:59",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "cusp",
+            "name": "宮頭 8",
+            "point_id": 8,
+            "product_longitude": 154.89917842995317,
+            "reference_longitude": 154.89870502643794,
+            "longitude_delta_arcsec": 1.7042526548266324,
+            "latitude_delta_arcsec": 0.0,
+            "separation_arcsec": 1.7042526548266321,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 5,
+            "reference_sign": 5,
+            "angular_exceeded": false
+          },
+          "latitude_delta_arcsec": {
+            "case": "edge-azimuth-main-1936-03",
+            "case_kind": "chart",
+            "house_latitude_mode": "zero",
+            "local_iso": "1936-03-02T05:58:10",
+            "zone": "America/Lima",
+            "system": "H",
+            "city_name": "Lima",
+            "geographic_latitude": -12.04318,
+            "geographic_longitude": -77.02824,
+            "kind": "cusp",
+            "name": "宮頭 1",
+            "point_id": 1,
+            "product_longitude": 200.56368464085463,
+            "reference_longitude": 200.56368482861797,
+            "longitude_delta_arcsec": 0.000675948001571669,
+            "latitude_delta_arcsec": 0.0,
+            "separation_arcsec": 0.000675948001571669,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 6,
+            "reference_sign": 6,
+            "angular_exceeded": false
+          },
+          "separation_arcsec": {
+            "case": "edge-range-last",
+            "case_kind": "chart",
+            "house_latitude_mode": "zero",
+            "local_iso": "2149-12-30T23:59:59",
+            "zone": "UTC",
+            "system": "P",
+            "city_name": "合成地點",
+            "geographic_latitude": 23.0,
+            "geographic_longitude": 120.2,
+            "kind": "cusp",
+            "name": "宮頭 8",
+            "point_id": 8,
+            "product_longitude": 154.89917842995317,
+            "reference_longitude": 154.89870502643794,
+            "longitude_delta_arcsec": 1.7042526548266324,
+            "latitude_delta_arcsec": 0.0,
+            "separation_arcsec": 1.7042526548266321,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 5,
+            "reference_sign": 5,
+            "angular_exceeded": false
+          }
+        },
+        "azimuth_cusps": {
+          "longitude_delta_arcsec": {
+            "case": "edge-azimuth-main-2023-05",
+            "case_kind": "chart",
+            "house_latitude_mode": "zero",
+            "local_iso": "2023-05-08T21:45:39",
+            "zone": "Asia/Singapore",
+            "system": "H",
+            "city_name": "Singapore",
+            "geographic_latitude": 1.28967,
+            "geographic_longitude": 103.85007,
+            "kind": "cusp",
+            "name": "宮頭 6",
+            "point_id": 6,
+            "product_longitude": 354.021173499425,
+            "reference_longitude": 354.02117519671503,
+            "longitude_delta_arcsec": 0.006110244112278451,
+            "latitude_delta_arcsec": 0.0,
+            "separation_arcsec": 0.006110244112278451,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 11,
+            "reference_sign": 11,
+            "angular_exceeded": false
+          },
+          "latitude_delta_arcsec": {
+            "case": "edge-azimuth-main-1936-03",
+            "case_kind": "chart",
+            "house_latitude_mode": "zero",
+            "local_iso": "1936-03-02T05:58:10",
+            "zone": "America/Lima",
+            "system": "H",
+            "city_name": "Lima",
+            "geographic_latitude": -12.04318,
+            "geographic_longitude": -77.02824,
+            "kind": "cusp",
+            "name": "宮頭 1",
+            "point_id": 1,
+            "product_longitude": 200.56368464085463,
+            "reference_longitude": 200.56368482861797,
+            "longitude_delta_arcsec": 0.000675948001571669,
+            "latitude_delta_arcsec": 0.0,
+            "separation_arcsec": 0.000675948001571669,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 6,
+            "reference_sign": 6,
+            "angular_exceeded": false
+          },
+          "separation_arcsec": {
+            "case": "edge-azimuth-main-2023-05",
+            "case_kind": "chart",
+            "house_latitude_mode": "zero",
+            "local_iso": "2023-05-08T21:45:39",
+            "zone": "Asia/Singapore",
+            "system": "H",
+            "city_name": "Singapore",
+            "geographic_latitude": 1.28967,
+            "geographic_longitude": 103.85007,
+            "kind": "cusp",
+            "name": "宮頭 6",
+            "point_id": 6,
+            "product_longitude": 354.021173499425,
+            "reference_longitude": 354.02117519671503,
+            "longitude_delta_arcsec": 0.006110244112278451,
+            "latitude_delta_arcsec": 0.0,
+            "separation_arcsec": 0.006110244112278451,
+            "angular_within_tolerance": true,
+            "zodiac_crossing": false,
+            "display_zodiac_crossing": false,
+            "product_sign": 11,
+            "reference_sign": 11,
+            "angular_exceeded": false
+          }
+        }
+      },
+      "by_system": {
+        "E": {
+          "charts": 2,
+          "measurements": 64,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "retrograde_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 0,
+          "max_longitude_delta_arcsec": 0.19837997617742076,
+          "max_latitude_delta_arcsec": 0.27550363789998755,
+          "max_separation_arcsec": 0.27623426311299615
+        },
+        "H": {
+          "charts": 16,
+          "measurements": 512,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 304,
+            "charts": 16
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "retrograde_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 16,
+          "max_longitude_delta_arcsec": 0.7732838139418163,
+          "max_latitude_delta_arcsec": 0.581444407168874,
+          "max_separation_arcsec": 0.8115684252003417
+        },
+        "P": {
+          "charts": 20,
+          "measurements": 640,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "retrograde_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 0,
+          "max_longitude_delta_arcsec": 1.7943704431047536,
+          "max_latitude_delta_arcsec": 0.6774642754749038,
+          "max_separation_arcsec": 1.835634552125828
+        },
+        "W": {
+          "charts": 9,
+          "measurements": 288,
+          "angular_exceeded": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "house_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "display_zodiac_crossing": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "undefined_both": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "retrograde_mismatch": {
+            "measurements": 1,
+            "charts": 1
+          },
+          "day_chart_mismatch": {
+            "measurements": 0,
+            "charts": 0
+          },
+          "review_charts": 1,
+          "max_longitude_delta_arcsec": 0.27880877607913135,
+          "max_latitude_delta_arcsec": 0.35269693643726896,
+          "max_separation_arcsec": 0.35326516920308354
+        }
+      },
+      "house_difference_systems": {
+        "H": 304
+      },
+      "asc_differences": 16,
+      "mc_differences": 0,
+      "time_comparison": {
+        "cases": 19,
+        "max_abs_tt_seconds": 4.023313522338867e-05,
+        "max_abs_ut1_seconds": 0.5629822611808777,
+        "worst_tt": {
+          "case": "edge-time-2016-12-31T23:59:59Z",
+          "case_kind": "time",
+          "house_latitude_mode": "zero",
+          "utc": "2016-12-31T23:59:59Z",
+          "product_tt_jd": 2457754.5007775924,
+          "reference_tt_jd": 2457754.500777593,
+          "product_ut1_jd": 2457754.499983696,
+          "reference_ut1_jd": 2457754.4999836856,
+          "tt_delta_seconds": 4.023313522338867e-05,
+          "ut1_delta_seconds": -0.0008851289749145508,
+          "product_ut1_source": "final_B",
+          "product_measured_time": true,
+          "product_leap_table_assumption": false,
+          "reference_function": "swisseph.utc_to_jd"
+        },
+        "worst_ut1": {
+          "case": "edge-eop-2027-10-04T00:00:00--86401",
+          "case_kind": "time",
+          "house_latitude_mode": "zero",
+          "utc": "2027-10-02T23:59:59Z",
+          "product_tt_jd": 2461681.500789167,
+          "reference_tt_jd": 2461681.500789167,
+          "product_ut1_jd": 2461681.4999863547,
+          "reference_ut1_jd": 2461681.4999928707,
+          "tt_delta_seconds": 0.0,
+          "ut1_delta_seconds": 0.5629822611808777,
+          "product_ut1_source": "prediction_A",
+          "product_measured_time": false,
+          "product_leap_table_assumption": true,
+          "reference_function": "swisseph.utc_to_jd"
+        },
+        "interpretation": "Independent time models; differences are in seconds, not angular arcseconds. No shared time inputs for these 19 tests. No accuracy pass/fail threshold is assigned."
+      },
+      "threshold_arcsec": 30.0,
+      "threshold_operator": "<",
+      "review_required": true,
+      "product_manifest_sha256": "c7f966f439415aa0fb0c54602305f48dab65669b0f2d5956b7102fe018c67333",
+      "reference_manifest_sha256": "530721344b70b1659378714639fd224cd676ca742d9bf1a845285677d3cadbaa",
+      "source_sha256": "32ca2b978c937f325b695721a1a3163cef6e5cb2264a583fa32da83cdbe4b40e"
+    }
+  },
+  "mode_invariants": {
+    "product": {
+      "cases": 57,
+      "coordinate_pairs": 940,
+      "axis_house_pairs": 94,
+      "unchanged_coordinates_and_axes": true,
+      "changed_charts": 23,
+      "changed_points": 62,
+      "undefined_transitions": 0,
+      "by_system": {
+        "H": 53,
+        "P": 9
+      },
+      "unchanged_helper_records": 30
+    },
+    "swiss": {
+      "cases": 57,
+      "coordinate_pairs": 1000,
+      "axis_house_pairs": 100,
+      "unchanged_coordinates_and_axes": true,
+      "changed_charts": 24,
+      "changed_points": 63,
+      "undefined_transitions": 0,
+      "by_system": {
+        "H": 53,
+        "P": 10
+      },
+      "unchanged_helper_records": 30
+    }
+  },
+  "timings": [
+    {
+      "engine": "product",
+      "mode": "actual",
+      "round": "first",
+      "workers": 12,
+      "pool_wall_seconds": 1.9694002000615,
+      "wall_seconds": 4.001668600016274,
+      "record_elapsed_seconds_sum": 3.8257156999316067
+    },
+    {
+      "engine": "product",
+      "mode": "actual",
+      "round": "repeat",
+      "workers": 12,
+      "pool_wall_seconds": 1.978219100041315,
+      "wall_seconds": 3.879849400022067,
+      "record_elapsed_seconds_sum": 3.964872600045055
+    },
+    {
+      "engine": "product",
+      "mode": "zero",
+      "round": "first",
+      "workers": 12,
+      "pool_wall_seconds": 1.8597139000194147,
+      "wall_seconds": 3.8789759998908266,
+      "record_elapsed_seconds_sum": 3.7664831997826695
+    },
+    {
+      "engine": "product",
+      "mode": "zero",
+      "round": "repeat",
+      "workers": 12,
+      "pool_wall_seconds": 2.0074543999508023,
+      "wall_seconds": 5.012952700024471,
+      "record_elapsed_seconds_sum": 3.7655702008632943
+    },
+    {
+      "engine": "swiss",
+      "mode": "actual",
+      "round": "first",
+      "workers": 4,
+      "pool_wall_seconds": 0.9555561000015587,
+      "wall_seconds": 1.4997914000414312,
+      "record_elapsed_seconds_sum": 0.0723382995929569
+    },
+    {
+      "engine": "swiss",
+      "mode": "actual",
+      "round": "repeat",
+      "workers": 4,
+      "pool_wall_seconds": 1.005533799994737,
+      "wall_seconds": 1.2173666000599042,
+      "record_elapsed_seconds_sum": 0.09175420016981661
+    },
+    {
+      "engine": "swiss",
+      "mode": "zero",
+      "round": "first",
+      "workers": 4,
+      "pool_wall_seconds": 0.955633100005798,
+      "wall_seconds": 1.3547920000273734,
+      "record_elapsed_seconds_sum": 0.057064300402998924
+    },
+    {
+      "engine": "swiss",
+      "mode": "zero",
+      "round": "repeat",
+      "workers": 4,
+      "pool_wall_seconds": 1.1942767000291497,
+      "wall_seconds": 1.8185984999872744,
+      "record_elapsed_seconds_sum": 0.0991099999519065
+    }
+  ]
+}

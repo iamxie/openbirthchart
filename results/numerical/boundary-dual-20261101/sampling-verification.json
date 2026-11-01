@@ -1,0 +1,25 @@
+{
+  "no_resampling": true,
+  "coverage": {
+    "cases": 87,
+    "groups": 87,
+    "kinds": {
+      "chart": 57,
+      "house": 6,
+      "aspect": 5,
+      "time": 19
+    },
+    "reference_routes": {
+      "shared_chart": 53,
+      "not_comparable": 14,
+      "native_leap_chart": 1,
+      "native_time": 19
+    }
+  },
+  "source_sha256": "f177b191e0d4d619b15afff149ba757b4ae94a8ea4da8fad6c08b193e5c48e7e",
+  "frozen_time_source_sha256": "41129a3357c0fa3ddd34fd78264c5fc5de013e7c370f61ececd149439116f0d1",
+  "cases_sha256": {
+    "actual": "fd4be376344625b0950dd3401e60361df2ab1a9256426c1dfc385cbf22b21f65",
+    "zero": "0953ae770eac2ded58f66a990fc60ffc0106507d85231c8988afc276c2bbe6b2"
+  }
+}

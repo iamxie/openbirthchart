@@ -1,0 +1,135 @@
+{
+  "suites": [
+    {
+      "suite": "complete",
+      "mode": "actual",
+      "cases": 2016,
+      "old_ok": 1987,
+      "new_ok": 1983,
+      "unchanged_entire_records": 1877,
+      "validated_T_records": 139,
+      "surviving_T_records": 135,
+      "raw_T_positions_preserved": 2780,
+      "fractional_cusp_positions_changed": 173,
+      "new_refusals": 4
+    },
+    {
+      "suite": "complete",
+      "mode": "zero",
+      "cases": 2016,
+      "old_ok": 1987,
+      "new_ok": 1984,
+      "unchanged_entire_records": 1877,
+      "validated_T_records": 139,
+      "surviving_T_records": 136,
+      "raw_T_positions_preserved": 2780,
+      "fractional_cusp_positions_changed": 174,
+      "new_refusals": 3
+    },
+    {
+      "suite": "main",
+      "mode": "actual",
+      "cases": 1200,
+      "old_ok": 1200,
+      "new_ok": 1200,
+      "unchanged_entire_records": 1115,
+      "validated_T_records": 85,
+      "surviving_T_records": 85,
+      "raw_T_positions_preserved": 1700,
+      "fractional_cusp_positions_changed": 114
+    },
+    {
+      "suite": "main",
+      "mode": "zero",
+      "cases": 1200,
+      "old_ok": 1200,
+      "new_ok": 1200,
+      "unchanged_entire_records": 1115,
+      "validated_T_records": 85,
+      "surviving_T_records": 85,
+      "raw_T_positions_preserved": 1700,
+      "fractional_cusp_positions_changed": 114
+    },
+    {
+      "suite": "boundary",
+      "mode": "actual",
+      "cases": 87,
+      "old_ok": 77,
+      "new_ok": 77,
+      "unchanged_entire_records": 87
+    },
+    {
+      "suite": "boundary",
+      "mode": "zero",
+      "cases": 87,
+      "old_ok": 77,
+      "new_ok": 77,
+      "unchanged_entire_records": 87
+    }
+  ],
+  "new_refusals": [
+    {
+      "suite": "complete",
+      "mode": "actual",
+      "case": "complete-1914-05-T",
+      "frame": "rejected",
+      "reason": "folded_or_degenerate_family",
+      "failed_points": "0;1;2;3;4;5;6;7;8;9;11;15;19;18;20;17;-11;-1;-2;-3"
+    },
+    {
+      "suite": "complete",
+      "mode": "actual",
+      "case": "complete-1914-06-T",
+      "frame": "ok",
+      "reason": "individual_point_ambiguity",
+      "failed_points": "1;2;3"
+    },
+    {
+      "suite": "complete",
+      "mode": "actual",
+      "case": "complete-2000-07-T",
+      "frame": "rejected",
+      "reason": "folded_or_degenerate_family",
+      "failed_points": "0;1;2;3;4;5;6;7;8;9;11;15;19;18;20;17;-11;-1;-2;-3"
+    },
+    {
+      "suite": "complete",
+      "mode": "actual",
+      "case": "complete-2027-04-T",
+      "frame": "rejected",
+      "reason": "folded_or_degenerate_family",
+      "failed_points": "0;1;2;3;4;5;6;7;8;9;11;15;19;18;20;17;-11;-1;-2;-3"
+    },
+    {
+      "suite": "complete",
+      "mode": "zero",
+      "case": "complete-1914-05-T",
+      "frame": "rejected",
+      "reason": "folded_or_degenerate_family",
+      "failed_points": "0;1;2;3;4;5;6;7;8;9;11;15;19;18;20;17;-11;-1;-2;-3"
+    },
+    {
+      "suite": "complete",
+      "mode": "zero",
+      "case": "complete-2000-07-T",
+      "frame": "rejected",
+      "reason": "folded_or_degenerate_family",
+      "failed_points": "0;1;2;3;4;5;6;7;8;9;11;15;19;18;20;17;-11;-1;-2;-3"
+    },
+    {
+      "suite": "complete",
+      "mode": "zero",
+      "case": "complete-2027-04-T",
+      "frame": "rejected",
+      "reason": "folded_or_degenerate_family",
+      "failed_points": "0;1;2;3;4;5;6;7;8;9;11;15;19;18;20;17;-11;-1;-2;-3"
+    }
+  ],
+  "point_refusal_reasons": {
+    "folded_or_degenerate_family": 120,
+    "multiple_roots": 3
+  },
+  "surviving_integer_house_changes": 0,
+  "unexpected_numeric_changes": 0,
+  "all_compared_raw_positions_preserved": true
+}

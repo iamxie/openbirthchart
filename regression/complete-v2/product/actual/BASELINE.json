@@ -1,0 +1,21 @@
+{
+  "name": "完全基準資料",
+  "engine": "product",
+  "suite": "complete-v2",
+  "house_latitude_mode": "actual",
+  "product_version": "0.6.5",
+  "reference_version": null,
+  "product_description": "LibEphemeris based with application fixes; exact source and policy captured",
+  "created_utc": "2026-10-31T14:28:35.736924+00:00",
+  "independent_repeat": {
+    "first": "D:\\Codex\\OpenBirthChart\\results\\numerical\\complete-dual-20261031\\runs-final\\product-actual-first",
+    "second": "D:\\Codex\\OpenBirthChart\\results\\numerical\\complete-dual-20261031\\runs-final\\product-actual-repeat",
+    "cases": 2016,
+    "equal": true,
+    "differences": [],
+    "environment_equal": true,
+    "first_manifest_sha256": "de912614ab4a8a319200299c08414dac7adc38e557cada02579c7221610115cd",
+    "second_manifest_sha256": "53ee20e7e25ca23d57fcd783cfb39b223b6f00de7a9ba822356f0899c6af98cb"
+  },
+  "interpretation": "Fixed observed product/reference behavior, including geometry rejections and undefined positions; not a claim of correctness."
+}

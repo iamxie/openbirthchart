@@ -1,0 +1,93 @@
+{
+  "swiss_version": "2.10.03",
+  "cases": [
+    {
+      "name": "north_forward_control",
+      "armc": 0.0,
+      "latitude": 30.0,
+      "obliquity": 23.4393,
+      "numbered_cusp": 2,
+      "cusp_longitude": 110.32697091761247,
+      "probes": [
+        {
+          "offset_degrees": -0.001,
+          "house_position": 1.9999845153781814
+        },
+        {
+          "offset_degrees": 0.0,
+          "house_position": 2.0
+        },
+        {
+          "offset_degrees": 0.001,
+          "house_position": 2.0000155031955478
+        }
+      ]
+    },
+    {
+      "name": "south_forward",
+      "armc": 0.0,
+      "latitude": -30.0,
+      "obliquity": 23.4393,
+      "numbered_cusp": 2,
+      "cusp_longitude": 150.23236017967548,
+      "probes": [
+        {
+          "offset_degrees": -0.001,
+          "house_position": 12.00005528013466
+        },
+        {
+          "offset_degrees": 0.0,
+          "house_position": 2.0
+        },
+        {
+          "offset_degrees": 0.001,
+          "house_position": 11.999944736857644
+        }
+      ]
+    },
+    {
+      "name": "north_reverse",
+      "armc": 90.0,
+      "latitude": 12.0,
+      "obliquity": 23.4393,
+      "numbered_cusp": 1,
+      "cusp_longitude": 0.0,
+      "probes": [
+        {
+          "offset_degrees": -0.001,
+          "house_position": 7.000006620248458
+        },
+        {
+          "offset_degrees": 0.0,
+          "house_position": 1.0
+        },
+        {
+          "offset_degrees": 0.001,
+          "house_position": 6.999993398270061
+        }
+      ]
+    },
+    {
+      "name": "south_reverse",
+      "armc": 270.0,
+      "latitude": -12.0,
+      "obliquity": 23.4393,
+      "numbered_cusp": 1,
+      "cusp_longitude": 180.0,
+      "probes": [
+        {
+          "offset_degrees": -0.001,
+          "house_position": 6.999993398270061
+        },
+        {
+          "offset_degrees": 0.0,
+          "house_position": 1.0
+        },
+        {
+          "offset_degrees": 0.001,
+          "house_position": 7.000006620248458
+        }
+      ]
+    }
+  ]
+}

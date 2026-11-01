@@ -1,0 +1,46 @@
+{
+  "schema": "boundary-current-v1",
+  "active_suite": "boundary-v2",
+  "cases_per_dataset": 87,
+  "updated_utc": "2026-10-31T16:28:38.484956+00:00",
+  "modes": {
+    "actual": {
+      "product": {
+        "path": "regression/boundary-v2/product/actual",
+        "seal_sha256": "bd4c8150d3b77e0aab91ac6b534afa4b5857d51cb139963efc339dae4662cd26",
+        "cases_sha256": "fd4be376344625b0950dd3401e60361df2ab1a9256426c1dfc385cbf22b21f65"
+      },
+      "swiss": {
+        "path": "regression/boundary-v2/swiss/actual",
+        "seal_sha256": "f25a936c2d4f00ae0cc3d68ab7ff454858bf1ae15d873007e88ec7d6c7f27df4",
+        "cases_sha256": "fd4be376344625b0950dd3401e60361df2ab1a9256426c1dfc385cbf22b21f65"
+      }
+    },
+    "zero": {
+      "product": {
+        "path": "regression/boundary-v2/product/zero",
+        "seal_sha256": "78fc2f750437c3b785bb410b2049947495bcc79b0446d0500c3d72ab4e7e024c",
+        "cases_sha256": "0953ae770eac2ded58f66a990fc60ffc0106507d85231c8988afc276c2bbe6b2"
+      },
+      "swiss": {
+        "path": "regression/boundary-v2/swiss/zero",
+        "seal_sha256": "c11b47f4d5234049afe1e1b4bea2f897ba32bbf04e2ef82023b225976b43f1a8",
+        "cases_sha256": "0953ae770eac2ded58f66a990fc60ffc0106507d85231c8988afc276c2bbe6b2"
+      }
+    }
+  },
+  "superseded": [
+    {
+      "path": "regression/baselines/0.6.5",
+      "scope": "boundary 87 only",
+      "status": "obsolete"
+    },
+    {
+      "path": "results/numerical/azimuth-patch-20261031/boundary-swiss.json",
+      "scope": "historical supplemental boundary reference",
+      "status": "obsolete"
+    }
+  ],
+  "preserved": "Historical bytes and current main-v2 1200/complete-v2 2016 baselines and routes are unchanged.",
+  "report": "results/numerical/boundary-dual-20261101/REPORT.md"
+}

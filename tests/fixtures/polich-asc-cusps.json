@@ -1,0 +1,266 @@
+[
+  {
+    "case": "complete-1904-11-T",
+    "input": {
+      "local_iso": "1904-11-21T11:25:33",
+      "zone": "Atlantic/Reykjavik",
+      "longitude": -21.89541,
+      "latitude": 64.13548,
+      "system": "T",
+      "small_bodies": true,
+      "minor_aspects": true,
+      "fold": 0,
+      "manual_dst": false,
+      "dst_enabled": false,
+      "dst_minutes": 60,
+      "name": "",
+      "gender": "男",
+      "notes": ""
+    },
+    "armc": 213.56849978362274,
+    "obliquity": 23.449096214738837,
+    "cusps": [
+      249.37900810810743,
+      301.643459887494,
+      5.537227836382214,
+      35.87988455855714,
+      52.70789021850646,
+      63.846433990490425,
+      69.37900810810743,
+      121.64345988749398,
+      185.53722783638221,
+      215.87988455855714,
+      232.70789021850646,
+      243.84643399049043
+    ],
+    "asc": 249.37900810810743,
+    "probes": [
+      {
+        "delta_degrees": -0.001,
+        "raw_position": 12.999067306518555
+      },
+      {
+        "delta_degrees": -1e-06,
+        "raw_position": 12.99999713897705
+      },
+      {
+        "delta_degrees": -1e-08,
+        "raw_position": 12.999998569488525
+      },
+      {
+        "delta_degrees": 0.0,
+        "raw_position": 12.999998569488525
+      },
+      {
+        "delta_degrees": 1e-08,
+        "raw_position": 1.0000000447034836
+      },
+      {
+        "delta_degrees": 1e-06,
+        "raw_position": 1.0000000894069672
+      },
+      {
+        "delta_degrees": 0.001,
+        "raw_position": 1.0000293254852295
+      }
+    ]
+  },
+  {
+    "case": "complete-1914-05-T",
+    "input": {
+      "local_iso": "1914-05-14T22:09:03",
+      "zone": "Europe/Oslo",
+      "longitude": 18.95508,
+      "latitude": 69.6489,
+      "system": "T",
+      "small_bodies": true,
+      "minor_aspects": true,
+      "fold": 0,
+      "manual_dst": false,
+      "dst_enabled": false,
+      "dst_minutes": 60,
+      "name": "",
+      "gender": "男",
+      "notes": ""
+    },
+    "armc": 207.9772083857891,
+    "obliquity": 23.452760991062423,
+    "cusps": [
+      233.95873272508535,
+      276.72028099303225,
+      356.38798566407974,
+      30.072307018915126,
+      45.12625887771026,
+      53.19754795317135,
+      53.95873272508538,
+      96.72028099303225,
+      176.38798566407968,
+      210.0723070189151,
+      225.12625887771023,
+      233.19754795317135
+    ],
+    "asc": 233.95873272508535,
+    "probes": [
+      {
+        "delta_degrees": -0.001,
+        "raw_position": 12.172457695007324
+      },
+      {
+        "delta_degrees": -1e-06,
+        "raw_position": 12.172720909118652
+      },
+      {
+        "delta_degrees": -1e-08,
+        "raw_position": 12.17272162437439
+      },
+      {
+        "delta_degrees": 0.0,
+        "raw_position": 12.17272162437439
+      },
+      {
+        "delta_degrees": 1e-08,
+        "raw_position": 1.0000000894069672
+      },
+      {
+        "delta_degrees": 1e-06,
+        "raw_position": 1.0000000894069672
+      },
+      {
+        "delta_degrees": 0.001,
+        "raw_position": 1.0000391602516174
+      }
+    ]
+  },
+  {
+    "case": "complete-2000-07-T",
+    "input": {
+      "local_iso": "2000-07-23T22:03:42",
+      "zone": "Atlantic/Reykjavik",
+      "longitude": -21.89541,
+      "latitude": 64.13548,
+      "system": "T",
+      "small_bodies": true,
+      "minor_aspects": true,
+      "fold": 0,
+      "manual_dst": false,
+      "dst_enabled": false,
+      "dst_minutes": 60,
+      "name": "",
+      "gender": "男",
+      "notes": ""
+    },
+    "armc": 250.97252145737676,
+    "obliquity": 23.438121392238784,
+    "cusps": [
+      278.1890630333021,
+      28.282535874003415,
+      57.40556617762556,
+      72.44213515724005,
+      84.25034880509571,
+      94.13867266935432,
+      98.18906303330209,
+      208.28253587400343,
+      237.40556617762556,
+      252.44213515724007,
+      264.2503488050957,
+      274.1386726693543
+    ],
+    "asc": 278.1890630333021,
+    "probes": [
+      {
+        "delta_degrees": -0.001,
+        "raw_position": 12.575721740722656
+      },
+      {
+        "delta_degrees": -1e-06,
+        "raw_position": 12.575937747955322
+      },
+      {
+        "delta_degrees": -1e-08,
+        "raw_position": 12.575937747955322
+      },
+      {
+        "delta_degrees": 0.0,
+        "raw_position": 12.575937747955322
+      },
+      {
+        "delta_degrees": 1e-08,
+        "raw_position": 1.0000000447034836
+      },
+      {
+        "delta_degrees": 1e-06,
+        "raw_position": 1.0000000894069672
+      },
+      {
+        "delta_degrees": 0.001,
+        "raw_position": 1.0000116229057312
+      }
+    ]
+  },
+  {
+    "case": "complete-2027-04-T",
+    "input": {
+      "local_iso": "2027-04-04T04:15:06",
+      "zone": "Atlantic/Reykjavik",
+      "longitude": -21.89541,
+      "latitude": 64.13548,
+      "system": "T",
+      "small_bodies": true,
+      "minor_aspects": true,
+      "fold": 0,
+      "manual_dst": false,
+      "dst_enabled": false,
+      "dst_minutes": 60,
+      "name": "",
+      "gender": "男",
+      "notes": ""
+    },
+    "armc": 234.14349211241282,
+    "obliquity": 23.437796169299666,
+    "cusps": [
+      262.52871660493275,
+      344.4118175335721,
+      35.96209439910641,
+      56.45192232879464,
+      69.74481224782164,
+      79.34508652571714,
+      82.52871660493275,
+      164.41181753357205,
+      215.9620943991064,
+      236.45192232879464,
+      249.7448122478216,
+      259.34508652571714
+    ],
+    "asc": 262.52871660493275,
+    "probes": [
+      {
+        "delta_degrees": -0.001,
+        "raw_position": 12.555185317993164
+      },
+      {
+        "delta_degrees": -1e-06,
+        "raw_position": 12.555481433868408
+      },
+      {
+        "delta_degrees": -1e-08,
+        "raw_position": 12.555481433868408
+      },
+      {
+        "delta_degrees": 0.0,
+        "raw_position": 12.555481433868408
+      },
+      {
+        "delta_degrees": 1e-08,
+        "raw_position": 1.0000000447034836
+      },
+      {
+        "delta_degrees": 1e-06,
+        "raw_position": 1.0000000894069672
+      },
+      {
+        "delta_degrees": 0.001,
+        "raw_position": 1.000020831823349
+      }
+    ]
+  }
+]

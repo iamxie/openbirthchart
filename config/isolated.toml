@@ -1,0 +1,2 @@
+# Deliberately empty: explicit environment settings control the experiment.
+# Prevents reading a personal ~/.libephemeris/config.toml.

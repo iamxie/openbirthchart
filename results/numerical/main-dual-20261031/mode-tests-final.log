@@ -1,0 +1,14 @@
+test_legacy_swiss_input_defaults_to_actual (test_complete_latitude_baselines.ModeTests.test_legacy_swiss_input_defaults_to_actual) ... ok
+test_mode_inventory_and_metadata_must_agree (test_complete_latitude_baselines.ModeTests.test_mode_inventory_and_metadata_must_agree) ... ok
+test_swiss_modes_retain_real_coordinates_and_pass_distinct_latitudes (test_complete_latitude_baselines.ModeTests.test_swiss_modes_retain_real_coordinates_and_pass_distinct_latitudes) ... ok
+test_swiss_rejects_truthy_non_boolean (test_complete_latitude_baselines.ModeTests.test_swiss_rejects_truthy_non_boolean) ... ok
+test_balanced_but_resampled_time_is_rejected (test_main_latitude_baselines.MainSuiteTests.test_balanced_but_resampled_time_is_rejected) ... ok
+test_both_modes_have_original_1200_and_no_boundaries (test_main_latitude_baselines.MainSuiteTests.test_both_modes_have_original_1200_and_no_boundaries) ... ok
+test_boundary_case_cannot_enter_main_suite (test_main_latitude_baselines.MainSuiteTests.test_boundary_case_cannot_enter_main_suite) ... ok
+test_complete_2016_coverage_remains_separate (test_main_latitude_baselines.MainSuiteTests.test_complete_2016_coverage_remains_separate) ... ok
+test_frozen_physical_time_is_not_substitutable (test_main_latitude_baselines.MainSuiteTests.test_frozen_physical_time_is_not_substitutable) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.800s
+
+OK

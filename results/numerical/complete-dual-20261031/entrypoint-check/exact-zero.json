@@ -1,0 +1,10 @@
+{
+  "first": "D:\\Codex\\OpenBirthChart\\regression\\complete-v2\\product\\zero",
+  "second": "results\\numerical\\complete-dual-20261031\\entrypoint-check\\run-zero",
+  "cases": 2016,
+  "equal": true,
+  "differences": [],
+  "environment_equal": true,
+  "first_manifest_sha256": "706b19673c06a45d4472dbb25f2cdd7695606e038c2faeda13bc739de9522321",
+  "second_manifest_sha256": "21368827d815050edd810172c6f51effddf2eb2f3262a545708f8464ea4489b7"
+}

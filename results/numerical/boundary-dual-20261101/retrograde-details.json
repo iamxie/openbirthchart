@@ -1,0 +1,32 @@
+[
+  {
+    "mode": "actual",
+    "case": "edge-mercury-station-before",
+    "local_iso": "2016-04-28T17:19:43",
+    "zone": "UTC",
+    "point_id": 2,
+    "name": "水星",
+    "product_speed_degrees_per_day": 5.402398528531194e-08,
+    "swiss_speed_degrees_per_day": -1.5181874502096504e-07,
+    "product_retrograde": false,
+    "swiss_retrograde": true,
+    "longitude_delta_arcsec": 0.0010662786877446706,
+    "product_house": 4,
+    "swiss_house": 4
+  },
+  {
+    "mode": "zero",
+    "case": "edge-mercury-station-before",
+    "local_iso": "2016-04-28T17:19:43",
+    "zone": "UTC",
+    "point_id": 2,
+    "name": "水星",
+    "product_speed_degrees_per_day": 5.402398528531194e-08,
+    "swiss_speed_degrees_per_day": -1.5181874502096504e-07,
+    "product_retrograde": false,
+    "swiss_retrograde": true,
+    "longitude_delta_arcsec": 0.0010662786877446706,
+    "product_house": 4,
+    "swiss_house": 4
+  }
+]
