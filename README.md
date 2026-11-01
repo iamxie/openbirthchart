@@ -4,7 +4,7 @@
 
 Windows 西洋占星本命盤桌面程式，使用 LibEphemeris 計算，提供繁體中文／英文介面、十四種宮位制、天體與宮頭表格、相位及離線報告。
 
-**v0.6.7：首次公開發佈候選。** 本地準備完成不代表下方下載已上線。
+**v0.6.7 已公開發佈。** [下載 Windows 版與完整來源](https://github.com/iamxie/openbirthchart/releases/tag/v0.6.7)。
 
 ## 下載與啟動
 

@@ -171,8 +171,8 @@
   },
   {
     "path": "DESKTOP_README.md",
-    "bytes": 1401,
-    "sha256": "dafce1e80dbb6538d6e110dd1afa46619fbfc614bda7dbebef8ebbfac3e99d37"
+    "bytes": 1346,
+    "sha256": "8367fb93f98f201881cf5c8a100bd6cf43afa58738260d82af14d6b0d454f41b"
   },
   {
     "path": "docs/azimuth-en-US.html",
@@ -221,13 +221,13 @@
   },
   {
     "path": "docs/README.md",
-    "bytes": 1833,
-    "sha256": "8f48c0e5fdd6990cc95d95e2d46e28999f77064ed05e98540fc6f05b56ce81c3"
+    "bytes": 1811,
+    "sha256": "7d8561306e953fdbdff667c1c02f88d95438adff3ba9f9b0e3ed69fd484512af"
   },
   {
     "path": "docs/releases/v0.6.7.md",
-    "bytes": 1286,
-    "sha256": "66c371962a3698995baa89d49d8a7aaf52d1ae01f85c2e1bfc9b302fcfd545cc"
+    "bytes": 1311,
+    "sha256": "2579d3756b4e7a2238afd5c546afa42480c5e6261d2f4865c5e4698449431d85"
   },
   {
     "path": "docs/VALIDATION.md",
@@ -1401,8 +1401,8 @@
   },
   {
     "path": "NOTICE.md",
-    "bytes": 3050,
-    "sha256": "e2402d4fe0342d9b0468e0d587e9bb6ea2314942f60ddd82ad0ed7317fae84a1"
+    "bytes": 2830,
+    "sha256": "c6515e4ea2b4113bb9e77479100e55ab2e146768e84e2c40dfe966384cf3b7c6"
   },
   {
     "path": "observation-data-sources.lock.json",
@@ -1416,13 +1416,13 @@
   },
   {
     "path": "README.en.md",
-    "bytes": 3311,
-    "sha256": "17af88cbb0d10d952666c1422fcbd8a1784f7ad23f0e9a9ad8d77ce8890a10aa"
+    "bytes": 3353,
+    "sha256": "2b2f735de7a0b2ee171a3b7bb32e5e7f82ac18cdb1a5d280baa6eb30f9303ee3"
   },
   {
     "path": "README.md",
-    "bytes": 3532,
-    "sha256": "4c2bb30dfde0baff4dcd00becf5eb96af0f8f0d28403b43c37ca2c82c2de4d17"
+    "bytes": 3570,
+    "sha256": "ad171a033c789fbe3a09ecb0881fd1e59701bd9bfcc107a4a68d605cceff271a"
   },
   {
     "path": "regression/boundary-current.json",

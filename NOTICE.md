@@ -12,13 +12,13 @@ This grant covers original code in `desktop/`, `scripts/`, `tests/`, application
 
 ## Corresponding source / 對應來源
 
-Repository / 專案位置（公開後）：https://github.com/iamxie/openbirthchart
+Repository / 專案位置：https://github.com/iamxie/openbirthchart
 
-Version / 版本：v0.6.7。發佈頁（公開後）：https://github.com/iamxie/openbirthchart/releases/tag/v0.6.7
+Version / 版本：v0.6.7。發佈頁：https://github.com/iamxie/openbirthchart/releases/tag/v0.6.7
 
-The release provides `OpenBirthChart-0.6.7-source.zip`, containing application/build/test sources, pinned runtime data and dependency source archives listed in `third-party-sources.lock.json`. Download it from the same page as the Windows ZIP, at no additional charge. Before upload, these are local release candidates; the URLs above are intended publication locations, not a claim that the release is online.
+The release provides `OpenBirthChart-0.6.7-source.zip`, containing application/build/test sources, pinned runtime data and dependency source archives listed in `third-party-sources.lock.json`. Download it from the same page as the Windows ZIP, at no additional charge.
 
-同版來源 ZIP 包含應用、建置與測試來源、固定執行資料及鎖定依賴來源，與 Windows ZIP 在同一發佈頁免費提供；本地準備階段網址尚未代表已上傳。
+同版來源 ZIP 包含應用、建置與測試來源、固定執行資料及鎖定依賴來源，與 Windows ZIP 在同一發佈頁免費提供。
 
 Qt/PySide6 and other dependencies are unmodified. Exact versions/source archives are recorded in the source manifest. See `docs/BUILDING.md` for installation and rebuild instructions. Original upstream license texts accompany source archives and the binary distribution.
 

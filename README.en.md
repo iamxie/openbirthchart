@@ -4,7 +4,7 @@ English · [繁體中文](README.md)
 
 A Windows desktop natal-chart application powered by LibEphemeris, with Traditional Chinese and English interfaces, fourteen house systems, planetary positions, house cusps, aspects and offline reports.
 
-**v0.6.7 is the first public-release candidate.** Local preparation is not evidence of an uploaded GitHub release.
+**v0.6.7 is now available.** [Download the Windows application and full corresponding source](https://github.com/iamxie/openbirthchart/releases/tag/v0.6.7).
 
 ## Download
 
