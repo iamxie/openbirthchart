@@ -43,7 +43,7 @@ IANA 時區，按「開始計算」。不需要地點或個人檔案。
 進度依序顯示掃描區間、細查事件及建立區間，數量均為真實完成數；測得速度後才
 估計目前階段剩餘時間。取消會停止並回收背景程序，不交付不完整結果。
 
-寬視窗右側顯示詳情；窄視窗使用詳情小視窗。低高度使用「功能」選單切換頁面。
+時間軸使用完整寬度；點選色帶開啟可縮放的事件詳情視窗。低高度使用「功能」選單切換頁面。
 篩選、縮放與選取不會重新計算。月／週／日是 30／7／1 天的時間視窗。
 
 ## 開發與驗證
@@ -81,3 +81,43 @@ The worker limit is logical processors minus four, with a minimum of one and a c
 based on available batches. The explicit smoke mode overrides this to two workers.
 Progress counts actual work and estimates only the current stage. Cancellation joins
 workers. Pinned numerical dependencies and ephemeris data are unchanged.
+
+## 星座歷程、同時事件與文件匯出
+
+色帶以虛線標示換座，相位色帶上／下列分別對應第一／第二顆天體。
+較窄區段不硬塞文字，懸停可讀星座順序，點選可讀完整起訖表。
+使用與位置引擎相同的地心回歸黃道十二星座；不是天文星座邊界。
+沿十分鐘掃描的黃經跨越 30 度倍數時局部求根；絕對速度反轉也分段查找，
+因此保留順行跨座、逆行跨回及同一段內多次換座。切點歸入後一段；查詢最後端點包含。
+星座計算沿用事件求根的停止條件與有限取樣限制，不改既有逆行／相位定義。
+
+詳情分「星座歷程與精確成相」及「同時事件」兩頁，能返回上一個事件。
+同時事件預設取整段區間交集，也可切至事件開始、每次精確成相、事件結束當下。
+列表使用所有計算結果，不受圖面篩選影響，顯示實際重疊起訖及重疊期間的星座。
+僅共用一個端點也列為同一瞬間，不誤稱整段時間都同時發生。
+
+「匯出 HTML 文件」可選全部結果，或所選事件（附重疊事件列表）。文件語系獨立於 UI，
+目前提供繁體中文與英文。範本沿用 templates/report/<locale> 的 labels.json、style.css，
+並新增 timeline-labels.json、timeline.html、timeline.css；複製語系資料夾即可擴充。
+HTML 單檔內嵌 CSS／SVG，無外部字型、網路資源或 JavaScript；包含查詢條件、時區與
+UTC 時差、本次容許度、事件星座分段及精確成相。全部匯出不受畫面篩選影響。
+圖頁每頁最多 30 個經過日、12 列；所選事件匯出會聚焦該段。較短色帶仍可從文字詳表閱讀。
+列印沿用 A4 橫向與頁碼，長表格自動續頁並重複表頭；長查詢會有較多頁，可改匯出所選事件。
+運算未完成、取消或更改條件後不可匯出舊結果。
+
+### Zodiac history, concurrent events and export
+
+Bands mark tropical geocentric sign ingresses with dashed lines, with the first body
+above the second for aspects. Tooltips and a resizable detail window expose narrow
+segments and retrograde re-entries. Ingress roots reuse the bounded coarse scan and
+absolute-speed extrema, with the same finite-sampling limitations as event search.
+
+The concurrent-events tab uses interval intersections by default, or the selected
+event's start, exact hits or end. It uses all results regardless of chart filters;
+shared endpoints are simultaneous instants. Linked events support back navigation.
+
+Offline HTML export offers all results or the selected event with overlaps. Document
+language is independent of the UI. Copy the existing report language folder including
+timeline.html, timeline.css and timeline-labels.json to add a language. Embedded
+SVG/CSS, accessible text tables, A4 landscape, continued tables and page numbers
+follow the natal report conventions; no network resources or JavaScript are needed.

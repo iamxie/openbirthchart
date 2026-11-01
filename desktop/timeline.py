@@ -97,6 +97,14 @@ class SkyEvent:
 
 
 @dataclass
+class ZodiacSegment:
+    body: int
+    start: float
+    end: float
+    sign: int
+
+
+@dataclass
 class TimelineResult:
     request: TimelineInput
     start: float
@@ -106,6 +114,7 @@ class TimelineResult:
     elapsed: float
     notes: list[str]
     worker_pids: list[int] = field(default_factory=list)
+    zodiac_segments: list[ZodiacSegment] = field(default_factory=list)
 
 
 class Cancelled(Exception):
@@ -214,7 +223,7 @@ def _refine(job, positions=None):
 
     def phase(t):
         p = get(t)
-        return delta(p[1, 0]-p[0, 0], target)
+        return delta(p[0,0] if b is None else p[1, 0]-p[0, 0], target)
 
     def speed(t):
         p = get(t)
@@ -306,6 +315,21 @@ def _assemble_events(job):
     return sorted(events,key=lambda e:e.start)
 
 
+def _assemble_sign_segments(job):
+    body,start,end,edges = job
+    cuts = [start,*_unique_times(t for t in edges if start<t<end),end] if end>start else [start]
+    intervals = list(zip(cuts,cuts[1:])) or [(start,end)]
+    segments = []
+    for left,right in intervals:
+        p,_ = _positions((left+right)/2,(body,))
+        sign = int(p[0,0]%360//30)
+        if segments and segments[-1].sign == sign:
+            segments[-1].end = right
+        else:
+            segments.append(ZodiacSegment(body,left,right,sign))
+    return segments
+
+
 class EventCollector:
     """Collect boundary candidates, including an entire orb visit between samples.
 
@@ -321,6 +345,14 @@ class EventCollector:
         if self.first is None:self.first=p.copy()
         if self.previous is not None:
             pt,pp=self.previous
+            for a in range(10):
+                jobs=[]
+                turn=pp[a,1]*p[a,1]<0
+                for target in range(0,360,30):
+                    fl,fr=delta(pp[a,0],target),delta(p[a,0],target)
+                    if turn or (fl*fr<=0 and abs(fl-fr)<180):
+                        jobs.append((('ingress',a,None,target,0.,pt,stamp),'edge'))
+                if jobs:self.jobs.append((jobs,('sign',a,None,None)))
             for a in RETRO_IDS:
                 if pp[a,1]*p[a,1]<=0 and pp[a,1]!=p[a,1]:
                     self.jobs.append(([ (('retro',a,None,None,0.,pt,stamp),'edge') ],('retro',a,None,None)))
@@ -361,6 +393,10 @@ class EventCollector:
                 roots['exact'].append(self.start)
             if initial or final or roots['edge'] or roots['exact']:
                 yield key,self.start,self.end,orb,roots['edge'],roots['exact'],initial,final
+
+    def zodiac_jobs(self):
+        for body in range(10):
+            yield body,self.start,self.end,self.roots.get(('sign',body,None,None),{}).get('edge',[])
 
 
 def calculate_timeline(request, progress=None, cancelled=None, workers=None, chunk_size=60, sample_step=600):
@@ -450,12 +486,14 @@ def calculate_timeline(request, progress=None, cancelled=None, workers=None, chu
         assembly=list(collector.assembly_jobs())
         events=[]
         for group in run_jobs(assembly,_assemble_events,'assemble',len(assembly)):events.extend(group)
+        zodiac=[]
+        for group in run_jobs(collector.zodiac_jobs(),_assemble_sign_segments,'zodiac',10):zodiac.extend(group)
         events.sort(key=lambda e:(e.kind!='retro',e.a,e.b or -1,e.angle or 0,e.start))
         report('finish',1,1)
         pool.close()
         pool.join()
         return TimelineResult(request,start.timestamp(),end.timestamp(),total,events,
-                              time.monotonic()-started,sorted(notes),sorted(worker_pids))
+                              time.monotonic()-started,sorted(notes),sorted(worker_pids),zodiac)
     except BaseException:
         pool.terminate()
         pool.join()

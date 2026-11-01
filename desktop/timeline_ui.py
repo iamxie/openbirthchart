@@ -2,6 +2,7 @@
 # Copyright (C) 2026 OpenBirthChart contributors
 """Sky timeline workbench. No personal profile or hardware fields."""
 from datetime import datetime, timezone
+from pathlib import Path
 import math
 import threading
 import time
@@ -11,7 +12,7 @@ from PySide6.QtCore import Qt, QDate, QTime, QThread, Signal, QTimer, QRectF, QP
 from PySide6.QtGui import QColor, QPainter, QPen, QPolygonF, QPixmap, QIcon
 from PySide6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QFormLayout, QLabel,
     QPushButton, QScrollArea, QSplitter, QFrame, QDateEdit, QTimeEdit, QComboBox,
-    QDoubleSpinBox, QGroupBox, QProgressBar, QTextBrowser, QToolTip, QCompleter, QDialog)
+    QDoubleSpinBox, QGroupBox, QProgressBar, QTextBrowser, QToolTip, QCompleter, QDialog, QFileDialog, QMessageBox)
 
 from .i18n import tr, error_text
 from .model import available_timezones, BirthInput, resolve_local
@@ -22,6 +23,11 @@ from .theme import TEXT, MUTED, BORDER, SURFACE, SOFT, ACCENT, primary
 from .aspects import draw_symbol
 from .fields import DateField,TimeField
 from .settings import default_orbs
+from .timeline_details import event_spans
+from .timeline_report import labels_for, sign_description, sign_name
+from .timeline_dialog import EventDetailDialog
+from .report import TEMPLATES
+from .i18n import language
 
 ASPECT_SYMBOLS = {0:'☌',90:'□',120:'△',180:'☍'}
 COLORS = {None:'#8a675b',0:'#ad841d',90:'#c54843',120:'#536db0',180:'#c54843'}
@@ -114,7 +120,8 @@ class TimelineCanvas(QWidget):
         self.start = self.end = 0.
         self.hits = []
         self.label_width = 165
-        self.row_height = 38
+        self.row_height = 56
+        self.labels = labels_for(TEMPLATES/language())
         self.body = None
         self.angle = 'all'
         self.setMouseTracking(True)
@@ -233,10 +240,24 @@ class TimelineCanvas(QWidget):
             for e in visible:
                 color = QColor(COLORS[e.angle])
                 left,right = self.x(max(e.start,self.start)),self.x(min(e.end,self.end))
-                rect = QRectF(left,y+11,max(3,right-left),self.row_height-22)
+                rect = QRectF(left,y+10,max(3,right-left),self.row_height-20)
                 p.setPen(Qt.PenStyle.NoPen)
                 p.setBrush(color)
                 p.drawRoundedRect(rect,3,3)
+                for lo,hi,signs in event_spans(self.result,e):
+                    if hi<self.start or lo>self.end:continue
+                    l,r=self.x(max(lo,self.start)),self.x(min(hi,self.end))
+                    p.setPen(QPen(QColor(SURFACE),1,Qt.PenStyle.DashLine))
+                    if e.start<lo<e.end:
+                        p.drawLine(QPointF(l,rect.top()),QPointF(l,rect.bottom()))
+                    p.setPen(QColor(SURFACE))
+                    font=p.font();small=p.font();small.setPointSizeF(max(8,font.pointSizeF()-2));p.setFont(small)
+                    for j,sign in enumerate(signs):
+                        text=sign_name(sign,self.labels)
+                        if p.fontMetrics().horizontalAdvance(text)+8<r-l:
+                            line_height=rect.height()/len(signs)
+                            p.drawText(QRectF(l+3,rect.top()+j*line_height,r-l-6,line_height),Qt.AlignmentFlag.AlignCenter,text)
+                    p.setFont(font)
                 if e is self.selection:
                     p.setPen(QPen(color,1.5))
                     p.setBrush(Qt.BrushStyle.NoBrush)
@@ -244,7 +265,7 @@ class TimelineCanvas(QWidget):
                 self.hits.append((rect.adjusted(-4,-8,4,8),e))
                 for exact in e.exact:
                     if self.start<=exact<=self.end:
-                        x,cy = self.x(exact),y+self.row_height/2
+                        x,cy = self.x(exact),y+7
                         p.setPen(QPen(QColor(SURFACE),1))
                         p.setBrush(color)
                         p.drawPolygon(QPolygonF([QPointF(x,cy-5),QPointF(x+5,cy),QPointF(x,cy+5),QPointF(x-5,cy)]))
@@ -264,6 +285,7 @@ class TimelineCanvas(QWidget):
         for rect,e in reversed(self.hits):
             if rect.contains(event.position()):
                 text = event_label(e)+'\n'+local_time(e.start,self.result.request.zone)+'\n'+local_time(e.end,self.result.request.zone)
+                text += '\n'+sign_description(self.result,e,self.labels)
                 QToolTip.showText(event.globalPosition().toPoint(),text,self)
                 return
         QToolTip.hideText()
@@ -387,7 +409,9 @@ class TimelinePage(QWidget):
         self.splitter.addWidget(center)
         heading = QLabel(tr('天象時間軸'))
         heading.setObjectName('chartTitle')
-        center_layout.addWidget(heading)
+        heading_row=QHBoxLayout()
+        heading_row.addWidget(heading,1)
+        center_layout.addLayout(heading_row)
         self.range_label = QLabel()
         self.range_label.setWordWrap(True)
         self.range_label.setObjectName('hint')
@@ -408,15 +432,16 @@ class TimelinePage(QWidget):
         self.previous_button,self.next_button = QPushButton('‹'),QPushButton('›')
         self.previous_button.setFixedWidth(36)
         self.next_button.setFixedWidth(36)
-        self.zoom.setMinimumWidth(115)
-        self.zoom.setMaximumWidth(130)
+        self.zoom.setMinimumWidth(145)
+        self.zoom.setMaximumWidth(155)
         self.previous_button.setAccessibleName(tr('上一段時間'))
         self.next_button.setAccessibleName(tr('下一段時間'))
         for widget in (self.aspect_filter,self.body_filter,self.zoom,self.previous_button,self.next_button):
             filters.addWidget(widget)
         self.detail_button=QPushButton(tr('事件詳情'))
-        self.detail_button.hide()
-        filters.addWidget(self.detail_button)
+        self.export_button=QPushButton(tr('匯出 HTML 文件'))
+        heading_row.addWidget(self.export_button)
+        heading_row.addWidget(self.detail_button)
         center_layout.addLayout(filters)
         self.result_splitter = QSplitter()
         self.result_splitter.setChildrenCollapsible(False)
@@ -438,21 +463,9 @@ class TimelinePage(QWidget):
         legend.setObjectName('hint')
         legend.setWordWrap(True)
         chart_layout.addWidget(legend)
+        sign_hint=QLabel(tr('虛線為換座；相位色帶上列對應第一顆天體，下列對應第二顆。短區段可懸停或點選查看完整星座歷程。'))
+        sign_hint.setWordWrap(True);sign_hint.setObjectName('hint');chart_layout.addWidget(sign_hint)
         self.result_splitter.addWidget(chart_area)
-        detail_area = QWidget()
-        self.detail_area=detail_area
-        detail_layout = QVBoxLayout(detail_area)
-        detail_layout.setContentsMargins(10,0,0,0)
-        detail_layout.addWidget(QLabel(tr('事件詳情')))
-        self.details = QTextBrowser()
-        self.details.setOpenExternalLinks(False)
-        self.details.setMinimumWidth(185)
-        self.details.setStyleSheet(f'QTextBrowser {{ background:{SURFACE}; border:1px solid {BORDER}; border-radius:7px; padding:8px; }}')
-        detail_layout.addWidget(self.details,1)
-        self.focus_event = QPushButton(tr('放大查看這段時間'))
-        detail_layout.addWidget(self.focus_event)
-        self.result_splitter.addWidget(detail_area)
-        self.result_splitter.setSizes([800,240])
         self.splitter.setSizes([290,1100])
         self.status = QLabel(tr('設定時間範圍與時區，按「開始計算」。'))
         self.status.setObjectName('status')
@@ -477,7 +490,7 @@ class TimelinePage(QWidget):
         self.zoom.currentIndexChanged.connect(self.zoom_changed)
         self.previous_button.clicked.connect(lambda:self.shift(-1))
         self.next_button.clicked.connect(lambda:self.shift(1))
-        self.focus_event.clicked.connect(self.focus_selection)
+        self.export_button.clicked.connect(self.export)
         self.detail_button.clicked.connect(self.show_detail_dialog)
         self.detail_dialog=None
         self.canvas.selected.connect(self.show_event)
@@ -506,6 +519,7 @@ class TimelinePage(QWidget):
     def conditions_changed(self,*args):
         if self.initializing:
             return
+        self.enable_results(False)
         self.result = None
         self.canvas.set_result(None)
         self.show_event(None)
@@ -538,7 +552,7 @@ class TimelinePage(QWidget):
         self.enable_results(False)
 
     def enable_results(self,enabled):
-        for widget in (self.aspect_filter,self.body_filter,self.zoom,self.previous_button,self.next_button):
+        for widget in (self.aspect_filter,self.body_filter,self.zoom,self.previous_button,self.next_button,self.export_button):
             widget.setEnabled(enabled)
 
     def toggle_settings(self):
@@ -598,6 +612,8 @@ class TimelinePage(QWidget):
                 self.status.setText(tr('第 1 階段：掃描時間區間 · 已完成 {done:,} / {total:,} 個掃描點',done=done,total=total))
             elif stage=='refine':
                 self.status.setText(tr('第 2 階段：細查事件時間 · 已完成 {done:,} / {total:,} 項',done=done,total=total))
+            elif stage=='zodiac':
+                self.status.setText(tr('正在建立星座歷程 · 已完成 {done} / {total} 顆天體',done=done,total=total))
             else:
                 self.status.setText(tr('第 3 階段：建立事件區間 · 已完成 {done:,} / {total:,} 項',done=done,total=total))
         self.update_elapsed()
@@ -606,7 +622,7 @@ class TimelinePage(QWidget):
         elapsed = time.monotonic()-self.started
         text = tr('已用時間：{time}',time=duration(elapsed))
         p = self.last_progress
-        if p and p['stage'] in ('sample','refine','assemble') and p['done']>0 and p.get('stage_elapsed',0)>10:
+        if p and p['stage'] in ('sample','refine','assemble','zodiac') and p['done']>0 and p.get('stage_elapsed',0)>10:
             remaining = p['stage_elapsed']*(p['total']-p['done'])/p['done']
             text += ' · '+tr('本階段預估尚需 {time}（隨實際速度更新）',time=duration(remaining))
         elif not p or p['done']==0:
@@ -693,54 +709,39 @@ class TimelinePage(QWidget):
             self.next_button.setEnabled(self.canvas.end<self.result.end)
 
     def show_event(self,event):
-        from html import escape
-        self.focus_event.setEnabled(event is not None)
+        self.detail_button.setEnabled(event is not None and self.result is not None)
         if event is None or self.result is None:
-            self.details.setPlainText(tr('點選色帶，查看起訖時間與精確成相。'))
-            self.detail_button.setEnabled(False)
-            if self.detail_dialog:
-                self.detail_dialog.findChild(QTextBrowser).setPlainText(self.details.toPlainText())
+            if self.detail_dialog:self.detail_dialog.hide()
             return
-        self.detail_button.setEnabled(True)
-        zone = self.result.request.zone
-        head = f'<h3 style="color:{ACCENT}">{escape(event_label(event))}</h3>'
-        if event.angle is not None:
-            orb = self.result.request.orbs[ANGLES.index(event.angle)]
-            head += f'<p>{event.angle}° · '+escape(tr('容許度 ±{orb}°',orb=orb))+'</p>'
-        head += '<p>'+escape(tr('開始'))+'<br>'+escape(local_time(event.start,zone))+'</p>'
-        if event.clipped_start:
-            head += '<p>'+escape(tr('查詢開始時已符合此條件。'))+'</p>'
-        head += '<p>'+escape(tr('結束'))+'<br>'+escape(local_time(event.end,zone))+'</p>'
-        if event.clipped_end:
-            head += '<p>'+escape(tr('查詢結束時仍符合此條件。'))+'</p>'
-        head += '<p>'+escape(tr('範圍內持續時間'))+'<br>'+escape(duration(event.end-event.start))+'</p>'
-        if event.kind=='aspect':
-            head += '<hr><b>'+escape(tr('精確成相 · {n} 次',n=len(event.exact)))+'</b>'
-            for stamp in event.exact:
-                head += '<p>◆ '+escape(local_time(stamp,zone,seconds=True))+'</p>'
-            if not event.exact:
-                head += '<p>'+escape(tr('此區間內沒有精確成相。'))+'</p>'
-        head += '<hr><p>'+escape(zone)+'</p>'
-        self.details.setHtml(head)
-        if self.detail_dialog:
-            self.detail_dialog.findChild(QTextBrowser).setHtml(head)
-        if self.detail_area.isHidden():
-            self.show_detail_dialog()
+        self.canvas.selection=event
+        if self.detail_dialog is None:self.detail_dialog=EventDetailDialog(self)
+        self.detail_dialog.set_event(self.result,event)
+        self.show_detail_dialog()
 
     def show_detail_dialog(self):
-        if self.detail_dialog is None:
-            self.detail_dialog=QDialog(self)
-            self.detail_dialog.setWindowTitle(tr('事件詳情'))
-            self.detail_dialog.resize(390,540)
-            layout=QVBoxLayout(self.detail_dialog)
-            browser=QTextBrowser()
-            layout.addWidget(browser)
-            zoom_button=QPushButton(tr('放大查看這段時間'))
-            zoom_button.clicked.connect(self.focus_selection)
-            layout.addWidget(zoom_button)
-        self.detail_dialog.findChild(QTextBrowser).setHtml(self.details.toHtml())
-        self.detail_dialog.show()
-        self.detail_dialog.raise_()
+        if self.detail_dialog and self.canvas.selection is not None:
+            self.detail_dialog.show();self.detail_dialog.raise_()
+
+    def export(self):
+        if self.result is None:return
+        from .dialogs import ExportDialog
+        from .storage import default_database_path
+        from .timeline_report import export_timeline_html
+        dialog=ExportDialog(self,timeline=True,has_selection=self.canvas.selection is not None)
+        if dialog.exec()!=QDialog.DialogCode.Accepted:return
+        directory=default_database_path().parent
+        try:directory.mkdir(parents=True,exist_ok=True)
+        except OSError as exc:
+            QMessageBox.warning(self,tr('無法匯出'),str(exc));return
+        name='sky-timeline-'+self.result.request.start[:10]+'.html'
+        path,_=QFileDialog.getSaveFileName(self,tr('匯出 HTML 文件'),str(directory/name),'HTML (*.html)')
+        if path:
+            if not path.lower().endswith('.html'):path+='.html'
+            try:
+                export_timeline_html(self.result,path,dialog.templates.currentData(),
+                    self.canvas.selection if dialog.scope.currentData()=='selected' else None)
+                self.status.setText(tr('已匯出文件：')+path)
+            except Exception as exc:QMessageBox.warning(self,tr('無法匯出'),error_text(exc))
 
     def focus_selection(self):
         e = self.canvas.selection
@@ -755,14 +756,6 @@ class TimelinePage(QWidget):
         self.canvas.end = self.canvas.start+width
         self.canvas.update()
         self.update_axis()
-
-    def resizeEvent(self,event):
-        super().resizeEvent(event)
-        compact=self.width()<1120 or self.height()<520
-        self.detail_area.setVisible(not compact)
-        self.detail_button.setVisible(compact)
-        if not compact and self.detail_dialog:
-            self.detail_dialog.hide()
 
     def request_close(self):
         if self.worker is not None:

@@ -25,7 +25,7 @@ class LanguageDialog(QDialog):
 
 
 class ExportDialog(QDialog):
-    def __init__(self, parent=None):
+    def __init__(self, parent=None, timeline=False, has_selection=False):
         super().__init__(parent)
         self.setWindowTitle(tr('匯出 HTML 文件'))
         self.resize(560, 490)
@@ -35,10 +35,17 @@ class ExportDialog(QDialog):
         subtitle = QLabel(tr('單一檔案，可離線閱讀與列印。')); subtitle.setObjectName('hint'); layout.addWidget(subtitle)
         layout.addWidget(QLabel(tr('文件語系／範本')))
         self.templates = QComboBox()
-        for path, label in available_templates(): self.templates.addItem(label, str(path))
+        from .timeline_report import timeline_templates
+        for path, label in (timeline_templates() if timeline else available_templates()): self.templates.addItem(label, str(path))
         layout.addWidget(self.templates)
         self.notes = QCheckBox(tr('包含個人備註')); layout.addWidget(self.notes)
-        contents = QLabel(tr('星盤圖、天體位置、十二宮宮頭位置、相位圖與相位詳細列表。'))
+        self.notes.setVisible(not timeline)
+        self.scope=QComboBox(self)
+        self.scope.addItem(tr('全部計算結果（不受畫面篩選影響）'),'all')
+        if has_selection:self.scope.addItem(tr('所選事件與同時事件列表'),'selected')
+        if timeline:layout.addWidget(self.scope)
+        else:self.scope.hide()
+        contents = QLabel(tr('時間軸、事件列表、星座歷程與精確成相。所選事件匯出另附重疊事件列表。') if timeline else tr('星盤圖、天體位置、十二宮宮頭位置、相位圖與相位詳細列表。'))
         contents.setObjectName('status'); contents.setWordWrap(True); layout.addWidget(contents)
         hint = QLabel(tr('列印建議：新版 Chrome／Edge、A4 橫向、縮放 100%，關閉瀏覽器頁首頁尾。頁碼僅在列印／PDF 顯示；較長內容會續頁。'))
         hint.setObjectName('hint'); hint.setWordWrap(True); layout.addWidget(hint)

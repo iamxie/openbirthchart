@@ -77,6 +77,19 @@ def run_timeline_smoke(app,window,out,guard):
     exact=next(e for e in result.events if e.exact)
     page.canvas.selection=exact
     page.show_event(exact)
+    if len(result.zodiac_segments)<10:raise AssertionError('Missing zodiac coverage')
+    detail=page.detail_dialog
+    settle();detail.grab().save(str(out/'event-history.png'))
+    detail.tabs.setCurrentIndex(1);settle();detail.grab().save(str(out/'overlapping-events.png'))
+    detail.scope.setCurrentIndex(2);settle();detail.grab().save(str(out/'exact-concurrent.png'))
+    from .timeline_report import export_timeline_html,TEMPLATES
+    from .dialogs import ExportDialog
+    export_dialog=ExportDialog(page,timeline=True,has_selection=True)
+    export_dialog.show();settle();export_dialog.grab().save(str(out/'export-dialog.png'));export_dialog.close()
+    for locale in ('zh-TW','en-US'):
+        export_timeline_html(result,out/f'timeline-{locale}.html',TEMPLATES/locale)
+        export_timeline_html(result,out/f'selected-{locale}.html',TEMPLATES/locale,exact)
+    detail.hide()
     capture('complete.png')
     sizes=[]
     for width,height in ((1440,900),(1280,720),(1024,650),(920,540)):
@@ -86,6 +99,9 @@ def run_timeline_smoke(app,window,out,guard):
             raise AssertionError('Timeline settings overflow')
         if page.chart_scroll.horizontalScrollBar().maximum():
             raise AssertionError('Timeline horizontal overflow')
+        for button in (page.export_button,page.detail_button):
+            if button.width()<button.fontMetrics().horizontalAdvance(button.text())+14:
+                raise AssertionError('Clipped timeline action label')
         sizes.append([window.width(),window.height()])
         capture(f'{width}x{height}.png')
     page.aspect_filter.setCurrentIndex(1)
@@ -93,6 +109,7 @@ def run_timeline_smoke(app,window,out,guard):
     capture('filtered-day.png')
     await_worker(cancel=True)
     if page.result is not None:raise AssertionError('Cancelled job retained a result')
+    if page.export_button.isEnabled():raise AssertionError('Stale export remained enabled')
     if multiprocessing.active_children():raise AssertionError('Timeline workers survived cancellation')
     capture('cancelled.png')
     import sys
