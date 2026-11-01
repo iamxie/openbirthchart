@@ -90,6 +90,8 @@ def run_timeline_smoke(app,window,out,guard):
         export_timeline_html(result,out/f'timeline-{locale}.html',TEMPLATES/locale)
         export_timeline_html(result,out/f'selected-{locale}.html',TEMPLATES/locale,exact)
     detail.hide()
+    from .sky_player_smoke import verify_player
+    verify_player(app,page,out)
     capture('complete.png')
     sizes=[]
     for width,height in ((1440,900),(1280,720),(1024,650),(920,540)):
@@ -99,7 +101,7 @@ def run_timeline_smoke(app,window,out,guard):
             raise AssertionError('Timeline settings overflow')
         if page.chart_scroll.horizontalScrollBar().maximum():
             raise AssertionError('Timeline horizontal overflow')
-        for button in (page.export_button,page.detail_button):
+        for button in (page.export_button,page.detail_button,page.player_button):
             if button.width()<button.fontMetrics().horizontalAdvance(button.text())+14:
                 raise AssertionError('Clipped timeline action label')
         sizes.append([window.width(),window.height()])

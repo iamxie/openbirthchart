@@ -7,13 +7,15 @@ from html import escape
 import math
 import threading
 import time
+import json
 from zoneinfo import ZoneInfo
 
 from PySide6.QtCore import Qt, QDate, QTime, QThread, Signal, QTimer, QRectF, QPointF
 from PySide6.QtGui import QColor, QPainter, QPen, QPolygonF, QPixmap, QIcon
 from PySide6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QFormLayout, QLabel,
     QPushButton, QScrollArea, QSplitter, QFrame, QDateEdit, QTimeEdit, QComboBox,
-    QDoubleSpinBox, QGroupBox, QProgressBar, QTextBrowser, QToolTip, QCompleter, QDialog, QFileDialog, QMessageBox)
+    QDoubleSpinBox, QGroupBox, QProgressBar, QTextBrowser, QToolTip, QCompleter, QDialog, QFileDialog, QMessageBox,
+    QListWidget, QListWidgetItem, QDialogButtonBox)
 
 from .i18n import tr, error_text
 from .model import available_timezones, BirthInput, resolve_local
@@ -76,17 +78,33 @@ class TimelineWorker(QThread):
         self.request = request
         self.stop = threading.Event()
         self.workers = workers
+        self.history_path = getattr(parent,'history_path',None)
 
     def run(self):
+        history=None;run_id=None
         try:
-            result = calculate_timeline(self.request,self.progress.emit,self.stop.is_set,self.workers)
+            if self.history_path:
+                from .sky_history import SkyHistory
+                history=SkyHistory(self.history_path)
+                start,end,_=self.request.resolve()
+                run_id=history.begin(self.request,math.ceil((end-start).total_seconds()/600)+1)
+            save=(lambda offset,stamps,data:history.append(run_id,offset,stamps,data)) if history else None
+            result = calculate_timeline(self.request,self.progress.emit,self.stop.is_set,self.workers,samples_ready=save)
             if self.stop.is_set():
-                self.cancelled.emit()
-            else:
-                self.succeeded.emit(result)
+                raise Cancelled()
+            if history:
+                self.progress.emit(dict(stage='save',done=0,total=1,elapsed=result.elapsed,stage_elapsed=0))
+                history.complete(run_id,result);result.history_id=run_id
+            self.succeeded.emit(result)
         except Cancelled:
+            if history and run_id:
+                try:history.abort(run_id,'cancelled')
+                except Exception:pass
             self.cancelled.emit()
         except Exception as exc:
+            if history and run_id:
+                try:history.abort(run_id,'failed')
+                except Exception:pass  # Incomplete runs remain ineligible for playback.
             self.failed.emit(error_text(exc))
 
 
@@ -317,9 +335,11 @@ class TimelineCanvas(QWidget):
 class TimelinePage(QWidget):
     activity_changed = Signal()
 
-    def __init__(self,parent=None,orb_provider=None):
+    def __init__(self,parent=None,orb_provider=None,history_path=None):
         super().__init__(parent)
         self.orb_provider=orb_provider or default_orbs
+        self.history_path=history_path
+        self.player=None
         self.worker = None
         self.result = None
         self.last_progress = None
@@ -337,9 +357,12 @@ class TimelinePage(QWidget):
         self.summary.setObjectName('hint')
         self.summary.setWordWrap(True)
         self.toggle_button = QPushButton(tr('收合設定'))
+        self.history_button=QPushButton(tr('天象歷史'))
+        self.history_button.setEnabled(history_path is not None)
         for widget in (self.run_button,self.cancel_button,self.summary):
             actions.addWidget(widget)
         actions.addStretch()
+        actions.addWidget(self.history_button)
         actions.addWidget(self.toggle_button)
         layout.addLayout(actions)
         self.splitter = QSplitter()
@@ -451,6 +474,8 @@ class TimelinePage(QWidget):
             filters.addWidget(widget)
         self.detail_button=QPushButton(tr('事件詳情'))
         self.export_button=QPushButton(tr('匯出文件'))
+        self.player_button=QPushButton(tr('看實際星盤'))
+        heading_row.addWidget(self.player_button)
         heading_row.addWidget(self.export_button)
         heading_row.addWidget(self.detail_button)
         center_layout.addLayout(filters)
@@ -503,6 +528,8 @@ class TimelinePage(QWidget):
         self.next_button.clicked.connect(lambda:self.shift(1))
         self.export_button.clicked.connect(self.export)
         self.detail_button.clicked.connect(self.show_detail_dialog)
+        self.player_button.clicked.connect(self.show_player)
+        self.history_button.clicked.connect(self.open_history)
         self.detail_dialog=None
         self.canvas.selected.connect(self.show_event)
         self.canvas.view_changed.connect(self.update_axis)
@@ -531,6 +558,7 @@ class TimelinePage(QWidget):
         if self.initializing:
             return
         self.enable_results(False)
+        self.close_player()
         self.result = None
         self.canvas.set_result(None)
         self.show_event(None)
@@ -565,6 +593,7 @@ class TimelinePage(QWidget):
     def enable_results(self,enabled):
         for widget in (self.aspect_filter,self.body_filter,self.zoom,self.previous_button,self.next_button,self.export_button):
             widget.setEnabled(enabled)
+        self.player_button.setEnabled(enabled and self.history_path is not None and getattr(self.result,'history_id',None) is not None)
 
     def toggle_settings(self):
         show = self.settings_scroll.isHidden()
@@ -581,6 +610,8 @@ class TimelinePage(QWidget):
             self.status.setText(error_text(exc))
             return
         self.result = None
+        self.close_player()
+        self.history_button.setEnabled(False)
         self.canvas.set_result(None)
         self.show_event(None)
         self.settings.setEnabled(False)
@@ -608,12 +639,14 @@ class TimelinePage(QWidget):
         if self.worker and self.worker.stop.is_set():
             return
         stage,done,total = payload['stage'],payload['done'],payload['total']
-        if stage in ('prepare','merge','finish'):
+        if stage in ('prepare','merge','finish','save'):
             self.progress_bar.setRange(0,0)
             if stage=='prepare':
                 self.status.setText(tr('正在準備星曆資料，請稍候。'))
             elif stage=='merge':
                 self.status.setText(tr('正在接合逆行與相位區間。'))
+            elif stage=='save':
+                self.status.setText(tr('正在儲存天象歷史，即將完成。'))
             else:
                 self.status.setText(tr('正在建立時間軸，即將完成。'))
         else:
@@ -662,6 +695,7 @@ class TimelinePage(QWidget):
         worker.deleteLater()
         self.settings.setEnabled(True)
         self.run_button.setEnabled(True)
+        self.history_button.setEnabled(self.history_path is not None)
         self.cancel_button.hide()
         self.heartbeat.stop()
         if self.closing:
@@ -769,8 +803,66 @@ class TimelinePage(QWidget):
         self.update_axis()
 
     def request_close(self):
+        self.close_player()
         if self.worker is not None:
             self.closing = True
             self.cancel()
             return False
         return True
+
+    def close_player(self):
+        if self.player:
+            self.player.close();self.player.deleteLater();self.player=None
+
+    def show_player(self):
+        if self.result is None or not self.history_path or not getattr(self.result,'history_id',None):return
+        self.close_player()
+        try:
+            from .sky_player import SkyPlayer
+            self.player=SkyPlayer(self.history_path,self.result,self)
+            self.player.show()
+        except Exception as exc:QMessageBox.warning(self,tr('無法播放'),error_text(exc))
+
+    def load_history(self,run_id):
+        from .sky_history import SkyHistory
+        result=SkyHistory(self.history_path).load(run_id)
+        self.close_player();self.initializing=True
+        try:
+            for value,date,clock,fold in ((result.request.start,self.start_date,self.start_time,self.start_fold),
+                                         (result.request.end,self.end_date,self.end_time,self.end_fold)):
+                wall=datetime.fromisoformat(value)
+                date.setDate(QDate(wall.year,wall.month,wall.day));clock.setTime(QTime(wall.hour,wall.minute))
+            self.zone.setCurrentText(result.request.zone)
+            self.start_fold.setCurrentIndex(self.start_fold.findData(result.request.start_fold))
+            self.end_fold.setCurrentIndex(self.end_fold.findData(result.request.end_fold))
+        finally:self.initializing=False
+        self.conditions_changed();self.apply_result(result)
+        self.status.setText(tr('已載入天象歷史，可直接播放或匯出，無須重新計算。'))
+        self.timing.setText(tr('歷史紀錄使用當時計算的容許度；不會覆寫全域設定。')+' '+
+                            ' · '.join(f'{a}° ±{o:g}°' for a,o in zip(ANGLES,result.request.orbs)))
+
+    def open_history(self):
+        from .sky_history import SkyHistory
+        try:rows=SkyHistory(self.history_path).list_complete()
+        except Exception as exc:QMessageBox.warning(self,tr('無法讀取天象歷史'),error_text(exc));return
+        dialog=QDialog(self);dialog.setWindowTitle(tr('天象歷史'));dialog.resize(750,430)
+        layout=QVBoxLayout(dialog)
+        note=QLabel(tr('選擇已完成的紀錄，直接查看時間軸與播放。未完成的計算不會列入。'))
+        note.setWordWrap(True);layout.addWidget(note)
+        listing=QListWidget();layout.addWidget(listing)
+        for run_id,created,raw,count in rows:
+            request=json.loads(raw)
+            item=QListWidgetItem(f"{request['start'].replace('T',' ')} — {request['end'].replace('T',' ')} · {request['zone']}\n"+
+                tr('{n:,} 個採樣點',n=count)+' · '+created[:19].replace('T',' ')+' UTC')
+            item.setData(Qt.ItemDataRole.UserRole,run_id);listing.addItem(item)
+        buttons=QDialogButtonBox(QDialogButtonBox.StandardButton.Open|QDialogButtonBox.StandardButton.Cancel)
+        buttons.button(QDialogButtonBox.StandardButton.Open).setText(tr('載入'))
+        buttons.button(QDialogButtonBox.StandardButton.Cancel).setText(tr('取消'))
+        buttons.button(QDialogButtonBox.StandardButton.Open).setEnabled(bool(rows))
+        layout.addWidget(buttons);buttons.accepted.connect(dialog.accept);buttons.rejected.connect(dialog.reject)
+        listing.itemDoubleClicked.connect(lambda _:dialog.accept())
+        if rows:listing.setCurrentRow(0)
+        else:layout.addWidget(QLabel(tr('尚無已完成的天象歷史。')))
+        if dialog.exec()==QDialog.DialogCode.Accepted and listing.currentItem():
+            try:self.load_history(listing.currentItem().data(Qt.ItemDataRole.UserRole))
+            except Exception as exc:QMessageBox.warning(self,tr('無法讀取天象歷史'),error_text(exc))

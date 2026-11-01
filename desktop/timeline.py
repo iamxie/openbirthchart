@@ -3,8 +3,8 @@
 """Coarse-scan geocentric sky events, independent of profiles and houses.
 
 Workers use the same pinned TT conversion and planetary calls as ChartEngine.
-Only bounded ten-minute sample chunks cross process boundaries; the coordinator retains
-events, not hundreds of thousands of complete charts. All event edges and exact
+Only bounded ten-minute sample chunks cross process boundaries; the coordinator can
+persist these through samples_ready, without retaining complete charts. All event edges and exact
 aspects are refined in those isolated workers, never on Qt's GUI thread.
 """
 from __future__ import annotations
@@ -178,8 +178,8 @@ def _sample_chunk(job):
     result = np.zeros((count, 10, 2), dtype=np.float64)
     notes = set()
     for i in range(count):
-        positions, found = _positions(min(end,start + (offset + i) * step), RETRO_IDS)
-        result[i,list(RETRO_IDS)] = positions
+        positions, found = _positions(min(end,start + (offset + i) * step), tuple(range(10)))
+        result[i] = positions
         notes.update(found)
     return offset, result, sorted(notes), os.getpid()
 
@@ -400,7 +400,7 @@ class EventCollector:
             yield body,self.start,self.end,self.roots.get(('sign',body,None,None),{}).get('edge',[])
 
 
-def calculate_timeline(request, progress=None, cancelled=None, workers=None, chunk_size=60, sample_step=600):
+def calculate_timeline(request, progress=None, cancelled=None, workers=None, chunk_size=60, sample_step=600, samples_ready=None):
     """Spawn workers; bounded scheduling, heartbeat, and prompt process cleanup.
 
     Progress payloads contain actual counts and elapsed time. An ETA for sampling
@@ -476,6 +476,8 @@ def calculate_timeline(request, progress=None, cancelled=None, workers=None, chu
         for offset, data, found_notes, pid in run_jobs(jobs,_sample_chunk,'sample',total,lambda r:len(r[1])):
             worker_pids.add(pid)
             notes.update(found_notes)
+            if samples_ready:
+                samples_ready(offset,[min(end.timestamp(),start.timestamp()+(offset+i)*sample_step) for i in range(len(data))],data)
             for i,positions in enumerate(data):
                 if i % 20 == 0 and cancelled():
                     raise Cancelled()

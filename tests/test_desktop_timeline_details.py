@@ -42,7 +42,7 @@ class DetailsTests(unittest.TestCase):
         def positions(stamp,bodies):
             calls.append(bodies);return np.zeros((len(bodies),2)),[]
         with patch('desktop.timeline._positions',positions):_sample_chunk((0,600,0,2,600))
-        self.assertEqual(calls,[RETRO_IDS,RETRO_IDS])
+        self.assertEqual(calls,[tuple(range(10)),tuple(range(10))])
         r,e,_=fixture()
         for locale in ('zh-TW','en-US'):
             doc=render_timeline_html(r,ROOT/'templates/report'/locale)

@@ -209,7 +209,7 @@ class MainWindow(QMainWindow):
     def switch_mode(self,index):
         if index==1 and self.timeline_page is None:
             from .timeline_ui import TimelinePage
-            self.timeline_page=TimelinePage(self,orb_provider=self.orbs)
+            self.timeline_page=TimelinePage(self,orb_provider=self.orbs,history_path=self.store.path.with_name('skyhistory.sqlite'))
             self.timeline_page.activity_changed.connect(self.update_settings_enabled)
             self.mode_stack.addWidget(self.timeline_page)
         self.mode_stack.setCurrentIndex(index)

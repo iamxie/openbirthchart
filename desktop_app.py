@@ -13,9 +13,11 @@ def main():
     parser=argparse.ArgumentParser();parser.add_argument('--smoke-output',type=Path);parser.add_argument('--language',choices=['zh-TW','en-US'])
     parser.add_argument('--smoke-fixture',type=Path,help='Synthetic profile JSON; requires --smoke-output')
     parser.add_argument('--timeline-smoke',action='store_true',help='Run isolated timeline UI/process verification; requires --smoke-output')
+    parser.add_argument('--timeline-replay-smoke',action='store_true',help='Replay completed history from --smoke-output without calculation')
     args=parser.parse_args()
     if args.smoke_fixture and not args.smoke_output:parser.error('--smoke-fixture requires --smoke-output')
     if args.timeline_smoke and not args.smoke_output:parser.error('--timeline-smoke requires --smoke-output')
+    if args.timeline_replay_smoke and not args.smoke_output:parser.error('--timeline-replay-smoke requires --smoke-output')
     if args.smoke_output:os.environ['QT_QPA_PLATFORM']='offscreen'
     from guard import RuntimeGuard
     guard=RuntimeGuard();guard.install()
@@ -42,6 +44,9 @@ def main():
     if args.timeline_smoke:
         from desktop.timeline_smoke import run_timeline_smoke
         return run_timeline_smoke(app,window,args.smoke_output,guard)
+    if args.timeline_replay_smoke:
+        from desktop.sky_player_smoke import run_replay_smoke
+        return run_replay_smoke(app,window,args.smoke_output,guard)
     if args.smoke_output:
         from desktop.model import ChartEngine
         from desktop.chart import export_chart

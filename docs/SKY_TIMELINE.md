@@ -48,6 +48,48 @@ IANA 時區，按「開始計算」。不需要地點或個人檔案。
 
 ## 開發與驗證
 
+### 天象歷史與星盤播放
+
+第一輪計算同時保存十顆行星每十分鐘的黃經、黃經速度及 UTC 時間戳，包含查詢的最後端點。
+資料寫入 `%USERPROFILE%\Documents\openbirthchart\skyhistory.sqlite`，與個人檔案 `data.sqlite` 分開。
+完整結果另外保存事件、換座歷程、查詢條件、當次容許度、程式／計算格式版本。
+背景工作以單一寫入端分批交易寫入；取消、失敗或中斷的紀錄不會列為可播放結果。
+目前保留未完成資料供辨識狀態，不支援自動續算。
+
+完成後按「看實際星盤」，或重開程式後由「天象歷史」載入已完成紀錄。
+載入歷史不計算星曆，也不覆寫全域容許度；歷史畫面與匯出使用當次容許度。
+若要套用新的容許度，重新按「開始計算」。更改條件會關閉播放器，避免顯示舊查詢。
+
+圓盤顯示日月至冥王星，日月不參與相位連線。沒有宮位與 ASC／MC，不需選地點；
+牡羊座 0° 固定在左側，小點是真實黃經位置，文字標籤會避讓。背景與十二星座環快取，
+十顆行星及連線為可重用的獨立圖形物件。播放器分批讀取資料，不預先產生整段影片或逐張圖片。
+
+- 首尾鍵：跳至區間開始／結束；停止鍵停留在目前時刻。
+- 播放／暫停：目標 15 fps；倒播與快轉：目標 30 fps；到達端點自動停止。
+- 時間拖曳條：跳至對應已存採樣點並暫停；時間戳包含選定時區與 UTC 時差。
+- 不補間、不跳過採樣點；若繪圖跟不上目標幀率，播放速度會降低。
+
+### Persisted history and playback
+
+The first calculation stores ten-body longitude/speed samples and UTC timestamps in
+`skyhistory.sqlite` beside `data.sqlite`, including the final endpoint. Completed runs
+also store event/sign history, request/orbs and application/calculation format versions.
+Cancelled, failed or interrupted runs remain ineligible for playback; automatic resume
+is not implemented. Sky History reopens completed runs without ephemeris calculation
+or changing shared orb settings. Historical views/exports use their recorded orbs.
+
+View Sky Chart reuses ten independent planet items and aspect lines over a cached zodiac
+ring. Sun and Moon positions are visible but excluded from aspects. There are no houses
+or axes; 0° Aries stays on the left. Dots retain true positions while labels avoid crowds.
+Play/pause targets 15 fps; reverse/fast-forward target 30 fps. Stop holds the current
+sample, start/end jump to endpoints, and seeking pauses playback. UTC sampling and
+offset-labelled local timestamps handle repeated DST hours. Frames are neither
+interpolated nor skipped; rendering delays slow playback. Reads use bounded blocks.
+
+`--timeline-replay-smoke --smoke-output <existing-test-directory>` verifies playback
+in a new process using an existing synthetic history, with calculation entry points
+blocked. It must only target isolated test output, never personal databases.
+
 預設程序數為 max(1, 邏輯處理器數 - 4)，並以實際批次數為上限；Windows 跨處理器
 群組計數。16 個邏輯處理器會使用 12 個程序。此政策不設定 CPU affinity，亦不將
 硬體資訊放進正常 UI。每個程序限制數學函式庫為單執行緒，工作採有界批次。
