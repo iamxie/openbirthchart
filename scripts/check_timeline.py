@@ -16,6 +16,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--minutes', type=int, default=120)
     parser.add_argument('--workers', type=int)
+    parser.add_argument('--sample-step',type=int,choices=(60,600),default=600)
     parser.add_argument('--start', default='2027-01-02T00:00')
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--cancel-after', type=float)
@@ -36,7 +37,7 @@ def main():
     try:
         result = calculate_timeline(request,progress,
             lambda: args.cancel_after is not None and time.monotonic()-began>=args.cancel_after,
-            workers=args.workers)
+            workers=args.workers,sample_step=args.sample_step)
         dump(args.output,result_dict(result))
     except Cancelled:
         dump(args.output,dict(cancelled=True,elapsed=time.monotonic()-began,children=len(multiprocessing.active_children())))

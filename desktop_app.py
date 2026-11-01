@@ -79,7 +79,7 @@ def main():
         window.advanced_toggle.setChecked(True)
         app.processEvents()
         from PySide6.QtWidgets import QScrollArea
-        window.findChild(QScrollArea).ensureWidgetVisible(window.orb_controls[150]);app.processEvents()
+        window.form_scroll.ensureWidgetVisible(window.minor);app.processEvents()
         if not window.grab().save(str(out/'settings.png')):raise RuntimeError('Settings capture failed')
         dump(out/'chart.json',chart)
         loaded=[n for n in sys.modules if n.split('.')[0] in ('swisseph','pysweph','pyswisseph')]

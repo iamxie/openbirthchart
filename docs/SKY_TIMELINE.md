@@ -3,70 +3,81 @@
 此功能位於開發分支，尚未合併或公開發佈。輸入當地起訖時間（到分鐘）與
 IANA 時區，按「開始計算」。不需要地點或個人檔案。
 
-- 逆行檢查八顆天體：水、金、火、木、土、天、海、冥。日、月不列入逆行列。
-- 相位包含日、月與上述八顆天體，45 組不重複配對；只計算 0、90、120、180 度。
-- 合相預設容許度 4 度，其他三種各 3 度；可設定 0～15 度，邊界包含在內。
-- 色帶表示容許度內的區間，菱形標示精確成相。同一段色帶可有多次成相；
-  也可能始終未到精確角度。0 度容許度仍保留精確事件標記。
-- 每分鐘都使用固定 LibEphemeris／Skyfield 行星路徑計算位置與速度。相位採黃經
-  夾角；不計宮位、ASC／MC、小天體或本命盤相位。既有個人星盤引擎未更換。
-- 在相鄰分鐘間補找事件邊界與精確角度；求根時間區間收斂至 0.125 秒以內。
-  這是求根停止條件，不代表星曆或未來 UTC 的絕對誤差為 0.125 秒。
-- 以逐分鐘狀態定義區間；極短且完全位於兩個樣本之間的「進入又離開容許度」
-  不保證形成色帶。跨越精確角度或相對速度反轉附近的成相另有求根檢查。
-- 查詢邊界若已在事件中，詳情會標示條件在起點／終點仍成立，不推測範圍外日期。
+- 逆行檢查水、金、火、木、土、天、海、冥；日、月不列逆行。
+- 相位包含日、月及八顆行星的 45 組配對，只計算 0、90、120、180 度。
+- 色帶代表容許度內區間，菱形代表精確成相；同一色帶可保留多次成相。
+  零容許度只顯示精確事件，不把單一成相延伸成整段色帶。
+- 每十分鐘使用固定 LibEphemeris／Skyfield 路徑計算黃經與當下速度。
+  始末時刻一定包含，最後不足十分鐘的區段也會檢查。
+- 以速度變號搜尋轉逆／順行；以有方向的角度搜尋相位目標及容許度邊界。
+  相對速度變號時先定位極值再分段求根，即使兩端都在容許度外，仍檢查短暫
+  進出與多次成相。合相／對分使用圓周角度處理，不將 0／360 度跳接當成事件。
+- 局部二分求根的時間區間收斂至 0.125 秒以內，事件結果保留秒級顯示。
+  這是數值停止條件，不代表星曆或未來 UTC 的絕對誤差為 0.125 秒。
+- 區間依精算後的邊界重建；起訖時已符合條件會標示截斷，不推測查詢外日期。
 
-時間沿 UTC 軸每分鐘前進，再轉回所選時區顯示。跨夏令時間時不重複／漏算實際
-時刻；重複的起訖鐘點須明確選擇第一次或第二次，不存在的鐘點會拒絕。
-歷史時差變更若含非整分鐘秒數，請分段查詢。日期安全範圍沿用現有產品。
+有限取樣不是對任意曲線的完備證明：若同一十分鐘內有多個未在端點速度顯露的
+轉折，仍需更密的驗證。此演算法針對目前固定引擎的十顆天體；新增其他運動模型
+或天體時須重新驗證，不能直接沿用完整性結論。診斷 CLI 可選 60 秒掃描來比較。
+既有個人星盤的位置／宮位計算引擎不變。
 
-進度分別顯示準備、逐分鐘位置計算、事件時間精算及建立時間軸；數量是真實完成
-數，不用定時動畫冒充進度。取得實際速度後才估計**目前階段**的剩餘時間。
-取消會停止並回收背景程序，不把部分結果當成完整結果。修改輸入後，舊結果清除。
+時間沿 UTC 軸掃描，再轉回所選時區；跨夏令時間不漏算／重複實際時刻。
+重複鐘點須選第一次或第二次，不存在的鐘點拒絕。日期安全範圍沿用現有產品。
 
-寬視窗右側顯示事件詳情；窄視窗以獨立詳情視窗保留時間軸空間。
-低高度主視窗使用「功能」選單取代兩個功能分頁，保留既有星盤圖的空間。
-篩選、縮放與選取不會重新計算。月／週／日尺度分別為 30／7／1 天的時間視窗。
+## 全域相位容許度
+
+上方「設定」是唯一修改入口，包含個人星盤的十種相位；天象時間軸取用其中四種。
+預設值沿用原星盤（0 度 4 度；90／120／180 度各 3 度），支援 0～15 度、一位小數。
+「套用」後保存至 Documents/openbirthchart/data.sqlite 的 app_settings/aspect_orbs，
+重開保留；「取消」不存；「恢復預設值」先填回預設，仍需套用才保存。
+
+新個人檔案只保存個人輸入，不包含另一套容許度。舊檔案讀入時忽略其獨立容許度，
+下次保存會使用簡化格式，不會反向覆蓋全域設定。沒有批次刪除或重建個人資料。
+個人星盤立即用已有位置重判相位；時間軸清除舊結果，提示手動重新計算。
+正在計算時不能套用容許度變更，需完成或取消後再改；寫入失敗不改目前有效設定。
+報告保留該次結果實際使用的容許度，供追溯。
+
+## 操作與進度
+
+日期／時間共用個人星盤的文字輸入元件、內距及區塊樣式；時間軸時間欄只接受 HH:mm。
+進度依序顯示掃描區間、細查事件及建立區間，數量均為真實完成數；測得速度後才
+估計目前階段剩餘時間。取消會停止並回收背景程序，不交付不完整結果。
+
+寬視窗右側顯示詳情；窄視窗使用詳情小視窗。低高度使用「功能」選單切換頁面。
+篩選、縮放與選取不會重新計算。月／週／日是 30／7／1 天的時間視窗。
 
 ## 開發與驗證
 
-預設同時計算程序數為 `max(1, 實體核心數 - 4)`，並以實際批次數為上限。
-核心辨識失敗時採單程序。這個設定不出現在使用者介面；不是 CPU affinity 的
-硬性保留。每個程序的數學函式庫限制為單執行緒，避免巢狀平行過度佔用資源。
-工作採有界批次，不建立或保存幾十萬份完整星盤。
+預設程序數為 max(1, 邏輯處理器數 - 4)，並以實際批次數為上限；Windows 跨處理器
+群組計數。16 個邏輯處理器會使用 12 個程序。此政策不設定 CPU affinity，亦不將
+硬體資訊放進正常 UI。每個程序限制數學函式庫為單執行緒，工作採有界批次。
 
-`scripts/check_timeline.py` 可記錄實際運算與取消結果。桌面及 frozen EXE 的
-`--timeline-smoke --smoke-output <new-directory>` 使用合成資料驗證進度、圖面與
-取消，**測試時明確強制兩個程序**，以驗證 Windows frozen spawn；正常介面仍
-使用上述自動政策。測試輸出記錄實際 worker PID、時間與環境，不顯示於產品介面。
-
-```powershell
-.venv-desktop/Scripts/python.exe -m unittest discover -s tests -p test_desktop_timeline.py -v
-.venv-desktop/Scripts/python.exe scripts/check_timeline.py --minutes 960 --workers 4 --output results/timeline/check.json
-.venv-desktop/Scripts/python.exe desktop_app.py --timeline-smoke --smoke-output results/timeline/ui-check
-```
+scripts/check_timeline.py 記錄實際運算、PID、進度及取消結果；--sample-step 60 可
+用較密掃描驗證。--timeline-smoke --smoke-output <new-directory> 是隔離的 UI／EXE
+診斷模式，明確強制兩程序驗證 frozen spawn，另驗證全域設定保存、圖面及取消。
+正常啟動仍使用自動政策；診斷不使用個人資料庫。
 
 ## English
 
-The development-only Sky timeline needs a local start/end time and a time zone,
-not a location or personal profile. It samples every minute, checks retrograde
-motion for Mercury through Pluto, and checks all 45 pairs of the Sun, Moon and
-eight planets for 0°, 90°, 120° and 180° aspects.
+The development Sky timeline accepts minute-resolution local endpoints and an IANA
+zone. It scans every ten minutes, including both endpoints, then refines stationary
+points, exact aspects and orb boundaries. Retrograde checks exclude the Sun and Moon;
+aspects use all 45 pairs of the ten bodies for 0°, 90°, 120° and 180°.
 
-Bands show orb intervals; diamonds show numerically refined exact aspects.
-Defaults are 4° for conjunctions and 3° otherwise. Multiple exact hits are kept.
-Minute sampling defines interval detection; a very short orb excursion wholly
-between samples is not guaranteed to produce a band. Exact crossings and nearby
-relative-speed reversals receive additional root checks. Root brackets are
-refined to 0.125 seconds; this is not an absolute astronomical accuracy claim.
+Directed angular crossings and relative-speed extrema allow short orb visits and
+multiple exact hits between coarse samples to be found. Refined boundaries define
+bands; zero orbs yield exact markers only. Root brackets stop within 0.125 seconds,
+which is a numerical criterion, not an absolute astronomical accuracy claim. Finite
+sampling is not a completeness proof for arbitrary curves with multiple hidden turns;
+changes to bodies or motion models require renewed validation.
 
-DST transitions are resolved on a continuous UTC sampling axis. Ambiguous
-endpoints require a fold choice, and nonexistent wall times are rejected.
-Clipped intervals are labelled. Changing conditions clears obsolete results.
+Settings is the sole aspect-orb editor. Values persist in SQLite app_settings and
+apply to both modes. Personal profiles no longer store editable orb rules; legacy
+rules are ignored on load. Birth-chart aspects refresh from existing positions;
+timeline results are cleared for manual recalculation. Running calculations block
+settings changes. Failed saves leave effective settings unchanged.
 
-Progress reports actual completed work and a measured estimate for the current
-stage. Cancel stops and joins worker processes. Hardware details stay out of
-the normal UI. The default worker limit is physical cores minus four, with a
-minimum of one; the explicit smoke mode forces two workers to exercise frozen
-Windows spawning. No dependency versions, personal data or sealed baselines are
-changed by this feature.
+The worker limit is logical processors minus four, with a minimum of one and a cap
+based on available batches. The explicit smoke mode overrides this to two workers.
+Progress counts actual work and estimates only the current stage. Cancellation joins
+workers. Pinned numerical dependencies and ephemeris data are unchanged.

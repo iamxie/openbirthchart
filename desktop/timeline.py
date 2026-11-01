@@ -1,9 +1,9 @@
 # SPDX-License-Identifier: AGPL-3.0-only
 # Copyright (C) 2026 OpenBirthChart contributors
-"""Minute-sampled geocentric sky events, independent of profiles and houses.
+"""Coarse-scan geocentric sky events, independent of profiles and houses.
 
 Workers use the same pinned TT conversion and planetary calls as ChartEngine.
-Only bounded sample chunks cross process boundaries; the coordinator retains
+Only bounded ten-minute sample chunks cross process boundaries; the coordinator retains
 events, not hundreds of thousands of complete charts. All event edges and exact
 aspects are refined in those isolated workers, never on Qt's GUI thread.
 """
@@ -25,11 +25,12 @@ import numpy as np
 
 from .errors import UserError, AmbiguousTimeError
 from .model import BirthInput, resolve_local
+from .settings import default_orbs
 
 BODY_NAMES = ('太陽', '月亮', '水星', '金星', '火星', '木星', '土星', '天王星', '海王星', '冥王星')
 RETRO_IDS = tuple(range(2, 10))
 ANGLES = (0, 90, 120, 180)
-DEFAULT_ORBS = (4., 3., 3., 3.)
+DEFAULT_ORBS = tuple(default_orbs()[angle] for angle in ANGLES)
 PAIRS = tuple(combinations(range(10), 2))
 UTC = timezone.utc
 
@@ -111,46 +112,20 @@ class Cancelled(Exception):
     pass
 
 
-def physical_core_count():
-    """Count physical cores across processor groups; conservative fallback of 1."""
-    if sys.platform == 'win32':
+def logical_processor_count():
+    """Match Task Manager's logical processor count, including Windows groups."""
+    if sys.platform=='win32':
         try:
-            api = ctypes.WinDLL('kernel32', use_last_error=True).GetLogicalProcessorInformationEx
-            api.argtypes = [ctypes.c_int, ctypes.c_void_p, ctypes.POINTER(ctypes.c_ulong)]
-            api.restype = ctypes.c_int
-            size = ctypes.c_ulong()
-            api(0, None, ctypes.byref(size))  # RelationProcessorCore
-            if not size.value:
-                return 1
-            buffer = ctypes.create_string_buffer(size.value)
-            if not api(0, buffer, ctypes.byref(size)):
-                return 1
-            offset = count = 0
-            while offset + 8 <= size.value:
-                relationship = ctypes.c_uint32.from_buffer(buffer, offset).value
-                length = ctypes.c_uint32.from_buffer(buffer, offset + 4).value
-                if length < 8 or offset + length > size.value:
-                    return 1
-                count += relationship == 0
-                offset += length
-            return max(1, count)
-        except (OSError, ValueError, AttributeError):
-            return 1
-    try:
-        from pathlib import Path
-        pairs = set()
-        for block in Path('/proc/cpuinfo').read_text().split('\n\n'):
-            values = dict(line.split(':', 1) for line in block.splitlines() if ':' in line)
-            values = {k.strip(): v.strip() for k, v in values.items()}
-            if 'physical id' in values and 'core id' in values:
-                pairs.add((values['physical id'], values['core id']))
-        return max(1, len(pairs))
-    except OSError:
-        return 1
+            api=ctypes.WinDLL('kernel32',use_last_error=True).GetActiveProcessorCount
+            api.argtypes=[ctypes.c_ushort];api.restype=ctypes.c_ulong
+            count=api(0xffff)  # ALL_PROCESSOR_GROUPS
+            if count:return int(count)
+        except (OSError,AttributeError):pass
+    return os.cpu_count() or 1
 
 
 def worker_count(cores=None):
-    return max(1, (physical_core_count() if cores is None else cores) - 4)
+    return max(1,(logical_processor_count() if cores is None else cores)-4)
 
 
 _ENGINE = None
@@ -190,11 +165,11 @@ def _positions(stamp, bodies=tuple(range(10))):
 
 
 def _sample_chunk(job):
-    start, offset, count = job
+    start, end, offset, count, step = job
     result = np.empty((count, 10, 2), dtype=np.float64)
     notes = set()
     for i in range(count):
-        result[i], found = _positions(start + (offset + i) * 60)
+        result[i], found = _positions(min(end,start + (offset + i) * step))
         notes.update(found)
     return offset, result, sorted(notes), os.getpid()
 
@@ -226,14 +201,15 @@ def _bisect(fn, left, right, fleft=None, fright=None):
     return (left+right)/2
 
 
-def _refine(job):
-    """One edge or one minute containing crossings / a relative-speed reversal."""
+def _refine(job, positions=None):
+    """Refine a directed-angle crossing; split at a relative-speed extremum."""
+    positions = positions or _positions
     kind, a, b, target, orb, left, right = job
     cache = {}
 
     def get(t):
         if t not in cache:
-            cache[t] = _positions(t, (a,) if b is None else (a,b))[0]
+            cache[t] = positions(t, (a,) if b is None else (a,b))[0]
         return cache[t]
 
     def phase(t):
@@ -270,101 +246,132 @@ def _refine(job):
     return roots
 
 
+def _unique_times(values):
+    result=[]
+    for value in sorted(values):
+        if not result or value-result[-1]>.125:result.append(value)
+    return result
+
+
+def _refine_bundle(jobs):
+    # All thresholds for one pair / interval reuse positions and speed roots.
+    cache={}
+    def positions(stamp,bodies):
+        key=(stamp,bodies)
+        if key not in cache:cache[key]=_positions(stamp,bodies)
+        return cache[key]
+    answer={'edge':[],'exact':[]}
+    for job,kind in jobs:
+        answer[kind].extend(_refine(job,positions))
+    return {kind:_unique_times(values) for kind,values in answer.items()}
+
+
+def _inside(key,p,orb):
+    kind,a,b,angle=key
+    if kind=='retro':return bool(p[0,1]<0)
+    return bool(abs(abs(delta(p[1,0],p[0,0]))-angle)<=orb)
+
+
+def _assemble_events(job):
+    key,start,end,orb,edges,exacts,initial,final=job
+    kind,a,b,angle=key
+    edges=_unique_times([max(start,min(end,t)) for t in edges])
+    exacts=_unique_times([max(start,min(end,t)) for t in exacts])
+    events=[]
+    cuts=_unique_times([start,*edges,end])
+    for left,right in zip(cuts,cuts[1:]):
+        if kind=='aspect' and orb==0:
+            active=False
+        elif not edges:
+            active=initial
+        else:
+            p,_=_positions((left+right)/2,(a,) if b is None else (a,b))
+            active=_inside(key,p,orb)
+        if active:
+            if events and abs(events[-1].end-left)<=.125:events[-1].end=right
+            else:events.append(SkyEvent(*key,left,right))
+    # Boundary tangencies and exact-only zero-orb events are genuine instants.
+    points=list(exacts)
+    if kind=='aspect':points+=edges
+    if initial:points.append(start)
+    if final:points.append(end)
+    for stamp in _unique_times(points):
+        event=next((e for e in events if e.start-.125<=stamp<=e.end+.125),None)
+        if event is None:
+            event=SkyEvent(*key,stamp,stamp);events.append(event)
+    for e in events:
+        e.clipped_start=initial and abs(e.start-start)<=.125
+        e.clipped_end=final and abs(e.end-end)<=.125
+        e.exact=[t for t in exacts if e.start-.125<=t<=e.end+.125]
+    return sorted(events,key=lambda e:e.start)
+
+
 class EventCollector:
-    """Sequential minute states, with the preceding sample retained across chunks."""
-    def __init__(self, start, end, orbs):
-        self.start, self.end, self.orbs = start, end, orbs
-        self.previous = None
-        self.active = {}
-        self.events = []
-        self.jobs = []  # (refinement job, event or pair key, attribute)
+    """Collect boundary candidates, including an entire orb visit between samples.
 
-    def consume(self, stamp, positions):
-        states = {}
-        for a in RETRO_IDS:
-            if positions[a,1] < 0:
-                states[('retro', a, None, None)] = True
-        for a,b in PAIRS:
-            separation = abs(delta(positions[b,0], positions[a,0]))
-            for angle, orb in zip(ANGLES, self.orbs):
-                if abs(separation-angle) <= orb:
-                    states[('aspect', a, b, angle)] = True
-        for key in set(self.active) - states.keys():
-            e = self.active.pop(key)
-            e.end = stamp
-            self.jobs.append((self.edge_job(key, stamp), e, 'end'))
-        for key in states.keys() - self.active.keys():
-            kind,a,b,angle = key
-            e = SkyEvent(kind,a,b,angle,stamp,stamp,clipped_start=self.previous is None)
-            self.active[key] = e
-            self.events.append(e)
-            if self.previous is not None:
-                self.jobs.append((self.edge_job(key, stamp), e, 'start'))
+    Directed-angle thresholds avoid the absolute-angle cusp at conjunction and
+    opposition. Every observed relative-speed reversal is inspected, even when
+    both endpoint states agree. Brackets remain continuous across worker chunks.
+    """
+    def __init__(self,start,end,orbs):
+        self.start,self.end,self.orbs=start,end,orbs
+        self.previous=None;self.first=None;self.jobs=[];self.roots={}
+
+    def consume(self,stamp,p):
+        if self.first is None:self.first=p.copy()
         if self.previous is not None:
-            pt, pp = self.previous
+            pt,pp=self.previous
+            for a in RETRO_IDS:
+                if pp[a,1]*p[a,1]<=0 and pp[a,1]!=p[a,1]:
+                    self.jobs.append(([ (('retro',a,None,None,0.,pt,stamp),'edge') ],('retro',a,None,None)))
             for a,b in PAIRS:
-                before = (pp[b,0]-pp[a,0]) % 360
-                after = (positions[b,0]-positions[a,0]) % 360
-                relative_speed_turn = (pp[b,1]-pp[a,1])*(positions[b,1]-positions[a,1]) < 0
-                for angle in ANGLES:
-                    targets = (angle,) if angle in (0,180) else (angle,360-angle)
-                    for target in targets:
-                        f0, f1 = delta(before,target), delta(after,target)
-                        crossing = f0*f1 <= 0 and abs(f0-f1) < 180
-                        near_turn = relative_speed_turn and min(abs(f0),abs(f1)) < .05
-                        if crossing or near_turn:
-                            job = ('exact',a,b,target,0.,pt,stamp)
-                            self.jobs.append((job, ('aspect',a,b,angle), 'exact'))
-        self.previous = stamp, positions.copy()
-
-    def edge_job(self, key, stamp):
-        kind,a,b,angle = key
-        return ('retro' if kind=='retro' else 'orb', a,b,angle,
-                0. if kind=='retro' else self.orbs[ANGLES.index(angle)],self.previous[0],stamp)
+                before=(pp[b,0]-pp[a,0])%360;after=(p[b,0]-p[a,0])%360
+                turn=(pp[b,1]-pp[a,1])*(p[b,1]-p[a,1])<0
+                for angle,orb in zip(ANGLES,self.orbs):
+                    targets={}
+                    for center in ((angle,) if angle in (0,180) else (angle,360-angle)):
+                        targets.setdefault(center%360,set()).add('exact')
+                        if orb:
+                            for target in (center-orb,center+orb):targets.setdefault(target%360,set()).add('edge')
+                    jobs=[]
+                    for target,kinds in targets.items():
+                        fl,fr=delta(before,target),delta(after,target)
+                        if turn or (fl*fr<=0 and abs(fl-fr)<180):
+                            for kind in kinds:jobs.append((('exact',a,b,target,0.,pt,stamp),kind))
+                    if jobs:self.jobs.append((jobs,('aspect',a,b,angle)))
+        self.previous=stamp,p.copy()
 
     def finish(self):
-        for e in self.active.values():
-            e.end = self.end
-            e.clipped_end = True
-        # For a one-sample request there are no brackets. A root is reported
-        # only if its unrounded value really is exact at that instant.
-        if self.previous and self.start == self.end:
-            p = self.previous[1]
-            for e in self.events:
-                if e.kind=='aspect' and abs(abs(delta(p[e.b,0],p[e.a,0]))-e.angle) <= 1e-10:
-                    e.exact.append(self.start)
+        pass
 
-    def apply_refinements(self, answers):
-        exacts = []
-        for (_, target, attr), values in zip(self.jobs, answers):
-            if attr == 'exact':
-                exacts.extend((target, value) for value in values)
-            else:
-                setattr(target, attr, values[0])
-        grouped = {}
-        for e in self.events:
-            grouped.setdefault(e.key, []).append(e)
-        for key, stamp in sorted(exacts, key=lambda x:x[1]):
-            candidates = grouped.get(key, [])
-            event = next((e for e in candidates if e.start-.25 <= stamp <= e.end+.25), None)
-            if event is None:
-                # Zero or sub-minute orbs still get their genuine exact marker.
-                _,a,b,angle = key
-                event = SkyEvent('aspect',a,b,angle,stamp,stamp)
-                self.events.append(event)
-                grouped.setdefault(key, []).append(event)
-            if not event.exact or abs(event.exact[-1]-stamp) > .25:
-                event.exact.append(stamp)
-        self.events.sort(key=lambda e:(e.kind!='retro',e.a,e.b or -1,e.angle or 0,e.start))
+    def apply_refinements(self,answers):
+        for (_,key),answer in zip(self.jobs,answers):
+            roots=self.roots.setdefault(key,{'edge':[],'exact':[]})
+            for kind in roots:roots[kind].extend(answer[kind])
+
+    def assembly_jobs(self):
+        last=self.previous[1]
+        keys=[('retro',a,None,None) for a in RETRO_IDS]+[('aspect',a,b,angle) for a,b in PAIRS for angle in ANGLES]
+        for key in keys:
+            kind,a,b,angle=key;ids=[a] if b is None else [a,b]
+            orb=0 if kind=='retro' else self.orbs[ANGLES.index(angle)]
+            initial=_inside(key,self.first[ids],orb);final=_inside(key,last[ids],orb)
+            roots=self.roots.get(key,{'edge':[],'exact':[]})
+            if self.start==self.end and kind=='aspect' and abs(abs(delta(self.first[b,0],self.first[a,0]))-angle)<=1e-10:
+                roots['exact'].append(self.start)
+            if initial or final or roots['edge'] or roots['exact']:
+                yield key,self.start,self.end,orb,roots['edge'],roots['exact'],initial,final
 
 
-def calculate_timeline(request, progress=None, cancelled=None, workers=None, chunk_size=120):
+def calculate_timeline(request, progress=None, cancelled=None, workers=None, chunk_size=60, sample_step=600):
     """Spawn workers; bounded scheduling, heartbeat, and prompt process cleanup.
 
     Progress payloads contain actual counts and elapsed time. An ETA for sampling
     is separate from later refinement; it is not advertised as whole-job ETA.
     """
-    start, end, total = request.resolve()
+    start, end, minutes = request.resolve()
+    if sample_step not in (60,600):raise ValueError('Supported scan steps: 60 or 600 seconds')
+    total=math.ceil((end-start).total_seconds()/sample_step)+1
     started = time.monotonic()
     progress = progress or (lambda payload: None)
     cancelled = cancelled or (lambda: False)
@@ -428,22 +435,26 @@ def calculate_timeline(request, progress=None, cancelled=None, workers=None, chu
             report(stage,done,job_total)
 
     try:
-        jobs = ((start.timestamp(),offset,min(chunk_size,total-offset)) for offset in range(0,total,chunk_size))
+        jobs = ((start.timestamp(),end.timestamp(),offset,min(chunk_size,total-offset),sample_step) for offset in range(0,total,chunk_size))
         for offset, data, found_notes, pid in run_jobs(jobs,_sample_chunk,'sample',total,lambda r:len(r[1])):
             worker_pids.add(pid)
             notes.update(found_notes)
             for i,positions in enumerate(data):
                 if i % 20 == 0 and cancelled():
                     raise Cancelled()
-                collector.consume(start.timestamp()+(offset+i)*60,positions)
+                collector.consume(min(end.timestamp(),start.timestamp()+(offset+i)*sample_step),positions)
         report('merge',0,1)
         collector.finish()
-        answers = list(run_jobs((job for job,_,_ in collector.jobs),_refine,'refine',len(collector.jobs)))
+        answers = list(run_jobs((jobs for jobs,key in collector.jobs),_refine_bundle,'refine',len(collector.jobs)))
         collector.apply_refinements(answers)
+        assembly=list(collector.assembly_jobs())
+        events=[]
+        for group in run_jobs(assembly,_assemble_events,'assemble',len(assembly)):events.extend(group)
+        events.sort(key=lambda e:(e.kind!='retro',e.a,e.b or -1,e.angle or 0,e.start))
         report('finish',1,1)
         pool.close()
         pool.join()
-        return TimelineResult(request,start.timestamp(),end.timestamp(),total,collector.events,
+        return TimelineResult(request,start.timestamp(),end.timestamp(),total,events,
                               time.monotonic()-started,sorted(notes),sorted(worker_pids))
     except BaseException:
         pool.terminate()

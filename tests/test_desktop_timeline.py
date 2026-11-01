@@ -13,7 +13,7 @@ import numpy as np
 ROOT=Path(__file__).resolve().parents[1]
 sys.path[:0]=[str(ROOT),str(ROOT/'scripts')]
 from desktop.timeline import (TimelineInput, SkyEvent, EventCollector, TimelineResult,
-    worker_count, RETRO_IDS, PAIRS, DEFAULT_ORBS, _refine)
+    worker_count, RETRO_IDS, PAIRS, DEFAULT_ORBS, _refine, _refine_bundle, _assemble_events)
 from desktop.errors import AmbiguousTimeError, UserError
 
 
@@ -21,7 +21,7 @@ class TimelineNumericalTests(unittest.TestCase):
     def test_sampling_range_and_core_boundary(self):
         r=TimelineInput('2027-01-02T00:00','2027-06-30T23:59')
         self.assertEqual(r.resolve()[2],259200)
-        self.assertEqual([worker_count(n) for n in (1,3,4,5,8,12)],[1,1,1,1,4,8])
+        self.assertEqual([worker_count(n) for n in (1,3,4,5,8,12,16)],[1,1,1,1,4,8,12])
         self.assertEqual(RETRO_IDS,tuple(range(2,10)))
         self.assertEqual(len(PAIRS),45)
         self.assertEqual(TimelineInput('2027-01-02T00:00','2027-01-02T00:00').resolve()[2],1)
@@ -44,29 +44,73 @@ class TimelineNumericalTests(unittest.TestCase):
                   TimelineInput('2027-01-02T00:00','2027-01-03T00:00',orbs=(float('nan'),3,3,3))]:
             with self.subTest(r=r),self.assertRaises(UserError):r.resolve()
 
+    def run_curve(self,curve,times,orbs=DEFAULT_ORBS):
+        c=EventCollector(times[0],times[-1],orbs)
+        def positions(t,bodies):return curve(t)[list(bodies)],[]
+        for t in times:c.consume(t,curve(t))
+        with patch('desktop.timeline._positions',positions):
+            c.apply_refinements([_refine_bundle(jobs) for jobs,key in c.jobs])
+            return [e for job in c.assembly_jobs() for e in _assemble_events(job)]
+
     def test_retrograde_spans_chunk_seam_and_no_sun_or_moon(self):
-        c=EventCollector(0,180,DEFAULT_ORBS)
-        for i,speed in enumerate((1,-1,-1,1)):
-            p=np.zeros((10,2));p[:,0]=np.arange(10)*21;p[:,1]=1
-            p[:3,1]=speed
-            c.consume(i*60,p)
-        c.finish()
-        r=[e for e in c.events if e.kind=='retro']
+        def curve(t):
+            p=np.zeros((10,2));p[:,0]=np.arange(10)*27.731;p[:,1]=1
+            p[:3,1]=(t-30)*(t-150)
+            return p
+        events=self.run_curve(curve,[0,60,120,180])
+        r=[e for e in events if e.kind=='retro']
         self.assertEqual(len(r),1);self.assertEqual(r[0].a,2)
-        self.assertEqual([(j[0][-2],j[0][-1]) for j in c.jobs if j[0][0]=='retro'],[(0,60),(120,180)])
+        self.assertAlmostEqual(r[0].start,30,delta=.125)
+        self.assertAlmostEqual(r[0].end,150,delta=.125)
         self.assertFalse(r[0].clipped_start or r[0].clipped_end)
 
-    def test_clipped_events_and_multiple_exact_hits(self):
-        c=EventCollector(0,180,DEFAULT_ORBS)
-        for i,lon in enumerate((89,91,89,91)):
-            p=np.zeros((10,2));p[:,0]=np.arange(10)*25;p[:,1]=1
-            p[4,0]=0;p[6,0]=lon;p[4,1]=-1
-            c.consume(i*60,p)
-        c.finish()
-        e=next(e for e in c.events if e.key==('aspect',4,6,90))
+    def test_short_orb_visit_between_two_outside_samples(self):
+        def curve(t):
+            p=np.zeros((10,2));p[:,0]=np.arange(10)*27.731;p[:,1]=0
+            p[0,0]=0;p[1]=[89.8+t/1500,57.6]
+            return p
+        events=self.run_curve(curve,[0,600],(.1,.1,.1,.1))
+        e=next(e for e in events if e.key==('aspect',0,1,90))
+        self.assertAlmostEqual(e.start,150,delta=.125)
+        self.assertAlmostEqual(e.end,450,delta=.125)
+        self.assertAlmostEqual(e.exact[0],300,delta=.125)
+
+    def test_multiple_exact_hits_and_orb_turn_between_samples(self):
+        def curve(t):
+            p=np.zeros((10,2));p[:,0]=np.arange(10)*27.731;p[:,1]=0
+            p[0,0]=0;p[1]=[90+((t-300)**2-10000)*1e-5,(t-300)*2e-5*86400]
+            return p
+        events=self.run_curve(curve,[0,600],(.1,.1,.1,.1))
+        e=next(e for e in events if e.key==('aspect',0,1,90))
+        self.assertEqual(len(e.exact),2)
+        self.assertAlmostEqual(e.exact[0],200,delta=.125)
+        self.assertAlmostEqual(e.exact[1],400,delta=.125)
+        self.assertFalse(e.clipped_start or e.clipped_end)
+
+    def test_wrapped_conjunction_and_clipped_intervals(self):
+        def curve(t):
+            p=np.zeros((10,2));p[:,0]=np.arange(10)*27.731;p[:,1]=0
+            p[0,0]=0;p[1]=[(359.8+t/1500)%360,57.6]
+            return p
+        events=self.run_curve(curve,[0,600],(.1,.1,.1,.1))
+        e=next(e for e in events if e.key==('aspect',0,1,0))
+        self.assertAlmostEqual(e.start,150,delta=.125)
+        self.assertAlmostEqual(e.end,450,delta=.125)
+        self.assertAlmostEqual(e.exact[0],300,delta=.125)
+        clipped=self.run_curve(curve,[200,400],(.1,.1,.1,.1))
+        e=next(e for e in clipped if e.key==('aspect',0,1,0))
         self.assertTrue(e.clipped_start and e.clipped_end)
-        jobs=[j for j,target,attr in c.jobs if target==('aspect',4,6,90) and attr=='exact']
-        self.assertEqual(len(jobs),3)
+        self.assertEqual((e.start,e.end),(200,400))
+
+    def test_orb_boundary_tangent_without_exact_aspect(self):
+        def curve(t):
+            p=np.zeros((10,2));p[:,0]=np.arange(10)*27.731;p[:,1]=0
+            p[0,0]=0;p[1]=[90.1+(t-300)**2*1e-5,(t-300)*2e-5*86400]
+            return p
+        events=self.run_curve(curve,[0,600],(.1,.1,.1,.1))
+        e=next(e for e in events if e.key==('aspect',0,1,90))
+        self.assertAlmostEqual(e.start,300,delta=.125)
+        self.assertEqual(e.start,e.end);self.assertEqual(e.exact,[])
 
     def test_circular_exact_conjunction_and_no_opposite_false_root(self):
         def positions(t,bodies):
@@ -96,11 +140,11 @@ class TimelineNumericalTests(unittest.TestCase):
             self.assertEqual(_refine(('exact',0,1,90,0,0,60)),[])
 
     def test_zero_orb_exact_marker_and_duplicate_boundary(self):
-        c=EventCollector(0,120,(0,0,0,0))
-        key=('aspect',0,1,90)
-        c.jobs=[(('exact',0,1,90,0,0,60),key,'exact'),(('exact',0,1,90,0,60,120),key,'exact')]
-        c.apply_refinements([[60],[60]])
-        self.assertEqual(len(c.events),1);self.assertEqual(c.events[0].exact,[60])
+        events=_assemble_events((('aspect',0,1,90),0,120,0,[],[60,60],False,False))
+        self.assertEqual(len(events),1);self.assertEqual(events[0].exact,[60])
+        events=_assemble_events((('aspect',0,1,90),0,120,0,[],[0],True,False))
+        self.assertEqual(events[0].start,events[0].end)
+
 
 
 class TimelineUiTests(unittest.TestCase):

@@ -125,17 +125,18 @@ class UiTests(unittest.TestCase):
 
     def test_strict_default_custom_edit_and_return_to_default(self):
         from desktop.window import MainWindow
-        w=MainWindow(auto_start=False,prompt_unsaved=False);fill_form(w)
+        import tempfile
+        from desktop.storage import ProfileStore
+        temp=tempfile.TemporaryDirectory();self.addCleanup(temp.cleanup)
+        w=MainWindow(auto_start=False,store=ProfileStore(Path(temp.name)/'data.sqlite'),prompt_unsaved=False);fill_form(w)
         try:
             self.assertEqual(w.orbs(),AspectPresetTests.expected)
-            self.assertIn(72,w.orb_controls)
-            w.orb_group.setChecked(True)
-            w.orb_controls[0].setValue(6.)
-            w.orb_controls[72].setValue(2.5)
+            self.assertIn(72,w.orbs())
+            w.apply_orbs({**w.orbs(),0:6.,72:2.5})
             chart=self.engine.calculate(w.input(),w.orbs())
             self.assertEqual(chart['orbs'],{**AspectPresetTests.expected,0:6.,72:2.5})
             self.assertTrue(all(a['limit']==chart['orbs'][a['angle']] for a in chart['aspects']))
-            w.orb_group.setChecked(False)
+            w.apply_orbs(AspectPresetTests.expected)
             self.assertEqual(w.orbs(),AspectPresetTests.expected)
         finally:
             w.close()
@@ -169,7 +170,10 @@ class UiTests(unittest.TestCase):
     def test_input_directions_seconds_and_dirty_export(self):
         from desktop.window import MainWindow
         from PySide6.QtCore import QTime
-        w=MainWindow(auto_start=False,prompt_unsaved=False);fill_form(w);w.time.setTime(QTime(13,25,31));w.ew.setCurrentIndex(1);w.ns.setCurrentIndex(1)
+        import tempfile
+        from desktop.storage import ProfileStore
+        temp=tempfile.TemporaryDirectory();self.addCleanup(temp.cleanup)
+        w=MainWindow(auto_start=False,store=ProfileStore(Path(temp.name)/'data.sqlite'),prompt_unsaved=False);fill_form(w);w.time.setTime(QTime(13,25,31));w.ew.setCurrentIndex(1);w.ns.setCurrentIndex(1)
         b=w.input();self.assertTrue(b.local_iso.endswith('13:25:31'));self.assertLess(b.longitude,0);self.assertLess(b.latitude,0)
         c=self.engine.calculate(b);w.apply_chart(c);self.assertTrue(w.export_button.isEnabled())
         w.time.setTime(QTime(13,25,32));self.assertFalse(w.export_button.isEnabled());w.close()
@@ -177,7 +181,10 @@ class UiTests(unittest.TestCase):
     def test_manual_mode_initializes_half_hour_dst(self):
         from desktop.window import MainWindow
         from PySide6.QtCore import QDate
-        w=MainWindow(auto_start=False,prompt_unsaved=False);fill_form(w);w.date.setDate(QDate(2024,1,1));w.zone.setCurrentText('Australia/Lord_Howe')
+        import tempfile
+        from desktop.storage import ProfileStore
+        temp=tempfile.TemporaryDirectory();self.addCleanup(temp.cleanup)
+        w=MainWindow(auto_start=False,store=ProfileStore(Path(temp.name)/'data.sqlite'),prompt_unsaved=False);fill_form(w);w.date.setDate(QDate(2024,1,1));w.zone.setCurrentText('Australia/Lord_Howe')
         self.assertTrue(w.dst.isChecked());w.dst_mode.setCurrentIndex(1)
         self.assertEqual(w.dst_amount.value(),30);w.close()
 
@@ -185,7 +192,10 @@ class UiTests(unittest.TestCase):
         from desktop.window import MainWindow
         from PySide6.QtTest import QTest
         import time
-        w=MainWindow(auto_start=False,prompt_unsaved=False);fill_form(w);w.engine=self.engine;w.calculate()
+        import tempfile
+        from desktop.storage import ProfileStore
+        temp=tempfile.TemporaryDirectory();self.addCleanup(temp.cleanup)
+        w=MainWindow(auto_start=False,store=ProfileStore(Path(temp.name)/'data.sqlite'),prompt_unsaved=False);fill_form(w);w.engine=self.engine;w.calculate()
         deadline=time.monotonic()+30
         while w.worker is not None and time.monotonic()<deadline:
             self.app.processEvents();QTest.qWait(20)

@@ -15,9 +15,9 @@ def run_timeline_smoke(app,window,out,guard):
     window.mode_tabs.setCurrentIndex(1)
     page=window.timeline_page
     page.start_date.setDate(QDate(2027,1,2))
-    page.end_date.setDate(QDate(2027,1,2))
+    page.end_date.setDate(QDate(2027,1,3))
     page.start_time.setTime(QTime(0,0))
-    page.end_time.setTime(QTime(3,59))
+    page.end_time.setTime(QTime(15,59))
     page.zone.setCurrentText('Asia/Taipei')
     updates=[]
 
@@ -56,11 +56,21 @@ def run_timeline_smoke(app,window,out,guard):
         settle()
         if expired:raise TimeoutError('Timeline smoke timed out')
 
+    from .storage import ProfileStore
+    from .settings import orb_dialog
+    from .fields import DateField,TimeField
+    assert isinstance(page.start_date,DateField) and isinstance(page.start_time,TimeField)
+    original=window.orbs()
+    window.apply_orbs({**original,0:5.})
+    assert page.request().orbs[0]==5. and ProfileStore(window.store.path).load_orbs()[0]==5.
+    dialog,_=orb_dialog(window.orbs(),window);dialog.show();settle()
+    dialog.grab().save(str(out/'global-settings.png'));dialog.close()
+    window.apply_orbs(original)
     capture('initial.png')
     await_worker()
     if page.result is None:raise RuntimeError(page.status.text())
     result=page.result
-    if result.samples!=240:raise AssertionError('Wrong minute count')
+    if result.samples!=241:raise AssertionError('Wrong coarse sample count')
     if len(result.worker_pids)!=2:raise AssertionError('Smoke did not execute in two distinct workers')
     if any(e.kind=='retro' and e.a in (0,1) for e in result.events):raise AssertionError('Luminary retrograde row')
     dump(out/'timeline.json',result_dict(result))
@@ -86,7 +96,7 @@ def run_timeline_smoke(app,window,out,guard):
     if multiprocessing.active_children():raise AssertionError('Timeline workers survived cancellation')
     capture('cancelled.png')
     import sys
-    dump(out/'runtime.json',dict(frozen=getattr(sys,'frozen',False),samples=240,
+    dump(out/'runtime.json',dict(frozen=getattr(sys,'frozen',False),samples=241,
         default_worker_policy=worker_count(),smoke_workers_override=2,worker_pids=result.worker_pids,
         events=len(result.events),exact=sum(len(e.exact) for e in result.events),
         cancelled=True,remaining_workers=len(multiprocessing.active_children()),sizes=sizes,

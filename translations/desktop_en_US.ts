@@ -19,7 +19,7 @@ No aspect matches the current settings.</translation>
     <message>
       <source> · 尚未儲存</source>
       <translation> · Unsaved</translation>
-      <location filename="../desktop/window.py" line="447" />
+      <location filename="../desktop/window.py" line="470" />
     </message>
     <message>
       <source> · 熱帶黃道 · 地心視位置</source>
@@ -29,7 +29,7 @@ No aspect matches the current settings.</translation>
     <message>
       <source> 分鐘</source>
       <translation> minutes</translation>
-      <location filename="../desktop/window.py" line="145" />
+      <location filename="../desktop/window.py" line="148" />
     </message>
     <message>
       <location filename="../desktop/window.py" line="314" />
@@ -39,17 +39,17 @@ No aspect matches the current settings.</translation>
     <message>
       <source>01  基本資料</source>
       <translation>01  Personal Details</translation>
-      <location filename="../desktop/window.py" line="107" />
+      <location filename="../desktop/window.py" line="110" />
     </message>
     <message>
       <source>02  出生時間地點</source>
       <translation>02  Birth Time and Location</translation>
-      <location filename="../desktop/window.py" line="115" />
+      <location filename="../desktop/window.py" line="118" />
     </message>
     <message>
       <source>03  星盤設定</source>
       <translation>03  Chart Settings</translation>
-      <location filename="../desktop/window.py" line="147" />
+      <location filename="../desktop/window.py" line="150" />
     </message>
     <message>
       <source>1960 年以前：以歷史時區換算的格林威治時間近似地球自轉時間。</source>
@@ -64,12 +64,12 @@ No aspect matches the current settings.</translation>
     <message>
       <source>30°、45°、72°、135°、150°；在圖上以虛線顯示。</source>
       <translation>30°, 45°, 72°, 135°, and 150°; shown as dotted lines on the chart.</translation>
-      <location filename="../desktop/window.py" line="166" />
+      <location filename="../desktop/window.py" line="169" />
     </message>
     <message>
       <source>API key 未能儲存至本機資料庫，下次開啟時需重新輸入。</source>
       <translation>The API key could not be saved locally. You will need to enter it again next time.</translation>
-      <location filename="../desktop/window.py" line="256" />
+      <location filename="../desktop/window.py" line="278" />
     </message>
     <message>
       <source>API key 格式不正確。</source>
@@ -103,7 +103,7 @@ Latitude {p1:.5f} · Longitude {p2:.5f}</translation>
 對應 UTC：{p2}</source>
       <translation>{p0} · {p1}
 UTC: {p2}</translation>
-      <location filename="../desktop/window.py" line="343" />
+      <location filename="../desktop/window.py" line="365" />
     </message>
     <message>
       <source>{p0} × {p1}　實際夾角 {p2:.4f}°</source>
@@ -113,7 +113,7 @@ UTC: {p2}</translation>
     <message>
       <source>{p0}超出範圍（0～{p1}）。</source>
       <translation>{p0} is outside the supported range (0 to {p1}).</translation>
-      <location filename="../desktop/fields.py" line="53" />
+      <location filename="../desktop/fields.py" line="57" />
     </message>
     <message>
       <source>三分</source>
@@ -128,7 +128,7 @@ UTC: {p2}</translation>
     <message>
       <source>不儲存</source>
       <translation>Don't Save</translation>
-      <location filename="../desktop/window.py" line="504" />
+      <location filename="../desktop/window.py" line="527" />
     </message>
     <message>
       <source>不支援的分宮制。</source>
@@ -168,7 +168,7 @@ UTC: {p2}</translation>
     <message>
       <source>依備註區分並儲存</source>
       <translation>Save with Distinguishing Notes</translation>
-      <location filename="../desktop/window.py" line="479" />
+      <location filename="../desktop/window.py" line="502" />
     </message>
     <message>
       <source>依地區與日期自動判斷</source>
@@ -178,27 +178,27 @@ UTC: {p2}</translation>
     <message>
       <source>修正分鐘</source>
       <translation>Adjustment minutes</translation>
-      <location filename="../desktop/window.py" line="472" />
+      <location filename="../desktop/window.py" line="495" />
     </message>
     <message>
       <source>修正模式</source>
       <translation>Adjustment mode</translation>
-      <location filename="../desktop/window.py" line="472" />
+      <location filename="../desktop/window.py" line="495" />
     </message>
     <message>
       <source>個人檔案已儲存：</source>
       <translation>Profile saved: </translation>
-      <location filename="../desktop/window.py" line="461" />
+      <location filename="../desktop/window.py" line="484" />
     </message>
     <message>
       <source>偏離角度</source>
       <translation>Deviation</translation>
-      <location filename="../desktop/window.py" line="190" />
+      <location filename="../desktop/window.py" line="186" />
     </message>
     <message>
       <source>備註</source>
       <translation>Notes</translation>
-      <location filename="../desktop/window.py" line="467" />
+      <location filename="../desktop/window.py" line="490" />
     </message>
     <message>
       <source>備註最多 2000 字。</source>
@@ -208,7 +208,7 @@ UTC: {p2}</translation>
     <message>
       <source>備註（選填）</source>
       <translation>Notes (optional)</translation>
-      <location filename="../desktop/window.py" line="113" />
+      <location filename="../desktop/window.py" line="116" />
     </message>
     <message>
       <source>儲存</source>
@@ -218,12 +218,12 @@ UTC: {p2}</translation>
     <message>
       <source>儲存前請填寫姓名。</source>
       <translation>Enter a name before saving.</translation>
-      <location filename="../desktop/storage.py" line="119" />
+      <location filename="../desktop/storage.py" line="128" />
     </message>
     <message>
       <source>儲存星盤文件</source>
       <translation>Save Chart Report</translation>
-      <location filename="../desktop/window.py" line="422" />
+      <location filename="../desktop/window.py" line="446" />
     </message>
     <message>
       <source>六合</source>
@@ -253,12 +253,12 @@ UTC: {p2}</translation>
     <message>
       <source>凱龍星、婚神星、智神星、灶神星、穀神星</source>
       <translation>Chiron, Juno, Pallas, Vesta, and Ceres</translation>
-      <location filename="../desktop/window.py" line="164" />
+      <location filename="../desktop/window.py" line="167" />
     </message>
     <message>
       <source>出生地區時區</source>
       <translation>Birth Time Zone</translation>
-      <location filename="../desktop/window.py" line="139" />
+      <location filename="../desktop/window.py" line="142" />
     </message>
     <message>
       <source>出生地址或醫院名稱（可加上國家、城市）</source>
@@ -283,17 +283,17 @@ UTC: {p2}</translation>
     <message>
       <source>出生時間</source>
       <translation>Local Birth Time</translation>
-      <location filename="../desktop/window.py" line="566" />
+      <location filename="../desktop/window.py" line="586" />
     </message>
     <message>
       <source>出生時間使用夏令時間</source>
       <translation>Apply daylight saving time</translation>
-      <location filename="../desktop/window.py" line="144" />
+      <location filename="../desktop/window.py" line="147" />
     </message>
     <message>
       <source>出生時間無效，請檢查時、分、秒。</source>
       <translation>Invalid birth time. Check the hours, minutes, and seconds.</translation>
-      <location filename="../desktop/fields.py" line="34" />
+      <location filename="../desktop/fields.py" line="38" />
     </message>
     <message>
       <source>出生時間：</source>
@@ -308,7 +308,7 @@ UTC: {p2}</translation>
     <message>
       <source>分宮制</source>
       <translation>House System</translation>
-      <location filename="../desktop/window.py" line="150" />
+      <location filename="../desktop/window.py" line="153" />
     </message>
     <message>
       <source>列印建議：新版 Chrome／Edge、A4 橫向、縮放 100%，關閉瀏覽器頁首頁尾。頁碼僅在列印／PDF 顯示；較長內容會續頁。</source>
@@ -338,7 +338,7 @@ UTC: {p2}</translation>
     <message>
       <source>北緯 N</source>
       <translation>North N</translation>
-      <location filename="../desktop/window.py" line="124" />
+      <location filename="../desktop/window.py" line="127" />
     </message>
     <message>
       <source>匯出 HTML 文件</source>
@@ -353,12 +353,12 @@ UTC: {p2}</translation>
     <message>
       <source>十二宮</source>
       <translation>Houses</translation>
-      <location filename="../desktop/window.py" line="188" />
+      <location filename="../desktop/window.py" line="184" />
     </message>
     <message>
       <source>十進位度</source>
       <translation>Decimal degrees</translation>
-      <location filename="../desktop/fields.py" line="47" />
+      <location filename="../desktop/fields.py" line="51" />
     </message>
     <message>
       <source>升</source>
@@ -393,12 +393,12 @@ UTC: {p2}</translation>
     <message>
       <source>南緯 S</source>
       <translation>South S</translation>
-      <location filename="../desktop/window.py" line="124" />
+      <location filename="../desktop/window.py" line="127" />
     </message>
     <message>
       <source>原紀錄已不存在，請重新載入清單確認。</source>
       <translation>The original profile no longer exists. Reload the list to check.</translation>
-      <location filename="../desktop/storage.py" line="127" />
+      <location filename="../desktop/storage.py" line="136" />
     </message>
     <message>
       <source>取消</source>
@@ -463,17 +463,17 @@ UTC: {p2}</translation>
     <message>
       <source>填妥出生日期與時間後，顯示時差、夏令時間及 UTC。</source>
       <translation>Enter the birth date and time to see the UTC offset, DST, and UTC time.</translation>
-      <location filename="../desktop/window.py" line="346" />
+      <location filename="../desktop/window.py" line="368" />
     </message>
     <message>
       <source>填寫出生當地的鐘錶時間；不確定秒數時可填 00。</source>
       <translation>Enter the local clock time at birth. Enter 00 if the seconds are unknown.</translation>
-      <location filename="../desktop/window.py" line="116" />
+      <location filename="../desktop/window.py" line="119" />
     </message>
     <message>
       <source>填寫出生資料後按「排星盤」。</source>
       <translation>Enter birth details, then select Calculate.</translation>
-      <location filename="../desktop/window.py" line="192" />
+      <location filename="../desktop/window.py" line="188" />
     </message>
     <message>
       <source>填寫出生資料，開始排盤</source>
@@ -498,7 +498,7 @@ UTC: {p2}</translation>
     <message>
       <source>夏令調整 </source>
       <translation>DST adjustment: </translation>
-      <location filename="../desktop/window.py" line="342" />
+      <location filename="../desktop/window.py" line="364" />
     </message>
     <message>
       <source>夏令調整需在 -120～180 分鐘內。</source>
@@ -508,7 +508,7 @@ UTC: {p2}</translation>
     <message>
       <source>夏令／重複鐘點差異</source>
       <translation>DST / repeated-time differences</translation>
-      <location filename="../desktop/window.py" line="467" />
+      <location filename="../desktop/window.py" line="490" />
     </message>
     <message>
       <source>夜生公式</source>
@@ -528,7 +528,7 @@ UTC: {p2}</translation>
     <message>
       <source>天王星、海王星、冥王星及出生資訊固定顯示。</source>
       <translation>Uranus, Neptune, Pluto, and birth information are always shown.</translation>
-      <location filename="../desktop/window.py" line="167" />
+      <location filename="../desktop/window.py" line="170" />
     </message>
     <message>
       <source>天秤</source>
@@ -548,22 +548,22 @@ UTC: {p2}</translation>
     <message>
       <source>天體 A</source>
       <translation>Body A</translation>
-      <location filename="../desktop/window.py" line="190" />
+      <location filename="../desktop/window.py" line="186" />
     </message>
     <message>
       <source>天體 B</source>
       <translation>Body B</translation>
-      <location filename="../desktop/window.py" line="190" />
+      <location filename="../desktop/window.py" line="186" />
     </message>
     <message>
       <source>天體位置</source>
       <translation>Celestial Positions</translation>
-      <location filename="../desktop/window.py" line="187" />
+      <location filename="../desktop/window.py" line="183" />
     </message>
     <message>
       <source>天體／點</source>
       <translation>Body / Point</translation>
-      <location filename="../desktop/window.py" line="187" />
+      <location filename="../desktop/window.py" line="183" />
     </message>
     <message>
       <source>太陽</source>
@@ -573,12 +573,12 @@ UTC: {p2}</translation>
     <message>
       <source>女</source>
       <translation>Female</translation>
-      <location filename="../desktop/window.py" line="110" />
+      <location filename="../desktop/window.py" line="113" />
     </message>
     <message>
       <source>姓名</source>
       <translation>Name</translation>
-      <location filename="../desktop/window.py" line="108" />
+      <location filename="../desktop/window.py" line="111" />
     </message>
     <message>
       <source>姓名需為 80 字以內的單行文字。</source>
@@ -603,17 +603,17 @@ UTC: {p2}</translation>
     <message>
       <source>宮位</source>
       <translation>House</translation>
-      <location filename="../desktop/window.py" line="187" />
+      <location filename="../desktop/window.py" line="183" />
     </message>
     <message>
       <source>宮頭位置</source>
       <translation>Cusp Position</translation>
-      <location filename="../desktop/window.py" line="188" />
+      <location filename="../desktop/window.py" line="184" />
     </message>
     <message>
       <source>容許度</source>
       <translation>Allowed Orb</translation>
-      <location filename="../desktop/window.py" line="190" />
+      <location filename="../desktop/window.py" line="186" />
     </message>
     <message>
       <source>容許度 ±{p0:g}°</source>
@@ -648,22 +648,22 @@ UTC: {p2}</translation>
     <message>
       <source>尚未儲存的修改</source>
       <translation>Unsaved Changes</translation>
-      <location filename="../desktop/window.py" line="500" />
+      <location filename="../desktop/window.py" line="523" />
     </message>
     <message>
       <source>尚未填寫；請返回表單填寫後再儲存。</source>
       <translation>Not provided. Return to the form and add notes before saving.</translation>
-      <location filename="../desktop/window.py" line="477" />
+      <location filename="../desktop/window.py" line="500" />
     </message>
     <message>
       <source>尚無已儲存的星盤。</source>
       <translation>No saved profiles yet.</translation>
-      <location filename="../desktop/window.py" line="575" />
+      <location filename="../desktop/window.py" line="595" />
     </message>
     <message>
       <source>展開填寫區</source>
       <translation>Show Form</translation>
-      <location filename="../desktop/window.py" line="245" />
+      <location filename="../desktop/window.py" line="267" />
     </message>
     <message>
       <source>巨蟹</source>
@@ -673,12 +673,12 @@ UTC: {p2}</translation>
     <message>
       <source>已儲存。下次啟動將使用 {language}。</source>
       <translation>Saved. The next launch will use {language}.</translation>
-      <location filename="../desktop/window.py" line="241" />
+      <location filename="../desktop/window.py" line="263" />
     </message>
     <message>
       <source>已匯出文件：</source>
       <translation>Report exported: </translation>
-      <location filename="../desktop/window.py" line="427" />
+      <location filename="../desktop/window.py" line="451" />
     </message>
     <message>
       <source>已套用</source>
@@ -693,7 +693,7 @@ UTC: {p2}</translation>
     <message>
       <source>已存檔案</source>
       <translation>Saved profile</translation>
-      <location filename="../desktop/window.py" line="446" />
+      <location filename="../desktop/window.py" line="469" />
     </message>
     <message>
       <location filename="../desktop/window.py" line="314" />
@@ -703,7 +703,7 @@ UTC: {p2}</translation>
     <message>
       <source>已帶入經緯度。請核對出生地區時區，再按「排星盤」。</source>
       <translation>Coordinates applied. Verify the birth time zone, then select Calculate.</translation>
-      <location filename="../desktop/window.py" line="261" />
+      <location filename="../desktop/window.py" line="283" />
     </message>
     <message>
       <source>已有相同姓名、性別、出生座標、日期時間及時區的檔案。請填寫備註以區分。</source>
@@ -713,7 +713,7 @@ UTC: {p2}</translation>
     <message>
       <source>已載入資料，正在準備星盤。</source>
       <translation>Profile loaded. Preparing the chart.</translation>
-      <location filename="../desktop/window.py" line="538" />
+      <location filename="../desktop/window.py" line="559" />
     </message>
     <message>
       <source>幸</source>
@@ -733,7 +733,7 @@ UTC: {p2}</translation>
     <message>
       <source>性別</source>
       <translation>Gender</translation>
-      <location filename="../desktop/window.py" line="112" />
+      <location filename="../desktop/window.py" line="115" />
     </message>
     <message>
       <source>性別需為男或女。</source>
@@ -743,7 +743,7 @@ UTC: {p2}</translation>
     <message>
       <source>手動修正夏令時間</source>
       <translation>Manual DST adjustment</translation>
-      <location filename="../desktop/window.py" line="143" />
+      <location filename="../desktop/window.py" line="146" />
     </message>
     <message>
       <source>手動夏令修正</source>
@@ -753,7 +753,7 @@ UTC: {p2}</translation>
     <message>
       <source>手動夏令開關</source>
       <translation>Manual DST enabled</translation>
-      <location filename="../desktop/window.py" line="472" />
+      <location filename="../desktop/window.py" line="495" />
     </message>
     <message>
       <source>手動指定</source>
@@ -763,17 +763,17 @@ UTC: {p2}</translation>
     <message>
       <source>找不到這筆星盤。</source>
       <translation>This profile could not be found.</translation>
-      <location filename="../desktop/storage.py" line="161" />
+      <location filename="../desktop/storage.py" line="170" />
     </message>
     <message>
       <source>排星盤</source>
       <translation>Calculate</translation>
-      <location filename="../desktop/window.py" line="88" />
+      <location filename="../desktop/window.py" line="91" />
     </message>
     <message>
       <source>排盤後即可查看相位。</source>
       <translation>Calculate a chart to view its aspects.</translation>
-      <location filename="../desktop/window.py" line="403" />
+      <location filename="../desktop/window.py" line="427" />
     </message>
     <message>
       <source>換算 UTC 後的日期超出支援範圍。</source>
@@ -788,7 +788,7 @@ UTC: {p2}</translation>
     <message>
       <source>搜尋姓名、性別、出生日期或備註</source>
       <translation>Search by name, gender, birth date, or notes</translation>
-      <location filename="../desktop/window.py" line="565" />
+      <location filename="../desktop/window.py" line="585" />
     </message>
     <message>
       <source>摩羯</source>
@@ -798,12 +798,12 @@ UTC: {p2}</translation>
     <message>
       <source>收合填寫區</source>
       <translation>Hide Form</translation>
-      <location filename="../desktop/window.py" line="78" />
+      <location filename="../desktop/window.py" line="81" />
     </message>
     <message>
       <source>放棄目前修改？</source>
       <translation>Discard Current Changes?</translation>
-      <location filename="../desktop/window.py" line="489" />
+      <location filename="../desktop/window.py" line="512" />
     </message>
     <message>
       <source>文件語系／範本</source>
@@ -818,12 +818,12 @@ UTC: {p2}</translation>
     <message>
       <source>新增個人檔案</source>
       <translation>New Profile</translation>
-      <location filename="../desktop/window.py" line="64" />
+      <location filename="../desktop/window.py" line="65" />
     </message>
     <message>
       <source>新檔案</source>
       <translation>New profile</translation>
-      <location filename="../desktop/window.py" line="446" />
+      <location filename="../desktop/window.py" line="469" />
     </message>
     <message>
       <source>日</source>
@@ -833,7 +833,7 @@ UTC: {p2}</translation>
     <message>
       <source>日期</source>
       <translation>Date</translation>
-      <location filename="../desktop/window.py" line="118" />
+      <location filename="../desktop/window.py" line="121" />
     </message>
     <message>
       <source>日本／東京</source>
@@ -853,7 +853,7 @@ UTC: {p2}</translation>
     <message>
       <source>星盤圖</source>
       <translation>Chart Wheel</translation>
-      <location filename="../desktop/window.py" line="186" />
+      <location filename="../desktop/window.py" line="182" />
     </message>
     <message>
       <source>星盤圖、天體位置、十二宮宮頭位置、相位圖與相位詳細列表。</source>
@@ -863,7 +863,7 @@ UTC: {p2}</translation>
     <message>
       <source>時間（時：分：秒）</source>
       <translation>Time (HH:mm:ss)</translation>
-      <location filename="../desktop/window.py" line="119" />
+      <location filename="../desktop/window.py" line="122" />
     </message>
     <message>
       <source>智</source>
@@ -878,7 +878,7 @@ UTC: {p2}</translation>
     <message>
       <source>更新時間</source>
       <translation>Updated</translation>
-      <location filename="../desktop/window.py" line="566" />
+      <location filename="../desktop/window.py" line="586" />
     </message>
     <message>
       <source>月</source>
@@ -913,7 +913,7 @@ UTC: {p2}</translation>
     <message>
       <source>未使用夏令時間</source>
       <translation>Daylight saving time not applied</translation>
-      <location filename="../desktop/window.py" line="342" />
+      <location filename="../desktop/window.py" line="364" />
     </message>
     <message>
       <source>未來閏秒尚未確定，日期接近時請更新資料。</source>
@@ -923,7 +923,7 @@ UTC: {p2}</translation>
     <message>
       <source>未命名</source>
       <translation>Unnamed</translation>
-      <location filename="../desktop/window.py" line="445" />
+      <location filename="../desktop/window.py" line="468" />
     </message>
     <message>
       <source>未填寫</source>
@@ -958,7 +958,7 @@ UTC: {p2}</translation>
     <message>
       <source>本筆備註：</source>
       <translation>Current notes: </translation>
-      <location filename="../desktop/window.py" line="477" />
+      <location filename="../desktop/window.py" line="500" />
     </message>
     <message>
       <source>東經</source>
@@ -968,7 +968,7 @@ UTC: {p2}</translation>
     <message>
       <source>東經 E</source>
       <translation>East E</translation>
-      <location filename="../desktop/window.py" line="124" />
+      <location filename="../desktop/window.py" line="127" />
     </message>
     <message>
       <source>查詢座標</source>
@@ -1003,7 +1003,7 @@ UTC: {p2}</translation>
     <message>
       <source>正在計算星盤…</source>
       <translation>Calculating chart…</translation>
-      <location filename="../desktop/window.py" line="356" />
+      <location filename="../desktop/window.py" line="378" />
     </message>
     <message>
       <source>此地點的分宮計算出現警示；請改選 Equal 或 Whole Sign。</source>
@@ -1048,7 +1048,7 @@ UTC: {p2}</translation>
     <message>
       <source>決定十二宮的劃分方式；預設 Placidus。</source>
       <translation>Defines the division of the twelve houses. Default: Placidus.</translation>
-      <location filename="../desktop/window.py" line="151" />
+      <location filename="../desktop/window.py" line="154" />
     </message>
     <message>
       <source>沒有找到結果，請補上城市／國家，或改為手動填寫。</source>
@@ -1098,7 +1098,7 @@ UTC: {p2}</translation>
     <message>
       <source>無</source>
       <translation>None</translation>
-      <location filename="../desktop/window.py" line="474" />
+      <location filename="../desktop/window.py" line="497" />
     </message>
     <message>
       <source>無效的重複時間選項。</source>
@@ -1108,7 +1108,7 @@ UTC: {p2}</translation>
     <message>
       <source>無法儲存</source>
       <translation>Unable to Save</translation>
-      <location filename="../desktop/window.py" line="458" />
+      <location filename="../desktop/window.py" line="481" />
     </message>
     <message>
       <source>無法儲存圖片。</source>
@@ -1118,17 +1118,17 @@ UTC: {p2}</translation>
     <message>
       <source>無法儲存設定</source>
       <translation>Unable to Save Settings</translation>
-      <location filename="../desktop/window.py" line="240" />
+      <location filename="../desktop/window.py" line="251" />
     </message>
     <message>
       <source>無法匯出</source>
       <translation>Unable to Export</translation>
-      <location filename="../desktop/window.py" line="428" />
+      <location filename="../desktop/window.py" line="452" />
     </message>
     <message>
       <source>無法建立 Documents/openbirthchart 資料夾，請確認資料夾權限。</source>
       <translation>Unable to create the Documents/openbirthchart folder. Check folder permissions.</translation>
-      <location filename="../desktop/window.py" line="421" />
+      <location filename="../desktop/window.py" line="445" />
     </message>
     <message>
       <source>無法建立圖片。</source>
@@ -1138,37 +1138,37 @@ UTC: {p2}</translation>
     <message>
       <source>無法從本機資料庫讀取 API key，請確認資料庫可存取。</source>
       <translation>Unable to read the API key from the local database. Check database access.</translation>
-      <location filename="../desktop/window.py" line="250" />
+      <location filename="../desktop/window.py" line="272" />
     </message>
     <message>
       <source>無法排盤：</source>
       <translation>Unable to calculate: </translation>
-      <location filename="../desktop/window.py" line="404" />
+      <location filename="../desktop/window.py" line="428" />
     </message>
     <message>
       <source>無法讀取設定</source>
       <translation>Unable to Read Settings</translation>
-      <location filename="../desktop/window.py" line="234" />
+      <location filename="../desktop/window.py" line="256" />
     </message>
     <message>
       <source>無法讀取語言設定，請確認本機資料庫可存取。</source>
       <translation>Unable to read the language setting. Check access to the local database.</translation>
-      <location filename="../desktop/window.py" line="234" />
+      <location filename="../desktop/window.py" line="256" />
     </message>
     <message>
       <source>無法載入</source>
       <translation>Unable to Load</translation>
-      <location filename="../desktop/window.py" line="557" />
+      <location filename="../desktop/window.py" line="577" />
     </message>
     <message>
       <source>無法開啟匯出位置</source>
       <translation>Unable to Open Export Folder</translation>
-      <location filename="../desktop/window.py" line="421" />
+      <location filename="../desktop/window.py" line="445" />
     </message>
     <message>
       <source>無法開啟資料庫</source>
       <translation>Unable to Open Database</translation>
-      <location filename="../desktop/window.py" line="563" />
+      <location filename="../desktop/window.py" line="583" />
     </message>
     <message>
       <source>無法開啟預設瀏覽器，請手動在地圖核對顯示的座標。</source>
@@ -1188,7 +1188,7 @@ UTC: {p2}</translation>
     <message>
       <source>用出生地址查座標</source>
       <translation>Find Coordinates by Address</translation>
-      <location filename="../desktop/window.py" line="122" />
+      <location filename="../desktop/window.py" line="125" />
     </message>
     <message>
       <source>由出生地址查詢經緯度</source>
@@ -1203,7 +1203,7 @@ UTC: {p2}</translation>
     <message>
       <source>發現相同個人資料</source>
       <translation>Duplicate Profile Details</translation>
-      <location filename="../desktop/window.py" line="465" />
+      <location filename="../desktop/window.py" line="488" />
     </message>
     <message>
       <source>目前無法連線至查詢服務；請稍後再試，或手動填寫經緯度。</source>
@@ -1213,22 +1213,22 @@ UTC: {p2}</translation>
     <message>
       <source>目前的星盤資料尚未儲存。</source>
       <translation>The current chart details have not been saved.</translation>
-      <location filename="../desktop/window.py" line="501" />
+      <location filename="../desktop/window.py" line="524" />
     </message>
     <message>
       <source>相位</source>
       <translation>Aspect</translation>
-      <location filename="../desktop/window.py" line="191" />
+      <location filename="../desktop/window.py" line="187" />
     </message>
     <message>
       <source>相位圖</source>
       <translation>Aspect Grid</translation>
-      <location filename="../desktop/window.py" line="189" />
+      <location filename="../desktop/window.py" line="185" />
     </message>
     <message>
       <source>相位容許度最多一位小數。</source>
       <translation>Aspect orbs may have at most one decimal place.</translation>
-      <location filename="../desktop/storage.py" line="61" />
+      <location filename="../desktop/settings.py" line="21" />
     </message>
     <message>
       <source>相位容許度需在 0～15 度內。</source>
@@ -1238,7 +1238,7 @@ UTC: {p2}</translation>
     <message>
       <source>相位設定不完整。</source>
       <translation>The aspect settings are incomplete.</translation>
-      <location filename="../desktop/storage.py" line="57" />
+      <location filename="../desktop/settings.py" line="15" />
     </message>
     <message>
       <source>真交點</source>
@@ -1258,17 +1258,17 @@ UTC: {p2}</translation>
     <message>
       <source>第 {p0} 宮</source>
       <translation>House {p0}</translation>
-      <location filename="../desktop/window.py" line="382" />
+      <location filename="../desktop/window.py" line="406" />
     </message>
     <message>
       <source>第一次（較早的時刻）</source>
       <translation>First occurrence (earlier)</translation>
-      <location filename="../desktop/timeline_ui.py" line="348" />
+      <location filename="../desktop/timeline_ui.py" line="357" />
     </message>
     <message>
       <source>第二次（較晚的時刻）</source>
       <translation>Second occurrence (later)</translation>
-      <location filename="../desktop/timeline_ui.py" line="349" />
+      <location filename="../desktop/timeline_ui.py" line="358" />
     </message>
     <message>
       <source>紐西蘭／奧克蘭</source>
@@ -1278,7 +1278,7 @@ UTC: {p2}</translation>
     <message>
       <source>經度</source>
       <translation>Longitude</translation>
-      <location filename="../desktop/window.py" line="123" />
+      <location filename="../desktop/window.py" line="126" />
     </message>
     <message>
       <source>經度超出範圍。</source>
@@ -1293,17 +1293,17 @@ UTC: {p2}</translation>
     <message>
       <source>經緯度與時區分開設定；時區選單不會更改經緯度。</source>
       <translation>Set coordinates and time zone separately. Selecting a time zone does not change the coordinates.</translation>
-      <location filename="../desktop/window.py" line="121" />
+      <location filename="../desktop/window.py" line="124" />
     </message>
     <message>
       <source>經緯度／時區</source>
       <translation>Coordinates / Time Zone</translation>
-      <location filename="../desktop/window.py" line="566" />
+      <location filename="../desktop/window.py" line="586" />
     </message>
     <message>
       <source>緯度</source>
       <translation>Latitude</translation>
-      <location filename="../desktop/window.py" line="123" />
+      <location filename="../desktop/window.py" line="126" />
     </message>
     <message>
       <source>緯度超出範圍。</source>
@@ -1328,7 +1328,7 @@ UTC: {p2}</translation>
     <message>
       <source>自動依地區與日期判斷</source>
       <translation>Automatic (location/date)</translation>
-      <location filename="../desktop/window.py" line="143" />
+      <location filename="../desktop/window.py" line="146" />
     </message>
     <message>
       <source>自訂相位容許度</source>
@@ -1358,12 +1358,12 @@ UTC: {p2}</translation>
     <message>
       <source>西經 W</source>
       <translation>West W</translation>
-      <location filename="../desktop/window.py" line="124" />
+      <location filename="../desktop/window.py" line="127" />
     </message>
     <message>
       <source>計算尚未結束，完成後即可關閉。</source>
       <translation>Calculation is in progress. You can close the application when it finishes.</translation>
-      <location filename="../desktop/window.py" line="596" />
+      <location filename="../desktop/window.py" line="616" />
     </message>
     <message>
       <source>設定值需為勾選狀態。</source>
@@ -1373,17 +1373,17 @@ UTC: {p2}</translation>
     <message>
       <source>詳細列表</source>
       <translation>Details</translation>
-      <location filename="../desktop/window.py" line="190" />
+      <location filename="../desktop/window.py" line="186" />
     </message>
     <message>
       <source>語言 / Language</source>
       <translation>語言 / Language</translation>
-      <location filename="../desktop/window.py" line="74" />
+      <location filename="../desktop/window.py" line="77" />
     </message>
     <message>
       <source>語言設定未能儲存，請確認本機資料庫可寫入。</source>
       <translation>Unable to save the language setting. Check that the local database is writable.</translation>
-      <location filename="../desktop/window.py" line="240" />
+      <location filename="../desktop/window.py" line="262" />
     </message>
     <message>
       <source>請先填寫 API key 與出生地址。</source>
@@ -1393,12 +1393,12 @@ UTC: {p2}</translation>
     <message>
       <source>請先按「排星盤」，完成後才能匯出文件。</source>
       <translation>Select Calculate first. Export is available when the chart is ready.</translation>
-      <location filename="../desktop/window.py" line="414" />
+      <location filename="../desktop/window.py" line="438" />
     </message>
     <message>
       <source>請填寫{p0}的正數或 0，最多五位小數；方向另外選擇。</source>
       <translation>Enter a positive value or 0 for {p0}, with up to five decimal places. Select the direction separately.</translation>
-      <location filename="../desktop/fields.py" line="51" />
+      <location filename="../desktop/fields.py" line="55" />
     </message>
     <message>
       <source>請完整填寫出生日期（YYYY/MM/DD）。</source>
@@ -1408,7 +1408,7 @@ UTC: {p2}</translation>
     <message>
       <source>請完整填寫出生時間（HH:mm:ss）；不確定秒數請填 00。</source>
       <translation>Enter a complete birth time (HH:mm:ss). Enter 00 if the seconds are unknown.</translation>
-      <location filename="../desktop/fields.py" line="32" />
+      <location filename="../desktop/fields.py" line="36" />
     </message>
     <message>
       <source>請完整填寫當地出生日期及時、分、秒。</source>
@@ -1423,12 +1423,12 @@ UTC: {p2}</translation>
     <message>
       <source>請從清單選擇有效的地區時區。</source>
       <translation>Select a valid time zone from the list.</translation>
-      <location filename="../desktop/window.py" line="348" />
+      <location filename="../desktop/window.py" line="370" />
     </message>
     <message>
       <source>請確認出生資料</source>
       <translation>Check Birth Details</translation>
-      <location filename="../desktop/window.py" line="405" />
+      <location filename="../desktop/window.py" line="429" />
     </message>
     <message>
       <source>請稍候一秒再查詢。</source>
@@ -1453,42 +1453,42 @@ UTC: {p2}</translation>
     <message>
       <source>資料已變更，請重新排盤；畫面仍為上一次結果。</source>
       <translation>Details have changed. Calculate again; the previous result is still displayed.</translation>
-      <location filename="../desktop/window.py" line="302" />
+      <location filename="../desktop/window.py" line="324" />
     </message>
     <message>
       <source>資料已變更，請重新排盤；畫面為上一筆計算。</source>
       <translation>Details have changed. Calculate again; the displayed chart is from the previous calculation.</translation>
-      <location filename="../desktop/window.py" line="393" />
+      <location filename="../desktop/window.py" line="417" />
     </message>
     <message>
       <source>資料庫來自較新版本，請更新程式再開啟。</source>
       <translation>This database was created by a newer version. Update the application before opening it.</translation>
-      <location filename="../desktop/storage.py" line="86" />
+      <location filename="../desktop/storage.py" line="95" />
     </message>
     <message>
       <source>載入</source>
       <translation>Load</translation>
-      <location filename="../desktop/window.py" line="87" />
+      <location filename="../desktop/window.py" line="90" />
     </message>
     <message>
       <source>載入個人檔案</source>
       <translation>Load Profile</translation>
-      <location filename="../desktop/window.py" line="564" />
+      <location filename="../desktop/window.py" line="584" />
     </message>
     <message>
       <source>載入原檔案會放棄目前未儲存的修改。確定要載入嗎？</source>
       <translation>Loading the original profile will discard your unsaved changes. Continue?</translation>
-      <location filename="../desktop/window.py" line="489" />
+      <location filename="../desktop/window.py" line="512" />
     </message>
     <message>
       <source>載入選取的原檔案</source>
       <translation>Load Selected Profile</translation>
-      <location filename="../desktop/window.py" line="478" />
+      <location filename="../desktop/window.py" line="501" />
     </message>
     <message>
       <source>輸入十進位度，最多五位小數。查詢座標後，請自行核對下方出生地區時區。</source>
       <translation>Enter decimal degrees with up to five decimal places. After a coordinate lookup, verify the birth time zone below.</translation>
-      <location filename="../desktop/window.py" line="131" />
+      <location filename="../desktop/window.py" line="134" />
     </message>
     <message>
       <source>輸入地址後按查詢</source>
@@ -1498,12 +1498,12 @@ UTC: {p2}</translation>
     <message>
       <source>返回編輯</source>
       <translation>Back to Editing</translation>
-      <location filename="../desktop/window.py" line="481" />
+      <location filename="../desktop/window.py" line="504" />
     </message>
     <message>
       <source>逆行 R</source>
       <translation>Retrograde R</translation>
-      <location filename="../desktop/window.py" line="381" />
+      <location filename="../desktop/window.py" line="405" />
     </message>
     <message>
       <source>這個當地時間因夏令時間切換而不存在，請核對出生時間。</source>
@@ -1518,17 +1518,17 @@ UTC: {p2}</translation>
     <message>
       <source>這筆檔案曾以備註區分重複資料，備註不能清空。</source>
       <translation>This profile uses notes to distinguish duplicate details. Its notes cannot be cleared.</translation>
-      <location filename="../desktop/storage.py" line="138" />
+      <location filename="../desktop/storage.py" line="147" />
     </message>
     <message>
       <source>進階顯示設定</source>
       <translation>Advanced Display Settings</translation>
-      <location filename="../desktop/window.py" line="155" />
+      <location filename="../desktop/window.py" line="158" />
     </message>
     <message>
       <source>運行</source>
       <translation>Motion</translation>
-      <location filename="../desktop/window.py" line="187" />
+      <location filename="../desktop/window.py" line="183" />
     </message>
     <message>
       <source>選擇下次啟動時使用的語言。文件匯出語言可另外選擇。</source>
@@ -1538,12 +1538,12 @@ UTC: {p2}</translation>
     <message>
       <source>重複鐘點</source>
       <translation>Repeated time</translation>
-      <location filename="../desktop/window.py" line="472" />
+      <location filename="../desktop/window.py" line="495" />
     </message>
     <message>
       <source>重複鐘點：請選擇</source>
       <translation>Repeated time: select occurrence</translation>
-      <location filename="../desktop/timeline_ui.py" line="347" />
+      <location filename="../desktop/timeline_ui.py" line="356" />
     </message>
     <message>
       <source>金</source>
@@ -1573,7 +1573,7 @@ UTC: {p2}</translation>
     <message>
       <source>需要區分相同個人資料時，請填寫備註。</source>
       <translation>Add notes to distinguish profiles with identical personal details.</translation>
-      <location filename="../desktop/window.py" line="113" />
+      <location filename="../desktop/window.py" line="116" />
     </message>
     <message>
       <source>頂</source>
@@ -1583,17 +1583,17 @@ UTC: {p2}</translation>
     <message>
       <source>順行</source>
       <translation>Direct</translation>
-      <location filename="../desktop/window.py" line="381" />
+      <location filename="../desktop/window.py" line="405" />
     </message>
     <message>
       <source>顯示小行星</source>
       <translation>Show Minor Bodies</translation>
-      <location filename="../desktop/window.py" line="163" />
+      <location filename="../desktop/window.py" line="166" />
     </message>
     <message>
       <source>顯示次要相位</source>
       <translation>Show Minor Aspects</translation>
-      <location filename="../desktop/window.py" line="165" />
+      <location filename="../desktop/window.py" line="168" />
     </message>
     <message>
       <source>香港</source>
@@ -1608,7 +1608,7 @@ UTC: {p2}</translation>
     <message>
       <source>黃道位置</source>
       <translation>Zodiac Position</translation>
-      <location filename="../desktop/window.py" line="187" />
+      <location filename="../desktop/window.py" line="183" />
     </message>
     <message>
       <source>點選下三角格子查看詳情；空白表示未符合目前的相位設定。</source>
@@ -1633,17 +1633,17 @@ UTC: {p2}</translation>
     <message>
       <source>（未填）</source>
       <translation>(Not provided)</translation>
-      <location filename="../desktop/window.py" line="474" />
+      <location filename="../desktop/window.py" line="497" />
     </message>
     <message>
       <source>已完成 · {system} · {count} 組相位</source>
       <translation>Complete · {system} · Aspects: {count}</translation>
-      <location filename="../desktop/window.py" line="394" />
+      <location filename="../desktop/window.py" line="418" />
     </message>
     <message>
       <source>未定義</source>
       <translation>Undefined</translation>
-      <location filename="../desktop/window.py" line="381" />
+      <location filename="../desktop/window.py" line="405" />
     </message>
     <message>
       <source>部分天體在 Koch 宮制下無法定義宮位。</source>
@@ -1663,7 +1663,7 @@ UTC: {p2}</translation>
     <message>
       <source>閱讀 Azimuth 說明</source>
       <translation>Read about Azimuth houses</translation>
-      <location filename="../desktop/window.py" line="183" />
+      <location filename="../desktop/window.py" line="179" />
     </message>
     <message>
       <source>此時間／地點的 Polich–Page 宮頭順序交錯或重疊，無法形成連續、不重疊的十二宮，因此停止排盤。請改選其他宮位制（例如 Equal 或 Whole Sign）後重新排盤。</source>
@@ -1723,7 +1723,7 @@ UTC: {p2}</translation>
     <message>
       <source>開啟：宮位位置圖；關閉：黃經輪盤。切換後請重新排盤，星座與黃經不變。</source>
       <translation>On: house-position view. Off: longitude wheel. Recalculate after switching; zodiac positions stay unchanged.</translation>
-      <location filename="../desktop/window.py" line="154" />
+      <location filename="../desktop/window.py" line="157" />
     </message>
     <message>
       <source>宮位位置圖；真實星座與度數請讀位置表。</source>
@@ -1813,52 +1813,52 @@ UTC: {p2}</translation>
     <message>
       <source>{hours} 小時 {minutes} 分鐘</source>
       <translation>{hours} h {minutes} min</translation>
-      <location filename="../desktop/timeline_ui.py" line="55" />
+      <location filename="../desktop/timeline_ui.py" line="57" />
     </message>
     <message>
       <source>{body} 逆行</source>
       <translation>{body} retrograde</translation>
-      <location filename="../desktop/timeline_ui.py" line="30" />
+      <location filename="../desktop/timeline_ui.py" line="32" />
     </message>
     <message>
       <source>{n} 秒</source>
       <translation>{n} s</translation>
-      <location filename="../desktop/timeline_ui.py" line="51" />
+      <location filename="../desktop/timeline_ui.py" line="53" />
     </message>
     <message>
       <source>{n} 分鐘</source>
       <translation>{n} min</translation>
-      <location filename="../desktop/timeline_ui.py" line="53" />
+      <location filename="../desktop/timeline_ui.py" line="55" />
     </message>
     <message>
       <source>已用時間：{time}</source>
       <translation>Elapsed: {time}</translation>
-      <location filename="../desktop/timeline_ui.py" line="605" />
+      <location filename="../desktop/timeline_ui.py" line="607" />
     </message>
     <message>
       <source>天體／相位</source>
       <translation>Body / aspect</translation>
-      <location filename="../desktop/timeline_ui.py" line="93" />
+      <location filename="../desktop/timeline_ui.py" line="95" />
     </message>
     <message>
       <source>天象時間軸</source>
       <translation>Sky timeline</translation>
-      <location filename="../desktop/timeline_ui.py" line="120" />
+      <location filename="../desktop/timeline_ui.py" line="122" />
     </message>
     <message>
       <source>點選色帶查看事件；方向鍵切換事件。</source>
       <translation>Select an event band for details; use arrow keys to move between events.</translation>
-      <location filename="../desktop/timeline_ui.py" line="121" />
+      <location filename="../desktop/timeline_ui.py" line="123" />
     </message>
     <message>
       <source>開始計算</source>
       <translation>Calculate</translation>
-      <location filename="../desktop/timeline_ui.py" line="293" />
+      <location filename="../desktop/timeline_ui.py" line="300" />
     </message>
     <message>
       <source>取消計算</source>
       <translation>Cancel calculation</translation>
-      <location filename="../desktop/timeline_ui.py" line="295" />
+      <location filename="../desktop/timeline_ui.py" line="302" />
     </message>
     <message>
       <source>每分鐘取樣，包含起訖分鐘。</source>
@@ -1868,42 +1868,42 @@ UTC: {p2}</translation>
     <message>
       <source>收合設定</source>
       <translation>Hide settings</translation>
-      <location filename="../desktop/timeline_ui.py" line="300" />
+      <location filename="../desktop/timeline_ui.py" line="307" />
     </message>
     <message>
       <source>01  時間範圍</source>
       <translation>01  Time range</translation>
-      <location filename="../desktop/timeline_ui.py" line="332" />
+      <location filename="../desktop/timeline_ui.py" line="341" />
     </message>
     <message>
       <source>02  計算內容</source>
       <translation>02  Events</translation>
-      <location filename="../desktop/timeline_ui.py" line="366" />
+      <location filename="../desktop/timeline_ui.py" line="375" />
     </message>
     <message>
       <source>逆行：水、金、火、木、土、天、海、冥，共八顆。</source>
       <translation>Retrograde: Mercury, Venus, Mars, Jupiter, Saturn, Uranus, Neptune and Pluto.</translation>
-      <location filename="../desktop/timeline_ui.py" line="367" />
+      <location filename="../desktop/timeline_ui.py" line="376" />
     </message>
     <message>
       <source>相位：日、月及上述八顆天體，共 45 組配對。</source>
       <translation>Aspects: the Sun, Moon and these eight planets; 45 pairs.</translation>
-      <location filename="../desktop/timeline_ui.py" line="368" />
+      <location filename="../desktop/timeline_ui.py" line="377" />
     </message>
     <message>
       <source>全部天體</source>
       <translation>All bodies</translation>
-      <location filename="../desktop/timeline_ui.py" line="405" />
+      <location filename="../desktop/timeline_ui.py" line="402" />
     </message>
     <message>
       <source>上一段時間</source>
       <translation>Previous time window</translation>
-      <location filename="../desktop/timeline_ui.py" line="416" />
+      <location filename="../desktop/timeline_ui.py" line="413" />
     </message>
     <message>
       <source>下一段時間</source>
       <translation>Next time window</translation>
-      <location filename="../desktop/timeline_ui.py" line="417" />
+      <location filename="../desktop/timeline_ui.py" line="414" />
     </message>
     <message>
       <source>R 逆行　☌ 合相　□ 四分　△ 三分　☍ 對分　◆ 精確成相</source>
@@ -1913,27 +1913,27 @@ UTC: {p2}</translation>
     <message>
       <source>放大查看這段時間</source>
       <translation>Zoom to this event</translation>
-      <location filename="../desktop/timeline_ui.py" line="455" />
+      <location filename="../desktop/timeline_ui.py" line="452" />
     </message>
     <message>
       <source>設定時間範圍與時區，按「開始計算」。</source>
       <translation>Set the time range and time zone, then select Calculate.</translation>
-      <location filename="../desktop/timeline_ui.py" line="460" />
+      <location filename="../desktop/timeline_ui.py" line="457" />
     </message>
     <message>
       <source>正在準備星曆資料，請稍候。</source>
       <translation>Preparing ephemeris data. Please wait.</translation>
-      <location filename="../desktop/timeline_ui.py" line="569" />
+      <location filename="../desktop/timeline_ui.py" line="568" />
     </message>
     <message>
       <source>計算已取消。可調整條件後重新開始。</source>
       <translation>Calculation cancelled. Adjust the settings and start again.</translation>
-      <location filename="../desktop/timeline_ui.py" line="623" />
+      <location filename="../desktop/timeline_ui.py" line="625" />
     </message>
     <message>
       <source>計算未完成：{reason}</source>
       <translation>Calculation did not complete: {reason}</translation>
-      <location filename="../desktop/timeline_ui.py" line="627" />
+      <location filename="../desktop/timeline_ui.py" line="629" />
     </message>
     <message>
       <source>計算完成 · {n:,} 個時刻 · {events:,} 段事件</source>
@@ -1943,42 +1943,42 @@ UTC: {p2}</translation>
     <message>
       <source>總用時：{time}</source>
       <translation>Total elapsed: {time}</translation>
-      <location filename="../desktop/timeline_ui.py" line="649" />
+      <location filename="../desktop/timeline_ui.py" line="656" />
     </message>
     <message>
       <source>選擇時間範圍與時區，按「開始計算」查看天象。</source>
       <translation>Choose the time range and time zone, then select Calculate to view sky events.</translation>
-      <location filename="../desktop/timeline_ui.py" line="189" />
+      <location filename="../desktop/timeline_ui.py" line="193" />
     </message>
     <message>
       <source>開始</source>
       <translation>Start</translation>
-      <location filename="../desktop/timeline_ui.py" line="338" />
+      <location filename="../desktop/timeline_ui.py" line="351" />
     </message>
     <message>
       <source>結束</source>
       <translation>End</translation>
-      <location filename="../desktop/timeline_ui.py" line="339" />
+      <location filename="../desktop/timeline_ui.py" line="352" />
     </message>
     <message>
       <source>時區</source>
       <translation>Time zone</translation>
-      <location filename="../desktop/timeline_ui.py" line="360" />
+      <location filename="../desktop/timeline_ui.py" line="369" />
     </message>
     <message>
       <source>全部四種相位</source>
       <translation>All four aspects</translation>
-      <location filename="../desktop/timeline_ui.py" line="400" />
+      <location filename="../desktop/timeline_ui.py" line="397" />
     </message>
     <message>
       <source>只看 90°／180°</source>
       <translation>Only 90° / 180°</translation>
-      <location filename="../desktop/timeline_ui.py" line="400" />
+      <location filename="../desktop/timeline_ui.py" line="397" />
     </message>
     <message>
       <source>全期</source>
       <translation>Full range</translation>
-      <location filename="../desktop/timeline_ui.py" line="409" />
+      <location filename="../desktop/timeline_ui.py" line="406" />
     </message>
     <message>
       <source>週</source>
@@ -1988,7 +1988,7 @@ UTC: {p2}</translation>
     <message>
       <source>事件詳情</source>
       <translation>Event details</translation>
-      <location filename="../desktop/timeline_ui.py" line="420" />
+      <location filename="../desktop/timeline_ui.py" line="417" />
     </message>
     <message>
       <source>每分鐘取樣 · {n:,} 個時刻</source>
@@ -1998,47 +1998,47 @@ UTC: {p2}</translation>
     <message>
       <source>夏令時間依所選時區與日期自動判斷。</source>
       <translation>Daylight saving follows the selected time zone and dates.</translation>
-      <location filename="../desktop/timeline_ui.py" line="533" />
+      <location filename="../desktop/timeline_ui.py" line="532" />
     </message>
     <message>
       <source>設定已更新，按「開始計算」產生結果。</source>
       <translation>Settings updated. Select Calculate to generate results.</translation>
-      <location filename="../desktop/timeline_ui.py" line="534" />
+      <location filename="../desktop/timeline_ui.py" line="533" />
     </message>
     <message>
       <source>展開設定</source>
       <translation>Show settings</translation>
-      <location filename="../desktop/timeline_ui.py" line="548" />
+      <location filename="../desktop/timeline_ui.py" line="547" />
     </message>
     <message>
       <source>本階段預估尚需 {time}（隨實際速度更新）</source>
       <translation>About {time} remaining in this stage (updated from measured speed)</translation>
-      <location filename="../desktop/timeline_ui.py" line="609" />
+      <location filename="../desktop/timeline_ui.py" line="611" />
     </message>
     <message>
       <source>正在停止計算並釋放資源，請稍候。</source>
       <translation>Stopping the calculation and releasing resources. Please wait.</translation>
-      <location filename="../desktop/timeline_ui.py" line="618" />
+      <location filename="../desktop/timeline_ui.py" line="620" />
     </message>
     <message>
       <source>點選色帶，查看起訖時間與精確成相。</source>
       <translation>Select an event band to see its interval and exact aspects.</translation>
-      <location filename="../desktop/timeline_ui.py" line="692" />
+      <location filename="../desktop/timeline_ui.py" line="699" />
     </message>
     <message>
       <source>逆行</source>
       <translation>Retrograde</translation>
-      <location filename="../desktop/timeline_ui.py" line="133" />
+      <location filename="../desktop/timeline_ui.py" line="135" />
     </message>
     <message>
       <source>相位區間</source>
       <translation>Aspect intervals</translation>
-      <location filename="../desktop/timeline_ui.py" line="139" />
+      <location filename="../desktop/timeline_ui.py" line="141" />
     </message>
     <message>
       <source>請核對時間設定。</source>
       <translation>Check the time settings.</translation>
-      <location filename="../desktop/timeline_ui.py" line="536" />
+      <location filename="../desktop/timeline_ui.py" line="517" />
     </message>
     <message>
       <source>第 1 階段：計算天體位置 · 已完成 {done:,} / {total:,} 個時刻</source>
@@ -2053,27 +2053,27 @@ UTC: {p2}</translation>
     <message>
       <source>正在取得運算速度，稍後提供估計。</source>
       <translation>Measuring calculation speed; an estimate will follow.</translation>
-      <location filename="../desktop/timeline_ui.py" line="611" />
+      <location filename="../desktop/timeline_ui.py" line="613" />
     </message>
     <message>
       <source>這顆天體不列入逆行檢查。</source>
       <translation>This body is not checked for retrograde motion.</translation>
-      <location filename="../desktop/timeline_ui.py" line="138" />
+      <location filename="../desktop/timeline_ui.py" line="140" />
     </message>
     <message>
       <source>此範圍沒有符合篩選的相位。</source>
       <translation>No aspects match this filter in the calculated range.</translation>
-      <location filename="../desktop/timeline_ui.py" line="152" />
+      <location filename="../desktop/timeline_ui.py" line="154" />
     </message>
     <message>
       <source>此視窗無事件</source>
       <translation>No events in view</translation>
-      <location filename="../desktop/timeline_ui.py" line="226" />
+      <location filename="../desktop/timeline_ui.py" line="230" />
     </message>
     <message>
       <source>區間內無逆行</source>
       <translation>No retrograde events</translation>
-      <location filename="../desktop/timeline_ui.py" line="226" />
+      <location filename="../desktop/timeline_ui.py" line="230" />
     </message>
     <message>
       <source>正在接合逆行與相位區間。</source>
@@ -2088,67 +2088,157 @@ UTC: {p2}</translation>
     <message>
       <source>容許度 ±{orb}°</source>
       <translation>Orb ±{orb}°</translation>
-      <location filename="../desktop/timeline_ui.py" line="702" />
+      <location filename="../desktop/timeline_ui.py" line="709" />
     </message>
     <message>
       <source>查詢開始時已符合此條件。</source>
       <translation>This condition is already active at the start of the range.</translation>
-      <location filename="../desktop/timeline_ui.py" line="705" />
+      <location filename="../desktop/timeline_ui.py" line="712" />
     </message>
     <message>
       <source>查詢結束時仍符合此條件。</source>
       <translation>This condition remains active at the end of the range.</translation>
-      <location filename="../desktop/timeline_ui.py" line="708" />
+      <location filename="../desktop/timeline_ui.py" line="715" />
     </message>
     <message>
       <source>精確成相 · {n} 次</source>
       <translation>Exact aspects · {n}</translation>
-      <location filename="../desktop/timeline_ui.py" line="711" />
+      <location filename="../desktop/timeline_ui.py" line="718" />
     </message>
     <message>
       <source>範圍內持續時間</source>
       <translation>Duration within the range</translation>
-      <location filename="../desktop/timeline_ui.py" line="709" />
+      <location filename="../desktop/timeline_ui.py" line="716" />
     </message>
     <message>
       <source>此區間內沒有精確成相。</source>
       <translation>No exact aspect occurs within this interval.</translation>
-      <location filename="../desktop/timeline_ui.py" line="715" />
+      <location filename="../desktop/timeline_ui.py" line="722" />
     </message>
     <message>
       <source>個人星盤</source>
       <translation>Birth chart</translation>
-      <location filename="../desktop/window.py" line="79" />
+      <location filename="../desktop/window.py" line="82" />
     </message>
     <message>
       <source>R 逆行　0° 合相　90° 四分　120° 三分　180° 對分　◆ 精確成相</source>
       <translation>R Retrograde   0° Conjunction   90° Square   120° Trine   180° Opposition   ◆ Exact</translation>
-      <location filename="../desktop/timeline_ui.py" line="440" />
+      <location filename="../desktop/timeline_ui.py" line="437" />
     </message>
     <message>
       <source>月視圖</source>
       <translation>Month</translation>
-      <location filename="../desktop/timeline_ui.py" line="409" />
+      <location filename="../desktop/timeline_ui.py" line="406" />
     </message>
     <message>
       <source>週視圖</source>
       <translation>Week</translation>
-      <location filename="../desktop/timeline_ui.py" line="409" />
+      <location filename="../desktop/timeline_ui.py" line="406" />
     </message>
     <message>
       <source>日視圖</source>
       <translation>Day</translation>
-      <location filename="../desktop/timeline_ui.py" line="409" />
+      <location filename="../desktop/timeline_ui.py" line="406" />
     </message>
     <message>
       <source>背景計算意外停止，請重新開始。</source>
       <translation>The background calculation stopped unexpectedly. Please start again.</translation>
-      <location filename="../desktop/timeline.py" line="421" />
+      <location filename="../desktop/timeline.py" line="429" />
     </message>
     <message>
       <source>功能</source>
       <translation>Mode</translation>
-      <location filename="../desktop/window.py" line="66" />
+      <location filename="../desktop/window.py" line="67" />
+    </message>
+    <message>
+      <source>請完整填寫日期（YYYY/MM/DD）。</source>
+      <translation>Enter the complete date (YYYY/MM/DD).</translation>
+      <location filename="../desktop/fields.py" line="18" />
+    </message>
+    <message>
+      <source>日期需在 1850～2149 年內。</source>
+      <translation>The date must be between 1850 and 2149.</translation>
+      <location filename="../desktop/fields.py" line="21" />
+    </message>
+    <message>
+      <source>請完整填寫有效的時間（HH:mm）。</source>
+      <translation>Enter a valid time (HH:mm).</translation>
+      <location filename="../desktop/fields.py" line="34" />
+    </message>
+    <message>
+      <source>日期無效，請檢查年月日。</source>
+      <translation>Invalid date. Check the year, month and day.</translation>
+      <location filename="../desktop/fields.py" line="20" />
+    </message>
+    <message>
+      <source>設定 · 相位容許度</source>
+      <translation>Settings · Aspect orbs</translation>
+      <location filename="../desktop/settings.py" line="30" />
+    </message>
+    <message>
+      <source>個人星盤與天象時間軸共用此設定。天象時間軸使用 0°、90°、120°、180°。</source>
+      <translation>These settings apply to both the birth chart and sky timeline. The timeline uses 0°, 90°, 120° and 180°.</translation>
+      <location filename="../desktop/settings.py" line="32" />
+    </message>
+    <message>
+      <source>套用</source>
+      <translation>Apply</translation>
+      <location filename="../desktop/settings.py" line="39" />
+    </message>
+    <message>
+      <source>恢復預設值</source>
+      <translation>Restore defaults</translation>
+      <location filename="../desktop/settings.py" line="41" />
+    </message>
+    <message>
+      <source>每十分鐘掃描，局部細查事件時間。</source>
+      <translation>Scan every ten minutes, then refine event times.</translation>
+      <location filename="../desktop/timeline_ui.py" line="304" />
+    </message>
+    <message>
+      <source>相位容許度統一由上方「設定」修改。</source>
+      <translation>Change shared aspect orbs in Settings above.</translation>
+      <location filename="../desktop/timeline_ui.py" line="381" />
+    </message>
+    <message>
+      <source>計算完成 · {n:,} 個掃描點 · {events:,} 段事件</source>
+      <translation>Complete · {n:,} scan points · {events:,} events</translation>
+      <location filename="../desktop/timeline_ui.py" line="655" />
+    </message>
+    <message>
+      <source>每十分鐘掃描 · {n:,} 個掃描點</source>
+      <translation>Ten-minute scan · {n:,} scan points</translation>
+      <location filename="../desktop/timeline_ui.py" line="531" />
+    </message>
+    <message>
+      <source>第 1 階段：掃描時間區間 · 已完成 {done:,} / {total:,} 個掃描點</source>
+      <translation>Stage 1: Scanning the range · {done:,} / {total:,} scan points</translation>
+      <location filename="../desktop/timeline_ui.py" line="598" />
+    </message>
+    <message>
+      <source>第 2 階段：細查事件時間 · 已完成 {done:,} / {total:,} 項</source>
+      <translation>Stage 2: Refining event times · {done:,} / {total:,} items</translation>
+      <location filename="../desktop/timeline_ui.py" line="600" />
+    </message>
+    <message>
+      <source>第 3 階段：建立事件區間 · 已完成 {done:,} / {total:,} 項</source>
+      <translation>Stage 3: Building event intervals · {done:,} / {total:,} items</translation>
+      <location filename="../desktop/timeline_ui.py" line="602" />
+    </message>
+    <message>
+      <source>設定</source>
+      <translation>Settings</translation>
+      <location filename="../desktop/window.py" line="75" />
+    </message>
+    <message>
+      <source>請先完成或取消計算，再修改相位容許度。</source>
+      <translation>Finish or cancel the calculation before changing aspect orbs.</translation>
+      <location filename="../desktop/window.py" line="235" />
+    </message>
+    <message>
+      <source>容許度已變更，請重新計算。</source>
+      <translation>Aspect orbs changed. Calculate again to update the timeline.</translation>
+      <location filename="../desktop/window.py" line="243" />
     </message>
   </context>
   <context>

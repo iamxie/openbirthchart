@@ -57,7 +57,7 @@ def apply_theme(app, family):
         QComboBox::down-arrow { image:url(@assets/down.svg); width:12px; height:12px; }
         QComboBox QAbstractItemView { background:@surface; border:1px solid @border; outline:0; selection-background-color:@soft; selection-color:@text; padding:4px; }
         QComboBox QAbstractItemView::item { min-height:30px; }
-        QAbstractSpinBox { padding-right:26px; }
+        QAbstractSpinBox { padding:6px 26px 6px 9px; }
         QAbstractSpinBox::up-button, QAbstractSpinBox::down-button { subcontrol-origin:border; width:24px; border:0; }
         QAbstractSpinBox::up-button { subcontrol-position:top right; }
         QAbstractSpinBox::down-button { subcontrol-position:bottom right; }

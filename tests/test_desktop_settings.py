@@ -32,6 +32,50 @@ class SettingsTests(unittest.TestCase):
         reopened.save_geocode_key('\u200b \ufeff');self.assertEqual(self.store.load_geocode_key(),'')
         self.assertEqual(reopened.load(ident),before)
 
+    def test_global_orbs_reopen_legacy_profile_and_busy_guard(self):
+        from desktop.settings import default_orbs
+        from desktop.timeline import TimelineInput,TimelineResult
+        from desktop.errors import UserError
+        values={**default_orbs(),0:6.,72:2.5}
+        w=MainWindow(auto_start=False,store=self.store,prompt_unsaved=False)
+        try:
+            w.mode_tabs.setCurrentIndex(1);page=w.timeline_page
+            request=page.request();start,end,_=request.resolve()
+            page.apply_result(TimelineResult(request,start.timestamp(),end.timestamp(),2,[],1,[]))
+            snapshot=w.form_snapshot()
+            w.apply_orbs(values)
+            self.assertEqual(w.form_snapshot(),snapshot)
+            self.assertIsNone(page.result)
+            self.assertEqual(page.request().orbs,(6.,3.,3.,3.))
+            self.assertEqual(ProfileStore(self.path).load_orbs(),values)
+            legacy=dict(schema=1,input=asdict(BirthInput(name='legacy')),custom_orbs=True,
+                        orb_values={str(a):15 for a in values})
+            w.restore_profile(legacy)
+            self.assertEqual(w.orbs(),values)
+            saved=w.store.load(w.store.save(w.profile_payload()))
+            self.assertNotIn('orb_values',saved);self.assertNotIn('custom_orbs',saved)
+            page.worker=object()
+            with self.assertRaises(UserError):w.apply_orbs(default_orbs())
+            self.assertEqual(self.store.load_orbs(),values)
+            page.worker=None
+            with patch.object(self.store,'save_orbs',side_effect=OSError('disk full')):
+                with self.assertRaises(OSError):w.apply_orbs(default_orbs())
+            self.assertEqual(w.orbs(),values)
+        finally:
+            page.worker=None;w.close();w.deleteLater();self.app.processEvents()
+        reopened=MainWindow(auto_start=False,store=ProfileStore(self.path),prompt_unsaved=False)
+        self.assertEqual(reopened.orbs(),values)
+        reopened.close();reopened.deleteLater();self.app.processEvents()
+
+    def test_invalid_global_orbs_do_not_replace_saved_settings(self):
+        from desktop.settings import default_orbs
+        from desktop.errors import UserError
+        self.store.save_orbs(default_orbs())
+        for value in (float('nan'),float('inf'),-1,16,.15,True):
+            with self.subTest(value=value),self.assertRaises(UserError):
+                self.store.save_orbs({**default_orbs(),0:value})
+        self.assertEqual(self.store.load_orbs(),default_orbs())
+
     def test_dialog_close_saves_and_next_window_prefills(self):
         seen=[];replacement=['test-only-key','']
         class Dialog(GeocodeDialog):

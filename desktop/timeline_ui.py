@@ -20,6 +20,8 @@ from .timeline import (TimelineInput, TimelineResult, calculate_timeline, Cancel
                        BODY_NAMES, RETRO_IDS, ANGLES, DEFAULT_ORBS)
 from .theme import TEXT, MUTED, BORDER, SURFACE, SOFT, ACCENT, primary
 from .aspects import draw_symbol
+from .fields import DateField,TimeField
+from .settings import default_orbs
 
 ASPECT_SYMBOLS = {0:'☌',90:'□',120:'△',180:'☍'}
 COLORS = {None:'#8a675b',0:'#ad841d',90:'#c54843',120:'#536db0',180:'#c54843'}
@@ -281,8 +283,11 @@ class TimelineCanvas(QWidget):
 
 
 class TimelinePage(QWidget):
-    def __init__(self,parent=None):
+    activity_changed = Signal()
+
+    def __init__(self,parent=None,orb_provider=None):
         super().__init__(parent)
+        self.orb_provider=orb_provider or default_orbs
         self.worker = None
         self.result = None
         self.last_progress = None
@@ -296,7 +301,7 @@ class TimelinePage(QWidget):
         primary(self.run_button)
         self.cancel_button = QPushButton(tr('取消計算'))
         self.cancel_button.hide()
-        self.summary = QLabel(tr('每分鐘取樣，包含起訖分鐘。'))
+        self.summary = QLabel(tr('每十分鐘掃描，局部細查事件時間。'))
         self.summary.setObjectName('hint')
         self.summary.setWordWrap(True)
         self.toggle_button = QPushButton(tr('收合設定'))
@@ -310,21 +315,23 @@ class TimelinePage(QWidget):
         layout.addWidget(self.splitter,1)
         self.settings_scroll = QScrollArea()
         self.settings_scroll.setWidgetResizable(True)
-        self.settings_scroll.setMinimumWidth(280)
-        self.settings_scroll.setMaximumWidth(320)
+        self.settings_scroll.setMinimumWidth(310)
+        self.settings_scroll.setMaximumWidth(400)
         self.settings_scroll.setFrameShape(QFrame.Shape.NoFrame)
         self.splitter.addWidget(self.settings_scroll)
         self.settings = QWidget()
+        self.settings.setObjectName('settings')
         self.settings_scroll.setWidget(self.settings)
         settings_layout = QVBoxLayout(self.settings)
-        settings_layout.setContentsMargins(0,0,8,0)
-        settings_layout.setSpacing(14)
+        settings_layout.setContentsMargins(0,6,10,16)
+        settings_layout.setSpacing(18)
 
         def section(title):
             box = QFrame()
             box.setObjectName('section')
             box_layout = QVBoxLayout(box)
-            box_layout.setContentsMargins(16,16,16,16)
+            box_layout.setContentsMargins(16,16,16,18)
+            box_layout.setSpacing(12)
             label = QLabel(title)
             label.setObjectName('sectionTitle')
             box_layout.addWidget(label)
@@ -332,18 +339,18 @@ class TimelinePage(QWidget):
             return box_layout
 
         time_layout = section(tr('01  時間範圍'))
-        self.start_date = QDateEdit(QDate.currentDate())
-        self.end_date = QDateEdit(QDate.currentDate().addMonths(1))
-        self.start_time = QTimeEdit(QTime(0,0))
-        self.end_time = QTimeEdit(QTime(23,59))
+        self.start_date = DateField(birth=False)
+        self.start_date.setDate(QDate.currentDate())
+        self.end_date = DateField(birth=False)
+        self.end_date.setDate(QDate.currentDate().addMonths(1))
+        self.start_time = TimeField(seconds=False)
+        self.start_time.setTime(QTime(0,0))
+        self.end_time = TimeField(seconds=False)
+        self.end_time.setTime(QTime(23,59))
         self.start_fold,self.end_fold = QComboBox(),QComboBox()
         for title,date,clock,fold in ((tr('開始'),self.start_date,self.start_time,self.start_fold),
                                      (tr('結束'),self.end_date,self.end_time,self.end_fold)):
             time_layout.addWidget(QLabel(title))
-            date.setDisplayFormat('yyyy-MM-dd')
-            date.setDateRange(QDate(1850,1,2),QDate(2149,12,30))
-            date.setCalendarPopup(True)
-            clock.setDisplayFormat('HH:mm')
             time_layout.addWidget(date)
             time_layout.addWidget(clock)
             fold.addItem(tr('重複鐘點：請選擇'),None)
@@ -371,20 +378,8 @@ class TimelinePage(QWidget):
             label = QLabel(text)
             label.setWordWrap(True)
             content_layout.addWidget(label)
-        self.orb_group = QGroupBox(tr('自訂相位容許度'))
-        self.orb_group.setCheckable(True)
-        self.orb_group.setChecked(False)
-        form = QFormLayout(self.orb_group)
-        self.orbs = {}
-        for angle,orb in zip(ANGLES,DEFAULT_ORBS):
-            spin = QDoubleSpinBox()
-            spin.setRange(0,15)
-            spin.setDecimals(1)
-            spin.setValue(orb)
-            spin.setSuffix('°')
-            self.orbs[angle] = spin
-            form.addRow(f'{angle}°',spin)
-        content_layout.addWidget(self.orb_group)
+        orb_note=QLabel(tr('相位容許度統一由上方「設定」修改。'))
+        orb_note.setWordWrap(True);orb_note.setObjectName('hint');content_layout.addWidget(orb_note)
         settings_layout.addStretch()
         center = QWidget()
         center_layout = QVBoxLayout(center)
@@ -491,15 +486,12 @@ class TimelinePage(QWidget):
         self.heartbeat.setInterval(1000)
         self.heartbeat.timeout.connect(self.update_elapsed)
         for widget in (self.start_date,self.end_date):
-            widget.dateChanged.connect(self.conditions_changed)
+            widget.textChanged.connect(self.conditions_changed)
         for widget in (self.start_time,self.end_time):
-            widget.timeChanged.connect(self.conditions_changed)
+            widget.textChanged.connect(self.conditions_changed)
         self.zone.editTextChanged.connect(self.conditions_changed)
         for widget in (self.start_fold,self.end_fold):
             widget.currentIndexChanged.connect(self.conditions_changed)
-        self.orb_group.toggled.connect(self.conditions_changed)
-        for spin in self.orbs.values():
-            spin.valueChanged.connect(self.conditions_changed)
         self.initializing = False
         self.conditions_changed()
         self.show_event(None)
@@ -508,7 +500,7 @@ class TimelinePage(QWidget):
         def iso(date,clock):
             return date.date().toString('yyyy-MM-dd')+'T'+clock.time().toString('HH:mm')
         return TimelineInput(iso(self.start_date,self.start_time),iso(self.end_date,self.end_time),
-            self.zone.currentText(),tuple(self.orbs[a].value() for a in ANGLES) if self.orb_group.isChecked() else DEFAULT_ORBS,
+            self.zone.currentText(),tuple(self.orb_provider()[a] for a in ANGLES),
             self.start_fold.currentData(),self.end_fold.currentData())
 
     def conditions_changed(self,*args):
@@ -520,7 +512,12 @@ class TimelinePage(QWidget):
         self.range_label.clear()
         self.progress_bar.hide()
         self.timing.clear()
-        request = self.request()
+        try:request = self.request()
+        except ValueError as exc:
+            self.summary.setText(tr('請核對時間設定。'))
+            self.time_note.setText(str(exc))
+            self.status.setText(tr('設定時間範圍與時區，按「開始計算」。'))
+            return
         for iso,combo in ((request.start,self.start_fold),(request.end,self.end_fold)):
             try:
                 resolve_local(BirthInput(local_iso=iso,zone=request.zone))
@@ -531,7 +528,7 @@ class TimelinePage(QWidget):
                 combo.hide()
         try:
             start,end,total = request.resolve()
-            self.summary.setText(tr('每分鐘取樣 · {n:,} 個時刻',n=total))
+            self.summary.setText(tr('每十分鐘掃描 · {n:,} 個掃描點',n=math.ceil((total-1)/10)+1))
             self.time_note.setText(tr('夏令時間依所選時區與日期自動判斷。'))
             self.status.setText(tr('設定已更新，按「開始計算」產生結果。'))
         except Exception as exc:
@@ -552,8 +549,8 @@ class TimelinePage(QWidget):
     def start_calculation(self):
         if self.worker is not None:
             return
-        request = self.request()
         try:
+            request = self.request()
             request.resolve()
         except Exception as exc:
             self.status.setText(error_text(exc))
@@ -578,6 +575,7 @@ class TimelinePage(QWidget):
         self.worker.cancelled.connect(self.on_cancelled)
         self.worker.failed.connect(self.on_failed)
         self.worker.finished.connect(self.worker_finished)
+        self.activity_changed.emit()
         self.worker.start()
 
     def on_progress(self,payload):
@@ -597,16 +595,18 @@ class TimelinePage(QWidget):
             self.progress_bar.setRange(0,max(1,total))
             self.progress_bar.setValue(done)
             if stage=='sample':
-                self.status.setText(tr('第 1 階段：計算天體位置 · 已完成 {done:,} / {total:,} 個時刻',done=done,total=total))
+                self.status.setText(tr('第 1 階段：掃描時間區間 · 已完成 {done:,} / {total:,} 個掃描點',done=done,total=total))
+            elif stage=='refine':
+                self.status.setText(tr('第 2 階段：細查事件時間 · 已完成 {done:,} / {total:,} 項',done=done,total=total))
             else:
-                self.status.setText(tr('第 2 階段：確認事件時間 · 已完成 {done:,} / {total:,} 項',done=done,total=total))
+                self.status.setText(tr('第 3 階段：建立事件區間 · 已完成 {done:,} / {total:,} 項',done=done,total=total))
         self.update_elapsed()
 
     def update_elapsed(self):
         elapsed = time.monotonic()-self.started
         text = tr('已用時間：{time}',time=duration(elapsed))
         p = self.last_progress
-        if p and p['stage'] in ('sample','refine') and p['done']>0 and p.get('stage_elapsed',0)>10:
+        if p and p['stage'] in ('sample','refine','assemble') and p['done']>0 and p.get('stage_elapsed',0)>10:
             remaining = p['stage_elapsed']*(p['total']-p['done'])/p['done']
             text += ' · '+tr('本階段預估尚需 {time}（隨實際速度更新）',time=duration(remaining))
         elif not p or p['done']==0:
@@ -631,6 +631,7 @@ class TimelinePage(QWidget):
     def worker_finished(self):
         worker = self.worker
         self.worker = None
+        self.activity_changed.emit()
         worker.deleteLater()
         self.settings.setEnabled(True)
         self.run_button.setEnabled(True)
@@ -651,7 +652,7 @@ class TimelinePage(QWidget):
         self.zoom_changed()
         self.range_label.setText(local_time(result.start,result.request.zone)+' — '+local_time(result.end,result.request.zone)+' · '+result.request.zone)
         self.progress_bar.hide()
-        self.status.setText(tr('計算完成 · {n:,} 個時刻 · {events:,} 段事件',n=result.samples,events=len(result.events)))
+        self.status.setText(tr('計算完成 · {n:,} 個掃描點 · {events:,} 段事件',n=result.samples,events=len(result.events)))
         self.timing.setText(tr('總用時：{time}',time=duration(result.elapsed)))
         if result.notes:
             self.timing.setText(self.timing.text()+'\n'+' '.join(tr(n) for n in result.notes))
