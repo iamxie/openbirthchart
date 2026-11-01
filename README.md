@@ -2,6 +2,8 @@
 
 [English](README.en.md) · 繁體中文
 
+**本分支為 0.7.0-dev 開發版，尚未合併／發佈。** 新增獨立的[天象時間軸](docs/SKY_TIMELINE.md)：依時間區間與時區逐分鐘計算八顆天體逆行及十顆天體的主要相位，提供進度、取消、色帶與精確成相標記。下方下載連結仍指向已公開的 0.6.7，不包含此新功能。
+
 Windows 西洋占星本命盤桌面程式，使用 LibEphemeris 計算，提供繁體中文／英文介面、十四種宮位制、天體與宮頭表格、相位及離線報告。
 
 **v0.6.7 已公開發佈。** [下載 Windows 版與完整來源](https://github.com/iamxie/openbirthchart/releases/tag/v0.6.7)。

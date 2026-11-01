@@ -1,4 +1,6 @@
-# Open BirthChart 0.6.7
+# Open BirthChart 0.7.0-dev
+
+本分支為天象時間軸開發版，未合併主線、未公開發佈。請參閱 [功能與限制](docs/SKY_TIMELINE.md)。來源啟動使用本 checkout 的 `launch-desktop.ps1`；下方 0.6.7 發佈紀錄是已公開舊版，並不包含新時間軸。
 
 v0.6.7 已在 GitHub 公開發佈。繁體中文與英文介面；AGPL-3.0-only，Copyright (C) 2026 OpenBirthChart contributors。
 

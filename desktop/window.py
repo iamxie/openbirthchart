@@ -10,7 +10,7 @@ from PySide6.QtGui import QColor, QFont, QAction
 from PySide6.QtWidgets import (QApplication,QMainWindow,QWidget,QVBoxLayout,QHBoxLayout,QFormLayout,
     QGroupBox,QLabel,QDateEdit,QTimeEdit,QDoubleSpinBox,QSpinBox,QComboBox,QCheckBox,QPushButton,
     QScrollArea,QSplitter,QTabWidget,QTableWidget,QTableWidgetItem,QHeaderView,QFileDialog,QMessageBox,
-    QAbstractItemView,QCompleter,QSizePolicy,QLineEdit,QMenu,QDialog,QDialogButtonBox,QToolButton,QPlainTextEdit,QFrame)
+    QAbstractItemView,QCompleter,QSizePolicy,QLineEdit,QMenu,QDialog,QDialogButtonBox,QToolButton,QPlainTextEdit,QFrame,QTabBar,QStackedWidget)
 from .model import (BirthInput,ChartEngine,HOUSE_SYSTEMS,ASPECTS,APP_VERSION,
     available_timezones,resolve_local,zodiac_text,calculation_key,display_chart,sorted_aspect_details)
 from .chart import ChartWidget,export_chart,font_family
@@ -63,11 +63,26 @@ class MainWindow(QMainWindow):
         title=QLabel('Open BirthChart');title.setObjectName('brandTitle');brand.addWidget(title)
         self.record_status=QLabel(tr('新增個人檔案'));self.record_status.setObjectName('hint');brand.addSpacing(18);brand.addWidget(self.record_status)
         header.addLayout(brand);header.addStretch()
+        self.mode_menu=QToolButton();self.mode_menu.setText(tr('功能'))
+        self.mode_menu.setPopupMode(QToolButton.ToolButtonPopupMode.InstantPopup)
+        mode_menu=QMenu(self.mode_menu);self.mode_menu_actions=[]
+        for index,title in enumerate((tr('個人星盤'),tr('天象時間軸'))):
+            action=mode_menu.addAction(title);action.setCheckable(True);action.setChecked(index==0)
+            action.triggered.connect(lambda checked=False,i=index:self.mode_tabs.setCurrentIndex(i))
+            self.mode_menu_actions.append(action)
+        self.mode_menu.setMenu(mode_menu);self.mode_menu.hide();header.addWidget(self.mode_menu)
         self.language_button=QPushButton('語言 / Language');header.addWidget(self.language_button)
         self.language_button.clicked.connect(self.choose_language)
         self.legal_button=QPushButton(tr('關於與授權'));header.addWidget(self.legal_button)
         self.legal_button.clicked.connect(self.legal_action.trigger)
         self.form_toggle=QPushButton(tr('收合填寫區'));header.addWidget(self.form_toggle);layout.addLayout(header)
+        self.mode_tabs=QTabBar();self.mode_tabs.addTab(tr('個人星盤'));self.mode_tabs.addTab(tr('天象時間軸'))
+        self.mode_tabs.setExpanding(False);layout.addWidget(self.mode_tabs)
+        self.mode_stack=QStackedWidget();layout.addWidget(self.mode_stack,1)
+        self.birth_page=QWidget();self.mode_stack.addWidget(self.birth_page)
+        self.timeline_page=None
+        layout=QVBoxLayout(self.birth_page);layout.setContentsMargins(0,0,0,0)
+        self.mode_tabs.currentChanged.connect(self.switch_mode)
         toolbar=QHBoxLayout()
         self.new_button=QPushButton(tr('新增個人檔案'));self.load_button=QPushButton(tr('載入'))
         self.save_button=QPushButton(tr('儲存'));self.calculate_button=QPushButton(tr('排星盤'));self.calculate_button.setObjectName('calculate')
@@ -195,6 +210,23 @@ class MainWindow(QMainWindow):
         self.saved_payload=self.form_snapshot();self.initial_payload=self.form_snapshot()
         for field in (self.name,self.date,self.time,self.lon,self.lat,self.zone.lineEdit()):
             field.editingFinished.connect(lambda w=field:w.setText(trim_text(w.text())))
+
+    def switch_mode(self,index):
+        if index==1 and self.timeline_page is None:
+            from .timeline_ui import TimelinePage
+            self.timeline_page=TimelinePage(self)
+            self.mode_stack.addWidget(self.timeline_page)
+        self.mode_stack.setCurrentIndex(index)
+        self.form_toggle.setVisible(index==0)
+        self.record_status.setVisible(index==0)
+        for i,action in enumerate(self.mode_menu_actions):action.setChecked(i==index)
+
+    def resizeEvent(self,event):
+        super().resizeEvent(event)
+        if hasattr(self,'mode_tabs'):
+            compact=self.height()<650
+            self.mode_tabs.setVisible(not compact)
+            self.mode_menu.setVisible(compact)
 
     def choose_language(self):
         try:selected=self.store.load_ui_language()
@@ -558,6 +590,8 @@ class MainWindow(QMainWindow):
             self.load_record(rows[table.currentRow()]['id'])
 
     def closeEvent(self,event):
+        if self.timeline_page is not None and not self.timeline_page.request_close():
+            event.ignore();return
         if self.worker and self.worker.isRunning():
             self.status.setText(tr('計算尚未結束，完成後即可關閉。'));event.ignore();return
         if not self.confirm_discard():event.ignore();return

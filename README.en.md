@@ -2,6 +2,8 @@
 
 English · [繁體中文](README.md)
 
+**This branch is the unmerged, unreleased 0.7.0-dev development version.** The new [Sky timeline](docs/SKY_TIMELINE.md) samples a time range minute by minute, with retrograde intervals, major aspects, exact-event markers, real progress and cancellation. Download links below still refer to the published 0.6.7 release, which does not include this feature.
+
 A Windows desktop natal-chart application powered by LibEphemeris, with Traditional Chinese and English interfaces, fourteen house systems, planetary positions, house cusps, aspects and offline reports.
 
 **v0.6.7 is now available.** [Download the Windows application and full corresponding source](https://github.com/iamxie/openbirthchart/releases/tag/v0.6.7).

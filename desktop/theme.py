@@ -98,6 +98,8 @@ def apply_theme(app, family):
         QSplitter::handle { background:transparent; width:10px; }
         QSplitter::handle:hover { background:@soft; }
         QToolTip { background:@surface; color:@text; border:1px solid @border; padding:6px; }
+        QProgressBar { border:0; background:#e7dace; border-radius:4px; }
+        QProgressBar::chunk { background:@accent; border-radius:4px; }
         QMenu { background:@surface; border:1px solid @border; padding:5px; }
         QMenu::item { padding:7px 18px; }
         QMenu::item:selected { background:@soft; }
