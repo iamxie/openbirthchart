@@ -2,7 +2,7 @@
 
 English · [繁體中文](README.md)
 
-**This branch is the unmerged, unreleased 0.7.0-dev development version.** The new [Sky timeline](docs/SKY_TIMELINE.md) scans every ten minutes and locally refines retrograde and aspect events, with interval bands, exact-event markers, real progress and cancellation. Both modes share application-wide aspect-orb settings. Download links below still refer to the published 0.6.7 release, which does not include this feature.
+**This branch is the unmerged, unreleased 0.7.0-dev development version.** The new [Sky timeline](docs/SKY_TIMELINE.md) scans every ten minutes and locally refines retrograde events and the 28 aspect pairs from Mercury through Pluto (excluding the Sun and Moon), with interval bands, exact-event markers, real progress and cancellation. Both modes share application-wide aspect-orb settings. Download links below still refer to the published 0.6.7 release, which does not include this feature.
 
 A Windows desktop natal-chart application powered by LibEphemeris, with Traditional Chinese and English interfaces, fourteen house systems, planetary positions, house cusps, aspects and offline reports.
 

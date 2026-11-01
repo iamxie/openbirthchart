@@ -27,11 +27,11 @@ class LanguageDialog(QDialog):
 class ExportDialog(QDialog):
     def __init__(self, parent=None, timeline=False, has_selection=False):
         super().__init__(parent)
-        self.setWindowTitle(tr('匯出 HTML 文件'))
+        self.setWindowTitle(tr('匯出文件'))
         self.resize(560, 490)
         layout = QVBoxLayout(self)
         dialog_layout(layout)
-        title = QLabel(tr('匯出 HTML 文件')); title.setObjectName('dialogTitle'); layout.addWidget(title)
+        title = QLabel(tr('匯出文件')); title.setObjectName('dialogTitle'); layout.addWidget(title)
         subtitle = QLabel(tr('單一檔案，可離線閱讀與列印。')); subtitle.setObjectName('hint'); layout.addWidget(subtitle)
         layout.addWidget(QLabel(tr('文件語系／範本')))
         self.templates = QComboBox()

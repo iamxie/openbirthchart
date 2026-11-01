@@ -313,7 +313,7 @@ UTC: {p2}</translation>
     <message>
       <source>列印建議：新版 Chrome／Edge、A4 橫向、縮放 100%，關閉瀏覽器頁首頁尾。頁碼僅在列印／PDF 顯示；較長內容會續頁。</source>
       <translation>Print with a recent Chrome or Edge: A4 landscape, 100% scale, browser headers and footers off. Page numbers appear in print/PDF; long content continues onto additional pages.</translation>
-      <location filename="../desktop/dialogs.py" line="49" />
+      <location filename="../desktop/dialogs.py" line="50" />
     </message>
     <message>
       <source>包含個人備註</source>
@@ -348,7 +348,7 @@ UTC: {p2}</translation>
     <message>
       <source>匯出文件</source>
       <translation>Export Report</translation>
-      <location filename="../desktop/dialogs.py" line="54" />
+      <location filename="../desktop/dialogs.py" line="30" />
     </message>
     <message>
       <source>十二宮</source>
@@ -678,7 +678,7 @@ UTC: {p2}</translation>
     <message>
       <source>已匯出文件：</source>
       <translation>Report exported: </translation>
-      <location filename="../desktop/timeline_ui.py" line="743" />
+      <location filename="../desktop/timeline_ui.py" line="744" />
     </message>
     <message>
       <source>已套用</source>
@@ -858,7 +858,7 @@ UTC: {p2}</translation>
     <message>
       <source>星盤圖、天體位置、十二宮宮頭位置、相位圖與相位詳細列表。</source>
       <translation>Includes the chart wheel, celestial positions, house cusps, aspect grid, and aspect details.</translation>
-      <location filename="../desktop/dialogs.py" line="47" />
+      <location filename="../desktop/dialogs.py" line="48" />
     </message>
     <message>
       <source>時間（時：分：秒）</source>
@@ -1123,7 +1123,7 @@ UTC: {p2}</translation>
     <message>
       <source>無法匯出</source>
       <translation>Unable to Export</translation>
-      <location filename="../desktop/timeline_ui.py" line="735" />
+      <location filename="../desktop/timeline_ui.py" line="736" />
     </message>
     <message>
       <source>無法建立 Documents/openbirthchart 資料夾，請確認資料夾權限。</source>
@@ -1833,7 +1833,7 @@ UTC: {p2}</translation>
     <message>
       <source>已用時間：{time}</source>
       <translation>Elapsed: {time}</translation>
-      <location filename="../desktop/timeline_ui.py" line="623" />
+      <location filename="../desktop/timeline_ui.py" line="624" />
     </message>
     <message>
       <source>天體／相位</source>
@@ -1898,12 +1898,12 @@ UTC: {p2}</translation>
     <message>
       <source>上一段時間</source>
       <translation>Previous time window</translation>
-      <location filename="../desktop/timeline_ui.py" line="437" />
+      <location filename="../desktop/timeline_ui.py" line="438" />
     </message>
     <message>
       <source>下一段時間</source>
       <translation>Next time window</translation>
-      <location filename="../desktop/timeline_ui.py" line="438" />
+      <location filename="../desktop/timeline_ui.py" line="439" />
     </message>
     <message>
       <source>R 逆行　☌ 合相　□ 四分　△ 三分　☍ 對分　◆ 精確成相</source>
@@ -1918,22 +1918,22 @@ UTC: {p2}</translation>
     <message>
       <source>設定時間範圍與時區，按「開始計算」。</source>
       <translation>Set the time range and time zone, then select Calculate.</translation>
-      <location filename="../desktop/timeline_ui.py" line="470" />
+      <location filename="../desktop/timeline_ui.py" line="471" />
     </message>
     <message>
       <source>正在準備星曆資料，請稍候。</source>
       <translation>Preparing ephemeris data. Please wait.</translation>
-      <location filename="../desktop/timeline_ui.py" line="582" />
+      <location filename="../desktop/timeline_ui.py" line="583" />
     </message>
     <message>
       <source>計算已取消。可調整條件後重新開始。</source>
       <translation>Calculation cancelled. Adjust the settings and start again.</translation>
-      <location filename="../desktop/timeline_ui.py" line="641" />
+      <location filename="../desktop/timeline_ui.py" line="642" />
     </message>
     <message>
       <source>計算未完成：{reason}</source>
       <translation>Calculation did not complete: {reason}</translation>
-      <location filename="../desktop/timeline_ui.py" line="645" />
+      <location filename="../desktop/timeline_ui.py" line="646" />
     </message>
     <message>
       <source>計算完成 · {n:,} 個時刻 · {events:,} 段事件</source>
@@ -1943,7 +1943,7 @@ UTC: {p2}</translation>
     <message>
       <source>總用時：{time}</source>
       <translation>Total elapsed: {time}</translation>
-      <location filename="../desktop/timeline_ui.py" line="672" />
+      <location filename="../desktop/timeline_ui.py" line="673" />
     </message>
     <message>
       <source>選擇時間範圍與時區，按「開始計算」查看天象。</source>
@@ -1978,7 +1978,7 @@ UTC: {p2}</translation>
     <message>
       <source>全期</source>
       <translation>Full range</translation>
-      <location filename="../desktop/timeline_ui.py" line="430" />
+      <location filename="../desktop/timeline_ui.py" line="431" />
     </message>
     <message>
       <source>週</source>
@@ -1998,27 +1998,27 @@ UTC: {p2}</translation>
     <message>
       <source>夏令時間依所選時區與日期自動判斷。</source>
       <translation>Daylight saving follows the selected time zone and dates.</translation>
-      <location filename="../desktop/timeline_ui.py" line="546" />
+      <location filename="../desktop/timeline_ui.py" line="547" />
     </message>
     <message>
       <source>設定已更新，按「開始計算」產生結果。</source>
       <translation>Settings updated. Select Calculate to generate results.</translation>
-      <location filename="../desktop/timeline_ui.py" line="547" />
+      <location filename="../desktop/timeline_ui.py" line="548" />
     </message>
     <message>
       <source>展開設定</source>
       <translation>Show settings</translation>
-      <location filename="../desktop/timeline_ui.py" line="561" />
+      <location filename="../desktop/timeline_ui.py" line="562" />
     </message>
     <message>
       <source>本階段預估尚需 {time}（隨實際速度更新）</source>
       <translation>About {time} remaining in this stage (updated from measured speed)</translation>
-      <location filename="../desktop/timeline_ui.py" line="627" />
+      <location filename="../desktop/timeline_ui.py" line="628" />
     </message>
     <message>
       <source>正在停止計算並釋放資源，請稍候。</source>
       <translation>Stopping the calculation and releasing resources. Please wait.</translation>
-      <location filename="../desktop/timeline_ui.py" line="636" />
+      <location filename="../desktop/timeline_ui.py" line="637" />
     </message>
     <message>
       <source>點選色帶，查看起訖時間與精確成相。</source>
@@ -2038,7 +2038,7 @@ UTC: {p2}</translation>
     <message>
       <source>請核對時間設定。</source>
       <translation>Check the time settings.</translation>
-      <location filename="../desktop/timeline_ui.py" line="531" />
+      <location filename="../desktop/timeline_ui.py" line="532" />
     </message>
     <message>
       <source>第 1 階段：計算天體位置 · 已完成 {done:,} / {total:,} 個時刻</source>
@@ -2053,7 +2053,7 @@ UTC: {p2}</translation>
     <message>
       <source>正在取得運算速度，稍後提供估計。</source>
       <translation>Measuring calculation speed; an estimate will follow.</translation>
-      <location filename="../desktop/timeline_ui.py" line="629" />
+      <location filename="../desktop/timeline_ui.py" line="630" />
     </message>
     <message>
       <source>這顆天體不列入逆行檢查。</source>
@@ -2078,12 +2078,12 @@ UTC: {p2}</translation>
     <message>
       <source>正在接合逆行與相位區間。</source>
       <translation>Joining retrograde and aspect intervals.</translation>
-      <location filename="../desktop/timeline_ui.py" line="605" />
+      <location filename="../desktop/timeline_ui.py" line="606" />
     </message>
     <message>
       <source>正在建立時間軸，即將完成。</source>
       <translation>Building the timeline. Almost done.</translation>
-      <location filename="../desktop/timeline_ui.py" line="607" />
+      <location filename="../desktop/timeline_ui.py" line="608" />
     </message>
     <message>
       <source>容許度 ±{orb}°</source>
@@ -2128,22 +2128,22 @@ UTC: {p2}</translation>
     <message>
       <source>月視圖</source>
       <translation>Month</translation>
-      <location filename="../desktop/timeline_ui.py" line="430" />
+      <location filename="../desktop/timeline_ui.py" line="431" />
     </message>
     <message>
       <source>週視圖</source>
       <translation>Week</translation>
-      <location filename="../desktop/timeline_ui.py" line="430" />
+      <location filename="../desktop/timeline_ui.py" line="431" />
     </message>
     <message>
       <source>日視圖</source>
       <translation>Day</translation>
-      <location filename="../desktop/timeline_ui.py" line="430" />
+      <location filename="../desktop/timeline_ui.py" line="431" />
     </message>
     <message>
       <source>背景計算意外停止，請重新開始。</source>
       <translation>The background calculation stopped unexpectedly. Please start again.</translation>
-      <location filename="../desktop/timeline.py" line="466" />
+      <location filename="../desktop/timeline.py" line="467" />
     </message>
     <message>
       <source>功能</source>
@@ -2203,27 +2203,27 @@ UTC: {p2}</translation>
     <message>
       <source>計算完成 · {n:,} 個掃描點 · {events:,} 段事件</source>
       <translation>Complete · {n:,} scan points · {events:,} events</translation>
-      <location filename="../desktop/timeline_ui.py" line="671" />
+      <location filename="../desktop/timeline_ui.py" line="672" />
     </message>
     <message>
       <source>每十分鐘掃描 · {n:,} 個掃描點</source>
       <translation>Ten-minute scan · {n:,} scan points</translation>
-      <location filename="../desktop/timeline_ui.py" line="545" />
+      <location filename="../desktop/timeline_ui.py" line="546" />
     </message>
     <message>
       <source>第 1 階段：掃描時間區間 · 已完成 {done:,} / {total:,} 個掃描點</source>
       <translation>Stage 1: Scanning the range · {done:,} / {total:,} scan points</translation>
-      <location filename="../desktop/timeline_ui.py" line="612" />
+      <location filename="../desktop/timeline_ui.py" line="613" />
     </message>
     <message>
       <source>第 2 階段：細查事件時間 · 已完成 {done:,} / {total:,} 項</source>
       <translation>Stage 2: Refining event times · {done:,} / {total:,} items</translation>
-      <location filename="../desktop/timeline_ui.py" line="614" />
+      <location filename="../desktop/timeline_ui.py" line="615" />
     </message>
     <message>
       <source>第 3 階段：建立事件區間 · 已完成 {done:,} / {total:,} 項</source>
       <translation>Stage 3: Building event intervals · {done:,} / {total:,} items</translation>
-      <location filename="../desktop/timeline_ui.py" line="618" />
+      <location filename="../desktop/timeline_ui.py" line="619" />
     </message>
     <message>
       <source>設定</source>
@@ -2253,7 +2253,7 @@ UTC: {p2}</translation>
     <message>
       <source>時間軸、事件列表、星座歷程與精確成相。所選事件匯出另附重疊事件列表。</source>
       <translation>Timeline, event catalog, zodiac history and exact aspects. Selected-event exports also list overlapping events.</translation>
-      <location filename="../desktop/dialogs.py" line="47" />
+      <location filename="../desktop/dialogs.py" line="48" />
     </message>
     <message>
       <source>上一個事件</source>
@@ -2303,7 +2303,17 @@ UTC: {p2}</translation>
     <message>
       <source>正在建立星座歷程 · 已完成 {done} / {total} 顆天體</source>
       <translation>Building zodiac history · {done} / {total} bodies complete</translation>
-      <location filename="../desktop/timeline_ui.py" line="616" />
+      <location filename="../desktop/timeline_ui.py" line="617" />
+    </message>
+    <message>
+      <source>相位：水星至冥王星，共 28 組配對；不含太陽與月亮。</source>
+      <translation>Aspects: Mercury through Pluto, 28 pairs; Sun and Moon excluded.</translation>
+      <location filename="../desktop/timeline_ui.py" line="399" />
+    </message>
+    <message>
+      <source>◆ 精確成相，虛線為換座；上／下列分別對應兩顆天體。短區段可懸停或點選查看星座歷程。</source>
+      <translation>◆ Exact aspect; dashed lines mark sign changes. Upper/lower signs match the two bodies. Hover or select narrow intervals for their zodiac history.</translation>
+      <location filename="../desktop/timeline_ui.py" line="467" />
     </message>
   </context>
   <context>

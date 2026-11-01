@@ -31,7 +31,7 @@ BODY_NAMES = ('太陽', '月亮', '水星', '金星', '火星', '木星', '土�
 RETRO_IDS = tuple(range(2, 10))
 ANGLES = (0, 90, 120, 180)
 DEFAULT_ORBS = tuple(default_orbs()[angle] for angle in ANGLES)
-PAIRS = tuple(combinations(range(10), 2))
+PAIRS = tuple(combinations(RETRO_IDS, 2))
 UTC = timezone.utc
 
 
@@ -175,10 +175,11 @@ def _positions(stamp, bodies=tuple(range(10))):
 
 def _sample_chunk(job):
     start, end, offset, count, step = job
-    result = np.empty((count, 10, 2), dtype=np.float64)
+    result = np.zeros((count, 10, 2), dtype=np.float64)
     notes = set()
     for i in range(count):
-        result[i], found = _positions(min(end,start + (offset + i) * step))
+        positions, found = _positions(min(end,start + (offset + i) * step), RETRO_IDS)
+        result[i,list(RETRO_IDS)] = positions
         notes.update(found)
     return offset, result, sorted(notes), os.getpid()
 
@@ -345,7 +346,7 @@ class EventCollector:
         if self.first is None:self.first=p.copy()
         if self.previous is not None:
             pt,pp=self.previous
-            for a in range(10):
+            for a in RETRO_IDS:
                 jobs=[]
                 turn=pp[a,1]*p[a,1]<0
                 for target in range(0,360,30):
@@ -395,7 +396,7 @@ class EventCollector:
                 yield key,self.start,self.end,orb,roots['edge'],roots['exact'],initial,final
 
     def zodiac_jobs(self):
-        for body in range(10):
+        for body in RETRO_IDS:
             yield body,self.start,self.end,self.roots.get(('sign',body,None,None),{}).get('edge',[])
 
 
@@ -487,7 +488,7 @@ def calculate_timeline(request, progress=None, cancelled=None, workers=None, chu
         events=[]
         for group in run_jobs(assembly,_assemble_events,'assemble',len(assembly)):events.extend(group)
         zodiac=[]
-        for group in run_jobs(collector.zodiac_jobs(),_assemble_sign_segments,'zodiac',10):zodiac.extend(group)
+        for group in run_jobs(collector.zodiac_jobs(),_assemble_sign_segments,'zodiac',len(RETRO_IDS)):zodiac.extend(group)
         events.sort(key=lambda e:(e.kind!='retro',e.a,e.b or -1,e.angle or 0,e.start))
         report('finish',1,1)
         pool.close()

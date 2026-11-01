@@ -25,6 +25,25 @@ def fixture():
 
 
 class DetailsTests(unittest.TestCase):
+    def test_scope_palette_and_chart_first_report(self):
+        from desktop.timeline import PAIRS,RETRO_IDS,_sample_chunk
+        from desktop.timeline_palette import COLORS
+        from desktop.timeline_ui import COLORS as UI_COLORS
+        from desktop.timeline_report import COLORS as REPORT_COLORS
+        self.assertEqual(len(PAIRS),28)
+        self.assertIs(UI_COLORS,REPORT_COLORS)
+        self.assertEqual(len(set(COLORS.values())),5)
+        calls=[]
+        def positions(stamp,bodies):
+            calls.append(bodies);return np.zeros((len(bodies),2)),[]
+        with patch('desktop.timeline._positions',positions):_sample_chunk((0,600,0,2,600))
+        self.assertEqual(calls,[RETRO_IDS,RETRO_IDS])
+        r,e,_=fixture()
+        for locale in ('zh-TW','en-US'):
+            doc=render_timeline_html(r,ROOT/'templates/report'/locale)
+            self.assertLess(doc.index('id="timeline"'),doc.index('id="overview"'))
+            for color in COLORS.values():self.assertIn(color,doc)
+
     def curve_segments(self,fn,times):
         def positions(t,bodies):
             p=np.zeros((10,2));p[:,0]=np.arange(10)*29+1;p[:,1]=1
@@ -34,7 +53,7 @@ class DetailsTests(unittest.TestCase):
         for t in times:c.consume(t,positions(t,tuple(range(10)))[0])
         with patch('desktop.timeline._positions',positions):
             c.apply_refinements([_refine_bundle(jobs) for jobs,key in c.jobs])
-            return _assemble_sign_segments(list(c.zodiac_jobs())[2])
+            return _assemble_sign_segments(list(c.zodiac_jobs())[0])
 
     def test_wrap_and_retrograde_sign_crossing(self):
         for direction,expected in ((1,[11,0]),(-1,[0,11])):
@@ -104,6 +123,8 @@ class DetailsUiTests(unittest.TestCase):
         from desktop.timeline_ui import TimelinePage
         from PySide6.QtCore import QUrl
         p=TimelinePage();r,e,other=fixture();p.apply_result(r);p.show_event(e)
+        self.assertEqual(p.export_button.text(),'匯出文件')
+        self.assertEqual([p.body_filter.itemData(i) for i in range(p.body_filter.count())],[None,*range(2,10)])
         d=p.detail_dialog
         self.assertTrue(p.export_button.isEnabled());self.assertEqual(d.scope.count(),4)
         d.scope.setCurrentIndex(2)

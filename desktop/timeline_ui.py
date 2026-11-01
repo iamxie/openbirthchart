@@ -24,13 +24,13 @@ from .aspects import draw_symbol
 from .fields import DateField,TimeField
 from .settings import default_orbs
 from .timeline_details import event_spans
-from .timeline_report import labels_for, sign_description, sign_name
+from .timeline_report import labels_for, sign_description, sign_name, color_legend
 from .timeline_dialog import EventDetailDialog
 from .report import TEMPLATES
 from .i18n import language
 
 ASPECT_SYMBOLS = {0:'☌',90:'□',120:'△',180:'☍'}
-COLORS = {None:'#8a675b',0:'#ad841d',90:'#c54843',120:'#536db0',180:'#c54843'}
+from .timeline_palette import COLORS
 
 
 def event_label(event):
@@ -396,7 +396,7 @@ class TimelinePage(QWidget):
         time_layout.addWidget(self.time_note)
         content_layout = section(tr('02  計算內容'))
         for text in (tr('逆行：水、金、火、木、土、天、海、冥，共八顆。'),
-                     tr('相位：日、月及上述八顆天體，共 45 組配對。')):
+                     tr('相位：水星至冥王星，共 28 組配對；不含太陽與月亮。')):
             label = QLabel(text)
             label.setWordWrap(True)
             content_layout.addWidget(label)
@@ -424,7 +424,8 @@ class TimelinePage(QWidget):
             self.aspect_filter.addItem(aspect_icon(angle),f'{angle}°',angle)
         self.body_filter = QComboBox()
         self.body_filter.addItem(tr('全部天體'),None)
-        for i,name in enumerate(BODY_NAMES):
+        for i in RETRO_IDS:
+            name=BODY_NAMES[i]
             self.body_filter.addItem(tr(name),i)
         self.zoom = QComboBox()
         for title,days in ((tr('全期'),None),(tr('月視圖'),30),(tr('週視圖'),7),(tr('日視圖'),1)):
@@ -439,7 +440,7 @@ class TimelinePage(QWidget):
         for widget in (self.aspect_filter,self.body_filter,self.zoom,self.previous_button,self.next_button):
             filters.addWidget(widget)
         self.detail_button=QPushButton(tr('事件詳情'))
-        self.export_button=QPushButton(tr('匯出 HTML 文件'))
+        self.export_button=QPushButton(tr('匯出文件'))
         heading_row.addWidget(self.export_button)
         heading_row.addWidget(self.detail_button)
         center_layout.addLayout(filters)
@@ -459,11 +460,11 @@ class TimelinePage(QWidget):
         self.chart_scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.chart_scroll.setWidget(self.canvas)
         chart_layout.addWidget(self.chart_scroll,1)
-        legend = QLabel(tr('R 逆行　0° 合相　90° 四分　120° 三分　180° 對分　◆ 精確成相'))
+        legend = QLabel(color_legend(self.canvas.labels))
         legend.setObjectName('hint')
         legend.setWordWrap(True)
         chart_layout.addWidget(legend)
-        sign_hint=QLabel(tr('虛線為換座；相位色帶上列對應第一顆天體，下列對應第二顆。短區段可懸停或點選查看完整星座歷程。'))
+        sign_hint=QLabel(tr('◆ 精確成相，虛線為換座；上／下列分別對應兩顆天體。短區段可懸停或點選查看星座歷程。'))
         sign_hint.setWordWrap(True);sign_hint.setObjectName('hint');chart_layout.addWidget(sign_hint)
         self.result_splitter.addWidget(chart_area)
         self.splitter.setSizes([290,1100])
@@ -734,7 +735,7 @@ class TimelinePage(QWidget):
         except OSError as exc:
             QMessageBox.warning(self,tr('無法匯出'),str(exc));return
         name='sky-timeline-'+self.result.request.start[:10]+'.html'
-        path,_=QFileDialog.getSaveFileName(self,tr('匯出 HTML 文件'),str(directory/name),'HTML (*.html)')
+        path,_=QFileDialog.getSaveFileName(self,tr('匯出文件'),str(directory/name),'HTML (*.html)')
         if path:
             if not path.lower().endswith('.html'):path+='.html'
             try:

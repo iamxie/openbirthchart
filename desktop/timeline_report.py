@@ -10,7 +10,7 @@ from .timeline import BODY_NAMES, ANGLES
 from .timeline_details import event_spans, sign_at, sign_path, overlapping_events, local_time
 from .model import APP_VERSION
 
-COLORS={None:'#8a675b',0:'#ad841d',90:'#c54843',120:'#536db0',180:'#c54843'}
+from .timeline_palette import COLORS
 esc=lambda value:html.escape(str(value),quote=True)
 
 
@@ -24,6 +24,11 @@ def labels_for(folder=None):
     labels=json.loads((folder/'labels.json').read_text(encoding='utf-8'))
     labels.update(json.loads((folder/'timeline-labels.json').read_text(encoding='utf-8')))
     return labels
+
+
+def color_legend(labels):
+    entries=[(None,labels['retro_legend'])]+[(a,labels['aspect_meanings'][str(a)]) for a in ANGLES]
+    return '　 '.join(f'<span style="color:{COLORS[a]}">■</span> '+esc(text) for a,text in entries)
 
 
 def event_title(event,labels):
@@ -52,8 +57,9 @@ def table(headers,rows):
 def event_html(result,event,labels,compact=False):
     """HTML fragment usable by QTextBrowser and exported documents."""
     clock=lambda t:esc(local_time(t,result.request.zone))
-    out='<h2>'+esc(event_title(event,labels))+'</h2><p>'+clock(event.start)+' — '+clock(event.end)+'</p>'
+    out=f'<h2 style="color:{COLORS[event.angle]}">'+esc(event_title(event,labels))+'</h2><p>'+clock(event.start)+' — '+clock(event.end)+'</p>'
     if event.angle is not None:
+        out+='<p>'+esc(labels['aspect_meanings'][str(event.angle)])+'</p>'
         out+='<p>'+esc(labels['orb'].format(orb=result.request.orbs[ANGLES.index(event.angle)]))+'</p>'
     for clipped,key in ((event.clipped_start,'clipped_start'),(event.clipped_end,'clipped_end')):
         if clipped:out+='<p>'+esc(labels[key])+'</p>'
@@ -118,7 +124,7 @@ def gantt_pages(result,events,labels,window=None):
                             xx=x(stamp);svg.append(f'<path d="M {xx:.3f} {y-4} l 4 4 -4 4 -4 -4 Z" fill="{color}" stroke="white"/>')
                     svg.append('</a>')
             svg.append('</svg>')
-            pages.append('<section class="page timeline-chart"><h2>'+esc(labels['timeline_title'])+'</h2><p>'+esc(local_time(start,result.request.zone))+' — '+esc(local_time(min(end,result.end),result.request.zone))+'</p>'+''.join(svg)+'<p class="hint">'+esc(labels['legend'])+'</p></section>')
+            pages.append('<section class="page timeline-chart"><h2>'+esc(labels['timeline_title'])+'</h2><p>'+esc(local_time(start,result.request.zone))+' — '+esc(local_time(min(end,result.end),result.request.zone))+' · '+esc(result.request.zone)+'</p>'+''.join(svg)+'<p class="hint">'+color_legend(labels)+'</p><p class="hint">'+esc(labels['legend'])+'</p></section>')
         start=end
     return ''.join(pages)
 
@@ -127,7 +133,8 @@ def render_timeline_html(result,template_dir=None,selected=None):
     folder=Path(template_dir or TEMPLATES/'zh-TW');labels=labels_for(folder)
     events=list(enumerate(result.events))
     if selected is not None:events=[(i,e) for i,e in events if e is selected]
-    intro='<h1>'+esc(labels['timeline_title'])+'</h1><p>'+esc(local_time(result.start,result.request.zone))+' — '+esc(local_time(result.end,result.request.zone))+'</p><p>'+esc(result.request.zone)+'</p>'
+    intro='<h1>'+esc(labels['overview_title'])+'</h1><p>'+esc(local_time(result.start,result.request.zone))+' — '+esc(local_time(result.end,result.request.zone))+'</p><p>'+esc(result.request.zone)+'</p>'
+    intro+='<p>'+esc(labels['body_scope'])+'</p>'
     intro+='<p>'+esc(labels['selected_scope'] if selected else labels['all_scope'])+'</p><p>'+esc(labels['convention'])+'</p>'
     intro+='<p>'+esc(labels['orbs'])+': '+esc(' · '.join(f'{a}° ±{o}°' for a,o in zip(ANGLES,result.request.orbs)))+'</p>'
     intro+='<p>'+esc(labels['print_hint'])+'</p>'
@@ -137,8 +144,10 @@ def render_timeline_html(result,template_dir=None,selected=None):
         [[f'<a href="#event-{i}">{esc(event_title(e,labels))}</a>',esc(local_time(e.start,result.request.zone)),
           esc(local_time(e.end,result.request.zone)),esc(sign_description(result,e,labels))] for i,e in events])
     if not events:intro+='<p>'+esc(labels['no_events'])+'</p>'
-    content='<section class="page" id="overview">'+intro+'</section>'+gantt_pages(result,events,labels,
-        (selected.start,selected.end) if selected is not None else None)
+    charts=gantt_pages(result,events,labels,(selected.start,selected.end) if selected is not None else None)
+    if not charts:charts='<section class="page timeline-chart"><h2>'+esc(labels['timeline_title'])+'</h2><p>'+esc(labels['no_events'])+'</p></section>'
+    content=charts.replace('<section ', '<section id="timeline" ',1)
+    content+='<section class="page" id="overview">'+intro+'</section>'
     content+='<section class="page"><h1>'+esc(labels['details_title'])+'</h1>'
     for index,event in events:
         content+=f'<article id="event-{index}">'+event_html(result,event,labels,compact=True)

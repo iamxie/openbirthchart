@@ -26,5 +26,14 @@
   "convention": "Times use the selected zone with UTC offsets. Event and ingress times display seconds; the 0.125-second root-solving stop criterion is not an absolute ephemeris accuracy guarantee.",
   "orbs": "Orbs used for this calculation",
   "no_events": "No events in this range.",
-  "overview": "Back to overview"
+  "overview": "Settings and events",
+  "aspect_meanings": {
+    "0": "0° Conjunction · Mutual strengthening",
+    "90": "90° Square · Mutual weakening",
+    "120": "120° Trine · Favorable",
+    "180": "180° Opposition · Adverse"
+  },
+  "retro_legend": "Retrograde",
+  "body_scope": "Mercury through Pluto · 8 bodies · 28 aspect pairs (Sun and Moon excluded)",
+  "overview_title": "Query Settings and Event Catalog"
 }

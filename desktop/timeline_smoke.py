@@ -14,8 +14,8 @@ def run_timeline_smoke(app,window,out,guard):
     window.resize(1440,900)
     window.mode_tabs.setCurrentIndex(1)
     page=window.timeline_page
-    page.start_date.setDate(QDate(2027,1,2))
-    page.end_date.setDate(QDate(2027,1,3))
+    page.start_date.setDate(QDate(2026,11,16))
+    page.end_date.setDate(QDate(2026,11,17))
     page.start_time.setTime(QTime(0,0))
     page.end_time.setTime(QTime(15,59))
     page.zone.setCurrentText('Asia/Taipei')
@@ -72,12 +72,12 @@ def run_timeline_smoke(app,window,out,guard):
     result=page.result
     if result.samples!=241:raise AssertionError('Wrong coarse sample count')
     if len(result.worker_pids)!=2:raise AssertionError('Smoke did not execute in two distinct workers')
-    if any(e.kind=='retro' and e.a in (0,1) for e in result.events):raise AssertionError('Luminary retrograde row')
+    if any(e.a in (0,1) or e.b in (0,1) for e in result.events):raise AssertionError('Luminary event')
     dump(out/'timeline.json',result_dict(result))
     exact=next(e for e in result.events if e.exact)
     page.canvas.selection=exact
     page.show_event(exact)
-    if len(result.zodiac_segments)<10:raise AssertionError('Missing zodiac coverage')
+    if len(result.zodiac_segments)<8:raise AssertionError('Missing zodiac coverage')
     detail=page.detail_dialog
     settle();detail.grab().save(str(out/'event-history.png'))
     detail.tabs.setCurrentIndex(1);settle();detail.grab().save(str(out/'overlapping-events.png'))

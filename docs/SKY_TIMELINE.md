@@ -4,7 +4,7 @@
 IANA 時區，按「開始計算」。不需要地點或個人檔案。
 
 - 逆行檢查水、金、火、木、土、天、海、冥；日、月不列逆行。
-- 相位包含日、月及八顆行星的 45 組配對，只計算 0、90、120、180 度。
+- 相位僅含水星至冥王星八顆行星的 28 組配對（不含日、月），只計算 0、90、120、180 度。
 - 色帶代表容許度內區間，菱形代表精確成相；同一色帶可保留多次成相。
   零容許度只顯示精確事件，不把單一成相延伸成整段色帶。
 - 每十分鐘使用固定 LibEphemeris／Skyfield 路徑計算黃經與當下速度。
@@ -17,7 +17,7 @@ IANA 時區，按「開始計算」。不需要地點或個人檔案。
 - 區間依精算後的邊界重建；起訖時已符合條件會標示截斷，不推測查詢外日期。
 
 有限取樣不是對任意曲線的完備證明：若同一十分鐘內有多個未在端點速度顯露的
-轉折，仍需更密的驗證。此演算法針對目前固定引擎的十顆天體；新增其他運動模型
+轉折，仍需更密的驗證。此演算法針對目前固定引擎的八顆天體；新增其他運動模型
 或天體時須重新驗證，不能直接沿用完整性結論。診斷 CLI 可選 60 秒掃描來比較。
 既有個人星盤的位置／宮位計算引擎不變。
 
@@ -62,7 +62,7 @@ scripts/check_timeline.py 記錄實際運算、PID、進度及取消結果；--s
 The development Sky timeline accepts minute-resolution local endpoints and an IANA
 zone. It scans every ten minutes, including both endpoints, then refines stationary
 points, exact aspects and orb boundaries. Retrograde checks exclude the Sun and Moon;
-aspects use all 45 pairs of the ten bodies for 0°, 90°, 120° and 180°.
+aspects use the 28 pairs from Mercury through Pluto, excluding the Sun and Moon for 0°, 90°, 120° and 180°.
 
 Directed angular crossings and relative-speed extrema allow short orb visits and
 multiple exact hits between coarse samples to be found. Refined boundaries define
@@ -96,7 +96,7 @@ workers. Pinned numerical dependencies and ephemeris data are unchanged.
 列表使用所有計算結果，不受圖面篩選影響，顯示實際重疊起訖及重疊期間的星座。
 僅共用一個端點也列為同一瞬間，不誤稱整段時間都同時發生。
 
-「匯出 HTML 文件」可選全部結果，或所選事件（附重疊事件列表）。文件語系獨立於 UI，
+「匯出文件」可選全部結果，或所選事件（附重疊事件列表）。文件語系獨立於 UI，
 目前提供繁體中文與英文。範本沿用 templates/report/<locale> 的 labels.json、style.css，
 並新增 timeline-labels.json、timeline.html、timeline.css；複製語系資料夾即可擴充。
 HTML 單檔內嵌 CSS／SVG，無外部字型、網路資源或 JavaScript；包含查詢條件、時區與
@@ -121,3 +121,24 @@ language is independent of the UI. Copy the existing report language folder incl
 timeline.html, timeline.css and timeline-labels.json to add a language. Embedded
 SVG/CSS, accessible text tables, A4 landscape, continued tables and page numbers
 follow the natal report conventions; no network resources or JavaScript are needed.
+
+
+## 2026-11-02 顯示規則調整
+
+天象相位完全排除太陽及月亮（包括日月配對），工作程序也只計算水星至冥王星的
+位置與星座歷程。個人星盤計算規則保持原狀。天象篩選與文件均反映八顆／28 對。
+按鈕及匯出視窗統一稱「匯出文件」；輸出格式仍為離線單檔 HTML。
+
+時間軸與文件共用配色：0° 金色（相互增強）、120° 綠色（吉相）、90° 灰紫色
+（相互削弱）、180° 紅色（凶相），逆行保留棕色。圖例以文字明示本功能採用的
+解讀，不僅依賴顏色區分；不影響相位計算條件或容許度。
+
+匯出文件先呈現甘特圖，再列查詢設定／事件列表，最後是事件詳情；列印也依此順序。
+空結果仍在頂端顯示時間軸區及無事件提示。
+
+The timeline excludes both luminaries from position sampling, sign histories and
+all aspect pairs; natal-chart rules are unchanged. The button is named Export Report.
+Timeline and report share gold (mutual strengthening), green (favorable), muted purple
+(mutual weakening), and red (adverse) for 0/120/90/180 degrees respectively. Labels
+state the interpretation as well as the angle. Reports place the Gantt chart first,
+followed by settings/catalog and event details, on screen and in print.
