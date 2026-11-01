@@ -11,6 +11,7 @@ from .timeline_details import event_spans, sign_at, sign_path, overlapping_event
 from .model import APP_VERSION
 
 from .timeline_palette import COLORS
+from .timeline_zodiac import sign_icon,sign_svg
 esc=lambda value:html.escape(str(value),quote=True)
 
 
@@ -41,6 +42,12 @@ def sign_name(sign,labels):
     return labels['unknown'] if sign is None else labels['signs'][sign]
 
 
+def sign_markup(sign,labels,icon_mode='svg'):
+    text=esc(sign_name(sign,labels))
+    if sign is None or not labels['lang'].startswith('en'):return text
+    return '<span class="zodiac-position">'+sign_icon(sign,icon_mode)+' <span class="zodiac-text">'+text+'</span></span>'
+
+
 def sign_description(result,event,labels,stamp=None):
     parts=[]
     for b in ((event.a,) if event.b is None else (event.a,event.b)):
@@ -49,12 +56,20 @@ def sign_description(result,event,labels,stamp=None):
     return ' · '.join(parts)
 
 
+def sign_description_html(result,event,labels,stamp=None,icon_mode='svg'):
+    parts=[]
+    for b in ((event.a,) if event.b is None else (event.a,event.b)):
+        signs=sign_path(result,event,b) if stamp is None else [sign_at(result,b,stamp)]
+        parts.append(esc(labels['bodies'][BODY_NAMES[b]])+': '+' → '.join(sign_markup(s,labels,icon_mode) for s in signs))
+    return ' · '.join(parts)
+
+
 def table(headers,rows):
     return '<table><thead><tr>'+''.join('<th scope="col">'+esc(h)+'</th>' for h in headers)+\
         '</tr></thead><tbody>'+''.join('<tr>'+''.join('<td>'+cell+'</td>' for cell in row)+'</tr>' for row in rows)+'</tbody></table>'
 
 
-def event_html(result,event,labels,compact=False):
+def event_html(result,event,labels,compact=False,icon_mode='svg'):
     """HTML fragment usable by QTextBrowser and exported documents."""
     clock=lambda t:esc(local_time(t,result.request.zone))
     out=f'<h2 style="color:{COLORS[event.angle]}">'+esc(event_title(event,labels))+'</h2><p>'+clock(event.start)+' — '+clock(event.end)+'</p>'
@@ -66,20 +81,20 @@ def event_html(result,event,labels,compact=False):
     if not compact:out+='<h3>'+esc(labels['history'])+'</h3><p>'+esc(labels['history_hint'])+'</p>'
     bodies=(event.a,) if event.b is None else (event.a,event.b)
     out+=table([labels['start'],labels['end'],*[labels['bodies'][BODY_NAMES[b]] for b in bodies]],
-        [[clock(a),clock(b),*[esc(sign_name(s,labels)) for s in signs]] for a,b,signs in event_spans(result,event)])
+        [[clock(a),clock(b),*[sign_markup(s,labels,icon_mode) for s in signs]] for a,b,signs in event_spans(result,event)])
     if event.kind=='aspect':
         out+='<h3>'+esc(labels['exact'].format(n=len(event.exact)))+'</h3>'
-        out+=table([labels['time'],labels['signs_heading']],[[clock(t),esc(sign_description(result,event,labels,t))] for t in event.exact]) if event.exact else '<p>'+esc(labels['no_exact'])+'</p>'
+        out+=table([labels['time'],labels['signs_heading']],[[clock(t),sign_description_html(result,event,labels,t,icon_mode)] for t in event.exact]) if event.exact else '<p>'+esc(labels['no_exact'])+'</p>'
     return out
 
 
-def overlaps_html(result,event,labels,stamp=None,scheme='#event-'):
+def overlaps_html(result,event,labels,stamp=None,scheme='#event-',icon_mode='svg'):
     rows=[]
     for index,other,left,right in overlapping_events(result,event,stamp):
         rows.append([f'<a href="{scheme}{index}">{esc(event_title(other,labels))}</a>',
             esc(local_time(left,result.request.zone)),esc(local_time(right,result.request.zone)),
-            esc(sign_description(result,other,labels,stamp) if stamp is not None else
-                sign_description(result,type(other)(other.kind,other.a,other.b,other.angle,left,right),labels))])
+            sign_description_html(result,other,labels,stamp,icon_mode) if stamp is not None else
+                sign_description_html(result,type(other)(other.kind,other.a,other.b,other.angle,left,right),labels,icon_mode=icon_mode)])
     return '<p>'+esc(labels['overlap_hint'])+'</p>'+ (table(
         [labels['event'],labels['overlap_start'],labels['overlap_end'],labels['signs_heading']],rows)
         if rows else '<p>'+esc(labels['no_overlap'])+'</p>')
@@ -118,7 +133,15 @@ def gantt_pages(result,events,labels,window=None):
                         for j,sign in enumerate(signs):
                             text=sign_name(sign,labels)
                             # Full names only where legible; every interval is in the text catalog.
-                            if r-l>max(34,len(text)*7+8):svg.append(f'<text x="{(l+r)/2:.3f}" y="{y+14+j*16}" fill="white" text-anchor="middle" font-size="12">{esc(text)}</text>')
+                            has_icon=sign is not None and labels['lang'].startswith('en')
+                            text_width=len(text)*7
+                            total_width=text_width+(17 if has_icon else 0)
+                            if r-l>max(34,total_width+8):
+                                center=(l+r)/2
+                                if has_icon:
+                                    icon=sign_svg(sign,'white').replace('<svg ',f'<svg x="{center-total_width/2:.3f}" y="{y+2+j*16}" width="14" height="14" ',1)
+                                    svg.append(icon)
+                                svg.append(f'<text x="{center+(8.5 if has_icon else 0):.3f}" y="{y+14+j*16}" fill="white" text-anchor="middle" font-size="12">{esc(text)}</text>')
                     for stamp in event.exact:
                         if start<=stamp<=end:
                             xx=x(stamp);svg.append(f'<path d="M {xx:.3f} {y-4} l 4 4 -4 4 -4 -4 Z" fill="{color}" stroke="white"/>')
@@ -142,7 +165,7 @@ def render_timeline_html(result,template_dir=None,selected=None):
     for note in result.notes:intro+='<p>'+esc(labels.get('warnings',{}).get(note,note))+'</p>'
     intro+=table([labels['event'],labels['start'],labels['end'],labels['signs_heading']],
         [[f'<a href="#event-{i}">{esc(event_title(e,labels))}</a>',esc(local_time(e.start,result.request.zone)),
-          esc(local_time(e.end,result.request.zone)),esc(sign_description(result,e,labels))] for i,e in events])
+          esc(local_time(e.end,result.request.zone)),sign_description_html(result,e,labels)] for i,e in events])
     if not events:intro+='<p>'+esc(labels['no_events'])+'</p>'
     charts=gantt_pages(result,events,labels,(selected.start,selected.end) if selected is not None else None)
     if not charts:charts='<section class="page timeline-chart"><h2>'+esc(labels['timeline_title'])+'</h2><p>'+esc(labels['no_events'])+'</p></section>'

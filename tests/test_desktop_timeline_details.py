@@ -25,6 +25,11 @@ def fixture():
 
 
 class DetailsTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        from PySide6.QtWidgets import QApplication
+        cls.app=QApplication.instance() or QApplication([])
+
     def test_scope_palette_and_chart_first_report(self):
         from desktop.timeline import PAIRS,RETRO_IDS,_sample_chunk
         from desktop.timeline_palette import COLORS
@@ -43,6 +48,31 @@ class DetailsTests(unittest.TestCase):
             doc=render_timeline_html(r,ROOT/'templates/report'/locale)
             self.assertLess(doc.index('id="timeline"'),doc.index('id="overview"'))
             for color in COLORS.values():self.assertIn(color,doc)
+
+    def test_english_zodiac_icons_in_reports_details_and_qt_images(self):
+        from PySide6.QtCore import QUrl
+        from PySide6.QtGui import QTextDocument
+        from PySide6.QtWidgets import QTextBrowser
+        from desktop.timeline_report import sign_markup,event_html,overlaps_html
+        from desktop.timeline_zodiac import qt_sign_image
+        en=labels_for(ROOT/'templates/report/en-US');zh=labels_for(ROOT/'templates/report/zh-TW')
+        browser=QTextBrowser()
+        for sign in range(12):
+            markup=sign_markup(sign,en)
+            self.assertIn('<path',markup);self.assertIn(en['signs'][sign],markup)
+            self.assertIn('aria-hidden="true"',markup)
+            self.assertNotIn('<svg',sign_markup(sign,zh))
+            browser.setHtml(sign_markup(sign,en,'qt'))
+            loaded=browser.document().resource(QTextDocument.ResourceType.ImageResource,QUrl(qt_sign_image(sign)))
+            self.assertIsNotNone(loaded);self.assertFalse(loaded.isNull())
+        r,e,_=fixture()
+        self.assertIn('zodiac-icon',event_html(r,e,en))
+        self.assertIn('zodiac-icon',overlaps_html(r,e,en))
+        self.assertIn('data:image/png',event_html(r,e,en,icon_mode='qt'))
+        doc=render_timeline_html(r,ROOT/'templates/report/en-US')
+        self.assertIn('<svg x=',doc);self.assertIn('class="zodiac-position"',doc)
+        self.assertNotIn('data:image/png',doc)
+        browser.deleteLater()
 
     def curve_segments(self,fn,times):
         def positions(t,bodies):

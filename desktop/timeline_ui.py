@@ -3,6 +3,7 @@
 """Sky timeline workbench. No personal profile or hardware fields."""
 from datetime import datetime, timezone
 from pathlib import Path
+from html import escape
 import math
 import threading
 import time
@@ -24,13 +25,14 @@ from .aspects import draw_symbol
 from .fields import DateField,TimeField
 from .settings import default_orbs
 from .timeline_details import event_spans
-from .timeline_report import labels_for, sign_description, sign_name, color_legend
+from .timeline_report import labels_for, sign_description, sign_name, color_legend, sign_description_html
 from .timeline_dialog import EventDetailDialog
 from .report import TEMPLATES
 from .i18n import language
 
 ASPECT_SYMBOLS = {0:'☌',90:'□',120:'△',180:'☍'}
 from .timeline_palette import COLORS
+from .zodiac import draw_zodiac
 
 
 def event_label(event):
@@ -254,9 +256,17 @@ class TimelineCanvas(QWidget):
                     font=p.font();small=p.font();small.setPointSizeF(max(8,font.pointSizeF()-2));p.setFont(small)
                     for j,sign in enumerate(signs):
                         text=sign_name(sign,self.labels)
-                        if p.fontMetrics().horizontalAdvance(text)+8<r-l:
+                        icon_size=12 if sign is not None and self.labels['lang'].startswith('en') else 0
+                        text_width=p.fontMetrics().horizontalAdvance(text)
+                        total_width=text_width+(icon_size+4 if icon_size else 0)
+                        if total_width+8<r-l:
                             line_height=rect.height()/len(signs)
-                            p.drawText(QRectF(l+3,rect.top()+j*line_height,r-l-6,line_height),Qt.AlignmentFlag.AlignCenter,text)
+                            tx=(l+r-total_width)/2
+                            cy=rect.top()+(j+.5)*line_height
+                            if icon_size:
+                                draw_zodiac(p,sign,QPointF(tx+icon_size/2,cy),icon_size,SURFACE)
+                                tx+=icon_size+4
+                            p.drawText(QRectF(tx,rect.top()+j*line_height,text_width,line_height),Qt.AlignmentFlag.AlignCenter,text)
                     p.setFont(font)
                 if e is self.selection:
                     p.setPen(QPen(color,1.5))
@@ -285,7 +295,7 @@ class TimelineCanvas(QWidget):
         for rect,e in reversed(self.hits):
             if rect.contains(event.position()):
                 text = event_label(e)+'\n'+local_time(e.start,self.result.request.zone)+'\n'+local_time(e.end,self.result.request.zone)
-                text += '\n'+sign_description(self.result,e,self.labels)
+                text = escape(text).replace('\n','<br>')+'<br>'+sign_description_html(self.result,e,self.labels,icon_mode='qt')
                 QToolTip.showText(event.globalPosition().toPoint(),text,self)
                 return
         QToolTip.hideText()

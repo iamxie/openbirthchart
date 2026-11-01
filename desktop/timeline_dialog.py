@@ -45,7 +45,7 @@ class EventDetailDialog(QDialog):
         self.result,self.current_event=result,event
         self.back.setEnabled(bool(self.history))
         self.title.setText(event_title(event,self.labels))
-        self.details.setHtml(event_html(result,event,self.labels))
+        self.details.setHtml(event_html(result,event,self.labels,icon_mode='qt'))
         self.scope.blockSignals(True);self.scope.clear()
         self.scope.addItem(tr('整段事件的重疊區間'),None)
         self.scope.addItem(tr('事件開始當下')+' · '+local_time(event.start,result.request.zone),event.start)
@@ -56,7 +56,7 @@ class EventDetailDialog(QDialog):
     def update_overlaps(self):
         if self.current_event is None:return
         stamp=self.scope.currentData()
-        self.overlaps.setHtml(overlaps_html(self.result,self.current_event,self.labels,stamp,'event:'))
+        self.overlaps.setHtml(overlaps_html(self.result,self.current_event,self.labels,stamp,'event:',icon_mode='qt'))
         self.tabs.setTabText(1,tr('同時事件')+f' ({len(overlapping_events(self.result,self.current_event,stamp))})')
 
     def navigate(self,url):
