@@ -11,6 +11,7 @@ import unittest
 from unittest.mock import patch
 import numpy as np
 from PySide6.QtWidgets import QApplication
+from PySide6.QtCore import QCoreApplication,QEvent
 from PySide6.QtTest import QTest
 from desktop.timeline import TimelineInput,TimelineResult
 from desktop.sky_history import SkyHistory,FrameReader
@@ -32,7 +33,14 @@ class HistoryTests(unittest.TestCase):
         self.run=self.history.begin(self.request,8)
         self.result=TimelineResult(self.request,self.stamps[0],self.stamps[-1],8,[],1,[])
 
-    def tearDown(self):self.temp.cleanup()
+    def tearDown(self):
+        # These tests never enter app.exec(); explicitly release parentless Qt
+        # dialogs before Python finalization can collect their signal cycles.
+        for widget in self.app.topLevelWidgets():
+            widget.close();widget.deleteLater()
+        QCoreApplication.sendPostedEvents(None,QEvent.Type.DeferredDelete)
+        self.app.processEvents()
+        self.temp.cleanup()
 
     def finish(self):
         self.history.append(self.run,0,self.stamps,self.data);self.history.complete(self.run,self.result)

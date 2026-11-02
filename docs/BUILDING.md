@@ -1,11 +1,11 @@
 # 建置與對應來源 / Building and corresponding source
 
-版本：v0.6.7；Windows x64。自有程式碼 AGPL-3.0-only，第三方保留原條款。
+版本：v0.7.0；Windows x64。自有程式碼 AGPL-3.0-only，第三方保留原條款。
 
 ## 來源的兩種形式
 
 - Git repository：精簡應用、測試、腳本、文件、鎖定檔、theme 原始素材與小型 Astronomicon 字型及原 OFL 授權。大型歷史封存不進 Git 歷史。
-- `OpenBirthChart-0.6.7-source.zip`：相同應用來源，加固定執行資料、完整 regression 封存、審查過的比較來源及 `third_party/sources/` 上游來源封存。另有清單與 SHA-256。不是只提供 GitHub 自動產生的 source ZIP。
+- `OpenBirthChart-0.7.0-source.zip`：相同應用來源，加固定執行資料、完整 regression 封存、審查過的比較來源及 `third_party/sources/` 上游來源封存。另有清單與 SHA-256。不是只提供 GitHub 自動產生的 source ZIP。
 
 Git checkout 的進階驗證需從同版完整來源 ZIP 取出 `regression/` 與 `validation/`。原始封存包含歷史路徑、版本與來源快照，這些是當時證據，不代表目前安裝位置。文章中的歷史證據連結，請在完整來源包內閱讀。
 
@@ -20,20 +20,20 @@ Git checkout 的進階驗證需從同版完整來源 ZIP 取出 `regression/` �
 
 腳本建立 Python 3.12 環境，依 `requirements/desktop.lock` 的版本與 SHA-256 安裝套件，再依三份資料 lock 準備全部核心、時間與桌面資料。已存在資料必須通過雜湊核對；不會無條件覆蓋不同資料。Git 版首次需要網路；完整來源包的資料可直接核對。套件 wheel 安裝仍需取得鎖定版本，不把本機 `.venv` 當成來源。
 
-v0.6.7 參考環境：CPython 3.12.14、LibEphemeris 3.2.2、PySide6-Essentials／shiboken6 6.12.0。完整版本見鎖定檔及 `third-party-sources.lock.json`。需要和歷史數值封存做環境精確核對時，使用該 Python patch 版；換 Python patch 會如實呈現環境差異。
+v0.7.0 參考環境：CPython 3.12.14、LibEphemeris 3.2.2、PySide6-Essentials／shiboken6 6.12.0。完整版本見鎖定檔及 `third-party-sources.lock.json`。需要和歷史數值封存做環境精確核對時，使用該 Python patch 版；換 Python patch 會如實呈現環境差異。
 
 ## 測試與 Windows 封裝
 
 ```powershell
-./.venv-desktop/Scripts/python.exe -m unittest discover -s tests -p 'test_desktop*.py'
+./.venv-desktop/Scripts/python.exe scripts/run_desktop_tests.py
 ./.venv-desktop/Scripts/python.exe -m unittest discover -s tests -p 'test_house_number2.py'
 ./build-desktop.ps1 -ReviewedReference validation/reviewed
 ./.venv-desktop/Scripts/python.exe scripts/verify_desktop_package.py
 ```
 
-以上完整測試需先取得完整來源包的封存。`build-desktop.ps1` 先測試並以預設 12 程序重算六份固定條件，僅允許明示的版本標籤差異，再執行 PyInstaller 和實際 EXE smoke。沒有 `-ReviewedReference` 時仍驗原正式主基準，會如實回報已記錄的 T／閏秒差異，不能靠覆寫基準消除。
+桌面測試逐模組啟動獨立程序，避免 Qt 視窗生命週期與樣式累積；每個模組都必須通過。以上完整測試需先取得完整來源包的封存。`build-desktop.ps1` 先測試並以預設 12 程序重算六份固定條件，僅允許明示的版本標籤差異，再執行 PyInstaller 和實際 EXE smoke。沒有 `-ReviewedReference` 時仍驗原正式主基準，會如實回報已記錄的 T／閏秒差異，不能靠覆寫基準消除。
 
-產物位於 `dist/OpenBirthChart-0.6.7/`。`verify_desktop_package.py` 核對逐檔雜湊並產生 Windows ZIP／SHA-256。`scripts/prepare_public_release.py` 整理公開來源與完整來源包；上游來源必須先按鎖定清單取得。
+產物位於 `dist/OpenBirthChart-0.7.0/`。`verify_desktop_package.py` 核對逐檔雜湊並產生 Windows ZIP／SHA-256。`scripts/prepare_public_release.py` 整理公開來源與完整來源包；上游來源必須先按鎖定清單取得。
 
 ## 替換 Qt／修改程式
 

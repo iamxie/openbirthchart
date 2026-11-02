@@ -1,7 +1,7 @@
 # 天象時間軸 / Sky timeline
 
-此功能位於開發分支，尚未合併或公開發佈。輸入當地起訖時間（到分鐘）與
-IANA 時區，按「開始計算」。不需要地點或個人檔案。
+自 v0.7.0 提供。輸入當地起訖時間（到分鐘）與 IANA 時區，按「開始計算」。
+不需要地點或個人檔案。
 
 - 逆行檢查水、金、火、木、土、天、海、冥；日、月不列逆行。
 - 相位僅含水星至冥王星八顆行星的 28 組配對（不含日、月），只計算 0、90、120、180 度。
@@ -171,10 +171,10 @@ SVG/CSS, accessible text tables, A4 landscape, continued tables and page numbers
 follow the natal report conventions; no network resources or JavaScript are needed.
 
 
-## 2026-11-02 顯示規則調整
+## 顯示與文件配色
 
-天象相位完全排除太陽及月亮（包括日月配對），工作程序也只計算水星至冥王星的
-位置與星座歷程。個人星盤計算規則保持原狀。天象篩選與文件均反映八顆／28 對。
+天象相位與星座歷程只搜尋水星至冥王星，排除太陽及月亮（包括日月配對）。
+首輪仍保存日月的位置與速度供播放器使用。個人星盤計算規則保持原狀，天象篩選與文件反映八顆／28 對。
 按鈕及匯出視窗統一稱「匯出文件」；輸出格式仍為離線單檔 HTML。
 
 時間軸與文件共用配色：0° 金色（相互增強）、120° 綠色（吉相）、90° 灰紫色
@@ -184,8 +184,9 @@ follow the natal report conventions; no network resources or JavaScript are need
 匯出文件先呈現甘特圖，再列查詢設定／事件列表，最後是事件詳情；列印也依此順序。
 空結果仍在頂端顯示時間軸區及無事件提示。
 
-The timeline excludes both luminaries from position sampling, sign histories and
-all aspect pairs; natal-chart rules are unchanged. The button is named Export Report.
+The timeline excludes both luminaries from event/sign searches and all aspect pairs.
+Their positions and speeds are still sampled for playback; natal-chart rules are
+unchanged. The button is named Export Report.
 Timeline and report share gold (mutual strengthening), green (favorable), muted purple
 (mutual weakening), and red (adverse) for 0/120/90/180 degrees respectively. Labels
 state the interpretation as well as the angle. Reports place the Gantt chart first,

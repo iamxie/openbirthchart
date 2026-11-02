@@ -1,4 +1,4 @@
-# Open BirthChart 0.6.7 — Copyright and license / 著作權與授權
+# Open BirthChart 0.7.0 — Copyright and license / 著作權與授權
 
 Copyright (C) 2026 OpenBirthChart contributors.
 
@@ -14,9 +14,9 @@ This grant covers original code in `desktop/`, `scripts/`, `tests/`, application
 
 Repository / 專案位置：https://github.com/iamxie/openbirthchart
 
-Version / 版本：v0.6.7。發佈頁：https://github.com/iamxie/openbirthchart/releases/tag/v0.6.7
+Version / 版本：v0.7.0。發佈頁：https://github.com/iamxie/openbirthchart/releases/tag/v0.7.0
 
-The release provides `OpenBirthChart-0.6.7-source.zip`, containing application/build/test sources, pinned runtime data and dependency source archives listed in `third-party-sources.lock.json`. Download it from the same page as the Windows ZIP, at no additional charge.
+The release provides `OpenBirthChart-0.7.0-source.zip`, containing application/build/test sources, pinned runtime data and dependency source archives listed in `third-party-sources.lock.json`. Download it from the same page as the Windows ZIP, at no additional charge.
 
 同版來源 ZIP 包含應用、建置與測試來源、固定執行資料及鎖定依賴來源，與 Windows ZIP 在同一發佈頁免費提供。
 

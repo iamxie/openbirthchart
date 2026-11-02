@@ -16,7 +16,7 @@ if (Get-Process OpenBirthChart -ErrorAction SilentlyContinue | Where-Object { $_
 if ($LASTEXITCODE -ne 0) { throw 'Help article build failed.' }
 & .venv-desktop/Scripts/python.exe scripts/build_translations.py
 if ($LASTEXITCODE -ne 0) { throw 'Translation validation failed.' }
-& .venv-desktop/Scripts/python.exe -m unittest discover -s tests -p 'test_desktop*.py' -v
+& .venv-desktop/Scripts/python.exe scripts/run_desktop_tests.py
 if ($LASTEXITCODE -ne 0) { throw 'Desktop tests failed.' }
 & .venv-desktop/Scripts/python.exe -m unittest discover -s tests -p 'test_house_number2.py' -v
 if ($LASTEXITCODE -ne 0) { throw 'Spatial house tests failed.' }

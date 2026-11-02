@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "application": "0.7.0-dev",
+  "application": "0.7.0",
   "archives": [
     {
       "name": "altgraph",

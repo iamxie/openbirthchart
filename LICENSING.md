@@ -6,7 +6,7 @@
 
 第三方軟體、字型及資料不重新授權。LibEphemeris 3.2.2 保留 AGPL-3.0-only 與上游通知；Qt/PySide6 使用其適用開源授權；字型保留 OFL。完整實際版本、通知與來源封存見 [第三方說明](THIRD_PARTY_DESKTOP.md)、`licenses/components.json` 及 `third-party-sources.lock.json`。
 
-本版 Windows ZIP 必須與 `OpenBirthChart-0.6.7-source.zip` 在同一發佈頁免費提供，並維持下載可用。完整來源包含應用、必要建置／安裝腳本、測試、固定資料及上游依賴來源封存；不能把 GitHub 自動 source ZIP 未經核對就當成完整對應來源。相關義務以 [AGPL 全文](https://opensource.org/license/agpl-3.0) 為準。
+本版 Windows ZIP 必須與 `OpenBirthChart-0.7.0-source.zip` 在同一發佈頁免費提供，並維持下載可用。完整來源包含應用、必要建置／安裝腳本、測試、固定資料及上游依賴來源封存；不能把 GitHub 自動 source ZIP 未經核對就當成完整對應來源。相關義務以 [AGPL 全文](https://opensource.org/license/agpl-3.0) 為準。
 
 本地發佈材料的準備與驗證不等於已公開上傳。驗證記錄由維護者保存；上傳前確認兩包與 SHA-256、版本 tag 及來源內容一致。
 
