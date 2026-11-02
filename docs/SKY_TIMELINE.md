@@ -65,7 +65,8 @@ IANA 時區，按「開始計算」。不需要地點或個人檔案。
 十顆行星及連線為可重用的獨立圖形物件。播放器分批讀取資料，不預先產生整段影片或逐張圖片。
 
 - 首尾鍵：跳至區間開始／結束；停止鍵停留在目前時刻。
-- 播放／暫停：目標 15 fps；倒播與快轉：目標 30 fps；到達端點自動停止。
+- 初始目標 15 fps；快轉每按一次增加 15 fps，上限 120 fps。暫停、停止與拖曳後保留選定順播速度；倒播固定 30 fps，到達端點自動停止。
+- 逆行名稱使用深棕底、白色粗體與 R；恢復順行時回復原色文字。定位點與引線保留行星顏色，標籤幾何保持穩定。圓盤下方列出目前逆行的完整名稱，無逆行時明示；皆依當前採樣點的速度判定，日月除外。
 - 時間拖曳條：跳至對應已存採樣點並暫停；時間戳包含選定時區與 UTC 時差。
 - 不補間、不跳過採樣點；若繪圖跟不上目標幀率，播放速度會降低。
 
@@ -81,7 +82,12 @@ or changing shared orb settings. Historical views/exports use their recorded orb
 View Sky Chart reuses ten independent planet items and aspect lines over a cached zodiac
 ring. Sun and Moon positions are visible but excluded from aspects. There are no houses
 or axes; 0° Aries stays on the left. Dots retain true positions while labels avoid crowds.
-Play/pause targets 15 fps; reverse/fast-forward target 30 fps. Stop holds the current
+Forward playback starts at 15 fps; each fast-forward click adds 15, capped at 120.
+Pause, stop and seeking preserve the selected forward speed; reverse stays at 30 fps.
+Retrograde names use dark brown badges, bold white text and R; direct motion restores
+the original text color. Dots and leaders retain planet colors, and label geometry
+stays stable. The strip below the wheel lists current retrograde bodies (excluding
+Sun/Moon) from the displayed sample's speed, or explicitly shows none. Stop holds the current
 sample, start/end jump to endpoints, and seeking pauses playback. UTC sampling and
 offset-labelled local timestamps handle repeated DST hours. Frames are neither
 interpolated nor skipped; rendering delays slow playback. Reads use bounded blocks.

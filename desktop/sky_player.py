@@ -7,10 +7,10 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from PySide6.QtCore import Qt, QPointF, QRectF, QTimer
-from PySide6.QtGui import QColor, QPainter, QPainterPath, QPen, QFont
+from PySide6.QtGui import QColor, QPainter, QPainterPath, QPen, QFont, QFontMetricsF
 from PySide6.QtWidgets import (QDialog, QVBoxLayout, QHBoxLayout, QLabel, QPushButton,
     QSlider, QGraphicsView, QGraphicsScene, QGraphicsItem, QGraphicsSimpleTextItem,
-    QStyle, QMessageBox)
+    QStyle, QMessageBox, QWidget)
 
 from .chart import spaced_labels, font_family
 from .i18n import tr, short_name, error_text
@@ -23,6 +23,88 @@ from .i18n import language
 from .report import TEMPLATES
 from .theme import SURFACE, TEXT, BORDER, SOFT
 from .zodiac import draw_zodiac
+
+RETRO_BACKGROUND='#654631'
+RETRO_TEXT='#ffffff'
+
+
+class PlanetLabel(QGraphicsItem):
+    """Stable label geometry in both motion states; children are never recreated."""
+    def __init__(self,text,color):
+        super().__init__()
+        self.color=color;self.retrograde=False;self.bounds=QRectF()
+        self.text=QGraphicsSimpleTextItem(text,self)
+        self.retro=QGraphicsSimpleTextItem('R',self)
+        self.retro.setBrush(QColor(RETRO_TEXT));self.retro.hide()
+        self.setCacheMode(QGraphicsItem.CacheMode.DeviceCoordinateCache)
+        self.set_size(24,14)
+
+    def boundingRect(self):return self.bounds
+
+    def set_size(self,size,small):
+        self.prepareGeometryChange()
+        self.normal=QFont(font_family());self.normal.setPixelSize(size)
+        self.bold=QFont(self.normal);self.bold.setBold(True)
+        font=QFont(font_family());font.setPixelSize(small);self.retro.setFont(font)
+        width=QFontMetricsF(self.bold).horizontalAdvance(self.text.text())
+        self.bounds=QRectF(0,0,width+self.retro.boundingRect().width()+size*.85,size*1.55)
+        self.text.setPos(size*.25,(self.bounds.height()-QFontMetricsF(self.normal).height())/2)
+        self.retro.setPos(width+size*.5,(self.bounds.height()-self.retro.boundingRect().height())/2)
+        self.apply_state()
+
+    def apply_state(self):
+        self.text.setFont(self.bold if self.retrograde else self.normal)
+        self.text.setBrush(QColor(RETRO_TEXT if self.retrograde else self.color))
+        self.retro.setVisible(self.retrograde);self.update()
+
+    def set_retrograde(self,value):
+        if self.retrograde!=value:
+            self.retrograde=value;self.apply_state()
+
+    def paint(self,p,option,widget=None):
+        if self.retrograde:
+            p.setRenderHint(QPainter.RenderHint.Antialiasing)
+            p.setPen(Qt.PenStyle.NoPen);p.setBrush(QColor(RETRO_BACKGROUND))
+            p.drawRoundedRect(self.bounds,6,6)
+
+
+class RetrogradeSummary(QWidget):
+    """Wrap full-name badges; reserve room for all bodies to avoid wheel jumps."""
+    def __init__(self,parent=None):
+        super().__init__(parent)
+        self.active=();self.names=[tr(body[1])+'  R' for body in BODIES[2:10]]
+        self.setMinimumHeight(80)
+        self.set_active(())
+
+    def badge_rects(self,names):
+        font=QFont(self.font());font.setBold(True);fm=QFontMetricsF(font)
+        height=math.ceil(fm.height()+12);x=10;y=32;rects=[]
+        for name in names:
+            width=math.ceil(fm.horizontalAdvance(name)+20)
+            if x>10 and x+width>self.width()-10:x=10;y+=height+6
+            rects.append(QRectF(x,y,width,height));x+=width+8
+        return rects,y+height+10
+
+    def resizeEvent(self,event):
+        super().resizeEvent(event)
+        _,height=self.badge_rects(self.names)
+        if self.minimumHeight()!=height:self.setFixedHeight(height)
+
+    def set_active(self,active):
+        self.active=tuple(active)
+        self.heading=tr('目前逆行 · {count} 顆',count=len(active)) if active else tr('目前沒有行星逆行')
+        self.setAccessibleName(self.heading+' '+', '.join(tr(BODIES[i][1]) for i in active))
+        self.update()
+
+    def paintEvent(self,event):
+        p=QPainter(self);p.setRenderHint(QPainter.RenderHint.Antialiasing)
+        p.setPen(Qt.PenStyle.NoPen);p.setBrush(QColor(SOFT));p.drawRoundedRect(self.rect(),7,7)
+        p.setPen(QColor(TEXT));p.drawText(QRectF(10,3,self.width()-20,27),Qt.AlignmentFlag.AlignVCenter,self.heading)
+        names=[self.names[i-2] for i in self.active];rects,_=self.badge_rects(names)
+        font=QFont(self.font());font.setBold(True);p.setFont(font)
+        for rect,name in zip(rects,names):
+            p.setPen(Qt.PenStyle.NoPen);p.setBrush(QColor(RETRO_BACKGROUND));p.drawRoundedRect(rect,6,6)
+            p.setPen(QColor(RETRO_TEXT));p.drawText(rect,Qt.AlignmentFlag.AlignCenter,name)
 
 
 def point(longitude, radius):
@@ -73,18 +155,12 @@ class SkyView(QGraphicsView):
         for a,b in PAIRS:
             line=self.scene().addLine(0,0,0,0);line.setZValue(1);line.hide();self.lines[a,b]=line
         self.icons=[];self.retro=[];self.anchors=[];self.leaders=[]
-        font=QFont(font_family());font.setPixelSize(24)
-        small=QFont(font_family());small.setPixelSize(14)
         for ident,name,short,color in BODIES[:10]:
             leader=self.scene().addLine(0,0,0,0,QPen(QColor(color),1));leader.setZValue(2)
             anchor=self.scene().addEllipse(-2.5,-2.5,5,5,QPen(QColor(color)),QColor(color));anchor.setZValue(3)
-            item=QGraphicsSimpleTextItem(short_name({'short':short}));item.setFont(font)
-            item.setBrush(QColor(color));item.setZValue(4)
-            item.setCacheMode(QGraphicsItem.CacheMode.DeviceCoordinateCache)
+            item=PlanetLabel(short_name({'short':short}),color);item.setZValue(4)
             self.scene().addItem(item)
-            retro=QGraphicsSimpleTextItem('R',item);retro.setFont(small);retro.setBrush(QColor(color))
-            retro.setPos(item.boundingRect().width()+2,8);retro.hide()
-            self.icons.append(item);self.retro.append(retro);self.anchors.append(anchor);self.leaders.append(leader)
+            self.icons.append(item);self.retro.append(item.retro);self.anchors.append(anchor);self.leaders.append(leader)
         self.visible_aspects=[]
         self.last_positions=None
         self.label_gap=11
@@ -92,11 +168,10 @@ class SkyView(QGraphicsView):
     def resizeEvent(self,event):
         super().resizeEvent(event);self.fitInView(self.sceneRect(),Qt.AspectRatioMode.KeepAspectRatio)
         scale=max(.1,self.transform().m11())
-        size=max(24,round(12/scale));self.label_gap=max(11,math.degrees((size*1.7+12)/350))
-        for item,retro in zip(self.icons,self.retro):
-            font=item.font();font.setPixelSize(size);item.setFont(font)
-            font=retro.font();font.setPixelSize(max(14,round(9/scale)));retro.setFont(font)
-            retro.setPos(item.boundingRect().width()+2,8)
+        size=max(24,round(12/scale))
+        for item in self.icons:item.set_size(size,max(14,round(9/scale)))
+        diameter=max(math.hypot(item.boundingRect().width(),item.boundingRect().height()) for item in self.icons)+8
+        self.label_gap=max(11,math.degrees(2*math.asin(min(.99,diameter/700))))
         if self.last_positions is not None:self.show_frame(self.last_positions,self.last_orbs)
 
     def show_frame(self,positions,orbs):
@@ -108,7 +183,7 @@ class SkyView(QGraphicsView):
             bounds=self.icons[i].boundingRect()
             self.icons[i].setPos(label.x()-bounds.width()/2,label.y()-bounds.height()/2)
             self.leaders[i].setLine(anchor.x(),anchor.y(),label.x(),label.y())
-            self.retro[i].setVisible(bool(i>=2 and speed<0))
+            self.icons[i].set_retrograde(bool(i>=2 and speed<0))
             self.icons[i].setToolTip(f'{tr(BODIES[i][1])} · {longitude%360:.4f}°')
         self.visible_aspects=list(active_aspects(positions,orbs))
         for line in self.lines.values():line.hide()
@@ -123,19 +198,21 @@ class SkyPlayer(QDialog):
         super().__init__(parent)
         self.setWindowTitle(tr('看實際星盤'));self.resize(960,850);self.setMinimumSize(600,540)
         self.result=result
-        self.index=0;self.rate=0;self.closed=False;self.painted_frames=0
+        self.index=0;self.rate=0;self.forward_fps=15;self.closed=False;self.painted_frames=0
+        self.active_retrograde=None
         layout=QVBoxLayout(self)
         self.timestamp=QLabel();self.timestamp.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.timestamp.setObjectName('chartTitle');layout.addWidget(self.timestamp)
         self.view=SkyView();layout.addWidget(self.view,1)
+        self.retrograde_summary=RetrogradeSummary();layout.addWidget(self.retrograde_summary)
         self.slider=QSlider(Qt.Orientation.Horizontal);self.slider.setRange(0,result.samples-1)
         self.slider.setAccessibleName(tr('播放時間'));layout.addWidget(self.slider)
         controls=QHBoxLayout();controls.addStretch();self.buttons=[]
         specs=[(QStyle.StandardPixmap.SP_MediaSkipBackward,tr('跳到開始'),lambda:self.seek(0)),
                (QStyle.StandardPixmap.SP_MediaSeekBackward,tr('倒播 · 30 fps'),lambda:self.play(-30)),
                (QStyle.StandardPixmap.SP_MediaStop,tr('停止，停留在目前時刻'),self.pause),
-               (QStyle.StandardPixmap.SP_MediaPlay,tr('播放／暫停 · 15 fps'),self.toggle),
-               (QStyle.StandardPixmap.SP_MediaSeekForward,tr('快轉 · 30 fps'),lambda:self.play(30)),
+               (QStyle.StandardPixmap.SP_MediaPlay,tr('播放／暫停'),self.toggle),
+               (QStyle.StandardPixmap.SP_MediaSeekForward,tr('加速 +15 fps，最高 120 fps'),self.accelerate),
                (QStyle.StandardPixmap.SP_MediaSkipForward,tr('跳到結束'),lambda:self.seek(self.reader.count-1))]
         for icon,label,callback in specs:
             button=QPushButton();button.setIcon(self.style().standardIcon(icon));button.setFixedSize(48,36)
@@ -157,14 +234,25 @@ class SkyPlayer(QDialog):
     def show_frame(self,index):
         stamp,positions=self.reader.frame(index);self.index=index
         self.view.show_frame(positions,self.result.request.orbs);self.painted_frames+=1
+        active=tuple(i for i in range(2,10) if positions[i,1]<0)
+        if active!=self.active_retrograde:
+            self.active_retrograde=active;self.retrograde_summary.set_active(active)
         self.timestamp.setText(datetime.fromtimestamp(stamp,ZoneInfo(self.result.request.zone)).strftime('%Y/%m/%d %H:%M %z')+' · '+self.result.request.zone)
         self.slider.blockSignals(True);self.slider.setValue(index);self.slider.blockSignals(False)
         self.update_status()
 
     def update_status(self):
         state=tr('已停止') if not self.rate else (tr('倒播') if self.rate<0 else tr('播放中'))
-        self.status.setText(tr('{state} · {current:,} / {total:,} 幀',state=state,current=self.index+1,total=self.reader.count))
+        fps=abs(self.rate) if self.rate else self.forward_fps
+        self.status.setText(tr('{state} · 目標 {fps} fps · {current:,} / {total:,} 幀',state=state,fps=fps,current=self.index+1,total=self.reader.count))
         self.buttons[3].setIcon(self.style().standardIcon(QStyle.StandardPixmap.SP_MediaPause if self.rate else QStyle.StandardPixmap.SP_MediaPlay))
+        label=tr('播放／暫停 · {fps} fps',fps=self.forward_fps)
+        self.buttons[3].setToolTip(label);self.buttons[3].setAccessibleName(label)
+        capped=self.forward_fps==120
+        label=tr('已達上限 · 120 fps') if capped else tr('加速至 {fps} fps',fps=self.forward_fps+15)
+        self.buttons[4].setToolTip(label);self.buttons[4].setAccessibleName(label)
+        # Keep forward available while reversing/paused, even at the speed cap.
+        self.buttons[4].setEnabled(not (capped and self.rate>0))
 
     def seek(self,index):
         self.pause()
@@ -173,13 +261,18 @@ class SkyPlayer(QDialog):
 
     def play(self,rate):
         if self.closed:return
+        if rate>0:
+            rate=max(15,min(120,15*round(rate/15)));self.forward_fps=rate
         if (rate>0 and self.index==self.reader.count-1) or (rate<0 and self.index==0):
             self.pause();return
         self.rate=rate;self.due=time.monotonic()+1/abs(rate);self.update_status();self.schedule()
 
     def toggle(self):
         if self.rate:self.pause()
-        else:self.play(15)
+        else:self.play(self.forward_fps)
+
+    def accelerate(self):
+        self.play(min(120,self.forward_fps+15))
 
     def pause(self):
         self.timer.stop();self.rate=0;self.update_status()

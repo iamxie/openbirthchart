@@ -678,7 +678,7 @@ UTC: {p2}</translation>
     <message>
       <source>已匯出文件：</source>
       <translation>Report exported: </translation>
-      <location filename="../desktop/timeline_ui.py" line="786" />
+      <location filename="../desktop/timeline_ui.py" line="788" />
     </message>
     <message>
       <source>已套用</source>
@@ -1123,7 +1123,7 @@ UTC: {p2}</translation>
     <message>
       <source>無法匯出</source>
       <translation>Unable to Export</translation>
-      <location filename="../desktop/timeline_ui.py" line="778" />
+      <location filename="../desktop/timeline_ui.py" line="780" />
     </message>
     <message>
       <source>無法建立 Documents/openbirthchart 資料夾，請確認資料夾權限。</source>
@@ -1263,12 +1263,12 @@ UTC: {p2}</translation>
     <message>
       <source>第一次（較早的時刻）</source>
       <translation>First occurrence (earlier)</translation>
-      <location filename="../desktop/timeline_ui.py" line="410" />
+      <location filename="../desktop/timeline_ui.py" line="412" />
     </message>
     <message>
       <source>第二次（較晚的時刻）</source>
       <translation>Second occurrence (later)</translation>
-      <location filename="../desktop/timeline_ui.py" line="411" />
+      <location filename="../desktop/timeline_ui.py" line="413" />
     </message>
     <message>
       <source>紐西蘭／奧克蘭</source>
@@ -1468,7 +1468,7 @@ UTC: {p2}</translation>
     <message>
       <source>載入</source>
       <translation>Load</translation>
-      <location filename="../desktop/timeline_ui.py" line="857" />
+      <location filename="../desktop/timeline_ui.py" line="859" />
     </message>
     <message>
       <source>載入個人檔案</source>
@@ -1543,7 +1543,7 @@ UTC: {p2}</translation>
     <message>
       <source>重複鐘點：請選擇</source>
       <translation>Repeated time: select occurrence</translation>
-      <location filename="../desktop/timeline_ui.py" line="409" />
+      <location filename="../desktop/timeline_ui.py" line="411" />
     </message>
     <message>
       <source>金</source>
@@ -1833,32 +1833,32 @@ UTC: {p2}</translation>
     <message>
       <source>已用時間：{time}</source>
       <translation>Elapsed: {time}</translation>
-      <location filename="../desktop/timeline_ui.py" line="665" />
+      <location filename="../desktop/timeline_ui.py" line="667" />
     </message>
     <message>
       <source>天體／相位</source>
       <translation>Body / aspect</translation>
-      <location filename="../desktop/timeline_ui.py" line="119" />
+      <location filename="../desktop/timeline_ui.py" line="121" />
     </message>
     <message>
       <source>天象時間軸</source>
       <translation>Sky timeline</translation>
-      <location filename="../desktop/timeline_ui.py" line="147" />
+      <location filename="../desktop/timeline_ui.py" line="149" />
     </message>
     <message>
       <source>點選色帶查看事件；方向鍵切換事件。</source>
       <translation>Select an event band for details; use arrow keys to move between events.</translation>
-      <location filename="../desktop/timeline_ui.py" line="148" />
+      <location filename="../desktop/timeline_ui.py" line="150" />
     </message>
     <message>
       <source>開始計算</source>
       <translation>Calculate</translation>
-      <location filename="../desktop/timeline_ui.py" line="350" />
+      <location filename="../desktop/timeline_ui.py" line="352" />
     </message>
     <message>
       <source>取消計算</source>
       <translation>Cancel calculation</translation>
-      <location filename="../desktop/timeline_ui.py" line="352" />
+      <location filename="../desktop/timeline_ui.py" line="354" />
     </message>
     <message>
       <source>每分鐘取樣，包含起訖分鐘。</source>
@@ -1868,22 +1868,22 @@ UTC: {p2}</translation>
     <message>
       <source>收合設定</source>
       <translation>Hide settings</translation>
-      <location filename="../desktop/timeline_ui.py" line="357" />
+      <location filename="../desktop/timeline_ui.py" line="359" />
     </message>
     <message>
       <source>01  時間範圍</source>
       <translation>01  Time range</translation>
-      <location filename="../desktop/timeline_ui.py" line="394" />
+      <location filename="../desktop/timeline_ui.py" line="396" />
     </message>
     <message>
       <source>02  計算內容</source>
       <translation>02  Events</translation>
-      <location filename="../desktop/timeline_ui.py" line="428" />
+      <location filename="../desktop/timeline_ui.py" line="430" />
     </message>
     <message>
       <source>逆行：水、金、火、木、土、天、海、冥，共八顆。</source>
       <translation>Retrograde: Mercury, Venus, Mars, Jupiter, Saturn, Uranus, Neptune and Pluto.</translation>
-      <location filename="../desktop/timeline_ui.py" line="429" />
+      <location filename="../desktop/timeline_ui.py" line="431" />
     </message>
     <message>
       <source>相位：日、月及上述八顆天體，共 45 組配對。</source>
@@ -1893,17 +1893,17 @@ UTC: {p2}</translation>
     <message>
       <source>全部天體</source>
       <translation>All bodies</translation>
-      <location filename="../desktop/timeline_ui.py" line="457" />
+      <location filename="../desktop/timeline_ui.py" line="459" />
     </message>
     <message>
       <source>上一段時間</source>
       <translation>Previous time window</translation>
-      <location filename="../desktop/timeline_ui.py" line="469" />
+      <location filename="../desktop/timeline_ui.py" line="471" />
     </message>
     <message>
       <source>下一段時間</source>
       <translation>Next time window</translation>
-      <location filename="../desktop/timeline_ui.py" line="470" />
+      <location filename="../desktop/timeline_ui.py" line="472" />
     </message>
     <message>
       <source>R 逆行　☌ 合相　□ 四分　△ 三分　☍ 對分　◆ 精確成相</source>
@@ -1918,22 +1918,22 @@ UTC: {p2}</translation>
     <message>
       <source>設定時間範圍與時區，按「開始計算」。</source>
       <translation>Set the time range and time zone, then select Calculate.</translation>
-      <location filename="../desktop/timeline_ui.py" line="504" />
+      <location filename="../desktop/timeline_ui.py" line="506" />
     </message>
     <message>
       <source>正在準備星曆資料，請稍候。</source>
       <translation>Preparing ephemeris data. Please wait.</translation>
-      <location filename="../desktop/timeline_ui.py" line="622" />
+      <location filename="../desktop/timeline_ui.py" line="624" />
     </message>
     <message>
       <source>計算已取消。可調整條件後重新開始。</source>
       <translation>Calculation cancelled. Adjust the settings and start again.</translation>
-      <location filename="../desktop/timeline_ui.py" line="683" />
+      <location filename="../desktop/timeline_ui.py" line="685" />
     </message>
     <message>
       <source>計算未完成：{reason}</source>
       <translation>Calculation did not complete: {reason}</translation>
-      <location filename="../desktop/timeline_ui.py" line="687" />
+      <location filename="../desktop/timeline_ui.py" line="689" />
     </message>
     <message>
       <source>計算完成 · {n:,} 個時刻 · {events:,} 段事件</source>
@@ -1943,42 +1943,42 @@ UTC: {p2}</translation>
     <message>
       <source>總用時：{time}</source>
       <translation>Total elapsed: {time}</translation>
-      <location filename="../desktop/timeline_ui.py" line="715" />
+      <location filename="../desktop/timeline_ui.py" line="717" />
     </message>
     <message>
       <source>選擇時間範圍與時區，按「開始計算」查看天象。</source>
       <translation>Choose the time range and time zone, then select Calculate to view sky events.</translation>
-      <location filename="../desktop/timeline_ui.py" line="218" />
+      <location filename="../desktop/timeline_ui.py" line="220" />
     </message>
     <message>
       <source>開始</source>
       <translation>Start</translation>
-      <location filename="../desktop/timeline_ui.py" line="404" />
+      <location filename="../desktop/timeline_ui.py" line="406" />
     </message>
     <message>
       <source>結束</source>
       <translation>End</translation>
-      <location filename="../desktop/timeline_ui.py" line="405" />
+      <location filename="../desktop/timeline_ui.py" line="407" />
     </message>
     <message>
       <source>時區</source>
       <translation>Time zone</translation>
-      <location filename="../desktop/timeline_ui.py" line="422" />
+      <location filename="../desktop/timeline_ui.py" line="424" />
     </message>
     <message>
       <source>全部四種相位</source>
       <translation>All four aspects</translation>
-      <location filename="../desktop/timeline_ui.py" line="452" />
+      <location filename="../desktop/timeline_ui.py" line="454" />
     </message>
     <message>
       <source>只看 90°／180°</source>
       <translation>Only 90° / 180°</translation>
-      <location filename="../desktop/timeline_ui.py" line="452" />
+      <location filename="../desktop/timeline_ui.py" line="454" />
     </message>
     <message>
       <source>全期</source>
       <translation>Full range</translation>
-      <location filename="../desktop/timeline_ui.py" line="462" />
+      <location filename="../desktop/timeline_ui.py" line="464" />
     </message>
     <message>
       <source>週</source>
@@ -1998,27 +1998,27 @@ UTC: {p2}</translation>
     <message>
       <source>夏令時間依所選時區與日期自動判斷。</source>
       <translation>Daylight saving follows the selected time zone and dates.</translation>
-      <location filename="../desktop/timeline_ui.py" line="583" />
+      <location filename="../desktop/timeline_ui.py" line="585" />
     </message>
     <message>
       <source>設定已更新，按「開始計算」產生結果。</source>
       <translation>Settings updated. Select Calculate to generate results.</translation>
-      <location filename="../desktop/timeline_ui.py" line="584" />
+      <location filename="../desktop/timeline_ui.py" line="586" />
     </message>
     <message>
       <source>展開設定</source>
       <translation>Show settings</translation>
-      <location filename="../desktop/timeline_ui.py" line="599" />
+      <location filename="../desktop/timeline_ui.py" line="601" />
     </message>
     <message>
       <source>本階段預估尚需 {time}（隨實際速度更新）</source>
       <translation>About {time} remaining in this stage (updated from measured speed)</translation>
-      <location filename="../desktop/timeline_ui.py" line="669" />
+      <location filename="../desktop/timeline_ui.py" line="671" />
     </message>
     <message>
       <source>正在停止計算並釋放資源，請稍候。</source>
       <translation>Stopping the calculation and releasing resources. Please wait.</translation>
-      <location filename="../desktop/timeline_ui.py" line="678" />
+      <location filename="../desktop/timeline_ui.py" line="680" />
     </message>
     <message>
       <source>點選色帶，查看起訖時間與精確成相。</source>
@@ -2028,17 +2028,17 @@ UTC: {p2}</translation>
     <message>
       <source>逆行</source>
       <translation>Retrograde</translation>
-      <location filename="../desktop/timeline_ui.py" line="160" />
+      <location filename="../desktop/timeline_ui.py" line="162" />
     </message>
     <message>
       <source>相位區間</source>
       <translation>Aspect intervals</translation>
-      <location filename="../desktop/timeline_ui.py" line="166" />
+      <location filename="../desktop/timeline_ui.py" line="168" />
     </message>
     <message>
       <source>請核對時間設定。</source>
       <translation>Check the time settings.</translation>
-      <location filename="../desktop/timeline_ui.py" line="568" />
+      <location filename="../desktop/timeline_ui.py" line="570" />
     </message>
     <message>
       <source>第 1 階段：計算天體位置 · 已完成 {done:,} / {total:,} 個時刻</source>
@@ -2053,37 +2053,37 @@ UTC: {p2}</translation>
     <message>
       <source>正在取得運算速度，稍後提供估計。</source>
       <translation>Measuring calculation speed; an estimate will follow.</translation>
-      <location filename="../desktop/timeline_ui.py" line="671" />
+      <location filename="../desktop/timeline_ui.py" line="673" />
     </message>
     <message>
       <source>這顆天體不列入逆行檢查。</source>
       <translation>This body is not checked for retrograde motion.</translation>
-      <location filename="../desktop/timeline_ui.py" line="165" />
+      <location filename="../desktop/timeline_ui.py" line="167" />
     </message>
     <message>
       <source>此範圍沒有符合篩選的相位。</source>
       <translation>No aspects match this filter in the calculated range.</translation>
-      <location filename="../desktop/timeline_ui.py" line="179" />
+      <location filename="../desktop/timeline_ui.py" line="181" />
     </message>
     <message>
       <source>此視窗無事件</source>
       <translation>No events in view</translation>
-      <location filename="../desktop/timeline_ui.py" line="255" />
+      <location filename="../desktop/timeline_ui.py" line="257" />
     </message>
     <message>
       <source>區間內無逆行</source>
       <translation>No retrograde events</translation>
-      <location filename="../desktop/timeline_ui.py" line="255" />
+      <location filename="../desktop/timeline_ui.py" line="257" />
     </message>
     <message>
       <source>正在接合逆行與相位區間。</source>
       <translation>Joining retrograde and aspect intervals.</translation>
-      <location filename="../desktop/timeline_ui.py" line="645" />
+      <location filename="../desktop/timeline_ui.py" line="647" />
     </message>
     <message>
       <source>正在建立時間軸，即將完成。</source>
       <translation>Building the timeline. Almost done.</translation>
-      <location filename="../desktop/timeline_ui.py" line="649" />
+      <location filename="../desktop/timeline_ui.py" line="651" />
     </message>
     <message>
       <source>容許度 ±{orb}°</source>
@@ -2128,17 +2128,17 @@ UTC: {p2}</translation>
     <message>
       <source>月視圖</source>
       <translation>Month</translation>
-      <location filename="../desktop/timeline_ui.py" line="462" />
+      <location filename="../desktop/timeline_ui.py" line="464" />
     </message>
     <message>
       <source>週視圖</source>
       <translation>Week</translation>
-      <location filename="../desktop/timeline_ui.py" line="462" />
+      <location filename="../desktop/timeline_ui.py" line="464" />
     </message>
     <message>
       <source>日視圖</source>
       <translation>Day</translation>
-      <location filename="../desktop/timeline_ui.py" line="462" />
+      <location filename="../desktop/timeline_ui.py" line="464" />
     </message>
     <message>
       <source>背景計算意外停止，請重新開始。</source>
@@ -2193,37 +2193,37 @@ UTC: {p2}</translation>
     <message>
       <source>每十分鐘掃描，局部細查事件時間。</source>
       <translation>Scan every ten minutes, then refine event times.</translation>
-      <location filename="../desktop/timeline_ui.py" line="354" />
+      <location filename="../desktop/timeline_ui.py" line="356" />
     </message>
     <message>
       <source>相位容許度統一由上方「設定」修改。</source>
       <translation>Change shared aspect orbs in Settings above.</translation>
-      <location filename="../desktop/timeline_ui.py" line="434" />
+      <location filename="../desktop/timeline_ui.py" line="436" />
     </message>
     <message>
       <source>計算完成 · {n:,} 個掃描點 · {events:,} 段事件</source>
       <translation>Complete · {n:,} scan points · {events:,} events</translation>
-      <location filename="../desktop/timeline_ui.py" line="714" />
+      <location filename="../desktop/timeline_ui.py" line="716" />
     </message>
     <message>
       <source>每十分鐘掃描 · {n:,} 個掃描點</source>
       <translation>Ten-minute scan · {n:,} scan points</translation>
-      <location filename="../desktop/timeline_ui.py" line="582" />
+      <location filename="../desktop/timeline_ui.py" line="584" />
     </message>
     <message>
       <source>第 1 階段：掃描時間區間 · 已完成 {done:,} / {total:,} 個掃描點</source>
       <translation>Stage 1: Scanning the range · {done:,} / {total:,} scan points</translation>
-      <location filename="../desktop/timeline_ui.py" line="654" />
+      <location filename="../desktop/timeline_ui.py" line="656" />
     </message>
     <message>
       <source>第 2 階段：細查事件時間 · 已完成 {done:,} / {total:,} 項</source>
       <translation>Stage 2: Refining event times · {done:,} / {total:,} items</translation>
-      <location filename="../desktop/timeline_ui.py" line="656" />
+      <location filename="../desktop/timeline_ui.py" line="658" />
     </message>
     <message>
       <source>第 3 階段：建立事件區間 · 已完成 {done:,} / {total:,} 項</source>
       <translation>Stage 3: Building event intervals · {done:,} / {total:,} items</translation>
-      <location filename="../desktop/timeline_ui.py" line="660" />
+      <location filename="../desktop/timeline_ui.py" line="662" />
     </message>
     <message>
       <source>設定</source>
@@ -2303,17 +2303,17 @@ UTC: {p2}</translation>
     <message>
       <source>正在建立星座歷程 · 已完成 {done} / {total} 顆天體</source>
       <translation>Building zodiac history · {done} / {total} bodies complete</translation>
-      <location filename="../desktop/timeline_ui.py" line="658" />
+      <location filename="../desktop/timeline_ui.py" line="660" />
     </message>
     <message>
       <source>相位：水星至冥王星，共 28 組配對；不含太陽與月亮。</source>
       <translation>Aspects: Mercury through Pluto, 28 pairs; Sun and Moon excluded.</translation>
-      <location filename="../desktop/timeline_ui.py" line="430" />
+      <location filename="../desktop/timeline_ui.py" line="432" />
     </message>
     <message>
       <source>◆ 精確成相，虛線為換座；上／下列分別對應兩顆天體。短區段可懸停或點選查看星座歷程。</source>
       <translation>◆ Exact aspect; dashed lines mark sign changes. Upper/lower signs match the two bodies. Hover or select narrow intervals for their zodiac history.</translation>
-      <location filename="../desktop/timeline_ui.py" line="500" />
+      <location filename="../desktop/timeline_ui.py" line="502" />
     </message>
     <message>
       <source>這份天象歷史尚未完成，無法播放。</source>
@@ -2333,22 +2333,22 @@ UTC: {p2}</translation>
     <message>
       <source>看實際星盤</source>
       <translation>View Sky Chart</translation>
-      <location filename="../desktop/sky_player.py" line="114" />
+      <location filename="../desktop/sky_player.py" line="199" />
     </message>
     <message>
       <source>播放時間</source>
       <translation>Playback time</translation>
-      <location filename="../desktop/sky_player.py" line="122" />
+      <location filename="../desktop/sky_player.py" line="209" />
     </message>
     <message>
       <source>每幀為已儲存的十分鐘採樣點；日月只顯示位置，不參與相位。無宮位，牡羊座 0° 固定在左側。</source>
       <translation>Each frame is a saved ten-minute sample. Sun and Moon positions are shown without their aspects. No houses; 0° Aries stays on the left.</translation>
-      <location filename="../desktop/sky_player.py" line="137" />
+      <location filename="../desktop/sky_player.py" line="224" />
     </message>
     <message>
       <source>已停止</source>
       <translation>Stopped</translation>
-      <location filename="../desktop/sky_player.py" line="151" />
+      <location filename="../desktop/sky_player.py" line="245" />
     </message>
     <message>
       <source>{state} · {current:,} / {total:,} 幀</source>
@@ -2358,22 +2358,22 @@ UTC: {p2}</translation>
     <message>
       <source>無法播放</source>
       <translation>Unable to play</translation>
-      <location filename="../desktop/sky_player.py" line="186" />
+      <location filename="../desktop/sky_player.py" line="294" />
     </message>
     <message>
       <source>跳到開始</source>
       <translation>Jump to start</translation>
-      <location filename="../desktop/sky_player.py" line="124" />
+      <location filename="../desktop/sky_player.py" line="211" />
     </message>
     <message>
       <source>倒播 · 30 fps</source>
       <translation>Reverse · 30 fps</translation>
-      <location filename="../desktop/sky_player.py" line="125" />
+      <location filename="../desktop/sky_player.py" line="212" />
     </message>
     <message>
       <source>停止，停留在目前時刻</source>
       <translation>Stop at the current time</translation>
-      <location filename="../desktop/sky_player.py" line="126" />
+      <location filename="../desktop/sky_player.py" line="213" />
     </message>
     <message>
       <source>播放／暫停 · 15 fps</source>
@@ -2388,57 +2388,97 @@ UTC: {p2}</translation>
     <message>
       <source>跳到結束</source>
       <translation>Jump to end</translation>
-      <location filename="../desktop/sky_player.py" line="129" />
+      <location filename="../desktop/sky_player.py" line="216" />
     </message>
     <message>
       <source>倒播</source>
       <translation>Reverse</translation>
-      <location filename="../desktop/sky_player.py" line="151" />
+      <location filename="../desktop/sky_player.py" line="245" />
     </message>
     <message>
       <source>播放中</source>
       <translation>Playing</translation>
-      <location filename="../desktop/sky_player.py" line="151" />
+      <location filename="../desktop/sky_player.py" line="245" />
     </message>
     <message>
       <source>天象歷史</source>
       <translation>Sky History</translation>
-      <location filename="../desktop/timeline_ui.py" line="358" />
+      <location filename="../desktop/timeline_ui.py" line="360" />
     </message>
     <message>
       <source>已載入天象歷史，可直接播放或匯出，無須重新計算。</source>
       <translation>Sky history loaded. Play or export without recalculating.</translation>
-      <location filename="../desktop/timeline_ui.py" line="838" />
+      <location filename="../desktop/timeline_ui.py" line="840" />
     </message>
     <message>
       <source>選擇已完成的紀錄，直接查看時間軸與播放。未完成的計算不會列入。</source>
       <translation>Choose a completed run to view its timeline or play it. Incomplete runs are not listed.</translation>
-      <location filename="../desktop/timeline_ui.py" line="848" />
+      <location filename="../desktop/timeline_ui.py" line="850" />
     </message>
     <message>
       <source>歷史紀錄使用當時計算的容許度；不會覆寫全域設定。</source>
       <translation>History uses the orbs recorded for that calculation; shared settings are unchanged.</translation>
-      <location filename="../desktop/timeline_ui.py" line="839" />
+      <location filename="../desktop/timeline_ui.py" line="841" />
     </message>
     <message>
       <source>無法讀取天象歷史</source>
       <translation>Unable to read sky history</translation>
-      <location filename="../desktop/timeline_ui.py" line="845" />
+      <location filename="../desktop/timeline_ui.py" line="847" />
     </message>
     <message>
       <source>尚無已完成的天象歷史。</source>
       <translation>No completed sky history yet.</translation>
-      <location filename="../desktop/timeline_ui.py" line="863" />
+      <location filename="../desktop/timeline_ui.py" line="865" />
     </message>
     <message>
       <source>正在儲存天象歷史，即將完成。</source>
       <translation>Saving sky history. Almost done.</translation>
-      <location filename="../desktop/timeline_ui.py" line="647" />
+      <location filename="../desktop/timeline_ui.py" line="649" />
     </message>
     <message>
       <source>{n:,} 個採樣點</source>
       <translation>{n:,} samples</translation>
-      <location filename="../desktop/timeline_ui.py" line="854" />
+      <location filename="../desktop/timeline_ui.py" line="856" />
+    </message>
+    <message>
+      <source>播放／暫停 · {fps} fps</source>
+      <translation>Play / Pause · {fps} fps</translation>
+      <location filename="../desktop/sky_player.py" line="249" />
+    </message>
+    <message>
+      <source>目前逆行 · {count} 顆</source>
+      <translation>Currently retrograde · {count}</translation>
+      <location filename="../desktop/sky_player.py" line="95" />
+    </message>
+    <message>
+      <source>目前沒有行星逆行</source>
+      <translation>No planets currently retrograde</translation>
+      <location filename="../desktop/sky_player.py" line="95" />
+    </message>
+    <message>
+      <source>{state} · 目標 {fps} fps · {current:,} / {total:,} 幀</source>
+      <translation>{state} · Target {fps} fps · {current:,} / {total:,} frames</translation>
+      <location filename="../desktop/sky_player.py" line="247" />
+    </message>
+    <message>
+      <source>已達上限 · 120 fps</source>
+      <translation>Maximum speed · 120 fps</translation>
+      <location filename="../desktop/sky_player.py" line="252" />
+    </message>
+    <message>
+      <source>加速至 {fps} fps</source>
+      <translation>Speed up to {fps} fps</translation>
+      <location filename="../desktop/sky_player.py" line="252" />
+    </message>
+    <message>
+      <source>播放／暫停</source>
+      <translation>Play / Pause</translation>
+      <location filename="../desktop/sky_player.py" line="214" />
+    </message>
+    <message>
+      <source>加速 +15 fps，最高 120 fps</source>
+      <translation>Speed up +15 fps, maximum 120 fps</translation>
+      <location filename="../desktop/sky_player.py" line="215" />
     </message>
   </context>
   <context>

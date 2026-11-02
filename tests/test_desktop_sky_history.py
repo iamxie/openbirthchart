@@ -87,6 +87,55 @@ class HistoryTests(unittest.TestCase):
         self.assertTrue(all(a>=2 and b>=2 for a,b,_ in aspects))
         self.assertAlmostEqual(point(0,280).x(),point(360,280).x())
 
+    def test_incremental_speed_pause_reverse_and_endpoints(self):
+        player=SkyPlayer(self.path,self.finish())
+        try:
+            self.assertEqual(player.forward_fps,15)
+            for rate in range(30,121,15):
+                player.buttons[4].click();self.assertEqual(player.rate,rate)
+            self.assertFalse(player.buttons[4].isEnabled())
+            player.accelerate();self.assertEqual(player.rate,120)
+            player.buttons[3].click();self.assertEqual(player.rate,0)
+            player.buttons[3].click();self.assertEqual(player.rate,120)
+            player.seek(4);self.assertEqual(player.rate,0)
+            player.buttons[1].click();self.assertEqual(player.rate,-30)
+            self.assertTrue(player.buttons[4].isEnabled())
+            player.buttons[4].click();self.assertEqual(player.rate,120)
+            player.seek(7);player.buttons[4].click();self.assertEqual(player.rate,0)
+            self.assertFalse(player.timer.isActive())
+            player.seek(0);player.toggle();self.assertEqual(player.rate,120)
+        finally:player.close()
+
+    def test_retrograde_labels_follow_samples_in_both_directions(self):
+        from desktop.sky_player import RETRO_TEXT
+        from desktop.model import BODIES
+        self.data[1,:,1]=1
+        self.data[2,:,1]=-1  # Even corrupt luminary speeds must not add Sun/Moon R.
+        player=SkyPlayer(self.path,self.finish());player.show();self.app.processEvents()
+        try:
+            items=player.view.icons;identities=[id(item) for item in items]
+            bounds=[item.boundingRect() for item in items]
+            positions=[item.pos() for item in items]
+            for frame,active in ((0,(2,)),(1,()),(2,tuple(range(2,10))),(1,()),(0,(2,))):
+                player.seek(frame)
+                self.assertEqual(player.retrograde_summary.active,active)
+                self.assertEqual(identities,[id(item) for item in items])
+                for i,item in enumerate(items):
+                    retro=i in active
+                    self.assertEqual(item.retrograde,retro)
+                    self.assertEqual(item.retro.isVisible(),retro)
+                    self.assertEqual(item.text.font().bold(),retro)
+                    self.assertEqual(item.text.brush().color().name(),RETRO_TEXT if retro else BODIES[i][3])
+                    self.assertEqual(item.boundingRect(),bounds[i])
+                    if i>0:self.assertEqual(item.pos(),positions[i])
+            for width,height in ((600,540),(960,850)):
+                player.resize(width,height);self.app.processEvents()
+                rects,_=player.retrograde_summary.badge_rects(player.retrograde_summary.names)
+                self.assertTrue(all(r.right()<=player.retrograde_summary.width() and r.bottom()<=player.retrograde_summary.height() for r in rects))
+                for i,item in enumerate(items):
+                    for other in items[i+1:]:self.assertFalse(item.sceneBoundingRect().intersects(other.sceneBoundingRect()))
+        finally:player.close()
+
     def test_single_frame_and_missing_frame(self):
         request=TimelineInput('2026-11-01T00:00','2026-11-01T00:00')
         ident=self.history.begin(request,1)
