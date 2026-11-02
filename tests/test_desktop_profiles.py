@@ -14,7 +14,7 @@ import unittest
 from unittest.mock import patch
 sys.path[:0]=[str(Path(__file__).resolve().parents[1]),str(Path(__file__).resolve().parents[1]/'scripts')]
 from desktop.model import APP_VERSION,ASPECTS,BirthInput,ChartEngine,display_chart
-from desktop.storage import ProfileStore,default_database_path
+from desktop.storage import ProfileStore,default_database_path,validate_profile
 
 def profile(**kwargs):
     return dict(schema=1,input=asdict(BirthInput(name='陳怡君',**kwargs)),custom_orbs=True,
@@ -36,16 +36,16 @@ class StorageTests(unittest.TestCase):
         self.assertEqual(len({a,b,c}),3)
         male['orb_values']['72']=2.5;self.store.save(male,a)
         reopened=ProfileStore(self.store.path)
-        self.assertEqual(reopened.load(a),male)
-        self.assertEqual(reopened.load(b),female);self.assertEqual(len(reopened.list()),3)
+        self.assertEqual(reopened.load(a),validate_profile(male))
+        self.assertEqual(reopened.load(b),validate_profile(female));self.assertEqual(len(reopened.list()),3)
         with self.assertRaisesRegex(ValueError,'不存在'):self.store.save(male,'missing-id')
         self.assertEqual(len(reopened.list()),3)
 
     def test_invalid_save_and_newer_schema_do_not_damage_data(self):
         good=profile();ident=self.store.save(good)
-        bad=profile();bad['orb_values']['0']=float('nan')
+        bad=profile();bad['input']['longitude']=float('nan')
         with self.assertRaises(ValueError):self.store.save(bad,ident)
-        self.assertEqual(self.store.load(ident),good)
+        self.assertEqual(self.store.load(ident),validate_profile(good))
         with closing(sqlite3.connect(self.store.path)) as conn:conn.execute('PRAGMA user_version=99')
         with self.assertRaisesRegex(ValueError,'較新版本'):self.store.list()
         with closing(sqlite3.connect(self.store.path)) as conn:
@@ -75,7 +75,7 @@ class ProfileUiTests(unittest.TestCase):
     def test_collapsed_order_and_display_without_recalculating(self):
         w=self.w
         self.assertTrue(w.advanced.isHidden())
-        self.assertEqual(list(w.orb_controls),[0,90,120,180,60,30,45,72,135,150])
+        self.assertEqual(list(w.orbs()),[0,90,120,180,60,30,45,72,135,150])
         w.name.setText('陳怡君');w.gender.setCurrentText('女')
         w.apply_chart(self.engine.calculate(w.input(),w.orbs()))
         raw=w.chart['all_points'];cusps=w.chart['cusps']
@@ -83,7 +83,7 @@ class ProfileUiTests(unittest.TestCase):
             w.small.setChecked(False);w.minor.setChecked(False)
             self.assertEqual(len(w.chart['points']),15);self.assertEqual(w.matrix.table.rowCount(),12)
             self.assertTrue(all(not a['minor'] for a in w.chart['aspects']))
-            w.orb_group.setChecked(True);w.orb_controls[0].setValue(10)
+            w.apply_orbs({**w.orbs(),0:10})
             self.assertEqual(w.chart['orbs'][0],10)
             w.small.setChecked(True);self.assertEqual(len(w.chart['points']),20)
             w.gender.setCurrentText('男');self.assertEqual(w.chart['input']['gender'],'男')
@@ -97,11 +97,11 @@ class ProfileUiTests(unittest.TestCase):
         w=self.w;p=profile(zone='America/New_York',local_iso='2024-11-03T01:30:00',fold=1,
             longitude=-74,latitude=40.7,manual_dst=True,dst_enabled=True,dst_minutes=30,gender='女',system='W')
         p['orb_values']['0']=7.5;p['custom_orbs']=False
-        w.restore_profile(p);self.assertEqual(w.profile_payload(),p)
+        w.restore_profile(p);self.assertEqual(w.profile_payload(),validate_profile(p))
         self.assertTrue(w.save_record());ident=w.record_id
         w.name.setText('新名稱');self.assertTrue(w.is_dirty())
         w.restore_profile(w.store.load(ident),ident)
-        self.assertFalse(w.is_dirty());self.assertEqual(w.profile_payload(),p)
+        self.assertFalse(w.is_dirty());self.assertEqual(w.profile_payload(),validate_profile(p))
         self.assertTrue(w.save_record());self.assertEqual(w.record_id,ident)
         self.assertEqual(len(w.store.list()),1)
         with patch.object(w,'confirm_discard',return_value=False):

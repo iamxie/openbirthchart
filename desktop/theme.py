@@ -57,7 +57,7 @@ def apply_theme(app, family):
         QComboBox::down-arrow { image:url(@assets/down.svg); width:12px; height:12px; }
         QComboBox QAbstractItemView { background:@surface; border:1px solid @border; outline:0; selection-background-color:@soft; selection-color:@text; padding:4px; }
         QComboBox QAbstractItemView::item { min-height:30px; }
-        QAbstractSpinBox { padding-right:26px; }
+        QAbstractSpinBox { padding:6px 26px 6px 9px; }
         QAbstractSpinBox::up-button, QAbstractSpinBox::down-button { subcontrol-origin:border; width:24px; border:0; }
         QAbstractSpinBox::up-button { subcontrol-position:top right; }
         QAbstractSpinBox::down-button { subcontrol-position:bottom right; }
@@ -98,6 +98,8 @@ def apply_theme(app, family):
         QSplitter::handle { background:transparent; width:10px; }
         QSplitter::handle:hover { background:@soft; }
         QToolTip { background:@surface; color:@text; border:1px solid @border; padding:6px; }
+        QProgressBar { border:0; background:#e7dace; border-radius:4px; }
+        QProgressBar::chunk { background:@accent; border-radius:4px; }
         QMenu { background:@surface; border:1px solid @border; padding:5px; }
         QMenu::item { padding:7px 18px; }
         QMenu::item:selected { background:@soft; }

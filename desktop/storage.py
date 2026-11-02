@@ -30,7 +30,7 @@ def default_database_path():
     return Path.home()/'Documents'/'openbirthchart'/'data.sqlite'
 
 def validate_profile(payload):
-    if payload.get('schema')!=1:
+    if payload.get('schema') not in (1,2):
         raise UserError('不支援這筆資料的格式版本。')
     values=dict(payload['input'])
     for key in ('name','notes','zone','local_iso','gender'):
@@ -47,24 +47,33 @@ def validate_profile(payload):
     if wall.tzinfo is not None or len(birth.local_iso)!=19:raise UserError('請完整填寫當地出生日期及時、分、秒。')
     if not datetime(1850,1,2)<=wall<=datetime(2149,12,30,23,59,59) or wall.microsecond:
         raise UserError('出生日期或時間超出支援範圍。')
-    for value in (birth.small_bodies,birth.minor_aspects,birth.manual_dst,birth.dst_enabled,birth.house_latitude,payload['custom_orbs']):
+    for value in (birth.small_bodies,birth.minor_aspects,birth.manual_dst,birth.dst_enabled,birth.house_latitude):
         if type(value) is not bool:raise UserError('設定值需為勾選狀態。')
     if type(birth.dst_minutes) is not int or not -120<=birth.dst_minutes<=180:raise UserError('夏令分鐘數超出範圍。')
     resolved=resolve_local(birth)
     if not datetime(1850,1,2,tzinfo=timezone.utc)<=resolved['utc']<datetime(2149,12,31,tzinfo=timezone.utc):
         raise UserError('換算 UTC 後的日期超出支援範圍。')
-    controls=payload['orb_values']
-    if set(controls)!={str(a) for a,_,_,_,_ in ASPECTS}:raise UserError('相位設定不完整。')
-    for value in controls.values():
-        if type(value) not in (int,float) or not math.isfinite(value) or not 0<=value<=15:
-            raise UserError('相位容許度需在 0～15 度內。')
-        if abs(value*10-round(value*10))>1e-8:raise UserError('相位容許度最多一位小數。')
-    return dict(schema=1,input=asdict(birth),custom_orbs=payload['custom_orbs'],
-                orb_values=dict(controls),app_version=payload.get('app_version',APP_VERSION))
+    # Legacy per-profile aspect settings are intentionally discarded on read.
+    # All new saves contain personal inputs only; application rules live below.
+    return dict(schema=2,input=asdict(birth),app_version=payload.get('app_version',APP_VERSION))
 
 class ProfileStore:
     def __init__(self,path=None):
         self.path=Path(path) if path is not None else default_database_path()
+
+    def load_orbs(self):
+        from .settings import default_orbs,validate_orbs
+        if not self.path.exists():return default_orbs()
+        with closing(self._connect()) as conn:
+            row=conn.execute('SELECT value FROM app_settings WHERE name=?',('aspect_orbs',)).fetchone()
+        return validate_orbs(json.loads(row[0])) if row else default_orbs()
+
+    def save_orbs(self,values):
+        from .settings import validate_orbs
+        encoded=json.dumps(validate_orbs(values),allow_nan=False)
+        with closing(self._connect()) as conn,conn:
+            conn.execute('INSERT INTO app_settings(name,value) VALUES (?,?) '
+                'ON CONFLICT(name) DO UPDATE SET value=excluded.value',('aspect_orbs',encoded))
 
     def load_ui_language(self):
         if not self.path.exists():return 'zh-TW'

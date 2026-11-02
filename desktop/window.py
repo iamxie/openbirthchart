@@ -10,7 +10,7 @@ from PySide6.QtGui import QColor, QFont, QAction
 from PySide6.QtWidgets import (QApplication,QMainWindow,QWidget,QVBoxLayout,QHBoxLayout,QFormLayout,
     QGroupBox,QLabel,QDateEdit,QTimeEdit,QDoubleSpinBox,QSpinBox,QComboBox,QCheckBox,QPushButton,
     QScrollArea,QSplitter,QTabWidget,QTableWidget,QTableWidgetItem,QHeaderView,QFileDialog,QMessageBox,
-    QAbstractItemView,QCompleter,QSizePolicy,QLineEdit,QMenu,QDialog,QDialogButtonBox,QToolButton,QPlainTextEdit,QFrame)
+    QAbstractItemView,QCompleter,QSizePolicy,QLineEdit,QMenu,QDialog,QDialogButtonBox,QToolButton,QPlainTextEdit,QFrame,QTabBar,QStackedWidget)
 from .model import (BirthInput,ChartEngine,HOUSE_SYSTEMS,ASPECTS,APP_VERSION,
     available_timezones,resolve_local,zodiac_text,calculation_key,display_chart,sorted_aspect_details)
 from .chart import ChartWidget,export_chart,font_family
@@ -57,17 +57,35 @@ class MainWindow(QMainWindow):
         self.store=store or ProfileStore();self.record_id=None;self.loading=False
         self.prompt_unsaved=prompt_unsaved;self.saved_payload=None
         self.geocode_key=''
+        self.global_orbs=self.store.load_orbs()
         apply_theme(QApplication.instance(),font_family())
         root=QWidget();self.setCentralWidget(root);layout=QVBoxLayout(root);layout.setContentsMargins(18,14,18,14)
         header=QHBoxLayout();brand=QHBoxLayout()
         title=QLabel('Open BirthChart');title.setObjectName('brandTitle');brand.addWidget(title)
         self.record_status=QLabel(tr('新增個人檔案'));self.record_status.setObjectName('hint');brand.addSpacing(18);brand.addWidget(self.record_status)
         header.addLayout(brand);header.addStretch()
+        self.mode_menu=QToolButton();self.mode_menu.setText(tr('功能'))
+        self.mode_menu.setPopupMode(QToolButton.ToolButtonPopupMode.InstantPopup)
+        mode_menu=QMenu(self.mode_menu);self.mode_menu_actions=[]
+        for index,title in enumerate((tr('個人星盤'),tr('天象時間軸'))):
+            action=mode_menu.addAction(title);action.setCheckable(True);action.setChecked(index==0)
+            action.triggered.connect(lambda checked=False,i=index:self.mode_tabs.setCurrentIndex(i))
+            self.mode_menu_actions.append(action)
+        self.mode_menu.setMenu(mode_menu);self.mode_menu.hide();header.addWidget(self.mode_menu)
+        self.settings_button=QPushButton(tr('設定'));header.addWidget(self.settings_button)
+        self.settings_button.clicked.connect(self.choose_orbs)
         self.language_button=QPushButton('語言 / Language');header.addWidget(self.language_button)
         self.language_button.clicked.connect(self.choose_language)
         self.legal_button=QPushButton(tr('關於與授權'));header.addWidget(self.legal_button)
         self.legal_button.clicked.connect(self.legal_action.trigger)
         self.form_toggle=QPushButton(tr('收合填寫區'));header.addWidget(self.form_toggle);layout.addLayout(header)
+        self.mode_tabs=QTabBar();self.mode_tabs.addTab(tr('個人星盤'));self.mode_tabs.addTab(tr('天象時間軸'))
+        self.mode_tabs.setExpanding(False);layout.addWidget(self.mode_tabs)
+        self.mode_stack=QStackedWidget();layout.addWidget(self.mode_stack,1)
+        self.birth_page=QWidget();self.mode_stack.addWidget(self.birth_page)
+        self.timeline_page=None
+        layout=QVBoxLayout(self.birth_page);layout.setContentsMargins(0,0,0,0)
+        self.mode_tabs.currentChanged.connect(self.switch_mode)
         toolbar=QHBoxLayout()
         self.new_button=QPushButton(tr('新增個人檔案'));self.load_button=QPushButton(tr('載入'))
         self.save_button=QPushButton(tr('儲存'));self.calculate_button=QPushButton(tr('排星盤'));self.calculate_button.setObjectName('calculate')
@@ -150,15 +168,8 @@ class MainWindow(QMainWindow):
         self.minor=QCheckBox(tr('顯示次要相位'));self.minor.setChecked(True);options.addWidget(self.minor)
         options.addWidget(hint(tr('30°、45°、72°、135°、150°；在圖上以虛線顯示。')))
         options.addWidget(hint(tr('天王星、海王星、冥王星及出生資訊固定顯示。')))
-        options.addWidget(hint(tr('容許度採用嚴格預設；勾選下方「自訂相位容許度」即可修改。取消勾選則使用嚴格預設。')))
-        self.orb_group=QGroupBox(tr('自訂相位容許度'));self.orb_group.setCheckable(True);self.orb_group.setChecked(False)
-        orb_layout=QFormLayout(self.orb_group);self.orb_controls={}
-        if language()=='en-US':orb_layout.setRowWrapPolicy(QFormLayout.RowWrapPolicy.WrapAllRows)
-        for angle,name,orb,color,minor in ASPECTS:
-            spin=QDoubleSpinBox();spin.setRange(0,15);spin.setDecimals(1);spin.setValue(orb);spin.setSuffix('°')
-            self.orb_controls[angle]=spin;orb_layout.addRow(f'{tr(name)} {angle}°',spin)
-        self.orb_group.setToolTip(tr('容許與理想相位角度相差多少度。這是判定規則，不是計算誤差。'))
-        options.addWidget(self.orb_group);left.addStretch()
+        options.addWidget(hint(tr('相位容許度統一由上方「設定」修改。')))
+        left.addStretch()
         self.advanced_toggle.toggled.connect(self.toggle_advanced)
         right=QWidget();right_layout=QVBoxLayout(right);right_layout.setContentsMargins(8,0,0,0);splitter.addWidget(right)
         self.house_notice=QFrame();self.house_notice.setObjectName('houseNotice')
@@ -188,13 +199,56 @@ class MainWindow(QMainWindow):
                               (self.dst_amount,'valueChanged'),(self.house,'currentIndexChanged'),(self.house_latitude,'toggled')]:
             getattr(widget,signal).connect(self.changed)
         for widget,signal in [(self.name,'textChanged'),(self.notes,'textChanged'),(self.gender,'currentIndexChanged'),
-                              (self.small,'toggled'),(self.minor,'toggled'),(self.orb_group,'toggled')]:
+                              (self.small,'toggled'),(self.minor,'toggled')]:
             getattr(widget,signal).connect(self.display_changed)
-        for spin in self.orb_controls.values():spin.valueChanged.connect(self.display_changed)
         self.refresh_time()
         self.saved_payload=self.form_snapshot();self.initial_payload=self.form_snapshot()
         for field in (self.name,self.date,self.time,self.lon,self.lat,self.zone.lineEdit()):
             field.editingFinished.connect(lambda w=field:w.setText(trim_text(w.text())))
+
+    def switch_mode(self,index):
+        if index==1 and self.timeline_page is None:
+            from .timeline_ui import TimelinePage
+            self.timeline_page=TimelinePage(self,orb_provider=self.orbs,history_path=self.store.path.with_name('skyhistory.sqlite'))
+            self.timeline_page.activity_changed.connect(self.update_settings_enabled)
+            self.mode_stack.addWidget(self.timeline_page)
+        self.mode_stack.setCurrentIndex(index)
+        self.form_toggle.setVisible(index==0)
+        self.record_status.setVisible(index==0)
+        for i,action in enumerate(self.mode_menu_actions):action.setChecked(i==index)
+
+    def resizeEvent(self,event):
+        super().resizeEvent(event)
+        if hasattr(self,'mode_tabs'):
+            compact=self.height()<650
+            self.mode_tabs.setVisible(not compact)
+            self.mode_menu.setVisible(compact)
+
+    def settings_busy(self):
+        return self.worker is not None or (self.timeline_page is not None and self.timeline_page.worker is not None)
+
+    def update_settings_enabled(self,*args):
+        self.settings_button.setEnabled(not self.settings_busy())
+
+    def apply_orbs(self,values):
+        from .settings import validate_orbs
+        if self.settings_busy():raise UserError('請先完成或取消計算，再修改相位容許度。')
+        values=validate_orbs(values)
+        if values==self.global_orbs:return
+        self.store.save_orbs(values)
+        self.global_orbs=values
+        self.display_changed()
+        if self.timeline_page is not None:
+            self.timeline_page.conditions_changed()
+            self.timeline_page.status.setText(tr('容許度已變更，請重新計算。'))
+
+    def choose_orbs(self):
+        if self.settings_busy():return
+        from .settings import orb_dialog
+        dialog,controls=orb_dialog(self.orbs(),self)
+        if dialog.exec()!=QDialog.DialogCode.Accepted:return
+        try:self.apply_orbs({a:control.value() for a,control in controls.items()})
+        except Exception as exc:QMessageBox.warning(self,tr('無法儲存設定'),error_text(exc))
 
     def choose_language(self):
         try:selected=self.store.load_ui_language()
@@ -262,7 +316,7 @@ class MainWindow(QMainWindow):
             name=trim_text(self.name.text()),gender=self.gender.currentData(),notes=trim_text(self.notes.toPlainText()))
 
     def orbs(self):
-        return {a:self.orb_controls[a].value() if self.orb_group.isChecked() else default for a,_,default,_,_ in ASPECTS}
+        return dict(self.global_orbs)
 
     def changed(self,*args):
         if self.loading:return
@@ -324,11 +378,13 @@ class MainWindow(QMainWindow):
         self.status.setText(tr('正在計算星盤…'));self.pending_revision=self.revision
         self.worker=Calculation(birth,self.orbs(),self.engine,self)
         self.worker.succeeded.connect(self.apply_chart);self.worker.failed.connect(self.error);self.worker.finished.connect(self.finished)
+        self.update_settings_enabled()
         self.worker.start()
 
     def finished(self):
         worker=self.worker;self.engine=worker.engine;self.worker=None
         worker.deleteLater();self.calculate_button.setEnabled(True)
+        self.update_settings_enabled()
         self.new_button.setEnabled(True);self.load_button.setEnabled(True)
 
     def apply_chart(self,chart):
@@ -396,8 +452,7 @@ class MainWindow(QMainWindow):
             except Exception as exc:QMessageBox.warning(self,tr('無法匯出'),error_text(exc))
 
     def profile_payload(self):
-        return dict(schema=1,input=asdict(self.input()),custom_orbs=self.orb_group.isChecked(),
-                    orb_values={str(a):spin.value() for a,spin in self.orb_controls.items()},app_version=APP_VERSION)
+        return dict(schema=2,input=asdict(self.input()),app_version=APP_VERSION)
 
     def is_dirty(self):
         return self.saved_payload is not None and self.form_snapshot()!=self.saved_payload
@@ -406,8 +461,8 @@ class MainWindow(QMainWindow):
         return dict(text=[trim_text(w.text()) for w in (self.name,self.date,self.time,self.lon,self.lat)],
             notes=trim_text(self.notes.toPlainText()),zone=trim_text(self.zone.currentText().split(' · ')[-1]),
             indices=[w.currentIndex() for w in (self.gender,self.ew,self.ns,self.house,self.fold,self.dst_mode)],
-            checks=[w.isChecked() for w in (self.dst,self.small,self.minor,self.orb_group,self.house_latitude)],
-            dst_minutes=self.dst_amount.value(),orbs=[w.value() for w in self.orb_controls.values()])
+            checks=[w.isChecked() for w in (self.dst,self.small,self.minor,self.house_latitude)],
+            dst_minutes=self.dst_amount.value())
 
     def update_record_status(self):
         title=trim_text(self.name.text()) or tr('未命名')
@@ -478,8 +533,7 @@ class MainWindow(QMainWindow):
     def restore_profile(self,payload,record_id=None):
         payload=validate_profile(payload);birth=BirthInput(**payload['input'])
         widgets=[self.name,self.notes,self.gender,self.date,self.time,self.lon,self.lat,self.ew,self.ns,self.zone,
-                 self.house,self.fold,self.dst_mode,self.dst,self.dst_amount,self.small,self.minor,self.orb_group,self.house_latitude,
-                 *self.orb_controls.values()]
+                 self.house,self.fold,self.dst_mode,self.dst,self.dst_amount,self.small,self.minor,self.house_latitude]
         self.loading=True;blockers=[QSignalBlocker(w) for w in widgets]
         try:
             self.name.setText(birth.name);self.notes.setPlainText(birth.notes);self.gender.setCurrentIndex(self.gender.findData(birth.gender))
@@ -493,8 +547,7 @@ class MainWindow(QMainWindow):
             self.fold.setCurrentIndex(self.fold.findData(birth.fold))
             self.dst_mode.setCurrentIndex(int(birth.manual_dst));self.dst.setChecked(birth.dst_enabled)
             self.dst_amount.setValue(birth.dst_minutes);self.small.setChecked(birth.small_bodies)
-            self.minor.setChecked(birth.minor_aspects);self.orb_group.setChecked(payload['custom_orbs'])
-            for angle,spin in self.orb_controls.items():spin.setValue(payload['orb_values'][str(angle)])
+            self.minor.setChecked(birth.minor_aspects)
         finally:
             del blockers;self.loading=False
         self.chart=None;self.wheel.set_chart(None);self.house_notice.hide()
@@ -508,8 +561,7 @@ class MainWindow(QMainWindow):
     def new_record(self):
         if self.worker or not self.confirm_discard():return
         from dataclasses import asdict
-        self.restore_profile(dict(schema=1,input=asdict(BirthInput()),custom_orbs=False,
-            orb_values={str(a):o for a,_,o,_,_ in ASPECTS},app_version=APP_VERSION))
+        self.restore_profile(dict(schema=2,input=asdict(BirthInput()),app_version=APP_VERSION))
         self.loading=True
         for field in (self.name,self.date,self.time,self.lon,self.lat):field.clear()
         self.notes.clear();self.loading=False
@@ -558,6 +610,8 @@ class MainWindow(QMainWindow):
             self.load_record(rows[table.currentRow()]['id'])
 
     def closeEvent(self,event):
+        if self.timeline_page is not None and not self.timeline_page.request_close():
+            event.ignore();return
         if self.worker and self.worker.isRunning():
             self.status.setText(tr('計算尚未結束，完成後即可關閉。'));event.ignore();return
         if not self.confirm_discard():event.ignore();return

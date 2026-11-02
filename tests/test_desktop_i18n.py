@@ -102,7 +102,7 @@ class I18nTests(unittest.TestCase):
         for lang in baseline:self.assertEqual(render_html(self.chart,True,TEMPLATES/lang),baseline[lang])
         self.assertEqual(self.chart,snapshot)
         dialog=ExportDialog(w)
-        self.assertEqual(dialog.windowTitle(),'Export HTML Report')
+        self.assertEqual(dialog.windowTitle(),'Export Report')
         self.assertEqual(Path(dialog.templates.currentData()).name,'zh-TW')
         self.assertGreaterEqual(dialog.templates.findText('English'),0)
         dialog.deleteLater()

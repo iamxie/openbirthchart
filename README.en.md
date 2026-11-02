@@ -2,16 +2,19 @@
 
 English · [繁體中文](README.md)
 
-A Windows desktop natal-chart application powered by LibEphemeris, with Traditional Chinese and English interfaces, fourteen house systems, planetary positions, house cusps, aspects and offline reports.
+A Windows desktop natal-chart and sky-timeline application powered by LibEphemeris, with Traditional Chinese and English interfaces, fourteen house systems, planetary positions, house cusps, aspects and offline reports.
 
-**v0.6.7 is now available.** [Download the Windows application and full corresponding source](https://github.com/iamxie/openbirthchart/releases/tag/v0.6.7).
+**v0.7.0** [Download the Windows application and full corresponding source](https://github.com/iamxie/openbirthchart/releases/tag/v0.7.0).
 
 ## Download
 
-Get `OpenBirthChart-0.6.7-windows-x64.zip` from [Releases](https://github.com/iamxie/openbirthchart/releases), extract the entire folder and run `OpenBirthChart.exe`. Python and ephemeris data are included. Keep the folder intact. The release also provides SHA-256 checksums and `OpenBirthChart-0.6.7-source.zip` with corresponding source. Only Windows x64 binaries are provided. The application is not code-signed.
+Get `OpenBirthChart-0.7.0-windows-x64.zip` from [Releases](https://github.com/iamxie/openbirthchart/releases), extract the entire folder and run `OpenBirthChart.exe`. Python and ephemeris data are included. Keep the folder intact. The release also provides SHA-256 checksums and `OpenBirthChart-0.7.0-source.zip` with corresponding source. Only Windows x64 binaries are provided. The application is not code-signed.
 
 ## Features and limits
 
+- [Sky Timeline](docs/SKY_TIMELINE.md) with retrogrades, major aspect bands, exact hits, zodiac histories and concurrent events.
+- Persisted sky history and chart playback: retrograde badges, 15–120 fps forward targets and 30 fps reverse.
+- Shared aspect-orb settings and bilingual offline timeline HTML export with printing support.
 - Fourteen house systems, actual/zero ecliptic latitude for house placement, configurable aspect orbs and local profiles.
 - PNG/SVG charts and self-contained HTML reports, printable to PDF from a browser.
 - Consistent zodiac outlines in English charts and position tables, with readable sign names and degrees.
@@ -23,13 +26,15 @@ Get `OpenBirthChart-0.6.7-windows-x64.zip` from [Releases](https://github.com/ia
 
 Profiles and settings are stored in `%USERPROFILE%\Documents\openbirthchart\data.sqlite`, outside the installation folder. This database is not encrypted and may contain names, birth details, notes and the optional geocoding key. Treat backups accordingly.
 
+Sky histories and playback samples are stored separately in `skyhistory.sqlite` in the same directory, also unencrypted.
+
 Calculation works offline, with no automatic chart uploads or telemetry. Optional address lookup sends the entered address and key to geocode.maps.co; the key is saved locally. Opening a map uses the browser. Manual coordinates require no API key.
 
 ## Development
 
 On Windows x64 with PowerShell, Git and uv, run `./setup-desktop.ps1`, then `./launch-desktop.ps1`. Initial provisioning needs network access; dependency versions and data hashes are pinned. The complete source archive includes runtime data and upstream source archives. Git checkouts download the same pinned data.
 
-See [building](docs/BUILDING.md), [dependency upgrades](docs/DEPENDENCY_UPGRADES.md), [validation](docs/VALIDATION.md), [bilingual articles](docs/README.md) and [release notes](docs/releases/v0.6.7.md). Large immutable validation archives are included in the complete source ZIP rather than the small Git working tree. Swiss/pyswisseph is used only in a separate validation environment, not as a desktop runtime dependency.
+See [building](docs/BUILDING.md), [dependency upgrades](docs/DEPENDENCY_UPGRADES.md), [validation](docs/VALIDATION.md), [bilingual articles](docs/README.md) and [release notes](docs/releases/v0.7.0.md). Large immutable validation archives are included in the complete source ZIP rather than the small Git working tree. Swiss/pyswisseph is used only in a separate validation environment, not as a desktop runtime dependency.
 
 ## License
 
